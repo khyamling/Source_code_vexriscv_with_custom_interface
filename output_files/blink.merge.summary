@@ -1,0 +1,17 @@
+Partition Merge Status : Successful - Fri Aug  6 13:16:00 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : blink
+Top-level Entity Name : blink
+Family : Cyclone V
+Logic utilization (in ALMs) : 17,151 / 32,070 ( 53 % )
+Total registers : 29936
+Total pins : 12 / 457 ( 3 % )
+Total virtual pins : 0
+Total block memory bits : 1,003,008 / 4,065,280 ( 25 % )
+Total DSP Blocks : 4 / 87 ( 5 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

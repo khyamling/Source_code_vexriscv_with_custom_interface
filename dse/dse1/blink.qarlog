@@ -1,0 +1,71 @@
+Quartus Prime Archive log --	/home/khyam/Downloads/qsys/jtag_master/dse/dse1/blink.qarlog
+
+Archive:	/home/khyam/Downloads/qsys/jtag_master/dse/dse1/blink.qar
+Date:		Mon Mar 15 15:59:47 2021
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+	=========== Files Selected: ===========
+/home/khyam/Downloads/qsys/jtag_master/blink.dse
+/home/khyam/Downloads/qsys/jtag_master/blink.qpf
+/home/khyam/Downloads/qsys/jtag_master/blink.qsf
+/home/khyam/Downloads/qsys/jtag_master/blink.sdc
+/home/khyam/Downloads/qsys/jtag_master/blink.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system.qsys
+/home/khyam/Downloads/qsys/jtag_master/soc_system.sopcinfo
+/home/khyam/Downloads/qsys/jtag_master/soc_system/soc_system.cmp
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/soc_system.debuginfo
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/soc_system.qip
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/soc_system.regmap
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/soc_system.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_avalon_packets_to_master.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_avalon_st_bytes_to_packets.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_avalon_st_clock_crosser.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_avalon_st_idle_inserter.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_avalon_st_idle_remover.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_avalon_st_jtag_interface.sdc
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_avalon_st_jtag_interface.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_avalon_st_packets_to_bytes.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_jtag_dc_streaming.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_jtag_sld_node.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_jtag_streaming.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_merlin_master_agent.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_merlin_master_translator.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_merlin_reorder_memory.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_merlin_slave_translator.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_reset_controller.sdc
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_reset_controller.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_reset_synchronizer.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/altera_std_synchronizer_nocut.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_button_pio.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_led_pio.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_master_0.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_master_0_b2p_adapter.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_master_0_p2b_adapter.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_master_0_timing_adt.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_mm_interconnect_0.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_001.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux.sv
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_ocram_16b.hex
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_ocram_16b.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_ocram_64K.hex
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_ocram_64K.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_switch_pio.v
+/home/khyam/Downloads/qsys/jtag_master/soc_system/synthesis/submodules/soc_system_sysid_qsys_0.v
+/tools/intelfpga_18.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 60 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

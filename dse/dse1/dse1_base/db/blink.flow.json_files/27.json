@@ -1,0 +1,17 @@
+{
+	"title" : "Timing Analyzer||Fast 1100mV 0C Model||Fast 1100mV 0C Model Recovery Summary",
+	"data" : {
+		"data" : [
+			{
+				"0" : "clk",
+				"1" : "16.981",
+				"2" : "0.000"
+			},
+			{
+				"0" : "altera_reserved_tck",
+				"1" : "31.454",
+				"2" : "0.000"
+			}
+		]
+	}
+}

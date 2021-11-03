@@ -1,0 +1,17 @@
+{
+	"title" : "Timing Analyzer||Fast 1100mV 85C Model||Fast 1100mV 85C Model Setup Summary",
+	"data" : {
+		"data" : [
+			{
+				"0" : "altera_reserved_tck",
+				"1" : "9.024",
+				"2" : "0.000"
+			},
+			{
+				"0" : "clk",
+				"1" : "14.549",
+				"2" : "0.000"
+			}
+		]
+	}
+}

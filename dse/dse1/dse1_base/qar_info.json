@@ -1,0 +1,7 @@
+{
+	"common_dir" : "/home/khyam/Downloads/qsys/jtag_master/",
+	"acds_version" : "Version 18.1.0",
+	"platform" : "linux",
+	"os" : "Ubuntu 18.04.5",
+	"qpf" : "blink.qpf"
+}

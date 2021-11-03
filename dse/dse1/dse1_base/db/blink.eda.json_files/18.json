@@ -1,0 +1,17 @@
+{
+	"title" : "Timing Analyzer||Slow 1100mV 0C Model||Slow 1100mV 0C Model Hold Summary",
+	"data" : {
+		"data" : [
+			{
+				"0" : "clk",
+				"1" : "0.281",
+				"2" : "0.000"
+			},
+			{
+				"0" : "altera_reserved_tck",
+				"1" : "0.435",
+				"2" : "0.000"
+			}
+		]
+	}
+}

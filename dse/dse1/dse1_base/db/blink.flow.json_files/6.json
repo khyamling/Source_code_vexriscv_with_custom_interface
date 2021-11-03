@@ -1,0 +1,42 @@
+{
+	"title" : "Flow OS Summary",
+	"data" : {
+		"data" : [
+			{
+				"0" : "Analysis & Synthesis",
+				"1" : "khyam-OptiPlex-9020",
+				"2" : "Ubuntu 18.04.5",
+				"3" : "18",
+				"4" : "x86_64"
+			},
+			{
+				"0" : "Fitter",
+				"1" : "khyam-OptiPlex-9020",
+				"2" : "Ubuntu 18.04.5",
+				"3" : "18",
+				"4" : "x86_64"
+			},
+			{
+				"0" : "Assembler",
+				"1" : "khyam-OptiPlex-9020",
+				"2" : "Ubuntu 18.04.5",
+				"3" : "18",
+				"4" : "x86_64"
+			},
+			{
+				"0" : "Timing Analyzer",
+				"1" : "khyam-OptiPlex-9020",
+				"2" : "Ubuntu 18.04.5",
+				"3" : "18",
+				"4" : "x86_64"
+			},
+			{
+				"0" : "EDA Netlist Writer",
+				"1" : "khyam-OptiPlex-9020",
+				"2" : "Ubuntu 18.04.5",
+				"3" : "18",
+				"4" : "x86_64"
+			}
+		]
+	}
+}

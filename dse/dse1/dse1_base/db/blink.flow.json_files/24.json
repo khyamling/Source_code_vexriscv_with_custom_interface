@@ -1,0 +1,17 @@
+{
+	"title" : "Timing Analyzer||Fast 1100mV 85C Model||Fast 1100mV 85C Model Removal Summary",
+	"data" : {
+		"data" : [
+			{
+				"0" : "clk",
+				"1" : "0.442",
+				"2" : "0.000"
+			},
+			{
+				"0" : "altera_reserved_tck",
+				"1" : "0.528",
+				"2" : "0.000"
+			}
+		]
+	}
+}

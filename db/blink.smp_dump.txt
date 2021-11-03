@@ -1,0 +1,109 @@
+
+State Machine - |blink|soc_system:u0|soc_system_master_0:master_0|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|state
+Name state.READ_SEND_WAIT state.READ_SEND_ISSUE state.READ_DATA_WAIT state.READ_CMD_WAIT state.READ_ASSERT state.RETURN_PACKET state.WRITE_WAIT state.GET_WRITE_DATA state.GET_ADDR4 state.GET_ADDR3 state.GET_ADDR2 state.GET_ADDR1 state.GET_SIZE2 state.GET_SIZE1 state.GET_EXTRA state.0000 
+state.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.GET_EXTRA 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.GET_SIZE1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.GET_SIZE2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.GET_ADDR1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.GET_ADDR2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.GET_ADDR3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.GET_ADDR4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.GET_WRITE_DATA 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.WRITE_WAIT 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.RETURN_PACKET 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.READ_ASSERT 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_CMD_WAIT 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_DATA_WAIT 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_ISSUE 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_WAIT 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |blink|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:ocram_16b_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |blink|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:ocram_64k_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |blink|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:nios2_gen2_0_debug_mem_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |blink|soc_system:u0|soc_system_nios2_gen2_0:nios2_gen2_0|soc_system_nios2_gen2_0_cpu:cpu|soc_system_nios2_gen2_0_cpu_nios2_oci:the_soc_system_nios2_gen2_0_cpu_nios2_oci|soc_system_nios2_gen2_0_cpu_debug_slave_wrapper:the_soc_system_nios2_gen2_0_cpu_debug_slave_wrapper|soc_system_nios2_gen2_0_cpu_debug_slave_tck:the_soc_system_nios2_gen2_0_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 
+
+State Machine - |blink|soc_system:u0|soc_system_master_0:master_0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|read_state
+Name read_state.ST_HEADER read_state.ST_READ_DATA read_state.ST_PADDED 
+read_state.ST_HEADER 0 0 0 
+read_state.ST_PADDED 1 0 1 
+read_state.ST_READ_DATA 1 1 0 
+
+State Machine - |blink|soc_system:u0|soc_system_master_0:master_0|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|write_state
+Name write_state.ST_WRITE_DATA write_state.ST_HEADER_2 write_state.ST_HEADER_1 write_state.ST_BYPASS 
+write_state.ST_BYPASS 0 0 0 0 
+write_state.ST_HEADER_1 0 0 1 1 
+write_state.ST_HEADER_2 0 1 0 1 
+write_state.ST_WRITE_DATA 1 0 0 1 
+
+State Machine - |blink|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:jtag_uart_0_avalon_jtag_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |blink|soc_system:u0|VexRiscvAxi4:vexriscvaxi4_0|JtagBridge:jtagBridge_1_|jtag_tap_fsm_state
+Name jtag_tap_fsm_state.1111 jtag_tap_fsm_state.1110 jtag_tap_fsm_state.1101 jtag_tap_fsm_state.1100 jtag_tap_fsm_state.1011 jtag_tap_fsm_state.1010 jtag_tap_fsm_state.1001 jtag_tap_fsm_state.1000 jtag_tap_fsm_state.0111 jtag_tap_fsm_state.0110 jtag_tap_fsm_state.0101 jtag_tap_fsm_state.0100 jtag_tap_fsm_state.0011 jtag_tap_fsm_state.0010 jtag_tap_fsm_state.0001 jtag_tap_fsm_state.0000 
+jtag_tap_fsm_state.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+jtag_tap_fsm_state.0001 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+jtag_tap_fsm_state.0010 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+jtag_tap_fsm_state.0011 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+jtag_tap_fsm_state.0100 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+jtag_tap_fsm_state.0101 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+jtag_tap_fsm_state.0110 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+jtag_tap_fsm_state.0111 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+jtag_tap_fsm_state.1000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+jtag_tap_fsm_state.1001 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+jtag_tap_fsm_state.1010 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+jtag_tap_fsm_state.1011 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+jtag_tap_fsm_state.1100 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+jtag_tap_fsm_state.1101 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+jtag_tap_fsm_state.1110 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+jtag_tap_fsm_state.1111 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |blink|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:sysid_qsys_0_control_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |blink|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:button_pio_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |blink|soc_system:u0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:led_pio_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 

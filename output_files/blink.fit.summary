@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Aug 12 15:13:32 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : blink
+Top-level Entity Name : blink
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 11,280 / 32,070 ( 35 % )
+Total registers : 31341
+Total pins : 12 / 457 ( 3 % )
+Total virtual pins : 0
+Total block memory bits : 1,015,168 / 4,065,280 ( 25 % )
+Total RAM Blocks : 151 / 397 ( 38 % )
+Total DSP Blocks : 4 / 87 ( 5 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,134 @@
+Restore Archived Project report for blink
+Mon Mar 15 15:59:54 2021
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Mon Mar 15 15:59:54 2021 ;
+; Revision Name                   ; blink                                 ;
+; Top-level Entity Name           ; blink                                 ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored '/home/khyam/Downloads/qsys/jtag_master/dse/dse1/dse1_base/blink.qar' into the 'dse/dse1/dse1_base' directory
+Info: Generated report 'blink.restore.rpt'
+Info (23030): Evaluation of Tcl script /tools/intelfpga_18.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 1052 megabytes
+    Info: Processing ended: Mon Mar 15 15:59:54 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++---------------------------------------------------------------------------------------------------+
+; Files Restored                                                                                    ;
++---------------------------------------------------------------------------------------------------+
+; File Name                                                                                         ;
++---------------------------------------------------------------------------------------------------+
+; qar_info.json                                                                                     ;
+; blink.dse                                                                                         ;
+; blink.qpf                                                                                         ;
+; blink.qsf                                                                                         ;
+; blink.sdc                                                                                         ;
+; blink.v                                                                                           ;
+; soc_system.qsys                                                                                   ;
+; soc_system.sopcinfo                                                                               ;
+; soc_system/soc_system.cmp                                                                         ;
+; soc_system/synthesis/soc_system.debuginfo                                                         ;
+; soc_system/synthesis/soc_system.qip                                                               ;
+; soc_system/synthesis/soc_system.regmap                                                            ;
+; soc_system/synthesis/soc_system.v                                                                 ;
+; soc_system/synthesis/submodules/altera_avalon_packets_to_master.v                                 ;
+; soc_system/synthesis/submodules/altera_avalon_sc_fifo.v                                           ;
+; soc_system/synthesis/submodules/altera_avalon_st_bytes_to_packets.v                               ;
+; soc_system/synthesis/submodules/altera_avalon_st_clock_crosser.v                                  ;
+; soc_system/synthesis/submodules/altera_avalon_st_idle_inserter.v                                  ;
+; soc_system/synthesis/submodules/altera_avalon_st_idle_remover.v                                   ;
+; soc_system/synthesis/submodules/altera_avalon_st_jtag_interface.sdc                               ;
+; soc_system/synthesis/submodules/altera_avalon_st_jtag_interface.v                                 ;
+; soc_system/synthesis/submodules/altera_avalon_st_packets_to_bytes.v                               ;
+; soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v                                  ;
+; soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv                                ;
+; soc_system/synthesis/submodules/altera_jtag_dc_streaming.v                                        ;
+; soc_system/synthesis/submodules/altera_jtag_sld_node.v                                            ;
+; soc_system/synthesis/submodules/altera_jtag_streaming.v                                           ;
+; soc_system/synthesis/submodules/altera_merlin_arbitrator.sv                                       ;
+; soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv                               ;
+; soc_system/synthesis/submodules/altera_merlin_master_agent.sv                                     ;
+; soc_system/synthesis/submodules/altera_merlin_master_translator.sv                                ;
+; soc_system/synthesis/submodules/altera_merlin_reorder_memory.sv                                   ;
+; soc_system/synthesis/submodules/altera_merlin_slave_agent.sv                                      ;
+; soc_system/synthesis/submodules/altera_merlin_slave_translator.sv                                 ;
+; soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv                                  ;
+; soc_system/synthesis/submodules/altera_reset_controller.sdc                                       ;
+; soc_system/synthesis/submodules/altera_reset_controller.v                                         ;
+; soc_system/synthesis/submodules/altera_reset_synchronizer.v                                       ;
+; soc_system/synthesis/submodules/altera_std_synchronizer_nocut.v                                   ;
+; soc_system/synthesis/submodules/soc_system_button_pio.v                                           ;
+; soc_system/synthesis/submodules/soc_system_led_pio.v                                              ;
+; soc_system/synthesis/submodules/soc_system_master_0.v                                             ;
+; soc_system/synthesis/submodules/soc_system_master_0_b2p_adapter.sv                                ;
+; soc_system/synthesis/submodules/soc_system_master_0_p2b_adapter.sv                                ;
+; soc_system/synthesis/submodules/soc_system_master_0_timing_adt.sv                                 ;
+; soc_system/synthesis/submodules/soc_system_mm_interconnect_0.v                                    ;
+; soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter.v                  ;
+; soc_system/synthesis/submodules/soc_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv ;
+; soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_demux.sv                         ;
+; soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_mux.sv                           ;
+; soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router.sv                            ;
+; soc_system/synthesis/submodules/soc_system_mm_interconnect_0_router_001.sv                        ;
+; soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_demux.sv                         ;
+; soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_mux.sv                           ;
+; soc_system/synthesis/submodules/soc_system_ocram_16b.hex                                          ;
+; soc_system/synthesis/submodules/soc_system_ocram_16b.v                                            ;
+; soc_system/synthesis/submodules/soc_system_ocram_64K.hex                                          ;
+; soc_system/synthesis/submodules/soc_system_ocram_64K.v                                            ;
+; soc_system/synthesis/submodules/soc_system_switch_pio.v                                           ;
+; soc_system/synthesis/submodules/soc_system_sysid_qsys_0.v                                         ;
+; assignment_defaults.qdf                                                                           ;
++---------------------------------------------------------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

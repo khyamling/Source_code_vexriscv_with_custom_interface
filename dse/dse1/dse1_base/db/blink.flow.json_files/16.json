@@ -1,0 +1,19 @@
+{
+	"title" : "Timing Analyzer||Slow 1100mV 0C Model||Slow 1100mV 0C Model Fmax Summary",
+	"data" : {
+		"data" : [
+			{
+				"0" : "52.3 MHz",
+				"1" : "52.3 MHz",
+				"2" : "altera_reserved_tck",
+				"3" : ""
+			},
+			{
+				"0" : "110.34 MHz",
+				"1" : "110.34 MHz",
+				"2" : "clk",
+				"3" : ""
+			}
+		]
+	}
+}

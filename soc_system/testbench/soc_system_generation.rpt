@@ -1,0 +1,380 @@
+Info: Starting: Create testbench Platform Designer system
+Info: /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system.ipx
+Info: qsys-generate /home/khyam/Downloads/qsys/jtag_master/soc_system.qsys --testbench=STANDARD --output-directory=/home/khyam/Downloads/qsys/jtag_master --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading jtag_master/soc_system.qsys
+Progress: Reading input file
+Progress: Adding button_pio [altera_avalon_pio 18.1]
+Progress: Parameterizing module button_pio
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding led_pio [altera_avalon_pio 18.1]
+Progress: Parameterizing module led_pio
+Progress: Adding master_0 [altera_jtag_avalon_master 18.1]
+Progress: Parameterizing module master_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding ocram_16b [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module ocram_16b
+Progress: Adding ocram_64K [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module ocram_64K
+Progress: Adding switch_pio [altera_avalon_pio 18.1]
+Progress: Parameterizing module switch_pio
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: soc_system.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: soc_system.switch_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: soc_system.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: qsys-generate succeeded.
+Info: Loading IP catalog for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (2) searching /tools/intelfpga_18.1/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index /tools/intelfpga_18.1/quartus/sopc_builder/bin/root_components.ipx
+Info: /tools/intelfpga_18.1/quartus/sopc_builder/bin/root_components.ipx: Loading now from components.ipx
+Info: Reading index /tools/intelfpga_18.1/quartus/sopc_builder/bin/ip_component_categories.ipx
+Info: /tools/intelfpga_18.1/quartus/sopc_builder/bin/ip_component_categories.ipx described 0 plugins, 0 paths, in 0.00 seconds
+Info: /tools/intelfpga_18.1/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.00 seconds
+Info: /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system.ipx
+Progress: Loading jtag_master/soc_system.qsys
+Info: /home/khyam/Downloads/qsys/jtag_master/* matched 23 files in 0.00 seconds
+Info: /home/khyam/Downloads/qsys/jtag_master/ip/**/* matched 0 files in 0.00 seconds
+Info: /home/khyam/Downloads/qsys/jtag_master/*/* matched 386 files in 0.00 seconds
+Info: /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system.ipx described 0 plugins, 3 paths, in 0.00 seconds
+Info: /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/* matched 4 files in 0.00 seconds
+Info: /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/*/* matched 0 files in 0.00 seconds
+Info: /home/khyam/.altera.quartus/ip/18.1/**/* matched 0 files in 0.00 seconds
+Info: /tools/intelfpga_18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
+Info: /tools/intelfpga_18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
+Info: /tools/intelfpga_18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
+Info: Reading index /tools/intelfpga_18.1/ip/altera/up.ipx
+Info: /tools/intelfpga_18.1/ip/altera/up.ipx described 3 plugins, 0 paths, in 0.00 seconds
+Info: Reading index /tools/intelfpga_18.1/ip/altera/altera_components.ipx
+Info: /tools/intelfpga_18.1/ip/altera/altera_components.ipx described 2035 plugins, 0 paths, in 0.11 seconds
+Info: /tools/intelfpga_18.1/ip/**/* matched 140 files in 0.11 seconds
+Info: /tools/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index /tools/intelfpga_18.1/quartus/sopc_builder/builtin.ipx
+Info: /tools/intelfpga_18.1/quartus/sopc_builder/builtin.ipx described 83 plugins, 0 paths, in 0.00 seconds
+Info: /tools/intelfpga_18.1/quartus/sopc_builder/**/* matched 9 files in 0.00 seconds
+Info: Reading index /tools/intelfpga_18.1/quartus/common/librarian/factories/index.ipx
+Info: /tools/intelfpga_18.1/quartus/common/librarian/factories/index.ipx described 151 plugins, 0 paths, in 0.01 seconds
+Info: /tools/intelfpga_18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
+Info: /tools/intelfpga_18.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: /tools/intelfpga_18.1/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.13 seconds
+Info: /tools/intelfpga_18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.13 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Running script /tools/intelfpga_18.1/quartus/sopc_builder/bin/tbgen.tcl
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: soc_system
+Info: TB_Gen: System design is: soc_system
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property button_pio EXPORT_OF
+Info: get_instance_property button_pio CLASS_NAME
+Info: get_instance_assignment button_pio testbench.partner.map.external_connection
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in
+Info: get_interface_property led_pio EXPORT_OF
+Info: get_instance_property led_pio CLASS_NAME
+Info: get_instance_assignment led_pio testbench.partner.map.external_connection
+Info: get_interface_property reset EXPORT_OF
+Info: get_instance_property clk_0 CLASS_NAME
+Info: get_instance_assignment clk_0 testbench.partner.map.clk_in_reset
+Info: get_interface_property switch_pio EXPORT_OF
+Info: get_instance_property switch_pio CLASS_NAME
+Info: get_instance_assignment switch_pio testbench.partner.map.external_connection
+Info: send_message Info TB_Gen: Creating testbench system : soc_system_tb with all standard BFMs
+Info: TB_Gen: Creating testbench system : soc_system_tb with all standard BFMs
+Info: create_system soc_system_tb
+Info: add_instance soc_system_inst soc_system 
+Info: set_use_testbench_naming_pattern true soc_system
+Info: get_instance_interfaces soc_system_inst
+Info: get_instance_interface_property soc_system_inst button_pio CLASS_NAME
+Info: get_instance_interface_property soc_system_inst clk CLASS_NAME
+Info: get_instance_interface_property soc_system_inst led_pio CLASS_NAME
+Info: get_instance_interface_property soc_system_inst reset CLASS_NAME
+Info: get_instance_interface_property soc_system_inst switch_pio CLASS_NAME
+Info: get_instance_interface_property soc_system_inst clk CLASS_NAME
+Info: send_message Info TB_Gen: clock_sink found: clk
+Info: TB_Gen: clock_sink found: clk
+Info: get_instance_interface_property soc_system_inst clk CLASS_NAME
+Info: add_instance soc_system_inst_clk_bfm altera_avalon_clock_source 
+Info: get_instance_property soc_system_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst clk clockRate
+Info: set_instance_parameter_value soc_system_inst_clk_bfm CLOCK_RATE 50000000.0
+Info: set_instance_parameter_value soc_system_inst_clk_bfm CLOCK_UNIT 1
+Info: get_instance_property soc_system_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_property soc_system_inst clk CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_clk_bfm
+Info: get_instance_interface_property soc_system_inst_clk_bfm clk CLASS_NAME
+Info: add_connection soc_system_inst_clk_bfm.clk soc_system_inst.clk
+Info: get_instance_interface_property soc_system_inst reset CLASS_NAME
+Info: send_message Info TB_Gen: reset_sink found: reset
+Info: TB_Gen: reset_sink found: reset
+Info: get_instance_interface_property soc_system_inst reset CLASS_NAME
+Info: add_instance soc_system_inst_reset_bfm altera_avalon_reset_source 
+Info: get_instance_property soc_system_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_ports soc_system_inst reset
+Info: get_instance_interface_port_property soc_system_inst reset reset_reset_n ROLE
+Info: get_instance_interface_port_property soc_system_inst reset reset_reset_n ROLE
+Info: set_instance_parameter_value soc_system_inst_reset_bfm ASSERT_HIGH_RESET 0
+Info: set_instance_parameter_value soc_system_inst_reset_bfm INITIAL_RESET_CYCLES 50
+Info: get_instance_property soc_system_inst_reset_bfm CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_reset_bfm
+Info: get_instance_interface_property soc_system_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property soc_system_inst_reset_bfm reset CLASS_NAME
+Info: get_instance_property soc_system_inst_reset_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst reset associatedClock
+Info: get_instance_interfaces soc_system_inst_clk_bfm
+Info: get_instance_interface_property soc_system_inst_clk_bfm clk CLASS_NAME
+Info: send_message Warning TB_Gen: soc_system_inst_reset_bfm is not associated to any clock; connecting soc_system_inst_reset_bfm to 'soc_system_inst_clk_bfm.clk'
+Warning: TB_Gen: soc_system_inst_reset_bfm is not associated to any clock; connecting soc_system_inst_reset_bfm to 'soc_system_inst_clk_bfm.clk'
+Info: add_connection soc_system_inst_clk_bfm.clk soc_system_inst_reset_bfm.clk
+Info: get_instance_interface_property soc_system_inst reset CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_reset_bfm
+Info: get_instance_interface_property soc_system_inst_reset_bfm clk CLASS_NAME
+Info: get_instance_interface_property soc_system_inst_reset_bfm reset CLASS_NAME
+Info: add_connection soc_system_inst_reset_bfm.reset soc_system_inst.reset
+Info: get_instance_interface_property soc_system_inst button_pio CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: button_pio
+Info: TB_Gen: conduit_end found: button_pio
+Info: get_instance_interface_property soc_system_inst button_pio CLASS_NAME
+Info: add_instance soc_system_inst_button_pio_bfm altera_conduit_bfm 
+Info: get_instance_property soc_system_inst_button_pio_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst button_pio associatedClock
+Info: get_instance_interface_parameter_value soc_system_inst button_pio associatedReset
+Info: get_instance_interface_ports soc_system_inst button_pio
+Info: get_instance_interface_port_property soc_system_inst button_pio button_pio_export ROLE
+Info: get_instance_interface_port_property soc_system_inst button_pio button_pio_export WIDTH
+Info: get_instance_interface_port_property soc_system_inst button_pio button_pio_export DIRECTION
+Info: set_instance_parameter_value soc_system_inst_button_pio_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value soc_system_inst_button_pio_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value soc_system_inst_button_pio_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value soc_system_inst_button_pio_bfm SIGNAL_WIDTHS 4
+Info: set_instance_parameter_value soc_system_inst_button_pio_bfm SIGNAL_DIRECTIONS output
+Info: get_instance_property soc_system_inst_button_pio_bfm CLASS_NAME
+Info: get_instance_interface_property soc_system_inst button_pio CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_button_pio_bfm
+Info: get_instance_interface_property soc_system_inst_button_pio_bfm conduit CLASS_NAME
+Info: add_connection soc_system_inst_button_pio_bfm.conduit soc_system_inst.button_pio
+Info: get_instance_interface_property soc_system_inst led_pio CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: led_pio
+Info: TB_Gen: conduit_end found: led_pio
+Info: get_instance_interface_property soc_system_inst led_pio CLASS_NAME
+Info: add_instance soc_system_inst_led_pio_bfm altera_conduit_bfm 
+Info: get_instance_property soc_system_inst_led_pio_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst led_pio associatedClock
+Info: get_instance_interface_parameter_value soc_system_inst led_pio associatedReset
+Info: get_instance_interface_ports soc_system_inst led_pio
+Info: get_instance_interface_port_property soc_system_inst led_pio led_pio_export ROLE
+Info: get_instance_interface_port_property soc_system_inst led_pio led_pio_export WIDTH
+Info: get_instance_interface_port_property soc_system_inst led_pio led_pio_export DIRECTION
+Info: set_instance_parameter_value soc_system_inst_led_pio_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value soc_system_inst_led_pio_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value soc_system_inst_led_pio_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value soc_system_inst_led_pio_bfm SIGNAL_WIDTHS 4
+Info: set_instance_parameter_value soc_system_inst_led_pio_bfm SIGNAL_DIRECTIONS input
+Info: get_instance_property soc_system_inst_led_pio_bfm CLASS_NAME
+Info: get_instance_interface_property soc_system_inst led_pio CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_led_pio_bfm
+Info: get_instance_interface_property soc_system_inst_led_pio_bfm conduit CLASS_NAME
+Info: add_connection soc_system_inst_led_pio_bfm.conduit soc_system_inst.led_pio
+Info: get_instance_interface_property soc_system_inst switch_pio CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: switch_pio
+Info: TB_Gen: conduit_end found: switch_pio
+Info: get_instance_interface_property soc_system_inst switch_pio CLASS_NAME
+Info: add_instance soc_system_inst_switch_pio_bfm altera_conduit_bfm 
+Info: get_instance_property soc_system_inst_switch_pio_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value soc_system_inst switch_pio associatedClock
+Info: get_instance_interface_parameter_value soc_system_inst switch_pio associatedReset
+Info: get_instance_interface_ports soc_system_inst switch_pio
+Info: get_instance_interface_port_property soc_system_inst switch_pio switch_pio_export ROLE
+Info: get_instance_interface_port_property soc_system_inst switch_pio switch_pio_export WIDTH
+Info: get_instance_interface_port_property soc_system_inst switch_pio switch_pio_export DIRECTION
+Info: set_instance_parameter_value soc_system_inst_switch_pio_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value soc_system_inst_switch_pio_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value soc_system_inst_switch_pio_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value soc_system_inst_switch_pio_bfm SIGNAL_WIDTHS 3
+Info: set_instance_parameter_value soc_system_inst_switch_pio_bfm SIGNAL_DIRECTIONS output
+Info: get_instance_property soc_system_inst_switch_pio_bfm CLASS_NAME
+Info: get_instance_interface_property soc_system_inst switch_pio CLASS_NAME
+Info: get_instance_interfaces soc_system_inst_switch_pio_bfm
+Info: get_instance_interface_property soc_system_inst_switch_pio_bfm conduit CLASS_NAME
+Info: add_connection soc_system_inst_switch_pio_bfm.conduit soc_system_inst.switch_pio
+Info: send_message Info TB_Gen: Saving testbench system: soc_system_tb.qsys
+Info: TB_Gen: Saving testbench system: soc_system_tb.qsys
+Info: save_system soc_system_tb.qsys
+Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
+Info: TB_Gen: TBGEN SUCCESSFUL
+Info: Testbench system: /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb.qsys
+Info: Done
+Info: qsys-generate /home/khyam/Downloads/qsys/jtag_master/soc_system.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=STANDARD --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=/home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb/simulation --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading testbench/soc_system_tb.qsys
+Progress: Reading input file
+Progress: Adding soc_system_inst [soc_system 1.0]
+Progress: Parameterizing module soc_system_inst
+Progress: Adding soc_system_inst_button_pio_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module soc_system_inst_button_pio_bfm
+Progress: Adding soc_system_inst_clk_bfm [altera_avalon_clock_source 18.1]
+Progress: Parameterizing module soc_system_inst_clk_bfm
+Progress: Adding soc_system_inst_led_pio_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module soc_system_inst_led_pio_bfm
+Progress: Adding soc_system_inst_reset_bfm [altera_avalon_reset_source 18.1]
+Progress: Parameterizing module soc_system_inst_reset_bfm
+Progress: Adding soc_system_inst_switch_pio_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module soc_system_inst_switch_pio_bfm
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: soc_system_tb.soc_system_inst.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system_tb.soc_system_inst.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: soc_system_tb.soc_system_inst.switch_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: soc_system_tb.soc_system_inst.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: soc_system_tb.soc_system_inst.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: soc_system_tb.soc_system_inst_clk_bfm: Elaborate: altera_clock_source
+Info: soc_system_tb.soc_system_inst_clk_bfm:            $Revision: #1 $
+Info: soc_system_tb.soc_system_inst_clk_bfm:            $Date: 2018/07/18 $
+Info: soc_system_tb.soc_system_inst_reset_bfm: Elaborate: altera_reset_source
+Info: soc_system_tb.soc_system_inst_reset_bfm:            $Revision: #1 $
+Info: soc_system_tb.soc_system_inst_reset_bfm:            $Date: 2018/07/18 $
+Info: soc_system_tb.soc_system_inst_reset_bfm: Reset is negatively asserted.
+Info: soc_system_tb: Generating soc_system_tb "soc_system_tb" for SIM_VERILOG
+Info: soc_system_inst: "soc_system_tb" instantiated soc_system "soc_system_inst"
+Info: soc_system_inst_button_pio_bfm: "soc_system_tb" instantiated altera_conduit_bfm "soc_system_inst_button_pio_bfm"
+Info: soc_system_inst_clk_bfm: "soc_system_tb" instantiated altera_avalon_clock_source "soc_system_inst_clk_bfm"
+Info: Reusing file /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb/simulation/submodules/verbosity_pkg.sv
+Info: soc_system_inst_led_pio_bfm: "soc_system_tb" instantiated altera_conduit_bfm "soc_system_inst_led_pio_bfm"
+Info: Reusing file /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb/simulation/submodules/verbosity_pkg.sv
+Info: soc_system_inst_reset_bfm: "soc_system_tb" instantiated altera_avalon_reset_source "soc_system_inst_reset_bfm"
+Info: Reusing file /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb/simulation/submodules/verbosity_pkg.sv
+Info: soc_system_inst_switch_pio_bfm: "soc_system_tb" instantiated altera_conduit_bfm "soc_system_inst_switch_pio_bfm"
+Info: Reusing file /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb/simulation/submodules/verbosity_pkg.sv
+Info: button_pio: Starting RTL generation for module 'soc_system_button_pio'
+Info: button_pio:   Generation command is [exec /tools/intelfpga_18.1/quartus/linux64/perl/bin/perl -I /tools/intelfpga_18.1/quartus/linux64/perl/lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/europa -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/perl_lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/common -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_button_pio --dir=/tmp/alt8709_1348313552514177754.dir/0083_button_pio_gen/ --quartus_dir=/tools/intelfpga_18.1/quartus --verilog --config=/tmp/alt8709_1348313552514177754.dir/0083_button_pio_gen//soc_system_button_pio_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8709_1348313552514177754.dir/0083_button_pio_gen/  ]
+Info: button_pio: Done RTL generation for module 'soc_system_button_pio'
+Info: button_pio: "soc_system_inst" instantiated altera_avalon_pio "button_pio"
+Info: jtag_uart_0: Starting RTL generation for module 'soc_system_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec /tools/intelfpga_18.1/quartus/linux64/perl/bin/perl -I /tools/intelfpga_18.1/quartus/linux64/perl/lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/europa -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/perl_lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/common -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart_0 --dir=/tmp/alt8709_1348313552514177754.dir/0084_jtag_uart_0_gen/ --quartus_dir=/tools/intelfpga_18.1/quartus --verilog --config=/tmp/alt8709_1348313552514177754.dir/0084_jtag_uart_0_gen//soc_system_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8709_1348313552514177754.dir/0084_jtag_uart_0_gen/  ]
+Info: jtag_uart_0: Done RTL generation for module 'soc_system_jtag_uart_0'
+Info: jtag_uart_0: "soc_system_inst" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: led_pio: Starting RTL generation for module 'soc_system_led_pio'
+Info: led_pio:   Generation command is [exec /tools/intelfpga_18.1/quartus/linux64/perl/bin/perl -I /tools/intelfpga_18.1/quartus/linux64/perl/lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/europa -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/perl_lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/common -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_led_pio --dir=/tmp/alt8709_1348313552514177754.dir/0085_led_pio_gen/ --quartus_dir=/tools/intelfpga_18.1/quartus --verilog --config=/tmp/alt8709_1348313552514177754.dir/0085_led_pio_gen//soc_system_led_pio_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8709_1348313552514177754.dir/0085_led_pio_gen/  ]
+Info: led_pio: Done RTL generation for module 'soc_system_led_pio'
+Info: led_pio: "soc_system_inst" instantiated altera_avalon_pio "led_pio"
+Info: master_0: "soc_system_inst" instantiated altera_jtag_avalon_master "master_0"
+Info: nios2_gen2_0: "soc_system_inst" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: ocram_16b: Starting RTL generation for module 'soc_system_ocram_16b'
+Info: ocram_16b:   Generation command is [exec /tools/intelfpga_18.1/quartus/linux64/perl/bin/perl -I /tools/intelfpga_18.1/quartus/linux64/perl/lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/europa -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/perl_lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/common -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_ocram_16b --dir=/tmp/alt8709_1348313552514177754.dir/0086_ocram_16b_gen/ --quartus_dir=/tools/intelfpga_18.1/quartus --verilog --config=/tmp/alt8709_1348313552514177754.dir/0086_ocram_16b_gen//soc_system_ocram_16b_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8709_1348313552514177754.dir/0086_ocram_16b_gen/  ]
+Info: ocram_16b: Done RTL generation for module 'soc_system_ocram_16b'
+Info: ocram_16b: "soc_system_inst" instantiated altera_avalon_onchip_memory2 "ocram_16b"
+Info: ocram_64K: Starting RTL generation for module 'soc_system_ocram_64K'
+Info: ocram_64K:   Generation command is [exec /tools/intelfpga_18.1/quartus/linux64/perl/bin/perl -I /tools/intelfpga_18.1/quartus/linux64/perl/lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/europa -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/perl_lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/common -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_ocram_64K --dir=/tmp/alt8709_1348313552514177754.dir/0087_ocram_64K_gen/ --quartus_dir=/tools/intelfpga_18.1/quartus --verilog --config=/tmp/alt8709_1348313552514177754.dir/0087_ocram_64K_gen//soc_system_ocram_64K_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8709_1348313552514177754.dir/0087_ocram_64K_gen/  ]
+Info: ocram_64K: Done RTL generation for module 'soc_system_ocram_64K'
+Info: ocram_64K: "soc_system_inst" instantiated altera_avalon_onchip_memory2 "ocram_64K"
+Info: switch_pio: Starting RTL generation for module 'soc_system_switch_pio'
+Info: switch_pio:   Generation command is [exec /tools/intelfpga_18.1/quartus/linux64/perl/bin/perl -I /tools/intelfpga_18.1/quartus/linux64/perl/lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/europa -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/perl_lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/common -I /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /tools/intelfpga_18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=soc_system_switch_pio --dir=/tmp/alt8709_1348313552514177754.dir/0088_switch_pio_gen/ --quartus_dir=/tools/intelfpga_18.1/quartus --verilog --config=/tmp/alt8709_1348313552514177754.dir/0088_switch_pio_gen//soc_system_switch_pio_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8709_1348313552514177754.dir/0088_switch_pio_gen/  ]
+Info: switch_pio: Done RTL generation for module 'soc_system_switch_pio'
+Info: switch_pio: "soc_system_inst" instantiated altera_avalon_pio "switch_pio"
+Info: sysid_qsys_0: "soc_system_inst" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "soc_system_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "soc_system_inst" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "soc_system_inst" instantiated altera_reset_controller "rst_controller"
+Info: jtag_phy_embedded_in_jtag_master: "master_0" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "master_0" instantiated timing_adapter "timing_adt"
+Info: fifo: "master_0" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "master_0" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "master_0" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "master_0" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "master_0" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "master_0" instantiated channel_adapter "p2b_adapter"
+Info: cpu: Starting RTL generation for module 'soc_system_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec /tools/intelfpga_18.1/quartus/linux64//eperlcmd -I /tools/intelfpga_18.1/quartus/linux64//perl/lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/europa -I /tools/intelfpga_18.1/quartus/sopc_builder/bin/perl_lib -I /tools/intelfpga_18.1/quartus/sopc_builder/bin -I /tools/intelfpga_18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /tools/intelfpga_18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /tools/intelfpga_18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /tools/intelfpga_18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /tools/intelfpga_18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=soc_system_nios2_gen2_0_cpu --dir=/tmp/alt8709_1348313552514177754.dir/0100_cpu_gen/ --quartus_bindir=/tools/intelfpga_18.1/quartus/linux64/ --verilog --config=/tmp/alt8709_1348313552514177754.dir/0100_cpu_gen//soc_system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt8709_1348313552514177754.dir/0100_cpu_gen/  ]
+Info: cpu: # 2021.03.23 17:14:03 (*) Starting Nios II generation
+Info: cpu: # 2021.03.23 17:14:03 (*)   Checking for plaintext license.
+Info: cpu: # 2021.03.23 17:14:03 (*)   Couldn't query license setup in Quartus directory /tools/intelfpga_18.1/quartus/linux64/
+Info: cpu: # 2021.03.23 17:14:03 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2021.03.23 17:14:03 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2021.03.23 17:14:03 (*)   Plaintext license not found.
+Info: cpu: # 2021.03.23 17:14:03 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2021.03.23 17:14:03 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2021.03.23 17:14:03 (*)   Creating all objects for CPU
+Info: cpu: # 2021.03.23 17:14:04 (*)   Creating '/tmp/alt8709_1348313552514177754.dir/0100_cpu_gen//soc_system_nios2_gen2_0_cpu_nios2_waves.do'
+Info: cpu: # 2021.03.23 17:14:04 (*)   Generating RTL from CPU objects
+Info: cpu: # 2021.03.23 17:14:04 (*)   Creating plain-text RTL
+Info: cpu: # 2021.03.23 17:14:05 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'soc_system_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: router_008: "mm_interconnect_0" instantiated altera_merlin_router "router_008"
+Info: router_010: "mm_interconnect_0" instantiated altera_merlin_router "router_010"
+Info: master_0_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "master_0_master_limiter"
+Info: Reusing file /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb/simulation/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_005: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_005"
+Info: Reusing file /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/soc_system_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: soc_system_tb: Done "soc_system_tb" with 52 modules, 85 files
+Info: qsys-generate succeeded.
+Info: sim-script-gen --spd=/home/khyam/Downloads/qsys/jtag_master/soc_system_tb.spd --output-directory=/home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/khyam/Downloads/qsys/jtag_master/soc_system_tb.spd --output-directory=/home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	52 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/khyam/Downloads/qsys/jtag_master/soc_system/testbench/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create testbench Platform Designer system
