@@ -7,198 +7,198 @@
 
 `timescale 1 ps / 1 ps
 module soc_system_mm_interconnect_0 (
-		input  wire [0:0]  VexRiscvAxi4_0_dBusaxi_awid,                      //                     VexRiscvAxi4_0_dBusaxi.awid
-		input  wire [31:0] VexRiscvAxi4_0_dBusaxi_awaddr,                    //                                           .awaddr
-		input  wire [7:0]  VexRiscvAxi4_0_dBusaxi_awlen,                     //                                           .awlen
-		input  wire [2:0]  VexRiscvAxi4_0_dBusaxi_awsize,                    //                                           .awsize
-		input  wire [1:0]  VexRiscvAxi4_0_dBusaxi_awburst,                   //                                           .awburst
-		input  wire [0:0]  VexRiscvAxi4_0_dBusaxi_awlock,                    //                                           .awlock
-		input  wire [3:0]  VexRiscvAxi4_0_dBusaxi_awcache,                   //                                           .awcache
-		input  wire [2:0]  VexRiscvAxi4_0_dBusaxi_awprot,                    //                                           .awprot
-		input  wire [3:0]  VexRiscvAxi4_0_dBusaxi_awqos,                     //                                           .awqos
-		input  wire [3:0]  VexRiscvAxi4_0_dBusaxi_awregion,                  //                                           .awregion
-		input  wire        VexRiscvAxi4_0_dBusaxi_awvalid,                   //                                           .awvalid
-		output wire        VexRiscvAxi4_0_dBusaxi_awready,                   //                                           .awready
-		input  wire [31:0] VexRiscvAxi4_0_dBusaxi_wdata,                     //                                           .wdata
-		input  wire [3:0]  VexRiscvAxi4_0_dBusaxi_wstrb,                     //                                           .wstrb
-		input  wire        VexRiscvAxi4_0_dBusaxi_wlast,                     //                                           .wlast
-		input  wire        VexRiscvAxi4_0_dBusaxi_wvalid,                    //                                           .wvalid
-		output wire        VexRiscvAxi4_0_dBusaxi_wready,                    //                                           .wready
-		output wire [0:0]  VexRiscvAxi4_0_dBusaxi_bid,                       //                                           .bid
-		output wire [1:0]  VexRiscvAxi4_0_dBusaxi_bresp,                     //                                           .bresp
-		output wire        VexRiscvAxi4_0_dBusaxi_bvalid,                    //                                           .bvalid
-		input  wire        VexRiscvAxi4_0_dBusaxi_bready,                    //                                           .bready
-		input  wire [0:0]  VexRiscvAxi4_0_dBusaxi_arid,                      //                                           .arid
-		input  wire [31:0] VexRiscvAxi4_0_dBusaxi_araddr,                    //                                           .araddr
-		input  wire [7:0]  VexRiscvAxi4_0_dBusaxi_arlen,                     //                                           .arlen
-		input  wire [2:0]  VexRiscvAxi4_0_dBusaxi_arsize,                    //                                           .arsize
-		input  wire [1:0]  VexRiscvAxi4_0_dBusaxi_arburst,                   //                                           .arburst
-		input  wire [0:0]  VexRiscvAxi4_0_dBusaxi_arlock,                    //                                           .arlock
-		input  wire [3:0]  VexRiscvAxi4_0_dBusaxi_arcache,                   //                                           .arcache
-		input  wire [2:0]  VexRiscvAxi4_0_dBusaxi_arprot,                    //                                           .arprot
-		input  wire [3:0]  VexRiscvAxi4_0_dBusaxi_arqos,                     //                                           .arqos
-		input  wire [3:0]  VexRiscvAxi4_0_dBusaxi_arregion,                  //                                           .arregion
-		input  wire        VexRiscvAxi4_0_dBusaxi_arvalid,                   //                                           .arvalid
-		output wire        VexRiscvAxi4_0_dBusaxi_arready,                   //                                           .arready
-		output wire [0:0]  VexRiscvAxi4_0_dBusaxi_rid,                       //                                           .rid
-		output wire [31:0] VexRiscvAxi4_0_dBusaxi_rdata,                     //                                           .rdata
-		output wire [1:0]  VexRiscvAxi4_0_dBusaxi_rresp,                     //                                           .rresp
-		output wire        VexRiscvAxi4_0_dBusaxi_rlast,                     //                                           .rlast
-		output wire        VexRiscvAxi4_0_dBusaxi_rvalid,                    //                                           .rvalid
-		input  wire        VexRiscvAxi4_0_dBusaxi_rready,                    //                                           .rready
-		input  wire [0:0]  VexRiscvAxi4_0_iBusaxi_awid,                      //                     VexRiscvAxi4_0_iBusaxi.awid
-		input  wire [31:0] VexRiscvAxi4_0_iBusaxi_awaddr,                    //                                           .awaddr
-		input  wire [0:0]  VexRiscvAxi4_0_iBusaxi_awlock,                    //                                           .awlock
-		input  wire [2:0]  VexRiscvAxi4_0_iBusaxi_awprot,                    //                                           .awprot
-		input  wire        VexRiscvAxi4_0_iBusaxi_awvalid,                   //                                           .awvalid
-		output wire        VexRiscvAxi4_0_iBusaxi_awready,                   //                                           .awready
-		input  wire [31:0] VexRiscvAxi4_0_iBusaxi_wdata,                     //                                           .wdata
-		input  wire        VexRiscvAxi4_0_iBusaxi_wlast,                     //                                           .wlast
-		input  wire        VexRiscvAxi4_0_iBusaxi_wvalid,                    //                                           .wvalid
-		output wire        VexRiscvAxi4_0_iBusaxi_wready,                    //                                           .wready
-		output wire [0:0]  VexRiscvAxi4_0_iBusaxi_bid,                       //                                           .bid
-		output wire        VexRiscvAxi4_0_iBusaxi_bvalid,                    //                                           .bvalid
-		input  wire        VexRiscvAxi4_0_iBusaxi_bready,                    //                                           .bready
-		input  wire [0:0]  VexRiscvAxi4_0_iBusaxi_arid,                      //                                           .arid
-		input  wire [31:0] VexRiscvAxi4_0_iBusaxi_araddr,                    //                                           .araddr
-		input  wire [7:0]  VexRiscvAxi4_0_iBusaxi_arlen,                     //                                           .arlen
-		input  wire [2:0]  VexRiscvAxi4_0_iBusaxi_arsize,                    //                                           .arsize
-		input  wire [1:0]  VexRiscvAxi4_0_iBusaxi_arburst,                   //                                           .arburst
-		input  wire [0:0]  VexRiscvAxi4_0_iBusaxi_arlock,                    //                                           .arlock
-		input  wire [3:0]  VexRiscvAxi4_0_iBusaxi_arcache,                   //                                           .arcache
-		input  wire [2:0]  VexRiscvAxi4_0_iBusaxi_arprot,                    //                                           .arprot
-		input  wire [3:0]  VexRiscvAxi4_0_iBusaxi_arqos,                     //                                           .arqos
-		input  wire [3:0]  VexRiscvAxi4_0_iBusaxi_arregion,                  //                                           .arregion
-		input  wire        VexRiscvAxi4_0_iBusaxi_arvalid,                   //                                           .arvalid
-		output wire        VexRiscvAxi4_0_iBusaxi_arready,                   //                                           .arready
-		output wire [0:0]  VexRiscvAxi4_0_iBusaxi_rid,                       //                                           .rid
-		output wire [31:0] VexRiscvAxi4_0_iBusaxi_rdata,                     //                                           .rdata
-		output wire [1:0]  VexRiscvAxi4_0_iBusaxi_rresp,                     //                                           .rresp
-		output wire        VexRiscvAxi4_0_iBusaxi_rlast,                     //                                           .rlast
-		output wire        VexRiscvAxi4_0_iBusaxi_rvalid,                    //                                           .rvalid
-		input  wire        VexRiscvAxi4_0_iBusaxi_rready,                    //                                           .rready
-		input  wire        clk_0_clk_clk,                                    //                                  clk_0_clk.clk
-		input  wire        master_0_clk_reset_reset_bridge_in_reset_reset,   //   master_0_clk_reset_reset_bridge_in_reset.reset
-		input  wire        nios2_gen2_0_reset_reset_bridge_in_reset_reset,   //   nios2_gen2_0_reset_reset_bridge_in_reset.reset
-		input  wire        VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset, // VexRiscvAxi4_0_reset_reset_bridge_in_reset.reset
-		input  wire [31:0] master_0_master_address,                          //                            master_0_master.address
-		output wire        master_0_master_waitrequest,                      //                                           .waitrequest
-		input  wire [3:0]  master_0_master_byteenable,                       //                                           .byteenable
-		input  wire        master_0_master_read,                             //                                           .read
-		output wire [31:0] master_0_master_readdata,                         //                                           .readdata
-		output wire        master_0_master_readdatavalid,                    //                                           .readdatavalid
-		input  wire        master_0_master_write,                            //                                           .write
-		input  wire [31:0] master_0_master_writedata,                        //                                           .writedata
-		input  wire [16:0] nios2_gen2_0_data_master_address,                 //                   nios2_gen2_0_data_master.address
-		output wire        nios2_gen2_0_data_master_waitrequest,             //                                           .waitrequest
-		input  wire [3:0]  nios2_gen2_0_data_master_byteenable,              //                                           .byteenable
-		input  wire        nios2_gen2_0_data_master_read,                    //                                           .read
-		output wire [31:0] nios2_gen2_0_data_master_readdata,                //                                           .readdata
-		input  wire        nios2_gen2_0_data_master_write,                   //                                           .write
-		input  wire [31:0] nios2_gen2_0_data_master_writedata,               //                                           .writedata
-		input  wire        nios2_gen2_0_data_master_debugaccess,             //                                           .debugaccess
-		input  wire [16:0] nios2_gen2_0_instruction_master_address,          //            nios2_gen2_0_instruction_master.address
-		output wire        nios2_gen2_0_instruction_master_waitrequest,      //                                           .waitrequest
-		input  wire        nios2_gen2_0_instruction_master_read,             //                                           .read
-		output wire [31:0] nios2_gen2_0_instruction_master_readdata,         //                                           .readdata
-		output wire [1:0]  button_pio_s1_address,                            //                              button_pio_s1.address
-		input  wire [31:0] button_pio_s1_readdata,                           //                                           .readdata
-		output wire [0:0]  jtag_uart_0_avalon_jtag_slave_address,            //              jtag_uart_0_avalon_jtag_slave.address
-		output wire        jtag_uart_0_avalon_jtag_slave_write,              //                                           .write
-		output wire        jtag_uart_0_avalon_jtag_slave_read,               //                                           .read
-		input  wire [31:0] jtag_uart_0_avalon_jtag_slave_readdata,           //                                           .readdata
-		output wire [31:0] jtag_uart_0_avalon_jtag_slave_writedata,          //                                           .writedata
-		input  wire        jtag_uart_0_avalon_jtag_slave_waitrequest,        //                                           .waitrequest
-		output wire        jtag_uart_0_avalon_jtag_slave_chipselect,         //                                           .chipselect
-		output wire [1:0]  led_pio_s1_address,                               //                                 led_pio_s1.address
-		output wire        led_pio_s1_write,                                 //                                           .write
-		input  wire [31:0] led_pio_s1_readdata,                              //                                           .readdata
-		output wire [31:0] led_pio_s1_writedata,                             //                                           .writedata
-		output wire        led_pio_s1_chipselect,                            //                                           .chipselect
-		output wire [8:0]  nios2_gen2_0_debug_mem_slave_address,             //               nios2_gen2_0_debug_mem_slave.address
-		output wire        nios2_gen2_0_debug_mem_slave_write,               //                                           .write
-		output wire        nios2_gen2_0_debug_mem_slave_read,                //                                           .read
-		input  wire [31:0] nios2_gen2_0_debug_mem_slave_readdata,            //                                           .readdata
-		output wire [31:0] nios2_gen2_0_debug_mem_slave_writedata,           //                                           .writedata
-		output wire [3:0]  nios2_gen2_0_debug_mem_slave_byteenable,          //                                           .byteenable
-		input  wire        nios2_gen2_0_debug_mem_slave_waitrequest,         //                                           .waitrequest
-		output wire        nios2_gen2_0_debug_mem_slave_debugaccess,         //                                           .debugaccess
-		output wire [11:0] ocram_16b_s1_address,                             //                               ocram_16b_s1.address
-		output wire        ocram_16b_s1_write,                               //                                           .write
-		input  wire [31:0] ocram_16b_s1_readdata,                            //                                           .readdata
-		output wire [31:0] ocram_16b_s1_writedata,                           //                                           .writedata
-		output wire [3:0]  ocram_16b_s1_byteenable,                          //                                           .byteenable
-		output wire        ocram_16b_s1_chipselect,                          //                                           .chipselect
-		output wire        ocram_16b_s1_clken,                               //                                           .clken
-		output wire [13:0] ocram_64K_s1_address,                             //                               ocram_64K_s1.address
-		output wire        ocram_64K_s1_write,                               //                                           .write
-		input  wire [31:0] ocram_64K_s1_readdata,                            //                                           .readdata
-		output wire [31:0] ocram_64K_s1_writedata,                           //                                           .writedata
-		output wire [3:0]  ocram_64K_s1_byteenable,                          //                                           .byteenable
-		output wire        ocram_64K_s1_chipselect,                          //                                           .chipselect
-		output wire        ocram_64K_s1_clken,                               //                                           .clken
-		output wire [1:0]  switch_pio_s1_address,                            //                              switch_pio_s1.address
-		input  wire [31:0] switch_pio_s1_readdata,                           //                                           .readdata
-		output wire [0:0]  sysid_qsys_0_control_slave_address,               //                 sysid_qsys_0_control_slave.address
-		input  wire [31:0] sysid_qsys_0_control_slave_readdata               //                                           .readdata
+		input  wire [0:0]  VexRiscv_0_dBusaxi_awid,                        //                       VexRiscv_0_dBusaxi.awid
+		input  wire [31:0] VexRiscv_0_dBusaxi_awaddr,                      //                                         .awaddr
+		input  wire [7:0]  VexRiscv_0_dBusaxi_awlen,                       //                                         .awlen
+		input  wire [2:0]  VexRiscv_0_dBusaxi_awsize,                      //                                         .awsize
+		input  wire [1:0]  VexRiscv_0_dBusaxi_awburst,                     //                                         .awburst
+		input  wire [0:0]  VexRiscv_0_dBusaxi_awlock,                      //                                         .awlock
+		input  wire [3:0]  VexRiscv_0_dBusaxi_awcache,                     //                                         .awcache
+		input  wire [2:0]  VexRiscv_0_dBusaxi_awprot,                      //                                         .awprot
+		input  wire [3:0]  VexRiscv_0_dBusaxi_awqos,                       //                                         .awqos
+		input  wire [3:0]  VexRiscv_0_dBusaxi_awregion,                    //                                         .awregion
+		input  wire        VexRiscv_0_dBusaxi_awvalid,                     //                                         .awvalid
+		output wire        VexRiscv_0_dBusaxi_awready,                     //                                         .awready
+		input  wire [31:0] VexRiscv_0_dBusaxi_wdata,                       //                                         .wdata
+		input  wire [3:0]  VexRiscv_0_dBusaxi_wstrb,                       //                                         .wstrb
+		input  wire        VexRiscv_0_dBusaxi_wlast,                       //                                         .wlast
+		input  wire        VexRiscv_0_dBusaxi_wvalid,                      //                                         .wvalid
+		output wire        VexRiscv_0_dBusaxi_wready,                      //                                         .wready
+		output wire [0:0]  VexRiscv_0_dBusaxi_bid,                         //                                         .bid
+		output wire [1:0]  VexRiscv_0_dBusaxi_bresp,                       //                                         .bresp
+		output wire        VexRiscv_0_dBusaxi_bvalid,                      //                                         .bvalid
+		input  wire        VexRiscv_0_dBusaxi_bready,                      //                                         .bready
+		input  wire [0:0]  VexRiscv_0_dBusaxi_arid,                        //                                         .arid
+		input  wire [31:0] VexRiscv_0_dBusaxi_araddr,                      //                                         .araddr
+		input  wire [7:0]  VexRiscv_0_dBusaxi_arlen,                       //                                         .arlen
+		input  wire [2:0]  VexRiscv_0_dBusaxi_arsize,                      //                                         .arsize
+		input  wire [1:0]  VexRiscv_0_dBusaxi_arburst,                     //                                         .arburst
+		input  wire [0:0]  VexRiscv_0_dBusaxi_arlock,                      //                                         .arlock
+		input  wire [3:0]  VexRiscv_0_dBusaxi_arcache,                     //                                         .arcache
+		input  wire [2:0]  VexRiscv_0_dBusaxi_arprot,                      //                                         .arprot
+		input  wire [3:0]  VexRiscv_0_dBusaxi_arqos,                       //                                         .arqos
+		input  wire [3:0]  VexRiscv_0_dBusaxi_arregion,                    //                                         .arregion
+		input  wire        VexRiscv_0_dBusaxi_arvalid,                     //                                         .arvalid
+		output wire        VexRiscv_0_dBusaxi_arready,                     //                                         .arready
+		output wire [0:0]  VexRiscv_0_dBusaxi_rid,                         //                                         .rid
+		output wire [31:0] VexRiscv_0_dBusaxi_rdata,                       //                                         .rdata
+		output wire [1:0]  VexRiscv_0_dBusaxi_rresp,                       //                                         .rresp
+		output wire        VexRiscv_0_dBusaxi_rlast,                       //                                         .rlast
+		output wire        VexRiscv_0_dBusaxi_rvalid,                      //                                         .rvalid
+		input  wire        VexRiscv_0_dBusaxi_rready,                      //                                         .rready
+		input  wire [0:0]  VexRiscv_0_iBusaxi_awid,                        //                       VexRiscv_0_iBusaxi.awid
+		input  wire [31:0] VexRiscv_0_iBusaxi_awaddr,                      //                                         .awaddr
+		input  wire [0:0]  VexRiscv_0_iBusaxi_awlock,                      //                                         .awlock
+		input  wire [2:0]  VexRiscv_0_iBusaxi_awprot,                      //                                         .awprot
+		input  wire        VexRiscv_0_iBusaxi_awvalid,                     //                                         .awvalid
+		output wire        VexRiscv_0_iBusaxi_awready,                     //                                         .awready
+		input  wire [31:0] VexRiscv_0_iBusaxi_wdata,                       //                                         .wdata
+		input  wire        VexRiscv_0_iBusaxi_wlast,                       //                                         .wlast
+		input  wire        VexRiscv_0_iBusaxi_wvalid,                      //                                         .wvalid
+		output wire        VexRiscv_0_iBusaxi_wready,                      //                                         .wready
+		output wire [0:0]  VexRiscv_0_iBusaxi_bid,                         //                                         .bid
+		output wire        VexRiscv_0_iBusaxi_bvalid,                      //                                         .bvalid
+		input  wire        VexRiscv_0_iBusaxi_bready,                      //                                         .bready
+		input  wire [0:0]  VexRiscv_0_iBusaxi_arid,                        //                                         .arid
+		input  wire [31:0] VexRiscv_0_iBusaxi_araddr,                      //                                         .araddr
+		input  wire [7:0]  VexRiscv_0_iBusaxi_arlen,                       //                                         .arlen
+		input  wire [2:0]  VexRiscv_0_iBusaxi_arsize,                      //                                         .arsize
+		input  wire [1:0]  VexRiscv_0_iBusaxi_arburst,                     //                                         .arburst
+		input  wire [0:0]  VexRiscv_0_iBusaxi_arlock,                      //                                         .arlock
+		input  wire [3:0]  VexRiscv_0_iBusaxi_arcache,                     //                                         .arcache
+		input  wire [2:0]  VexRiscv_0_iBusaxi_arprot,                      //                                         .arprot
+		input  wire [3:0]  VexRiscv_0_iBusaxi_arqos,                       //                                         .arqos
+		input  wire [3:0]  VexRiscv_0_iBusaxi_arregion,                    //                                         .arregion
+		input  wire        VexRiscv_0_iBusaxi_arvalid,                     //                                         .arvalid
+		output wire        VexRiscv_0_iBusaxi_arready,                     //                                         .arready
+		output wire [0:0]  VexRiscv_0_iBusaxi_rid,                         //                                         .rid
+		output wire [31:0] VexRiscv_0_iBusaxi_rdata,                       //                                         .rdata
+		output wire [1:0]  VexRiscv_0_iBusaxi_rresp,                       //                                         .rresp
+		output wire        VexRiscv_0_iBusaxi_rlast,                       //                                         .rlast
+		output wire        VexRiscv_0_iBusaxi_rvalid,                      //                                         .rvalid
+		input  wire        VexRiscv_0_iBusaxi_rready,                      //                                         .rready
+		input  wire        clk_0_clk_clk,                                  //                                clk_0_clk.clk
+		input  wire        master_0_clk_reset_reset_bridge_in_reset_reset, // master_0_clk_reset_reset_bridge_in_reset.reset
+		input  wire        nios2_gen2_0_reset_reset_bridge_in_reset_reset, // nios2_gen2_0_reset_reset_bridge_in_reset.reset
+		input  wire        VexRiscv_0_reset_reset_bridge_in_reset_reset,   //   VexRiscv_0_reset_reset_bridge_in_reset.reset
+		input  wire [31:0] master_0_master_address,                        //                          master_0_master.address
+		output wire        master_0_master_waitrequest,                    //                                         .waitrequest
+		input  wire [3:0]  master_0_master_byteenable,                     //                                         .byteenable
+		input  wire        master_0_master_read,                           //                                         .read
+		output wire [31:0] master_0_master_readdata,                       //                                         .readdata
+		output wire        master_0_master_readdatavalid,                  //                                         .readdatavalid
+		input  wire        master_0_master_write,                          //                                         .write
+		input  wire [31:0] master_0_master_writedata,                      //                                         .writedata
+		input  wire [16:0] nios2_gen2_0_data_master_address,               //                 nios2_gen2_0_data_master.address
+		output wire        nios2_gen2_0_data_master_waitrequest,           //                                         .waitrequest
+		input  wire [3:0]  nios2_gen2_0_data_master_byteenable,            //                                         .byteenable
+		input  wire        nios2_gen2_0_data_master_read,                  //                                         .read
+		output wire [31:0] nios2_gen2_0_data_master_readdata,              //                                         .readdata
+		input  wire        nios2_gen2_0_data_master_write,                 //                                         .write
+		input  wire [31:0] nios2_gen2_0_data_master_writedata,             //                                         .writedata
+		input  wire        nios2_gen2_0_data_master_debugaccess,           //                                         .debugaccess
+		input  wire [16:0] nios2_gen2_0_instruction_master_address,        //          nios2_gen2_0_instruction_master.address
+		output wire        nios2_gen2_0_instruction_master_waitrequest,    //                                         .waitrequest
+		input  wire        nios2_gen2_0_instruction_master_read,           //                                         .read
+		output wire [31:0] nios2_gen2_0_instruction_master_readdata,       //                                         .readdata
+		output wire [1:0]  button_pio_s1_address,                          //                            button_pio_s1.address
+		input  wire [31:0] button_pio_s1_readdata,                         //                                         .readdata
+		output wire [0:0]  jtag_uart_0_avalon_jtag_slave_address,          //            jtag_uart_0_avalon_jtag_slave.address
+		output wire        jtag_uart_0_avalon_jtag_slave_write,            //                                         .write
+		output wire        jtag_uart_0_avalon_jtag_slave_read,             //                                         .read
+		input  wire [31:0] jtag_uart_0_avalon_jtag_slave_readdata,         //                                         .readdata
+		output wire [31:0] jtag_uart_0_avalon_jtag_slave_writedata,        //                                         .writedata
+		input  wire        jtag_uart_0_avalon_jtag_slave_waitrequest,      //                                         .waitrequest
+		output wire        jtag_uart_0_avalon_jtag_slave_chipselect,       //                                         .chipselect
+		output wire [1:0]  led_pio_s1_address,                             //                               led_pio_s1.address
+		output wire        led_pio_s1_write,                               //                                         .write
+		input  wire [31:0] led_pio_s1_readdata,                            //                                         .readdata
+		output wire [31:0] led_pio_s1_writedata,                           //                                         .writedata
+		output wire        led_pio_s1_chipselect,                          //                                         .chipselect
+		output wire [8:0]  nios2_gen2_0_debug_mem_slave_address,           //             nios2_gen2_0_debug_mem_slave.address
+		output wire        nios2_gen2_0_debug_mem_slave_write,             //                                         .write
+		output wire        nios2_gen2_0_debug_mem_slave_read,              //                                         .read
+		input  wire [31:0] nios2_gen2_0_debug_mem_slave_readdata,          //                                         .readdata
+		output wire [31:0] nios2_gen2_0_debug_mem_slave_writedata,         //                                         .writedata
+		output wire [3:0]  nios2_gen2_0_debug_mem_slave_byteenable,        //                                         .byteenable
+		input  wire        nios2_gen2_0_debug_mem_slave_waitrequest,       //                                         .waitrequest
+		output wire        nios2_gen2_0_debug_mem_slave_debugaccess,       //                                         .debugaccess
+		output wire [11:0] ocram_16b_s1_address,                           //                             ocram_16b_s1.address
+		output wire        ocram_16b_s1_write,                             //                                         .write
+		input  wire [31:0] ocram_16b_s1_readdata,                          //                                         .readdata
+		output wire [31:0] ocram_16b_s1_writedata,                         //                                         .writedata
+		output wire [3:0]  ocram_16b_s1_byteenable,                        //                                         .byteenable
+		output wire        ocram_16b_s1_chipselect,                        //                                         .chipselect
+		output wire        ocram_16b_s1_clken,                             //                                         .clken
+		output wire [13:0] ocram_64K_s1_address,                           //                             ocram_64K_s1.address
+		output wire        ocram_64K_s1_write,                             //                                         .write
+		input  wire [31:0] ocram_64K_s1_readdata,                          //                                         .readdata
+		output wire [31:0] ocram_64K_s1_writedata,                         //                                         .writedata
+		output wire [3:0]  ocram_64K_s1_byteenable,                        //                                         .byteenable
+		output wire        ocram_64K_s1_chipselect,                        //                                         .chipselect
+		output wire        ocram_64K_s1_clken,                             //                                         .clken
+		output wire [1:0]  switch_pio_s1_address,                          //                            switch_pio_s1.address
+		input  wire [31:0] switch_pio_s1_readdata,                         //                                         .readdata
+		output wire [0:0]  sysid_qsys_0_control_slave_address,             //               sysid_qsys_0_control_slave.address
+		input  wire [31:0] sysid_qsys_0_control_slave_readdata             //                                         .readdata
 	);
 
-	wire    [0:0] vexriscvaxi4_0_dbusaxi_translator_m0_ruser;                                         // VexRiscvAxi4_0_dBusaxi_agent:ruser -> VexRiscvAxi4_0_dBusaxi_translator:m0_ruser
-	wire    [0:0] vexriscvaxi4_0_dbusaxi_translator_m0_wuser;                                         // VexRiscvAxi4_0_dBusaxi_translator:m0_wuser -> VexRiscvAxi4_0_dBusaxi_agent:wuser
-	wire    [1:0] vexriscvaxi4_0_dbusaxi_translator_m0_awburst;                                       // VexRiscvAxi4_0_dBusaxi_translator:m0_awburst -> VexRiscvAxi4_0_dBusaxi_agent:awburst
-	wire    [3:0] vexriscvaxi4_0_dbusaxi_translator_m0_arregion;                                      // VexRiscvAxi4_0_dBusaxi_translator:m0_arregion -> VexRiscvAxi4_0_dBusaxi_agent:arregion
-	wire    [0:0] vexriscvaxi4_0_dbusaxi_translator_m0_awuser;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_awuser -> VexRiscvAxi4_0_dBusaxi_agent:awuser
-	wire    [7:0] vexriscvaxi4_0_dbusaxi_translator_m0_arlen;                                         // VexRiscvAxi4_0_dBusaxi_translator:m0_arlen -> VexRiscvAxi4_0_dBusaxi_agent:arlen
-	wire    [3:0] vexriscvaxi4_0_dbusaxi_translator_m0_arqos;                                         // VexRiscvAxi4_0_dBusaxi_translator:m0_arqos -> VexRiscvAxi4_0_dBusaxi_agent:arqos
-	wire    [3:0] vexriscvaxi4_0_dbusaxi_translator_m0_wstrb;                                         // VexRiscvAxi4_0_dBusaxi_translator:m0_wstrb -> VexRiscvAxi4_0_dBusaxi_agent:wstrb
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_wready;                                        // VexRiscvAxi4_0_dBusaxi_agent:wready -> VexRiscvAxi4_0_dBusaxi_translator:m0_wready
-	wire    [0:0] vexriscvaxi4_0_dbusaxi_translator_m0_rid;                                           // VexRiscvAxi4_0_dBusaxi_agent:rid -> VexRiscvAxi4_0_dBusaxi_translator:m0_rid
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_rready;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_rready -> VexRiscvAxi4_0_dBusaxi_agent:rready
-	wire    [7:0] vexriscvaxi4_0_dbusaxi_translator_m0_awlen;                                         // VexRiscvAxi4_0_dBusaxi_translator:m0_awlen -> VexRiscvAxi4_0_dBusaxi_agent:awlen
-	wire    [3:0] vexriscvaxi4_0_dbusaxi_translator_m0_awqos;                                         // VexRiscvAxi4_0_dBusaxi_translator:m0_awqos -> VexRiscvAxi4_0_dBusaxi_agent:awqos
-	wire    [3:0] vexriscvaxi4_0_dbusaxi_translator_m0_arcache;                                       // VexRiscvAxi4_0_dBusaxi_translator:m0_arcache -> VexRiscvAxi4_0_dBusaxi_agent:arcache
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_wvalid;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_wvalid -> VexRiscvAxi4_0_dBusaxi_agent:wvalid
-	wire   [31:0] vexriscvaxi4_0_dbusaxi_translator_m0_araddr;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_araddr -> VexRiscvAxi4_0_dBusaxi_agent:araddr
-	wire    [2:0] vexriscvaxi4_0_dbusaxi_translator_m0_arprot;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_arprot -> VexRiscvAxi4_0_dBusaxi_agent:arprot
-	wire    [2:0] vexriscvaxi4_0_dbusaxi_translator_m0_awprot;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_awprot -> VexRiscvAxi4_0_dBusaxi_agent:awprot
-	wire   [31:0] vexriscvaxi4_0_dbusaxi_translator_m0_wdata;                                         // VexRiscvAxi4_0_dBusaxi_translator:m0_wdata -> VexRiscvAxi4_0_dBusaxi_agent:wdata
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_arvalid;                                       // VexRiscvAxi4_0_dBusaxi_translator:m0_arvalid -> VexRiscvAxi4_0_dBusaxi_agent:arvalid
-	wire    [3:0] vexriscvaxi4_0_dbusaxi_translator_m0_awcache;                                       // VexRiscvAxi4_0_dBusaxi_translator:m0_awcache -> VexRiscvAxi4_0_dBusaxi_agent:awcache
-	wire    [0:0] vexriscvaxi4_0_dbusaxi_translator_m0_arid;                                          // VexRiscvAxi4_0_dBusaxi_translator:m0_arid -> VexRiscvAxi4_0_dBusaxi_agent:arid
-	wire    [0:0] vexriscvaxi4_0_dbusaxi_translator_m0_arlock;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_arlock -> VexRiscvAxi4_0_dBusaxi_agent:arlock
-	wire    [0:0] vexriscvaxi4_0_dbusaxi_translator_m0_awlock;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_awlock -> VexRiscvAxi4_0_dBusaxi_agent:awlock
-	wire   [31:0] vexriscvaxi4_0_dbusaxi_translator_m0_awaddr;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_awaddr -> VexRiscvAxi4_0_dBusaxi_agent:awaddr
-	wire    [1:0] vexriscvaxi4_0_dbusaxi_translator_m0_bresp;                                         // VexRiscvAxi4_0_dBusaxi_agent:bresp -> VexRiscvAxi4_0_dBusaxi_translator:m0_bresp
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_arready;                                       // VexRiscvAxi4_0_dBusaxi_agent:arready -> VexRiscvAxi4_0_dBusaxi_translator:m0_arready
-	wire   [31:0] vexriscvaxi4_0_dbusaxi_translator_m0_rdata;                                         // VexRiscvAxi4_0_dBusaxi_agent:rdata -> VexRiscvAxi4_0_dBusaxi_translator:m0_rdata
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_awready;                                       // VexRiscvAxi4_0_dBusaxi_agent:awready -> VexRiscvAxi4_0_dBusaxi_translator:m0_awready
-	wire    [1:0] vexriscvaxi4_0_dbusaxi_translator_m0_arburst;                                       // VexRiscvAxi4_0_dBusaxi_translator:m0_arburst -> VexRiscvAxi4_0_dBusaxi_agent:arburst
-	wire    [2:0] vexriscvaxi4_0_dbusaxi_translator_m0_arsize;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_arsize -> VexRiscvAxi4_0_dBusaxi_agent:arsize
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_bready;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_bready -> VexRiscvAxi4_0_dBusaxi_agent:bready
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_rlast;                                         // VexRiscvAxi4_0_dBusaxi_agent:rlast -> VexRiscvAxi4_0_dBusaxi_translator:m0_rlast
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_wlast;                                         // VexRiscvAxi4_0_dBusaxi_translator:m0_wlast -> VexRiscvAxi4_0_dBusaxi_agent:wlast
-	wire    [3:0] vexriscvaxi4_0_dbusaxi_translator_m0_awregion;                                      // VexRiscvAxi4_0_dBusaxi_translator:m0_awregion -> VexRiscvAxi4_0_dBusaxi_agent:awregion
-	wire    [0:0] vexriscvaxi4_0_dbusaxi_translator_m0_buser;                                         // VexRiscvAxi4_0_dBusaxi_agent:buser -> VexRiscvAxi4_0_dBusaxi_translator:m0_buser
-	wire    [1:0] vexriscvaxi4_0_dbusaxi_translator_m0_rresp;                                         // VexRiscvAxi4_0_dBusaxi_agent:rresp -> VexRiscvAxi4_0_dBusaxi_translator:m0_rresp
-	wire    [0:0] vexriscvaxi4_0_dbusaxi_translator_m0_awid;                                          // VexRiscvAxi4_0_dBusaxi_translator:m0_awid -> VexRiscvAxi4_0_dBusaxi_agent:awid
-	wire    [0:0] vexriscvaxi4_0_dbusaxi_translator_m0_bid;                                           // VexRiscvAxi4_0_dBusaxi_agent:bid -> VexRiscvAxi4_0_dBusaxi_translator:m0_bid
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_bvalid;                                        // VexRiscvAxi4_0_dBusaxi_agent:bvalid -> VexRiscvAxi4_0_dBusaxi_translator:m0_bvalid
-	wire    [2:0] vexriscvaxi4_0_dbusaxi_translator_m0_awsize;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_awsize -> VexRiscvAxi4_0_dBusaxi_agent:awsize
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_awvalid;                                       // VexRiscvAxi4_0_dBusaxi_translator:m0_awvalid -> VexRiscvAxi4_0_dBusaxi_agent:awvalid
-	wire    [0:0] vexriscvaxi4_0_dbusaxi_translator_m0_aruser;                                        // VexRiscvAxi4_0_dBusaxi_translator:m0_aruser -> VexRiscvAxi4_0_dBusaxi_agent:aruser
-	wire          vexriscvaxi4_0_dbusaxi_translator_m0_rvalid;                                        // VexRiscvAxi4_0_dBusaxi_agent:rvalid -> VexRiscvAxi4_0_dBusaxi_translator:m0_rvalid
-	wire          rsp_mux_src_valid;                                                                  // rsp_mux:src_valid -> VexRiscvAxi4_0_dBusaxi_agent:write_rp_valid
-	wire  [122:0] rsp_mux_src_data;                                                                   // rsp_mux:src_data -> VexRiscvAxi4_0_dBusaxi_agent:write_rp_data
-	wire          rsp_mux_src_ready;                                                                  // VexRiscvAxi4_0_dBusaxi_agent:write_rp_ready -> rsp_mux:src_ready
-	wire    [7:0] rsp_mux_src_channel;                                                                // rsp_mux:src_channel -> VexRiscvAxi4_0_dBusaxi_agent:write_rp_channel
-	wire          rsp_mux_src_startofpacket;                                                          // rsp_mux:src_startofpacket -> VexRiscvAxi4_0_dBusaxi_agent:write_rp_startofpacket
-	wire          rsp_mux_src_endofpacket;                                                            // rsp_mux:src_endofpacket -> VexRiscvAxi4_0_dBusaxi_agent:write_rp_endofpacket
-	wire          rsp_mux_001_src_valid;                                                              // rsp_mux_001:src_valid -> VexRiscvAxi4_0_dBusaxi_agent:read_rp_valid
-	wire  [122:0] rsp_mux_001_src_data;                                                               // rsp_mux_001:src_data -> VexRiscvAxi4_0_dBusaxi_agent:read_rp_data
-	wire          rsp_mux_001_src_ready;                                                              // VexRiscvAxi4_0_dBusaxi_agent:read_rp_ready -> rsp_mux_001:src_ready
-	wire    [7:0] rsp_mux_001_src_channel;                                                            // rsp_mux_001:src_channel -> VexRiscvAxi4_0_dBusaxi_agent:read_rp_channel
-	wire          rsp_mux_001_src_startofpacket;                                                      // rsp_mux_001:src_startofpacket -> VexRiscvAxi4_0_dBusaxi_agent:read_rp_startofpacket
-	wire          rsp_mux_001_src_endofpacket;                                                        // rsp_mux_001:src_endofpacket -> VexRiscvAxi4_0_dBusaxi_agent:read_rp_endofpacket
+	wire    [0:0] vexriscv_0_dbusaxi_translator_m0_ruser;                                             // VexRiscv_0_dBusaxi_agent:ruser -> VexRiscv_0_dBusaxi_translator:m0_ruser
+	wire    [0:0] vexriscv_0_dbusaxi_translator_m0_wuser;                                             // VexRiscv_0_dBusaxi_translator:m0_wuser -> VexRiscv_0_dBusaxi_agent:wuser
+	wire    [1:0] vexriscv_0_dbusaxi_translator_m0_awburst;                                           // VexRiscv_0_dBusaxi_translator:m0_awburst -> VexRiscv_0_dBusaxi_agent:awburst
+	wire    [3:0] vexriscv_0_dbusaxi_translator_m0_arregion;                                          // VexRiscv_0_dBusaxi_translator:m0_arregion -> VexRiscv_0_dBusaxi_agent:arregion
+	wire    [0:0] vexriscv_0_dbusaxi_translator_m0_awuser;                                            // VexRiscv_0_dBusaxi_translator:m0_awuser -> VexRiscv_0_dBusaxi_agent:awuser
+	wire    [7:0] vexriscv_0_dbusaxi_translator_m0_arlen;                                             // VexRiscv_0_dBusaxi_translator:m0_arlen -> VexRiscv_0_dBusaxi_agent:arlen
+	wire    [3:0] vexriscv_0_dbusaxi_translator_m0_arqos;                                             // VexRiscv_0_dBusaxi_translator:m0_arqos -> VexRiscv_0_dBusaxi_agent:arqos
+	wire    [3:0] vexriscv_0_dbusaxi_translator_m0_wstrb;                                             // VexRiscv_0_dBusaxi_translator:m0_wstrb -> VexRiscv_0_dBusaxi_agent:wstrb
+	wire          vexriscv_0_dbusaxi_translator_m0_wready;                                            // VexRiscv_0_dBusaxi_agent:wready -> VexRiscv_0_dBusaxi_translator:m0_wready
+	wire    [0:0] vexriscv_0_dbusaxi_translator_m0_rid;                                               // VexRiscv_0_dBusaxi_agent:rid -> VexRiscv_0_dBusaxi_translator:m0_rid
+	wire          vexriscv_0_dbusaxi_translator_m0_rready;                                            // VexRiscv_0_dBusaxi_translator:m0_rready -> VexRiscv_0_dBusaxi_agent:rready
+	wire    [7:0] vexriscv_0_dbusaxi_translator_m0_awlen;                                             // VexRiscv_0_dBusaxi_translator:m0_awlen -> VexRiscv_0_dBusaxi_agent:awlen
+	wire    [3:0] vexriscv_0_dbusaxi_translator_m0_awqos;                                             // VexRiscv_0_dBusaxi_translator:m0_awqos -> VexRiscv_0_dBusaxi_agent:awqos
+	wire    [3:0] vexriscv_0_dbusaxi_translator_m0_arcache;                                           // VexRiscv_0_dBusaxi_translator:m0_arcache -> VexRiscv_0_dBusaxi_agent:arcache
+	wire          vexriscv_0_dbusaxi_translator_m0_wvalid;                                            // VexRiscv_0_dBusaxi_translator:m0_wvalid -> VexRiscv_0_dBusaxi_agent:wvalid
+	wire   [31:0] vexriscv_0_dbusaxi_translator_m0_araddr;                                            // VexRiscv_0_dBusaxi_translator:m0_araddr -> VexRiscv_0_dBusaxi_agent:araddr
+	wire    [2:0] vexriscv_0_dbusaxi_translator_m0_arprot;                                            // VexRiscv_0_dBusaxi_translator:m0_arprot -> VexRiscv_0_dBusaxi_agent:arprot
+	wire    [2:0] vexriscv_0_dbusaxi_translator_m0_awprot;                                            // VexRiscv_0_dBusaxi_translator:m0_awprot -> VexRiscv_0_dBusaxi_agent:awprot
+	wire   [31:0] vexriscv_0_dbusaxi_translator_m0_wdata;                                             // VexRiscv_0_dBusaxi_translator:m0_wdata -> VexRiscv_0_dBusaxi_agent:wdata
+	wire          vexriscv_0_dbusaxi_translator_m0_arvalid;                                           // VexRiscv_0_dBusaxi_translator:m0_arvalid -> VexRiscv_0_dBusaxi_agent:arvalid
+	wire    [3:0] vexriscv_0_dbusaxi_translator_m0_awcache;                                           // VexRiscv_0_dBusaxi_translator:m0_awcache -> VexRiscv_0_dBusaxi_agent:awcache
+	wire    [0:0] vexriscv_0_dbusaxi_translator_m0_arid;                                              // VexRiscv_0_dBusaxi_translator:m0_arid -> VexRiscv_0_dBusaxi_agent:arid
+	wire    [0:0] vexriscv_0_dbusaxi_translator_m0_arlock;                                            // VexRiscv_0_dBusaxi_translator:m0_arlock -> VexRiscv_0_dBusaxi_agent:arlock
+	wire    [0:0] vexriscv_0_dbusaxi_translator_m0_awlock;                                            // VexRiscv_0_dBusaxi_translator:m0_awlock -> VexRiscv_0_dBusaxi_agent:awlock
+	wire   [31:0] vexriscv_0_dbusaxi_translator_m0_awaddr;                                            // VexRiscv_0_dBusaxi_translator:m0_awaddr -> VexRiscv_0_dBusaxi_agent:awaddr
+	wire    [1:0] vexriscv_0_dbusaxi_translator_m0_bresp;                                             // VexRiscv_0_dBusaxi_agent:bresp -> VexRiscv_0_dBusaxi_translator:m0_bresp
+	wire          vexriscv_0_dbusaxi_translator_m0_arready;                                           // VexRiscv_0_dBusaxi_agent:arready -> VexRiscv_0_dBusaxi_translator:m0_arready
+	wire   [31:0] vexriscv_0_dbusaxi_translator_m0_rdata;                                             // VexRiscv_0_dBusaxi_agent:rdata -> VexRiscv_0_dBusaxi_translator:m0_rdata
+	wire          vexriscv_0_dbusaxi_translator_m0_awready;                                           // VexRiscv_0_dBusaxi_agent:awready -> VexRiscv_0_dBusaxi_translator:m0_awready
+	wire    [1:0] vexriscv_0_dbusaxi_translator_m0_arburst;                                           // VexRiscv_0_dBusaxi_translator:m0_arburst -> VexRiscv_0_dBusaxi_agent:arburst
+	wire    [2:0] vexriscv_0_dbusaxi_translator_m0_arsize;                                            // VexRiscv_0_dBusaxi_translator:m0_arsize -> VexRiscv_0_dBusaxi_agent:arsize
+	wire          vexriscv_0_dbusaxi_translator_m0_bready;                                            // VexRiscv_0_dBusaxi_translator:m0_bready -> VexRiscv_0_dBusaxi_agent:bready
+	wire          vexriscv_0_dbusaxi_translator_m0_rlast;                                             // VexRiscv_0_dBusaxi_agent:rlast -> VexRiscv_0_dBusaxi_translator:m0_rlast
+	wire          vexriscv_0_dbusaxi_translator_m0_wlast;                                             // VexRiscv_0_dBusaxi_translator:m0_wlast -> VexRiscv_0_dBusaxi_agent:wlast
+	wire    [3:0] vexriscv_0_dbusaxi_translator_m0_awregion;                                          // VexRiscv_0_dBusaxi_translator:m0_awregion -> VexRiscv_0_dBusaxi_agent:awregion
+	wire    [0:0] vexriscv_0_dbusaxi_translator_m0_buser;                                             // VexRiscv_0_dBusaxi_agent:buser -> VexRiscv_0_dBusaxi_translator:m0_buser
+	wire    [1:0] vexriscv_0_dbusaxi_translator_m0_rresp;                                             // VexRiscv_0_dBusaxi_agent:rresp -> VexRiscv_0_dBusaxi_translator:m0_rresp
+	wire    [0:0] vexriscv_0_dbusaxi_translator_m0_awid;                                              // VexRiscv_0_dBusaxi_translator:m0_awid -> VexRiscv_0_dBusaxi_agent:awid
+	wire    [0:0] vexriscv_0_dbusaxi_translator_m0_bid;                                               // VexRiscv_0_dBusaxi_agent:bid -> VexRiscv_0_dBusaxi_translator:m0_bid
+	wire          vexriscv_0_dbusaxi_translator_m0_bvalid;                                            // VexRiscv_0_dBusaxi_agent:bvalid -> VexRiscv_0_dBusaxi_translator:m0_bvalid
+	wire    [2:0] vexriscv_0_dbusaxi_translator_m0_awsize;                                            // VexRiscv_0_dBusaxi_translator:m0_awsize -> VexRiscv_0_dBusaxi_agent:awsize
+	wire          vexriscv_0_dbusaxi_translator_m0_awvalid;                                           // VexRiscv_0_dBusaxi_translator:m0_awvalid -> VexRiscv_0_dBusaxi_agent:awvalid
+	wire    [0:0] vexriscv_0_dbusaxi_translator_m0_aruser;                                            // VexRiscv_0_dBusaxi_translator:m0_aruser -> VexRiscv_0_dBusaxi_agent:aruser
+	wire          vexriscv_0_dbusaxi_translator_m0_rvalid;                                            // VexRiscv_0_dBusaxi_agent:rvalid -> VexRiscv_0_dBusaxi_translator:m0_rvalid
+	wire          rsp_mux_src_valid;                                                                  // rsp_mux:src_valid -> VexRiscv_0_dBusaxi_agent:write_rp_valid
+	wire  [122:0] rsp_mux_src_data;                                                                   // rsp_mux:src_data -> VexRiscv_0_dBusaxi_agent:write_rp_data
+	wire          rsp_mux_src_ready;                                                                  // VexRiscv_0_dBusaxi_agent:write_rp_ready -> rsp_mux:src_ready
+	wire    [7:0] rsp_mux_src_channel;                                                                // rsp_mux:src_channel -> VexRiscv_0_dBusaxi_agent:write_rp_channel
+	wire          rsp_mux_src_startofpacket;                                                          // rsp_mux:src_startofpacket -> VexRiscv_0_dBusaxi_agent:write_rp_startofpacket
+	wire          rsp_mux_src_endofpacket;                                                            // rsp_mux:src_endofpacket -> VexRiscv_0_dBusaxi_agent:write_rp_endofpacket
+	wire          rsp_mux_001_src_valid;                                                              // rsp_mux_001:src_valid -> VexRiscv_0_dBusaxi_agent:read_rp_valid
+	wire  [122:0] rsp_mux_001_src_data;                                                               // rsp_mux_001:src_data -> VexRiscv_0_dBusaxi_agent:read_rp_data
+	wire          rsp_mux_001_src_ready;                                                              // VexRiscv_0_dBusaxi_agent:read_rp_ready -> rsp_mux_001:src_ready
+	wire    [7:0] rsp_mux_001_src_channel;                                                            // rsp_mux_001:src_channel -> VexRiscv_0_dBusaxi_agent:read_rp_channel
+	wire          rsp_mux_001_src_startofpacket;                                                      // rsp_mux_001:src_startofpacket -> VexRiscv_0_dBusaxi_agent:read_rp_startofpacket
+	wire          rsp_mux_001_src_endofpacket;                                                        // rsp_mux_001:src_endofpacket -> VexRiscv_0_dBusaxi_agent:read_rp_endofpacket
 	wire          nios2_gen2_0_data_master_translator_avalon_universal_master_0_waitrequest;          // nios2_gen2_0_data_master_agent:av_waitrequest -> nios2_gen2_0_data_master_translator:uav_waitrequest
 	wire   [31:0] nios2_gen2_0_data_master_translator_avalon_universal_master_0_readdata;             // nios2_gen2_0_data_master_agent:av_readdata -> nios2_gen2_0_data_master_translator:uav_readdata
 	wire          nios2_gen2_0_data_master_translator_avalon_universal_master_0_debugaccess;          // nios2_gen2_0_data_master_translator:uav_debugaccess -> nios2_gen2_0_data_master_agent:av_debugaccess
@@ -227,62 +227,62 @@ module soc_system_mm_interconnect_0 (
 	wire          master_0_master_translator_avalon_universal_master_0_write;                         // master_0_master_translator:uav_write -> master_0_master_agent:av_write
 	wire   [31:0] master_0_master_translator_avalon_universal_master_0_writedata;                     // master_0_master_translator:uav_writedata -> master_0_master_agent:av_writedata
 	wire    [2:0] master_0_master_translator_avalon_universal_master_0_burstcount;                    // master_0_master_translator:uav_burstcount -> master_0_master_agent:av_burstcount
-	wire    [0:0] vexriscvaxi4_0_ibusaxi_translator_m0_ruser;                                         // VexRiscvAxi4_0_iBusaxi_agent:ruser -> VexRiscvAxi4_0_iBusaxi_translator:m0_ruser
-	wire    [0:0] vexriscvaxi4_0_ibusaxi_translator_m0_wuser;                                         // VexRiscvAxi4_0_iBusaxi_translator:m0_wuser -> VexRiscvAxi4_0_iBusaxi_agent:wuser
-	wire    [1:0] vexriscvaxi4_0_ibusaxi_translator_m0_awburst;                                       // VexRiscvAxi4_0_iBusaxi_translator:m0_awburst -> VexRiscvAxi4_0_iBusaxi_agent:awburst
-	wire    [3:0] vexriscvaxi4_0_ibusaxi_translator_m0_arregion;                                      // VexRiscvAxi4_0_iBusaxi_translator:m0_arregion -> VexRiscvAxi4_0_iBusaxi_agent:arregion
-	wire    [0:0] vexriscvaxi4_0_ibusaxi_translator_m0_awuser;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_awuser -> VexRiscvAxi4_0_iBusaxi_agent:awuser
-	wire    [7:0] vexriscvaxi4_0_ibusaxi_translator_m0_arlen;                                         // VexRiscvAxi4_0_iBusaxi_translator:m0_arlen -> VexRiscvAxi4_0_iBusaxi_agent:arlen
-	wire    [3:0] vexriscvaxi4_0_ibusaxi_translator_m0_arqos;                                         // VexRiscvAxi4_0_iBusaxi_translator:m0_arqos -> VexRiscvAxi4_0_iBusaxi_agent:arqos
-	wire    [3:0] vexriscvaxi4_0_ibusaxi_translator_m0_wstrb;                                         // VexRiscvAxi4_0_iBusaxi_translator:m0_wstrb -> VexRiscvAxi4_0_iBusaxi_agent:wstrb
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_wready;                                        // VexRiscvAxi4_0_iBusaxi_agent:wready -> VexRiscvAxi4_0_iBusaxi_translator:m0_wready
-	wire    [0:0] vexriscvaxi4_0_ibusaxi_translator_m0_rid;                                           // VexRiscvAxi4_0_iBusaxi_agent:rid -> VexRiscvAxi4_0_iBusaxi_translator:m0_rid
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_rready;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_rready -> VexRiscvAxi4_0_iBusaxi_agent:rready
-	wire    [7:0] vexriscvaxi4_0_ibusaxi_translator_m0_awlen;                                         // VexRiscvAxi4_0_iBusaxi_translator:m0_awlen -> VexRiscvAxi4_0_iBusaxi_agent:awlen
-	wire    [3:0] vexriscvaxi4_0_ibusaxi_translator_m0_awqos;                                         // VexRiscvAxi4_0_iBusaxi_translator:m0_awqos -> VexRiscvAxi4_0_iBusaxi_agent:awqos
-	wire    [3:0] vexriscvaxi4_0_ibusaxi_translator_m0_arcache;                                       // VexRiscvAxi4_0_iBusaxi_translator:m0_arcache -> VexRiscvAxi4_0_iBusaxi_agent:arcache
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_wvalid;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_wvalid -> VexRiscvAxi4_0_iBusaxi_agent:wvalid
-	wire   [31:0] vexriscvaxi4_0_ibusaxi_translator_m0_araddr;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_araddr -> VexRiscvAxi4_0_iBusaxi_agent:araddr
-	wire    [2:0] vexriscvaxi4_0_ibusaxi_translator_m0_arprot;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_arprot -> VexRiscvAxi4_0_iBusaxi_agent:arprot
-	wire    [2:0] vexriscvaxi4_0_ibusaxi_translator_m0_awprot;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_awprot -> VexRiscvAxi4_0_iBusaxi_agent:awprot
-	wire   [31:0] vexriscvaxi4_0_ibusaxi_translator_m0_wdata;                                         // VexRiscvAxi4_0_iBusaxi_translator:m0_wdata -> VexRiscvAxi4_0_iBusaxi_agent:wdata
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_arvalid;                                       // VexRiscvAxi4_0_iBusaxi_translator:m0_arvalid -> VexRiscvAxi4_0_iBusaxi_agent:arvalid
-	wire    [3:0] vexriscvaxi4_0_ibusaxi_translator_m0_awcache;                                       // VexRiscvAxi4_0_iBusaxi_translator:m0_awcache -> VexRiscvAxi4_0_iBusaxi_agent:awcache
-	wire    [0:0] vexriscvaxi4_0_ibusaxi_translator_m0_arid;                                          // VexRiscvAxi4_0_iBusaxi_translator:m0_arid -> VexRiscvAxi4_0_iBusaxi_agent:arid
-	wire    [0:0] vexriscvaxi4_0_ibusaxi_translator_m0_arlock;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_arlock -> VexRiscvAxi4_0_iBusaxi_agent:arlock
-	wire    [0:0] vexriscvaxi4_0_ibusaxi_translator_m0_awlock;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_awlock -> VexRiscvAxi4_0_iBusaxi_agent:awlock
-	wire   [31:0] vexriscvaxi4_0_ibusaxi_translator_m0_awaddr;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_awaddr -> VexRiscvAxi4_0_iBusaxi_agent:awaddr
-	wire    [1:0] vexriscvaxi4_0_ibusaxi_translator_m0_bresp;                                         // VexRiscvAxi4_0_iBusaxi_agent:bresp -> VexRiscvAxi4_0_iBusaxi_translator:m0_bresp
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_arready;                                       // VexRiscvAxi4_0_iBusaxi_agent:arready -> VexRiscvAxi4_0_iBusaxi_translator:m0_arready
-	wire   [31:0] vexriscvaxi4_0_ibusaxi_translator_m0_rdata;                                         // VexRiscvAxi4_0_iBusaxi_agent:rdata -> VexRiscvAxi4_0_iBusaxi_translator:m0_rdata
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_awready;                                       // VexRiscvAxi4_0_iBusaxi_agent:awready -> VexRiscvAxi4_0_iBusaxi_translator:m0_awready
-	wire    [1:0] vexriscvaxi4_0_ibusaxi_translator_m0_arburst;                                       // VexRiscvAxi4_0_iBusaxi_translator:m0_arburst -> VexRiscvAxi4_0_iBusaxi_agent:arburst
-	wire    [2:0] vexriscvaxi4_0_ibusaxi_translator_m0_arsize;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_arsize -> VexRiscvAxi4_0_iBusaxi_agent:arsize
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_bready;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_bready -> VexRiscvAxi4_0_iBusaxi_agent:bready
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_rlast;                                         // VexRiscvAxi4_0_iBusaxi_agent:rlast -> VexRiscvAxi4_0_iBusaxi_translator:m0_rlast
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_wlast;                                         // VexRiscvAxi4_0_iBusaxi_translator:m0_wlast -> VexRiscvAxi4_0_iBusaxi_agent:wlast
-	wire    [3:0] vexriscvaxi4_0_ibusaxi_translator_m0_awregion;                                      // VexRiscvAxi4_0_iBusaxi_translator:m0_awregion -> VexRiscvAxi4_0_iBusaxi_agent:awregion
-	wire    [0:0] vexriscvaxi4_0_ibusaxi_translator_m0_buser;                                         // VexRiscvAxi4_0_iBusaxi_agent:buser -> VexRiscvAxi4_0_iBusaxi_translator:m0_buser
-	wire    [1:0] vexriscvaxi4_0_ibusaxi_translator_m0_rresp;                                         // VexRiscvAxi4_0_iBusaxi_agent:rresp -> VexRiscvAxi4_0_iBusaxi_translator:m0_rresp
-	wire    [0:0] vexriscvaxi4_0_ibusaxi_translator_m0_awid;                                          // VexRiscvAxi4_0_iBusaxi_translator:m0_awid -> VexRiscvAxi4_0_iBusaxi_agent:awid
-	wire    [0:0] vexriscvaxi4_0_ibusaxi_translator_m0_bid;                                           // VexRiscvAxi4_0_iBusaxi_agent:bid -> VexRiscvAxi4_0_iBusaxi_translator:m0_bid
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_bvalid;                                        // VexRiscvAxi4_0_iBusaxi_agent:bvalid -> VexRiscvAxi4_0_iBusaxi_translator:m0_bvalid
-	wire    [2:0] vexriscvaxi4_0_ibusaxi_translator_m0_awsize;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_awsize -> VexRiscvAxi4_0_iBusaxi_agent:awsize
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_awvalid;                                       // VexRiscvAxi4_0_iBusaxi_translator:m0_awvalid -> VexRiscvAxi4_0_iBusaxi_agent:awvalid
-	wire    [0:0] vexriscvaxi4_0_ibusaxi_translator_m0_aruser;                                        // VexRiscvAxi4_0_iBusaxi_translator:m0_aruser -> VexRiscvAxi4_0_iBusaxi_agent:aruser
-	wire          vexriscvaxi4_0_ibusaxi_translator_m0_rvalid;                                        // VexRiscvAxi4_0_iBusaxi_agent:rvalid -> VexRiscvAxi4_0_iBusaxi_translator:m0_rvalid
-	wire          rsp_mux_004_src_valid;                                                              // rsp_mux_004:src_valid -> VexRiscvAxi4_0_iBusaxi_agent:write_rp_valid
-	wire  [122:0] rsp_mux_004_src_data;                                                               // rsp_mux_004:src_data -> VexRiscvAxi4_0_iBusaxi_agent:write_rp_data
-	wire          rsp_mux_004_src_ready;                                                              // VexRiscvAxi4_0_iBusaxi_agent:write_rp_ready -> rsp_mux_004:src_ready
-	wire    [7:0] rsp_mux_004_src_channel;                                                            // rsp_mux_004:src_channel -> VexRiscvAxi4_0_iBusaxi_agent:write_rp_channel
-	wire          rsp_mux_004_src_startofpacket;                                                      // rsp_mux_004:src_startofpacket -> VexRiscvAxi4_0_iBusaxi_agent:write_rp_startofpacket
-	wire          rsp_mux_004_src_endofpacket;                                                        // rsp_mux_004:src_endofpacket -> VexRiscvAxi4_0_iBusaxi_agent:write_rp_endofpacket
-	wire          rsp_mux_005_src_valid;                                                              // rsp_mux_005:src_valid -> VexRiscvAxi4_0_iBusaxi_agent:read_rp_valid
-	wire  [122:0] rsp_mux_005_src_data;                                                               // rsp_mux_005:src_data -> VexRiscvAxi4_0_iBusaxi_agent:read_rp_data
-	wire          rsp_mux_005_src_ready;                                                              // VexRiscvAxi4_0_iBusaxi_agent:read_rp_ready -> rsp_mux_005:src_ready
-	wire    [7:0] rsp_mux_005_src_channel;                                                            // rsp_mux_005:src_channel -> VexRiscvAxi4_0_iBusaxi_agent:read_rp_channel
-	wire          rsp_mux_005_src_startofpacket;                                                      // rsp_mux_005:src_startofpacket -> VexRiscvAxi4_0_iBusaxi_agent:read_rp_startofpacket
-	wire          rsp_mux_005_src_endofpacket;                                                        // rsp_mux_005:src_endofpacket -> VexRiscvAxi4_0_iBusaxi_agent:read_rp_endofpacket
+	wire    [0:0] vexriscv_0_ibusaxi_translator_m0_ruser;                                             // VexRiscv_0_iBusaxi_agent:ruser -> VexRiscv_0_iBusaxi_translator:m0_ruser
+	wire    [0:0] vexriscv_0_ibusaxi_translator_m0_wuser;                                             // VexRiscv_0_iBusaxi_translator:m0_wuser -> VexRiscv_0_iBusaxi_agent:wuser
+	wire    [1:0] vexriscv_0_ibusaxi_translator_m0_awburst;                                           // VexRiscv_0_iBusaxi_translator:m0_awburst -> VexRiscv_0_iBusaxi_agent:awburst
+	wire    [3:0] vexriscv_0_ibusaxi_translator_m0_arregion;                                          // VexRiscv_0_iBusaxi_translator:m0_arregion -> VexRiscv_0_iBusaxi_agent:arregion
+	wire    [0:0] vexriscv_0_ibusaxi_translator_m0_awuser;                                            // VexRiscv_0_iBusaxi_translator:m0_awuser -> VexRiscv_0_iBusaxi_agent:awuser
+	wire    [7:0] vexriscv_0_ibusaxi_translator_m0_arlen;                                             // VexRiscv_0_iBusaxi_translator:m0_arlen -> VexRiscv_0_iBusaxi_agent:arlen
+	wire    [3:0] vexriscv_0_ibusaxi_translator_m0_arqos;                                             // VexRiscv_0_iBusaxi_translator:m0_arqos -> VexRiscv_0_iBusaxi_agent:arqos
+	wire    [3:0] vexriscv_0_ibusaxi_translator_m0_wstrb;                                             // VexRiscv_0_iBusaxi_translator:m0_wstrb -> VexRiscv_0_iBusaxi_agent:wstrb
+	wire          vexriscv_0_ibusaxi_translator_m0_wready;                                            // VexRiscv_0_iBusaxi_agent:wready -> VexRiscv_0_iBusaxi_translator:m0_wready
+	wire    [0:0] vexriscv_0_ibusaxi_translator_m0_rid;                                               // VexRiscv_0_iBusaxi_agent:rid -> VexRiscv_0_iBusaxi_translator:m0_rid
+	wire          vexriscv_0_ibusaxi_translator_m0_rready;                                            // VexRiscv_0_iBusaxi_translator:m0_rready -> VexRiscv_0_iBusaxi_agent:rready
+	wire    [7:0] vexriscv_0_ibusaxi_translator_m0_awlen;                                             // VexRiscv_0_iBusaxi_translator:m0_awlen -> VexRiscv_0_iBusaxi_agent:awlen
+	wire    [3:0] vexriscv_0_ibusaxi_translator_m0_awqos;                                             // VexRiscv_0_iBusaxi_translator:m0_awqos -> VexRiscv_0_iBusaxi_agent:awqos
+	wire    [3:0] vexriscv_0_ibusaxi_translator_m0_arcache;                                           // VexRiscv_0_iBusaxi_translator:m0_arcache -> VexRiscv_0_iBusaxi_agent:arcache
+	wire          vexriscv_0_ibusaxi_translator_m0_wvalid;                                            // VexRiscv_0_iBusaxi_translator:m0_wvalid -> VexRiscv_0_iBusaxi_agent:wvalid
+	wire   [31:0] vexriscv_0_ibusaxi_translator_m0_araddr;                                            // VexRiscv_0_iBusaxi_translator:m0_araddr -> VexRiscv_0_iBusaxi_agent:araddr
+	wire    [2:0] vexriscv_0_ibusaxi_translator_m0_arprot;                                            // VexRiscv_0_iBusaxi_translator:m0_arprot -> VexRiscv_0_iBusaxi_agent:arprot
+	wire    [2:0] vexriscv_0_ibusaxi_translator_m0_awprot;                                            // VexRiscv_0_iBusaxi_translator:m0_awprot -> VexRiscv_0_iBusaxi_agent:awprot
+	wire   [31:0] vexriscv_0_ibusaxi_translator_m0_wdata;                                             // VexRiscv_0_iBusaxi_translator:m0_wdata -> VexRiscv_0_iBusaxi_agent:wdata
+	wire          vexriscv_0_ibusaxi_translator_m0_arvalid;                                           // VexRiscv_0_iBusaxi_translator:m0_arvalid -> VexRiscv_0_iBusaxi_agent:arvalid
+	wire    [3:0] vexriscv_0_ibusaxi_translator_m0_awcache;                                           // VexRiscv_0_iBusaxi_translator:m0_awcache -> VexRiscv_0_iBusaxi_agent:awcache
+	wire    [0:0] vexriscv_0_ibusaxi_translator_m0_arid;                                              // VexRiscv_0_iBusaxi_translator:m0_arid -> VexRiscv_0_iBusaxi_agent:arid
+	wire    [0:0] vexriscv_0_ibusaxi_translator_m0_arlock;                                            // VexRiscv_0_iBusaxi_translator:m0_arlock -> VexRiscv_0_iBusaxi_agent:arlock
+	wire    [0:0] vexriscv_0_ibusaxi_translator_m0_awlock;                                            // VexRiscv_0_iBusaxi_translator:m0_awlock -> VexRiscv_0_iBusaxi_agent:awlock
+	wire   [31:0] vexriscv_0_ibusaxi_translator_m0_awaddr;                                            // VexRiscv_0_iBusaxi_translator:m0_awaddr -> VexRiscv_0_iBusaxi_agent:awaddr
+	wire    [1:0] vexriscv_0_ibusaxi_translator_m0_bresp;                                             // VexRiscv_0_iBusaxi_agent:bresp -> VexRiscv_0_iBusaxi_translator:m0_bresp
+	wire          vexriscv_0_ibusaxi_translator_m0_arready;                                           // VexRiscv_0_iBusaxi_agent:arready -> VexRiscv_0_iBusaxi_translator:m0_arready
+	wire   [31:0] vexriscv_0_ibusaxi_translator_m0_rdata;                                             // VexRiscv_0_iBusaxi_agent:rdata -> VexRiscv_0_iBusaxi_translator:m0_rdata
+	wire          vexriscv_0_ibusaxi_translator_m0_awready;                                           // VexRiscv_0_iBusaxi_agent:awready -> VexRiscv_0_iBusaxi_translator:m0_awready
+	wire    [1:0] vexriscv_0_ibusaxi_translator_m0_arburst;                                           // VexRiscv_0_iBusaxi_translator:m0_arburst -> VexRiscv_0_iBusaxi_agent:arburst
+	wire    [2:0] vexriscv_0_ibusaxi_translator_m0_arsize;                                            // VexRiscv_0_iBusaxi_translator:m0_arsize -> VexRiscv_0_iBusaxi_agent:arsize
+	wire          vexriscv_0_ibusaxi_translator_m0_bready;                                            // VexRiscv_0_iBusaxi_translator:m0_bready -> VexRiscv_0_iBusaxi_agent:bready
+	wire          vexriscv_0_ibusaxi_translator_m0_rlast;                                             // VexRiscv_0_iBusaxi_agent:rlast -> VexRiscv_0_iBusaxi_translator:m0_rlast
+	wire          vexriscv_0_ibusaxi_translator_m0_wlast;                                             // VexRiscv_0_iBusaxi_translator:m0_wlast -> VexRiscv_0_iBusaxi_agent:wlast
+	wire    [3:0] vexriscv_0_ibusaxi_translator_m0_awregion;                                          // VexRiscv_0_iBusaxi_translator:m0_awregion -> VexRiscv_0_iBusaxi_agent:awregion
+	wire    [0:0] vexriscv_0_ibusaxi_translator_m0_buser;                                             // VexRiscv_0_iBusaxi_agent:buser -> VexRiscv_0_iBusaxi_translator:m0_buser
+	wire    [1:0] vexriscv_0_ibusaxi_translator_m0_rresp;                                             // VexRiscv_0_iBusaxi_agent:rresp -> VexRiscv_0_iBusaxi_translator:m0_rresp
+	wire    [0:0] vexriscv_0_ibusaxi_translator_m0_awid;                                              // VexRiscv_0_iBusaxi_translator:m0_awid -> VexRiscv_0_iBusaxi_agent:awid
+	wire    [0:0] vexriscv_0_ibusaxi_translator_m0_bid;                                               // VexRiscv_0_iBusaxi_agent:bid -> VexRiscv_0_iBusaxi_translator:m0_bid
+	wire          vexriscv_0_ibusaxi_translator_m0_bvalid;                                            // VexRiscv_0_iBusaxi_agent:bvalid -> VexRiscv_0_iBusaxi_translator:m0_bvalid
+	wire    [2:0] vexriscv_0_ibusaxi_translator_m0_awsize;                                            // VexRiscv_0_iBusaxi_translator:m0_awsize -> VexRiscv_0_iBusaxi_agent:awsize
+	wire          vexriscv_0_ibusaxi_translator_m0_awvalid;                                           // VexRiscv_0_iBusaxi_translator:m0_awvalid -> VexRiscv_0_iBusaxi_agent:awvalid
+	wire    [0:0] vexriscv_0_ibusaxi_translator_m0_aruser;                                            // VexRiscv_0_iBusaxi_translator:m0_aruser -> VexRiscv_0_iBusaxi_agent:aruser
+	wire          vexriscv_0_ibusaxi_translator_m0_rvalid;                                            // VexRiscv_0_iBusaxi_agent:rvalid -> VexRiscv_0_iBusaxi_translator:m0_rvalid
+	wire          rsp_mux_004_src_valid;                                                              // rsp_mux_004:src_valid -> VexRiscv_0_iBusaxi_agent:write_rp_valid
+	wire  [122:0] rsp_mux_004_src_data;                                                               // rsp_mux_004:src_data -> VexRiscv_0_iBusaxi_agent:write_rp_data
+	wire          rsp_mux_004_src_ready;                                                              // VexRiscv_0_iBusaxi_agent:write_rp_ready -> rsp_mux_004:src_ready
+	wire    [7:0] rsp_mux_004_src_channel;                                                            // rsp_mux_004:src_channel -> VexRiscv_0_iBusaxi_agent:write_rp_channel
+	wire          rsp_mux_004_src_startofpacket;                                                      // rsp_mux_004:src_startofpacket -> VexRiscv_0_iBusaxi_agent:write_rp_startofpacket
+	wire          rsp_mux_004_src_endofpacket;                                                        // rsp_mux_004:src_endofpacket -> VexRiscv_0_iBusaxi_agent:write_rp_endofpacket
+	wire          rsp_mux_005_src_valid;                                                              // rsp_mux_005:src_valid -> VexRiscv_0_iBusaxi_agent:read_rp_valid
+	wire  [122:0] rsp_mux_005_src_data;                                                               // rsp_mux_005:src_data -> VexRiscv_0_iBusaxi_agent:read_rp_data
+	wire          rsp_mux_005_src_ready;                                                              // VexRiscv_0_iBusaxi_agent:read_rp_ready -> rsp_mux_005:src_ready
+	wire    [7:0] rsp_mux_005_src_channel;                                                            // rsp_mux_005:src_channel -> VexRiscv_0_iBusaxi_agent:read_rp_channel
+	wire          rsp_mux_005_src_startofpacket;                                                      // rsp_mux_005:src_startofpacket -> VexRiscv_0_iBusaxi_agent:read_rp_startofpacket
+	wire          rsp_mux_005_src_endofpacket;                                                        // rsp_mux_005:src_endofpacket -> VexRiscv_0_iBusaxi_agent:read_rp_endofpacket
 	wire          nios2_gen2_0_instruction_master_translator_avalon_universal_master_0_waitrequest;   // nios2_gen2_0_instruction_master_agent:av_waitrequest -> nios2_gen2_0_instruction_master_translator:uav_waitrequest
 	wire   [31:0] nios2_gen2_0_instruction_master_translator_avalon_universal_master_0_readdata;      // nios2_gen2_0_instruction_master_agent:av_readdata -> nios2_gen2_0_instruction_master_translator:uav_readdata
 	wire          nios2_gen2_0_instruction_master_translator_avalon_universal_master_0_debugaccess;   // nios2_gen2_0_instruction_master_translator:uav_debugaccess -> nios2_gen2_0_instruction_master_agent:av_debugaccess
@@ -372,102 +372,6 @@ module soc_system_mm_interconnect_0 (
 	wire          nios2_gen2_0_debug_mem_slave_agent_rdata_fifo_src_valid;                            // nios2_gen2_0_debug_mem_slave_agent:rdata_fifo_src_valid -> nios2_gen2_0_debug_mem_slave_agent_rdata_fifo:in_valid
 	wire   [33:0] nios2_gen2_0_debug_mem_slave_agent_rdata_fifo_src_data;                             // nios2_gen2_0_debug_mem_slave_agent:rdata_fifo_src_data -> nios2_gen2_0_debug_mem_slave_agent_rdata_fifo:in_data
 	wire          nios2_gen2_0_debug_mem_slave_agent_rdata_fifo_src_ready;                            // nios2_gen2_0_debug_mem_slave_agent_rdata_fifo:in_ready -> nios2_gen2_0_debug_mem_slave_agent:rdata_fifo_src_ready
-	wire   [31:0] ocram_64k_s1_agent_m0_readdata;                                                     // ocram_64K_s1_translator:uav_readdata -> ocram_64K_s1_agent:m0_readdata
-	wire          ocram_64k_s1_agent_m0_waitrequest;                                                  // ocram_64K_s1_translator:uav_waitrequest -> ocram_64K_s1_agent:m0_waitrequest
-	wire          ocram_64k_s1_agent_m0_debugaccess;                                                  // ocram_64K_s1_agent:m0_debugaccess -> ocram_64K_s1_translator:uav_debugaccess
-	wire   [31:0] ocram_64k_s1_agent_m0_address;                                                      // ocram_64K_s1_agent:m0_address -> ocram_64K_s1_translator:uav_address
-	wire    [3:0] ocram_64k_s1_agent_m0_byteenable;                                                   // ocram_64K_s1_agent:m0_byteenable -> ocram_64K_s1_translator:uav_byteenable
-	wire          ocram_64k_s1_agent_m0_read;                                                         // ocram_64K_s1_agent:m0_read -> ocram_64K_s1_translator:uav_read
-	wire          ocram_64k_s1_agent_m0_readdatavalid;                                                // ocram_64K_s1_translator:uav_readdatavalid -> ocram_64K_s1_agent:m0_readdatavalid
-	wire          ocram_64k_s1_agent_m0_lock;                                                         // ocram_64K_s1_agent:m0_lock -> ocram_64K_s1_translator:uav_lock
-	wire   [31:0] ocram_64k_s1_agent_m0_writedata;                                                    // ocram_64K_s1_agent:m0_writedata -> ocram_64K_s1_translator:uav_writedata
-	wire          ocram_64k_s1_agent_m0_write;                                                        // ocram_64K_s1_agent:m0_write -> ocram_64K_s1_translator:uav_write
-	wire    [2:0] ocram_64k_s1_agent_m0_burstcount;                                                   // ocram_64K_s1_agent:m0_burstcount -> ocram_64K_s1_translator:uav_burstcount
-	wire          ocram_64k_s1_agent_rf_source_valid;                                                 // ocram_64K_s1_agent:rf_source_valid -> ocram_64K_s1_agent_rsp_fifo:in_valid
-	wire  [123:0] ocram_64k_s1_agent_rf_source_data;                                                  // ocram_64K_s1_agent:rf_source_data -> ocram_64K_s1_agent_rsp_fifo:in_data
-	wire          ocram_64k_s1_agent_rf_source_ready;                                                 // ocram_64K_s1_agent_rsp_fifo:in_ready -> ocram_64K_s1_agent:rf_source_ready
-	wire          ocram_64k_s1_agent_rf_source_startofpacket;                                         // ocram_64K_s1_agent:rf_source_startofpacket -> ocram_64K_s1_agent_rsp_fifo:in_startofpacket
-	wire          ocram_64k_s1_agent_rf_source_endofpacket;                                           // ocram_64K_s1_agent:rf_source_endofpacket -> ocram_64K_s1_agent_rsp_fifo:in_endofpacket
-	wire          ocram_64k_s1_agent_rsp_fifo_out_valid;                                              // ocram_64K_s1_agent_rsp_fifo:out_valid -> ocram_64K_s1_agent:rf_sink_valid
-	wire  [123:0] ocram_64k_s1_agent_rsp_fifo_out_data;                                               // ocram_64K_s1_agent_rsp_fifo:out_data -> ocram_64K_s1_agent:rf_sink_data
-	wire          ocram_64k_s1_agent_rsp_fifo_out_ready;                                              // ocram_64K_s1_agent:rf_sink_ready -> ocram_64K_s1_agent_rsp_fifo:out_ready
-	wire          ocram_64k_s1_agent_rsp_fifo_out_startofpacket;                                      // ocram_64K_s1_agent_rsp_fifo:out_startofpacket -> ocram_64K_s1_agent:rf_sink_startofpacket
-	wire          ocram_64k_s1_agent_rsp_fifo_out_endofpacket;                                        // ocram_64K_s1_agent_rsp_fifo:out_endofpacket -> ocram_64K_s1_agent:rf_sink_endofpacket
-	wire          ocram_64k_s1_agent_rdata_fifo_src_valid;                                            // ocram_64K_s1_agent:rdata_fifo_src_valid -> ocram_64K_s1_agent_rdata_fifo:in_valid
-	wire   [33:0] ocram_64k_s1_agent_rdata_fifo_src_data;                                             // ocram_64K_s1_agent:rdata_fifo_src_data -> ocram_64K_s1_agent_rdata_fifo:in_data
-	wire          ocram_64k_s1_agent_rdata_fifo_src_ready;                                            // ocram_64K_s1_agent_rdata_fifo:in_ready -> ocram_64K_s1_agent:rdata_fifo_src_ready
-	wire   [31:0] ocram_16b_s1_agent_m0_readdata;                                                     // ocram_16b_s1_translator:uav_readdata -> ocram_16b_s1_agent:m0_readdata
-	wire          ocram_16b_s1_agent_m0_waitrequest;                                                  // ocram_16b_s1_translator:uav_waitrequest -> ocram_16b_s1_agent:m0_waitrequest
-	wire          ocram_16b_s1_agent_m0_debugaccess;                                                  // ocram_16b_s1_agent:m0_debugaccess -> ocram_16b_s1_translator:uav_debugaccess
-	wire   [31:0] ocram_16b_s1_agent_m0_address;                                                      // ocram_16b_s1_agent:m0_address -> ocram_16b_s1_translator:uav_address
-	wire    [3:0] ocram_16b_s1_agent_m0_byteenable;                                                   // ocram_16b_s1_agent:m0_byteenable -> ocram_16b_s1_translator:uav_byteenable
-	wire          ocram_16b_s1_agent_m0_read;                                                         // ocram_16b_s1_agent:m0_read -> ocram_16b_s1_translator:uav_read
-	wire          ocram_16b_s1_agent_m0_readdatavalid;                                                // ocram_16b_s1_translator:uav_readdatavalid -> ocram_16b_s1_agent:m0_readdatavalid
-	wire          ocram_16b_s1_agent_m0_lock;                                                         // ocram_16b_s1_agent:m0_lock -> ocram_16b_s1_translator:uav_lock
-	wire   [31:0] ocram_16b_s1_agent_m0_writedata;                                                    // ocram_16b_s1_agent:m0_writedata -> ocram_16b_s1_translator:uav_writedata
-	wire          ocram_16b_s1_agent_m0_write;                                                        // ocram_16b_s1_agent:m0_write -> ocram_16b_s1_translator:uav_write
-	wire    [2:0] ocram_16b_s1_agent_m0_burstcount;                                                   // ocram_16b_s1_agent:m0_burstcount -> ocram_16b_s1_translator:uav_burstcount
-	wire          ocram_16b_s1_agent_rf_source_valid;                                                 // ocram_16b_s1_agent:rf_source_valid -> ocram_16b_s1_agent_rsp_fifo:in_valid
-	wire  [123:0] ocram_16b_s1_agent_rf_source_data;                                                  // ocram_16b_s1_agent:rf_source_data -> ocram_16b_s1_agent_rsp_fifo:in_data
-	wire          ocram_16b_s1_agent_rf_source_ready;                                                 // ocram_16b_s1_agent_rsp_fifo:in_ready -> ocram_16b_s1_agent:rf_source_ready
-	wire          ocram_16b_s1_agent_rf_source_startofpacket;                                         // ocram_16b_s1_agent:rf_source_startofpacket -> ocram_16b_s1_agent_rsp_fifo:in_startofpacket
-	wire          ocram_16b_s1_agent_rf_source_endofpacket;                                           // ocram_16b_s1_agent:rf_source_endofpacket -> ocram_16b_s1_agent_rsp_fifo:in_endofpacket
-	wire          ocram_16b_s1_agent_rsp_fifo_out_valid;                                              // ocram_16b_s1_agent_rsp_fifo:out_valid -> ocram_16b_s1_agent:rf_sink_valid
-	wire  [123:0] ocram_16b_s1_agent_rsp_fifo_out_data;                                               // ocram_16b_s1_agent_rsp_fifo:out_data -> ocram_16b_s1_agent:rf_sink_data
-	wire          ocram_16b_s1_agent_rsp_fifo_out_ready;                                              // ocram_16b_s1_agent:rf_sink_ready -> ocram_16b_s1_agent_rsp_fifo:out_ready
-	wire          ocram_16b_s1_agent_rsp_fifo_out_startofpacket;                                      // ocram_16b_s1_agent_rsp_fifo:out_startofpacket -> ocram_16b_s1_agent:rf_sink_startofpacket
-	wire          ocram_16b_s1_agent_rsp_fifo_out_endofpacket;                                        // ocram_16b_s1_agent_rsp_fifo:out_endofpacket -> ocram_16b_s1_agent:rf_sink_endofpacket
-	wire          ocram_16b_s1_agent_rdata_fifo_src_valid;                                            // ocram_16b_s1_agent:rdata_fifo_src_valid -> ocram_16b_s1_agent_rdata_fifo:in_valid
-	wire   [33:0] ocram_16b_s1_agent_rdata_fifo_src_data;                                             // ocram_16b_s1_agent:rdata_fifo_src_data -> ocram_16b_s1_agent_rdata_fifo:in_data
-	wire          ocram_16b_s1_agent_rdata_fifo_src_ready;                                            // ocram_16b_s1_agent_rdata_fifo:in_ready -> ocram_16b_s1_agent:rdata_fifo_src_ready
-	wire   [31:0] led_pio_s1_agent_m0_readdata;                                                       // led_pio_s1_translator:uav_readdata -> led_pio_s1_agent:m0_readdata
-	wire          led_pio_s1_agent_m0_waitrequest;                                                    // led_pio_s1_translator:uav_waitrequest -> led_pio_s1_agent:m0_waitrequest
-	wire          led_pio_s1_agent_m0_debugaccess;                                                    // led_pio_s1_agent:m0_debugaccess -> led_pio_s1_translator:uav_debugaccess
-	wire   [31:0] led_pio_s1_agent_m0_address;                                                        // led_pio_s1_agent:m0_address -> led_pio_s1_translator:uav_address
-	wire    [3:0] led_pio_s1_agent_m0_byteenable;                                                     // led_pio_s1_agent:m0_byteenable -> led_pio_s1_translator:uav_byteenable
-	wire          led_pio_s1_agent_m0_read;                                                           // led_pio_s1_agent:m0_read -> led_pio_s1_translator:uav_read
-	wire          led_pio_s1_agent_m0_readdatavalid;                                                  // led_pio_s1_translator:uav_readdatavalid -> led_pio_s1_agent:m0_readdatavalid
-	wire          led_pio_s1_agent_m0_lock;                                                           // led_pio_s1_agent:m0_lock -> led_pio_s1_translator:uav_lock
-	wire   [31:0] led_pio_s1_agent_m0_writedata;                                                      // led_pio_s1_agent:m0_writedata -> led_pio_s1_translator:uav_writedata
-	wire          led_pio_s1_agent_m0_write;                                                          // led_pio_s1_agent:m0_write -> led_pio_s1_translator:uav_write
-	wire    [2:0] led_pio_s1_agent_m0_burstcount;                                                     // led_pio_s1_agent:m0_burstcount -> led_pio_s1_translator:uav_burstcount
-	wire          led_pio_s1_agent_rf_source_valid;                                                   // led_pio_s1_agent:rf_source_valid -> led_pio_s1_agent_rsp_fifo:in_valid
-	wire  [123:0] led_pio_s1_agent_rf_source_data;                                                    // led_pio_s1_agent:rf_source_data -> led_pio_s1_agent_rsp_fifo:in_data
-	wire          led_pio_s1_agent_rf_source_ready;                                                   // led_pio_s1_agent_rsp_fifo:in_ready -> led_pio_s1_agent:rf_source_ready
-	wire          led_pio_s1_agent_rf_source_startofpacket;                                           // led_pio_s1_agent:rf_source_startofpacket -> led_pio_s1_agent_rsp_fifo:in_startofpacket
-	wire          led_pio_s1_agent_rf_source_endofpacket;                                             // led_pio_s1_agent:rf_source_endofpacket -> led_pio_s1_agent_rsp_fifo:in_endofpacket
-	wire          led_pio_s1_agent_rsp_fifo_out_valid;                                                // led_pio_s1_agent_rsp_fifo:out_valid -> led_pio_s1_agent:rf_sink_valid
-	wire  [123:0] led_pio_s1_agent_rsp_fifo_out_data;                                                 // led_pio_s1_agent_rsp_fifo:out_data -> led_pio_s1_agent:rf_sink_data
-	wire          led_pio_s1_agent_rsp_fifo_out_ready;                                                // led_pio_s1_agent:rf_sink_ready -> led_pio_s1_agent_rsp_fifo:out_ready
-	wire          led_pio_s1_agent_rsp_fifo_out_startofpacket;                                        // led_pio_s1_agent_rsp_fifo:out_startofpacket -> led_pio_s1_agent:rf_sink_startofpacket
-	wire          led_pio_s1_agent_rsp_fifo_out_endofpacket;                                          // led_pio_s1_agent_rsp_fifo:out_endofpacket -> led_pio_s1_agent:rf_sink_endofpacket
-	wire          led_pio_s1_agent_rdata_fifo_src_valid;                                              // led_pio_s1_agent:rdata_fifo_src_valid -> led_pio_s1_agent_rdata_fifo:in_valid
-	wire   [33:0] led_pio_s1_agent_rdata_fifo_src_data;                                               // led_pio_s1_agent:rdata_fifo_src_data -> led_pio_s1_agent_rdata_fifo:in_data
-	wire          led_pio_s1_agent_rdata_fifo_src_ready;                                              // led_pio_s1_agent_rdata_fifo:in_ready -> led_pio_s1_agent:rdata_fifo_src_ready
-	wire   [31:0] button_pio_s1_agent_m0_readdata;                                                    // button_pio_s1_translator:uav_readdata -> button_pio_s1_agent:m0_readdata
-	wire          button_pio_s1_agent_m0_waitrequest;                                                 // button_pio_s1_translator:uav_waitrequest -> button_pio_s1_agent:m0_waitrequest
-	wire          button_pio_s1_agent_m0_debugaccess;                                                 // button_pio_s1_agent:m0_debugaccess -> button_pio_s1_translator:uav_debugaccess
-	wire   [31:0] button_pio_s1_agent_m0_address;                                                     // button_pio_s1_agent:m0_address -> button_pio_s1_translator:uav_address
-	wire    [3:0] button_pio_s1_agent_m0_byteenable;                                                  // button_pio_s1_agent:m0_byteenable -> button_pio_s1_translator:uav_byteenable
-	wire          button_pio_s1_agent_m0_read;                                                        // button_pio_s1_agent:m0_read -> button_pio_s1_translator:uav_read
-	wire          button_pio_s1_agent_m0_readdatavalid;                                               // button_pio_s1_translator:uav_readdatavalid -> button_pio_s1_agent:m0_readdatavalid
-	wire          button_pio_s1_agent_m0_lock;                                                        // button_pio_s1_agent:m0_lock -> button_pio_s1_translator:uav_lock
-	wire   [31:0] button_pio_s1_agent_m0_writedata;                                                   // button_pio_s1_agent:m0_writedata -> button_pio_s1_translator:uav_writedata
-	wire          button_pio_s1_agent_m0_write;                                                       // button_pio_s1_agent:m0_write -> button_pio_s1_translator:uav_write
-	wire    [2:0] button_pio_s1_agent_m0_burstcount;                                                  // button_pio_s1_agent:m0_burstcount -> button_pio_s1_translator:uav_burstcount
-	wire          button_pio_s1_agent_rf_source_valid;                                                // button_pio_s1_agent:rf_source_valid -> button_pio_s1_agent_rsp_fifo:in_valid
-	wire  [123:0] button_pio_s1_agent_rf_source_data;                                                 // button_pio_s1_agent:rf_source_data -> button_pio_s1_agent_rsp_fifo:in_data
-	wire          button_pio_s1_agent_rf_source_ready;                                                // button_pio_s1_agent_rsp_fifo:in_ready -> button_pio_s1_agent:rf_source_ready
-	wire          button_pio_s1_agent_rf_source_startofpacket;                                        // button_pio_s1_agent:rf_source_startofpacket -> button_pio_s1_agent_rsp_fifo:in_startofpacket
-	wire          button_pio_s1_agent_rf_source_endofpacket;                                          // button_pio_s1_agent:rf_source_endofpacket -> button_pio_s1_agent_rsp_fifo:in_endofpacket
-	wire          button_pio_s1_agent_rsp_fifo_out_valid;                                             // button_pio_s1_agent_rsp_fifo:out_valid -> button_pio_s1_agent:rf_sink_valid
-	wire  [123:0] button_pio_s1_agent_rsp_fifo_out_data;                                              // button_pio_s1_agent_rsp_fifo:out_data -> button_pio_s1_agent:rf_sink_data
-	wire          button_pio_s1_agent_rsp_fifo_out_ready;                                             // button_pio_s1_agent:rf_sink_ready -> button_pio_s1_agent_rsp_fifo:out_ready
-	wire          button_pio_s1_agent_rsp_fifo_out_startofpacket;                                     // button_pio_s1_agent_rsp_fifo:out_startofpacket -> button_pio_s1_agent:rf_sink_startofpacket
-	wire          button_pio_s1_agent_rsp_fifo_out_endofpacket;                                       // button_pio_s1_agent_rsp_fifo:out_endofpacket -> button_pio_s1_agent:rf_sink_endofpacket
-	wire          button_pio_s1_agent_rdata_fifo_src_valid;                                           // button_pio_s1_agent:rdata_fifo_src_valid -> button_pio_s1_agent_rdata_fifo:in_valid
-	wire   [33:0] button_pio_s1_agent_rdata_fifo_src_data;                                            // button_pio_s1_agent:rdata_fifo_src_data -> button_pio_s1_agent_rdata_fifo:in_data
-	wire          button_pio_s1_agent_rdata_fifo_src_ready;                                           // button_pio_s1_agent_rdata_fifo:in_ready -> button_pio_s1_agent:rdata_fifo_src_ready
 	wire   [31:0] switch_pio_s1_agent_m0_readdata;                                                    // switch_pio_s1_translator:uav_readdata -> switch_pio_s1_agent:m0_readdata
 	wire          switch_pio_s1_agent_m0_waitrequest;                                                 // switch_pio_s1_translator:uav_waitrequest -> switch_pio_s1_agent:m0_waitrequest
 	wire          switch_pio_s1_agent_m0_debugaccess;                                                 // switch_pio_s1_agent:m0_debugaccess -> switch_pio_s1_translator:uav_debugaccess
@@ -492,28 +396,118 @@ module soc_system_mm_interconnect_0 (
 	wire          switch_pio_s1_agent_rdata_fifo_src_valid;                                           // switch_pio_s1_agent:rdata_fifo_src_valid -> switch_pio_s1_agent_rdata_fifo:in_valid
 	wire   [33:0] switch_pio_s1_agent_rdata_fifo_src_data;                                            // switch_pio_s1_agent:rdata_fifo_src_data -> switch_pio_s1_agent_rdata_fifo:in_data
 	wire          switch_pio_s1_agent_rdata_fifo_src_ready;                                           // switch_pio_s1_agent_rdata_fifo:in_ready -> switch_pio_s1_agent:rdata_fifo_src_ready
-	wire          cmd_mux_007_src_valid;                                                              // cmd_mux_007:src_valid -> switch_pio_s1_agent:cp_valid
-	wire  [122:0] cmd_mux_007_src_data;                                                               // cmd_mux_007:src_data -> switch_pio_s1_agent:cp_data
-	wire          cmd_mux_007_src_ready;                                                              // switch_pio_s1_agent:cp_ready -> cmd_mux_007:src_ready
-	wire    [7:0] cmd_mux_007_src_channel;                                                            // cmd_mux_007:src_channel -> switch_pio_s1_agent:cp_channel
-	wire          cmd_mux_007_src_startofpacket;                                                      // cmd_mux_007:src_startofpacket -> switch_pio_s1_agent:cp_startofpacket
-	wire          cmd_mux_007_src_endofpacket;                                                        // cmd_mux_007:src_endofpacket -> switch_pio_s1_agent:cp_endofpacket
-	wire          vexriscvaxi4_0_dbusaxi_agent_write_cp_valid;                                        // VexRiscvAxi4_0_dBusaxi_agent:write_cp_valid -> router:sink_valid
-	wire  [122:0] vexriscvaxi4_0_dbusaxi_agent_write_cp_data;                                         // VexRiscvAxi4_0_dBusaxi_agent:write_cp_data -> router:sink_data
-	wire          vexriscvaxi4_0_dbusaxi_agent_write_cp_ready;                                        // router:sink_ready -> VexRiscvAxi4_0_dBusaxi_agent:write_cp_ready
-	wire          vexriscvaxi4_0_dbusaxi_agent_write_cp_startofpacket;                                // VexRiscvAxi4_0_dBusaxi_agent:write_cp_startofpacket -> router:sink_startofpacket
-	wire          vexriscvaxi4_0_dbusaxi_agent_write_cp_endofpacket;                                  // VexRiscvAxi4_0_dBusaxi_agent:write_cp_endofpacket -> router:sink_endofpacket
+	wire   [31:0] button_pio_s1_agent_m0_readdata;                                                    // button_pio_s1_translator:uav_readdata -> button_pio_s1_agent:m0_readdata
+	wire          button_pio_s1_agent_m0_waitrequest;                                                 // button_pio_s1_translator:uav_waitrequest -> button_pio_s1_agent:m0_waitrequest
+	wire          button_pio_s1_agent_m0_debugaccess;                                                 // button_pio_s1_agent:m0_debugaccess -> button_pio_s1_translator:uav_debugaccess
+	wire   [31:0] button_pio_s1_agent_m0_address;                                                     // button_pio_s1_agent:m0_address -> button_pio_s1_translator:uav_address
+	wire    [3:0] button_pio_s1_agent_m0_byteenable;                                                  // button_pio_s1_agent:m0_byteenable -> button_pio_s1_translator:uav_byteenable
+	wire          button_pio_s1_agent_m0_read;                                                        // button_pio_s1_agent:m0_read -> button_pio_s1_translator:uav_read
+	wire          button_pio_s1_agent_m0_readdatavalid;                                               // button_pio_s1_translator:uav_readdatavalid -> button_pio_s1_agent:m0_readdatavalid
+	wire          button_pio_s1_agent_m0_lock;                                                        // button_pio_s1_agent:m0_lock -> button_pio_s1_translator:uav_lock
+	wire   [31:0] button_pio_s1_agent_m0_writedata;                                                   // button_pio_s1_agent:m0_writedata -> button_pio_s1_translator:uav_writedata
+	wire          button_pio_s1_agent_m0_write;                                                       // button_pio_s1_agent:m0_write -> button_pio_s1_translator:uav_write
+	wire    [2:0] button_pio_s1_agent_m0_burstcount;                                                  // button_pio_s1_agent:m0_burstcount -> button_pio_s1_translator:uav_burstcount
+	wire          button_pio_s1_agent_rf_source_valid;                                                // button_pio_s1_agent:rf_source_valid -> button_pio_s1_agent_rsp_fifo:in_valid
+	wire  [123:0] button_pio_s1_agent_rf_source_data;                                                 // button_pio_s1_agent:rf_source_data -> button_pio_s1_agent_rsp_fifo:in_data
+	wire          button_pio_s1_agent_rf_source_ready;                                                // button_pio_s1_agent_rsp_fifo:in_ready -> button_pio_s1_agent:rf_source_ready
+	wire          button_pio_s1_agent_rf_source_startofpacket;                                        // button_pio_s1_agent:rf_source_startofpacket -> button_pio_s1_agent_rsp_fifo:in_startofpacket
+	wire          button_pio_s1_agent_rf_source_endofpacket;                                          // button_pio_s1_agent:rf_source_endofpacket -> button_pio_s1_agent_rsp_fifo:in_endofpacket
+	wire          button_pio_s1_agent_rsp_fifo_out_valid;                                             // button_pio_s1_agent_rsp_fifo:out_valid -> button_pio_s1_agent:rf_sink_valid
+	wire  [123:0] button_pio_s1_agent_rsp_fifo_out_data;                                              // button_pio_s1_agent_rsp_fifo:out_data -> button_pio_s1_agent:rf_sink_data
+	wire          button_pio_s1_agent_rsp_fifo_out_ready;                                             // button_pio_s1_agent:rf_sink_ready -> button_pio_s1_agent_rsp_fifo:out_ready
+	wire          button_pio_s1_agent_rsp_fifo_out_startofpacket;                                     // button_pio_s1_agent_rsp_fifo:out_startofpacket -> button_pio_s1_agent:rf_sink_startofpacket
+	wire          button_pio_s1_agent_rsp_fifo_out_endofpacket;                                       // button_pio_s1_agent_rsp_fifo:out_endofpacket -> button_pio_s1_agent:rf_sink_endofpacket
+	wire          button_pio_s1_agent_rdata_fifo_src_valid;                                           // button_pio_s1_agent:rdata_fifo_src_valid -> button_pio_s1_agent_rdata_fifo:in_valid
+	wire   [33:0] button_pio_s1_agent_rdata_fifo_src_data;                                            // button_pio_s1_agent:rdata_fifo_src_data -> button_pio_s1_agent_rdata_fifo:in_data
+	wire          button_pio_s1_agent_rdata_fifo_src_ready;                                           // button_pio_s1_agent_rdata_fifo:in_ready -> button_pio_s1_agent:rdata_fifo_src_ready
+	wire   [31:0] led_pio_s1_agent_m0_readdata;                                                       // led_pio_s1_translator:uav_readdata -> led_pio_s1_agent:m0_readdata
+	wire          led_pio_s1_agent_m0_waitrequest;                                                    // led_pio_s1_translator:uav_waitrequest -> led_pio_s1_agent:m0_waitrequest
+	wire          led_pio_s1_agent_m0_debugaccess;                                                    // led_pio_s1_agent:m0_debugaccess -> led_pio_s1_translator:uav_debugaccess
+	wire   [31:0] led_pio_s1_agent_m0_address;                                                        // led_pio_s1_agent:m0_address -> led_pio_s1_translator:uav_address
+	wire    [3:0] led_pio_s1_agent_m0_byteenable;                                                     // led_pio_s1_agent:m0_byteenable -> led_pio_s1_translator:uav_byteenable
+	wire          led_pio_s1_agent_m0_read;                                                           // led_pio_s1_agent:m0_read -> led_pio_s1_translator:uav_read
+	wire          led_pio_s1_agent_m0_readdatavalid;                                                  // led_pio_s1_translator:uav_readdatavalid -> led_pio_s1_agent:m0_readdatavalid
+	wire          led_pio_s1_agent_m0_lock;                                                           // led_pio_s1_agent:m0_lock -> led_pio_s1_translator:uav_lock
+	wire   [31:0] led_pio_s1_agent_m0_writedata;                                                      // led_pio_s1_agent:m0_writedata -> led_pio_s1_translator:uav_writedata
+	wire          led_pio_s1_agent_m0_write;                                                          // led_pio_s1_agent:m0_write -> led_pio_s1_translator:uav_write
+	wire    [2:0] led_pio_s1_agent_m0_burstcount;                                                     // led_pio_s1_agent:m0_burstcount -> led_pio_s1_translator:uav_burstcount
+	wire          led_pio_s1_agent_rf_source_valid;                                                   // led_pio_s1_agent:rf_source_valid -> led_pio_s1_agent_rsp_fifo:in_valid
+	wire  [123:0] led_pio_s1_agent_rf_source_data;                                                    // led_pio_s1_agent:rf_source_data -> led_pio_s1_agent_rsp_fifo:in_data
+	wire          led_pio_s1_agent_rf_source_ready;                                                   // led_pio_s1_agent_rsp_fifo:in_ready -> led_pio_s1_agent:rf_source_ready
+	wire          led_pio_s1_agent_rf_source_startofpacket;                                           // led_pio_s1_agent:rf_source_startofpacket -> led_pio_s1_agent_rsp_fifo:in_startofpacket
+	wire          led_pio_s1_agent_rf_source_endofpacket;                                             // led_pio_s1_agent:rf_source_endofpacket -> led_pio_s1_agent_rsp_fifo:in_endofpacket
+	wire          led_pio_s1_agent_rsp_fifo_out_valid;                                                // led_pio_s1_agent_rsp_fifo:out_valid -> led_pio_s1_agent:rf_sink_valid
+	wire  [123:0] led_pio_s1_agent_rsp_fifo_out_data;                                                 // led_pio_s1_agent_rsp_fifo:out_data -> led_pio_s1_agent:rf_sink_data
+	wire          led_pio_s1_agent_rsp_fifo_out_ready;                                                // led_pio_s1_agent:rf_sink_ready -> led_pio_s1_agent_rsp_fifo:out_ready
+	wire          led_pio_s1_agent_rsp_fifo_out_startofpacket;                                        // led_pio_s1_agent_rsp_fifo:out_startofpacket -> led_pio_s1_agent:rf_sink_startofpacket
+	wire          led_pio_s1_agent_rsp_fifo_out_endofpacket;                                          // led_pio_s1_agent_rsp_fifo:out_endofpacket -> led_pio_s1_agent:rf_sink_endofpacket
+	wire          led_pio_s1_agent_rdata_fifo_src_valid;                                              // led_pio_s1_agent:rdata_fifo_src_valid -> led_pio_s1_agent_rdata_fifo:in_valid
+	wire   [33:0] led_pio_s1_agent_rdata_fifo_src_data;                                               // led_pio_s1_agent:rdata_fifo_src_data -> led_pio_s1_agent_rdata_fifo:in_data
+	wire          led_pio_s1_agent_rdata_fifo_src_ready;                                              // led_pio_s1_agent_rdata_fifo:in_ready -> led_pio_s1_agent:rdata_fifo_src_ready
+	wire   [31:0] ocram_16b_s1_agent_m0_readdata;                                                     // ocram_16b_s1_translator:uav_readdata -> ocram_16b_s1_agent:m0_readdata
+	wire          ocram_16b_s1_agent_m0_waitrequest;                                                  // ocram_16b_s1_translator:uav_waitrequest -> ocram_16b_s1_agent:m0_waitrequest
+	wire          ocram_16b_s1_agent_m0_debugaccess;                                                  // ocram_16b_s1_agent:m0_debugaccess -> ocram_16b_s1_translator:uav_debugaccess
+	wire   [31:0] ocram_16b_s1_agent_m0_address;                                                      // ocram_16b_s1_agent:m0_address -> ocram_16b_s1_translator:uav_address
+	wire    [3:0] ocram_16b_s1_agent_m0_byteenable;                                                   // ocram_16b_s1_agent:m0_byteenable -> ocram_16b_s1_translator:uav_byteenable
+	wire          ocram_16b_s1_agent_m0_read;                                                         // ocram_16b_s1_agent:m0_read -> ocram_16b_s1_translator:uav_read
+	wire          ocram_16b_s1_agent_m0_readdatavalid;                                                // ocram_16b_s1_translator:uav_readdatavalid -> ocram_16b_s1_agent:m0_readdatavalid
+	wire          ocram_16b_s1_agent_m0_lock;                                                         // ocram_16b_s1_agent:m0_lock -> ocram_16b_s1_translator:uav_lock
+	wire   [31:0] ocram_16b_s1_agent_m0_writedata;                                                    // ocram_16b_s1_agent:m0_writedata -> ocram_16b_s1_translator:uav_writedata
+	wire          ocram_16b_s1_agent_m0_write;                                                        // ocram_16b_s1_agent:m0_write -> ocram_16b_s1_translator:uav_write
+	wire    [2:0] ocram_16b_s1_agent_m0_burstcount;                                                   // ocram_16b_s1_agent:m0_burstcount -> ocram_16b_s1_translator:uav_burstcount
+	wire          ocram_16b_s1_agent_rf_source_valid;                                                 // ocram_16b_s1_agent:rf_source_valid -> ocram_16b_s1_agent_rsp_fifo:in_valid
+	wire  [123:0] ocram_16b_s1_agent_rf_source_data;                                                  // ocram_16b_s1_agent:rf_source_data -> ocram_16b_s1_agent_rsp_fifo:in_data
+	wire          ocram_16b_s1_agent_rf_source_ready;                                                 // ocram_16b_s1_agent_rsp_fifo:in_ready -> ocram_16b_s1_agent:rf_source_ready
+	wire          ocram_16b_s1_agent_rf_source_startofpacket;                                         // ocram_16b_s1_agent:rf_source_startofpacket -> ocram_16b_s1_agent_rsp_fifo:in_startofpacket
+	wire          ocram_16b_s1_agent_rf_source_endofpacket;                                           // ocram_16b_s1_agent:rf_source_endofpacket -> ocram_16b_s1_agent_rsp_fifo:in_endofpacket
+	wire          ocram_16b_s1_agent_rsp_fifo_out_valid;                                              // ocram_16b_s1_agent_rsp_fifo:out_valid -> ocram_16b_s1_agent:rf_sink_valid
+	wire  [123:0] ocram_16b_s1_agent_rsp_fifo_out_data;                                               // ocram_16b_s1_agent_rsp_fifo:out_data -> ocram_16b_s1_agent:rf_sink_data
+	wire          ocram_16b_s1_agent_rsp_fifo_out_ready;                                              // ocram_16b_s1_agent:rf_sink_ready -> ocram_16b_s1_agent_rsp_fifo:out_ready
+	wire          ocram_16b_s1_agent_rsp_fifo_out_startofpacket;                                      // ocram_16b_s1_agent_rsp_fifo:out_startofpacket -> ocram_16b_s1_agent:rf_sink_startofpacket
+	wire          ocram_16b_s1_agent_rsp_fifo_out_endofpacket;                                        // ocram_16b_s1_agent_rsp_fifo:out_endofpacket -> ocram_16b_s1_agent:rf_sink_endofpacket
+	wire          ocram_16b_s1_agent_rdata_fifo_src_valid;                                            // ocram_16b_s1_agent:rdata_fifo_src_valid -> ocram_16b_s1_agent_rdata_fifo:in_valid
+	wire   [33:0] ocram_16b_s1_agent_rdata_fifo_src_data;                                             // ocram_16b_s1_agent:rdata_fifo_src_data -> ocram_16b_s1_agent_rdata_fifo:in_data
+	wire          ocram_16b_s1_agent_rdata_fifo_src_ready;                                            // ocram_16b_s1_agent_rdata_fifo:in_ready -> ocram_16b_s1_agent:rdata_fifo_src_ready
+	wire   [31:0] ocram_64k_s1_agent_m0_readdata;                                                     // ocram_64K_s1_translator:uav_readdata -> ocram_64K_s1_agent:m0_readdata
+	wire          ocram_64k_s1_agent_m0_waitrequest;                                                  // ocram_64K_s1_translator:uav_waitrequest -> ocram_64K_s1_agent:m0_waitrequest
+	wire          ocram_64k_s1_agent_m0_debugaccess;                                                  // ocram_64K_s1_agent:m0_debugaccess -> ocram_64K_s1_translator:uav_debugaccess
+	wire   [31:0] ocram_64k_s1_agent_m0_address;                                                      // ocram_64K_s1_agent:m0_address -> ocram_64K_s1_translator:uav_address
+	wire    [3:0] ocram_64k_s1_agent_m0_byteenable;                                                   // ocram_64K_s1_agent:m0_byteenable -> ocram_64K_s1_translator:uav_byteenable
+	wire          ocram_64k_s1_agent_m0_read;                                                         // ocram_64K_s1_agent:m0_read -> ocram_64K_s1_translator:uav_read
+	wire          ocram_64k_s1_agent_m0_readdatavalid;                                                // ocram_64K_s1_translator:uav_readdatavalid -> ocram_64K_s1_agent:m0_readdatavalid
+	wire          ocram_64k_s1_agent_m0_lock;                                                         // ocram_64K_s1_agent:m0_lock -> ocram_64K_s1_translator:uav_lock
+	wire   [31:0] ocram_64k_s1_agent_m0_writedata;                                                    // ocram_64K_s1_agent:m0_writedata -> ocram_64K_s1_translator:uav_writedata
+	wire          ocram_64k_s1_agent_m0_write;                                                        // ocram_64K_s1_agent:m0_write -> ocram_64K_s1_translator:uav_write
+	wire    [2:0] ocram_64k_s1_agent_m0_burstcount;                                                   // ocram_64K_s1_agent:m0_burstcount -> ocram_64K_s1_translator:uav_burstcount
+	wire          ocram_64k_s1_agent_rf_source_valid;                                                 // ocram_64K_s1_agent:rf_source_valid -> ocram_64K_s1_agent_rsp_fifo:in_valid
+	wire  [123:0] ocram_64k_s1_agent_rf_source_data;                                                  // ocram_64K_s1_agent:rf_source_data -> ocram_64K_s1_agent_rsp_fifo:in_data
+	wire          ocram_64k_s1_agent_rf_source_ready;                                                 // ocram_64K_s1_agent_rsp_fifo:in_ready -> ocram_64K_s1_agent:rf_source_ready
+	wire          ocram_64k_s1_agent_rf_source_startofpacket;                                         // ocram_64K_s1_agent:rf_source_startofpacket -> ocram_64K_s1_agent_rsp_fifo:in_startofpacket
+	wire          ocram_64k_s1_agent_rf_source_endofpacket;                                           // ocram_64K_s1_agent:rf_source_endofpacket -> ocram_64K_s1_agent_rsp_fifo:in_endofpacket
+	wire          ocram_64k_s1_agent_rsp_fifo_out_valid;                                              // ocram_64K_s1_agent_rsp_fifo:out_valid -> ocram_64K_s1_agent:rf_sink_valid
+	wire  [123:0] ocram_64k_s1_agent_rsp_fifo_out_data;                                               // ocram_64K_s1_agent_rsp_fifo:out_data -> ocram_64K_s1_agent:rf_sink_data
+	wire          ocram_64k_s1_agent_rsp_fifo_out_ready;                                              // ocram_64K_s1_agent:rf_sink_ready -> ocram_64K_s1_agent_rsp_fifo:out_ready
+	wire          ocram_64k_s1_agent_rsp_fifo_out_startofpacket;                                      // ocram_64K_s1_agent_rsp_fifo:out_startofpacket -> ocram_64K_s1_agent:rf_sink_startofpacket
+	wire          ocram_64k_s1_agent_rsp_fifo_out_endofpacket;                                        // ocram_64K_s1_agent_rsp_fifo:out_endofpacket -> ocram_64K_s1_agent:rf_sink_endofpacket
+	wire          ocram_64k_s1_agent_rdata_fifo_src_valid;                                            // ocram_64K_s1_agent:rdata_fifo_src_valid -> ocram_64K_s1_agent_rdata_fifo:in_valid
+	wire   [33:0] ocram_64k_s1_agent_rdata_fifo_src_data;                                             // ocram_64K_s1_agent:rdata_fifo_src_data -> ocram_64K_s1_agent_rdata_fifo:in_data
+	wire          ocram_64k_s1_agent_rdata_fifo_src_ready;                                            // ocram_64K_s1_agent_rdata_fifo:in_ready -> ocram_64K_s1_agent:rdata_fifo_src_ready
+	wire          vexriscv_0_dbusaxi_agent_write_cp_valid;                                            // VexRiscv_0_dBusaxi_agent:write_cp_valid -> router:sink_valid
+	wire  [122:0] vexriscv_0_dbusaxi_agent_write_cp_data;                                             // VexRiscv_0_dBusaxi_agent:write_cp_data -> router:sink_data
+	wire          vexriscv_0_dbusaxi_agent_write_cp_ready;                                            // router:sink_ready -> VexRiscv_0_dBusaxi_agent:write_cp_ready
+	wire          vexriscv_0_dbusaxi_agent_write_cp_startofpacket;                                    // VexRiscv_0_dBusaxi_agent:write_cp_startofpacket -> router:sink_startofpacket
+	wire          vexriscv_0_dbusaxi_agent_write_cp_endofpacket;                                      // VexRiscv_0_dBusaxi_agent:write_cp_endofpacket -> router:sink_endofpacket
 	wire          router_src_valid;                                                                   // router:src_valid -> cmd_demux:sink_valid
 	wire  [122:0] router_src_data;                                                                    // router:src_data -> cmd_demux:sink_data
 	wire          router_src_ready;                                                                   // cmd_demux:sink_ready -> router:src_ready
 	wire    [7:0] router_src_channel;                                                                 // router:src_channel -> cmd_demux:sink_channel
 	wire          router_src_startofpacket;                                                           // router:src_startofpacket -> cmd_demux:sink_startofpacket
 	wire          router_src_endofpacket;                                                             // router:src_endofpacket -> cmd_demux:sink_endofpacket
-	wire          vexriscvaxi4_0_dbusaxi_agent_read_cp_valid;                                         // VexRiscvAxi4_0_dBusaxi_agent:read_cp_valid -> router_001:sink_valid
-	wire  [122:0] vexriscvaxi4_0_dbusaxi_agent_read_cp_data;                                          // VexRiscvAxi4_0_dBusaxi_agent:read_cp_data -> router_001:sink_data
-	wire          vexriscvaxi4_0_dbusaxi_agent_read_cp_ready;                                         // router_001:sink_ready -> VexRiscvAxi4_0_dBusaxi_agent:read_cp_ready
-	wire          vexriscvaxi4_0_dbusaxi_agent_read_cp_startofpacket;                                 // VexRiscvAxi4_0_dBusaxi_agent:read_cp_startofpacket -> router_001:sink_startofpacket
-	wire          vexriscvaxi4_0_dbusaxi_agent_read_cp_endofpacket;                                   // VexRiscvAxi4_0_dBusaxi_agent:read_cp_endofpacket -> router_001:sink_endofpacket
+	wire          vexriscv_0_dbusaxi_agent_read_cp_valid;                                             // VexRiscv_0_dBusaxi_agent:read_cp_valid -> router_001:sink_valid
+	wire  [122:0] vexriscv_0_dbusaxi_agent_read_cp_data;                                              // VexRiscv_0_dBusaxi_agent:read_cp_data -> router_001:sink_data
+	wire          vexriscv_0_dbusaxi_agent_read_cp_ready;                                             // router_001:sink_ready -> VexRiscv_0_dBusaxi_agent:read_cp_ready
+	wire          vexriscv_0_dbusaxi_agent_read_cp_startofpacket;                                     // VexRiscv_0_dBusaxi_agent:read_cp_startofpacket -> router_001:sink_startofpacket
+	wire          vexriscv_0_dbusaxi_agent_read_cp_endofpacket;                                       // VexRiscv_0_dBusaxi_agent:read_cp_endofpacket -> router_001:sink_endofpacket
 	wire          router_001_src_valid;                                                               // router_001:src_valid -> cmd_demux_001:sink_valid
 	wire  [122:0] router_001_src_data;                                                                // router_001:src_data -> cmd_demux_001:sink_data
 	wire          router_001_src_ready;                                                               // cmd_demux_001:sink_ready -> router_001:src_ready
@@ -536,22 +530,22 @@ module soc_system_mm_interconnect_0 (
 	wire          master_0_master_agent_cp_ready;                                                     // router_003:sink_ready -> master_0_master_agent:cp_ready
 	wire          master_0_master_agent_cp_startofpacket;                                             // master_0_master_agent:cp_startofpacket -> router_003:sink_startofpacket
 	wire          master_0_master_agent_cp_endofpacket;                                               // master_0_master_agent:cp_endofpacket -> router_003:sink_endofpacket
-	wire          vexriscvaxi4_0_ibusaxi_agent_write_cp_valid;                                        // VexRiscvAxi4_0_iBusaxi_agent:write_cp_valid -> router_004:sink_valid
-	wire  [122:0] vexriscvaxi4_0_ibusaxi_agent_write_cp_data;                                         // VexRiscvAxi4_0_iBusaxi_agent:write_cp_data -> router_004:sink_data
-	wire          vexriscvaxi4_0_ibusaxi_agent_write_cp_ready;                                        // router_004:sink_ready -> VexRiscvAxi4_0_iBusaxi_agent:write_cp_ready
-	wire          vexriscvaxi4_0_ibusaxi_agent_write_cp_startofpacket;                                // VexRiscvAxi4_0_iBusaxi_agent:write_cp_startofpacket -> router_004:sink_startofpacket
-	wire          vexriscvaxi4_0_ibusaxi_agent_write_cp_endofpacket;                                  // VexRiscvAxi4_0_iBusaxi_agent:write_cp_endofpacket -> router_004:sink_endofpacket
+	wire          vexriscv_0_ibusaxi_agent_write_cp_valid;                                            // VexRiscv_0_iBusaxi_agent:write_cp_valid -> router_004:sink_valid
+	wire  [122:0] vexriscv_0_ibusaxi_agent_write_cp_data;                                             // VexRiscv_0_iBusaxi_agent:write_cp_data -> router_004:sink_data
+	wire          vexriscv_0_ibusaxi_agent_write_cp_ready;                                            // router_004:sink_ready -> VexRiscv_0_iBusaxi_agent:write_cp_ready
+	wire          vexriscv_0_ibusaxi_agent_write_cp_startofpacket;                                    // VexRiscv_0_iBusaxi_agent:write_cp_startofpacket -> router_004:sink_startofpacket
+	wire          vexriscv_0_ibusaxi_agent_write_cp_endofpacket;                                      // VexRiscv_0_iBusaxi_agent:write_cp_endofpacket -> router_004:sink_endofpacket
 	wire          router_004_src_valid;                                                               // router_004:src_valid -> cmd_demux_004:sink_valid
 	wire  [122:0] router_004_src_data;                                                                // router_004:src_data -> cmd_demux_004:sink_data
 	wire          router_004_src_ready;                                                               // cmd_demux_004:sink_ready -> router_004:src_ready
 	wire    [7:0] router_004_src_channel;                                                             // router_004:src_channel -> cmd_demux_004:sink_channel
 	wire          router_004_src_startofpacket;                                                       // router_004:src_startofpacket -> cmd_demux_004:sink_startofpacket
 	wire          router_004_src_endofpacket;                                                         // router_004:src_endofpacket -> cmd_demux_004:sink_endofpacket
-	wire          vexriscvaxi4_0_ibusaxi_agent_read_cp_valid;                                         // VexRiscvAxi4_0_iBusaxi_agent:read_cp_valid -> router_005:sink_valid
-	wire  [122:0] vexriscvaxi4_0_ibusaxi_agent_read_cp_data;                                          // VexRiscvAxi4_0_iBusaxi_agent:read_cp_data -> router_005:sink_data
-	wire          vexriscvaxi4_0_ibusaxi_agent_read_cp_ready;                                         // router_005:sink_ready -> VexRiscvAxi4_0_iBusaxi_agent:read_cp_ready
-	wire          vexriscvaxi4_0_ibusaxi_agent_read_cp_startofpacket;                                 // VexRiscvAxi4_0_iBusaxi_agent:read_cp_startofpacket -> router_005:sink_startofpacket
-	wire          vexriscvaxi4_0_ibusaxi_agent_read_cp_endofpacket;                                   // VexRiscvAxi4_0_iBusaxi_agent:read_cp_endofpacket -> router_005:sink_endofpacket
+	wire          vexriscv_0_ibusaxi_agent_read_cp_valid;                                             // VexRiscv_0_iBusaxi_agent:read_cp_valid -> router_005:sink_valid
+	wire  [122:0] vexriscv_0_ibusaxi_agent_read_cp_data;                                              // VexRiscv_0_iBusaxi_agent:read_cp_data -> router_005:sink_data
+	wire          vexriscv_0_ibusaxi_agent_read_cp_ready;                                             // router_005:sink_ready -> VexRiscv_0_iBusaxi_agent:read_cp_ready
+	wire          vexriscv_0_ibusaxi_agent_read_cp_startofpacket;                                     // VexRiscv_0_iBusaxi_agent:read_cp_startofpacket -> router_005:sink_startofpacket
+	wire          vexriscv_0_ibusaxi_agent_read_cp_endofpacket;                                       // VexRiscv_0_iBusaxi_agent:read_cp_endofpacket -> router_005:sink_endofpacket
 	wire          router_005_src_valid;                                                               // router_005:src_valid -> cmd_demux_005:sink_valid
 	wire  [122:0] router_005_src_data;                                                                // router_005:src_data -> cmd_demux_005:sink_data
 	wire          router_005_src_ready;                                                               // cmd_demux_005:sink_ready -> router_005:src_ready
@@ -602,22 +596,22 @@ module soc_system_mm_interconnect_0 (
 	wire    [7:0] router_009_src_channel;                                                             // router_009:src_channel -> rsp_demux_002:sink_channel
 	wire          router_009_src_startofpacket;                                                       // router_009:src_startofpacket -> rsp_demux_002:sink_startofpacket
 	wire          router_009_src_endofpacket;                                                         // router_009:src_endofpacket -> rsp_demux_002:sink_endofpacket
-	wire          ocram_64k_s1_agent_rp_valid;                                                        // ocram_64K_s1_agent:rp_valid -> router_010:sink_valid
-	wire  [122:0] ocram_64k_s1_agent_rp_data;                                                         // ocram_64K_s1_agent:rp_data -> router_010:sink_data
-	wire          ocram_64k_s1_agent_rp_ready;                                                        // router_010:sink_ready -> ocram_64K_s1_agent:rp_ready
-	wire          ocram_64k_s1_agent_rp_startofpacket;                                                // ocram_64K_s1_agent:rp_startofpacket -> router_010:sink_startofpacket
-	wire          ocram_64k_s1_agent_rp_endofpacket;                                                  // ocram_64K_s1_agent:rp_endofpacket -> router_010:sink_endofpacket
+	wire          switch_pio_s1_agent_rp_valid;                                                       // switch_pio_s1_agent:rp_valid -> router_010:sink_valid
+	wire  [122:0] switch_pio_s1_agent_rp_data;                                                        // switch_pio_s1_agent:rp_data -> router_010:sink_data
+	wire          switch_pio_s1_agent_rp_ready;                                                       // router_010:sink_ready -> switch_pio_s1_agent:rp_ready
+	wire          switch_pio_s1_agent_rp_startofpacket;                                               // switch_pio_s1_agent:rp_startofpacket -> router_010:sink_startofpacket
+	wire          switch_pio_s1_agent_rp_endofpacket;                                                 // switch_pio_s1_agent:rp_endofpacket -> router_010:sink_endofpacket
 	wire          router_010_src_valid;                                                               // router_010:src_valid -> rsp_demux_003:sink_valid
 	wire  [122:0] router_010_src_data;                                                                // router_010:src_data -> rsp_demux_003:sink_data
 	wire          router_010_src_ready;                                                               // rsp_demux_003:sink_ready -> router_010:src_ready
 	wire    [7:0] router_010_src_channel;                                                             // router_010:src_channel -> rsp_demux_003:sink_channel
 	wire          router_010_src_startofpacket;                                                       // router_010:src_startofpacket -> rsp_demux_003:sink_startofpacket
 	wire          router_010_src_endofpacket;                                                         // router_010:src_endofpacket -> rsp_demux_003:sink_endofpacket
-	wire          ocram_16b_s1_agent_rp_valid;                                                        // ocram_16b_s1_agent:rp_valid -> router_011:sink_valid
-	wire  [122:0] ocram_16b_s1_agent_rp_data;                                                         // ocram_16b_s1_agent:rp_data -> router_011:sink_data
-	wire          ocram_16b_s1_agent_rp_ready;                                                        // router_011:sink_ready -> ocram_16b_s1_agent:rp_ready
-	wire          ocram_16b_s1_agent_rp_startofpacket;                                                // ocram_16b_s1_agent:rp_startofpacket -> router_011:sink_startofpacket
-	wire          ocram_16b_s1_agent_rp_endofpacket;                                                  // ocram_16b_s1_agent:rp_endofpacket -> router_011:sink_endofpacket
+	wire          button_pio_s1_agent_rp_valid;                                                       // button_pio_s1_agent:rp_valid -> router_011:sink_valid
+	wire  [122:0] button_pio_s1_agent_rp_data;                                                        // button_pio_s1_agent:rp_data -> router_011:sink_data
+	wire          button_pio_s1_agent_rp_ready;                                                       // router_011:sink_ready -> button_pio_s1_agent:rp_ready
+	wire          button_pio_s1_agent_rp_startofpacket;                                               // button_pio_s1_agent:rp_startofpacket -> router_011:sink_startofpacket
+	wire          button_pio_s1_agent_rp_endofpacket;                                                 // button_pio_s1_agent:rp_endofpacket -> router_011:sink_endofpacket
 	wire          router_011_src_valid;                                                               // router_011:src_valid -> rsp_demux_004:sink_valid
 	wire  [122:0] router_011_src_data;                                                                // router_011:src_data -> rsp_demux_004:sink_data
 	wire          router_011_src_ready;                                                               // rsp_demux_004:sink_ready -> router_011:src_ready
@@ -635,22 +629,22 @@ module soc_system_mm_interconnect_0 (
 	wire    [7:0] router_012_src_channel;                                                             // router_012:src_channel -> rsp_demux_005:sink_channel
 	wire          router_012_src_startofpacket;                                                       // router_012:src_startofpacket -> rsp_demux_005:sink_startofpacket
 	wire          router_012_src_endofpacket;                                                         // router_012:src_endofpacket -> rsp_demux_005:sink_endofpacket
-	wire          button_pio_s1_agent_rp_valid;                                                       // button_pio_s1_agent:rp_valid -> router_013:sink_valid
-	wire  [122:0] button_pio_s1_agent_rp_data;                                                        // button_pio_s1_agent:rp_data -> router_013:sink_data
-	wire          button_pio_s1_agent_rp_ready;                                                       // router_013:sink_ready -> button_pio_s1_agent:rp_ready
-	wire          button_pio_s1_agent_rp_startofpacket;                                               // button_pio_s1_agent:rp_startofpacket -> router_013:sink_startofpacket
-	wire          button_pio_s1_agent_rp_endofpacket;                                                 // button_pio_s1_agent:rp_endofpacket -> router_013:sink_endofpacket
+	wire          ocram_16b_s1_agent_rp_valid;                                                        // ocram_16b_s1_agent:rp_valid -> router_013:sink_valid
+	wire  [122:0] ocram_16b_s1_agent_rp_data;                                                         // ocram_16b_s1_agent:rp_data -> router_013:sink_data
+	wire          ocram_16b_s1_agent_rp_ready;                                                        // router_013:sink_ready -> ocram_16b_s1_agent:rp_ready
+	wire          ocram_16b_s1_agent_rp_startofpacket;                                                // ocram_16b_s1_agent:rp_startofpacket -> router_013:sink_startofpacket
+	wire          ocram_16b_s1_agent_rp_endofpacket;                                                  // ocram_16b_s1_agent:rp_endofpacket -> router_013:sink_endofpacket
 	wire          router_013_src_valid;                                                               // router_013:src_valid -> rsp_demux_006:sink_valid
 	wire  [122:0] router_013_src_data;                                                                // router_013:src_data -> rsp_demux_006:sink_data
 	wire          router_013_src_ready;                                                               // rsp_demux_006:sink_ready -> router_013:src_ready
 	wire    [7:0] router_013_src_channel;                                                             // router_013:src_channel -> rsp_demux_006:sink_channel
 	wire          router_013_src_startofpacket;                                                       // router_013:src_startofpacket -> rsp_demux_006:sink_startofpacket
 	wire          router_013_src_endofpacket;                                                         // router_013:src_endofpacket -> rsp_demux_006:sink_endofpacket
-	wire          switch_pio_s1_agent_rp_valid;                                                       // switch_pio_s1_agent:rp_valid -> router_014:sink_valid
-	wire  [122:0] switch_pio_s1_agent_rp_data;                                                        // switch_pio_s1_agent:rp_data -> router_014:sink_data
-	wire          switch_pio_s1_agent_rp_ready;                                                       // router_014:sink_ready -> switch_pio_s1_agent:rp_ready
-	wire          switch_pio_s1_agent_rp_startofpacket;                                               // switch_pio_s1_agent:rp_startofpacket -> router_014:sink_startofpacket
-	wire          switch_pio_s1_agent_rp_endofpacket;                                                 // switch_pio_s1_agent:rp_endofpacket -> router_014:sink_endofpacket
+	wire          ocram_64k_s1_agent_rp_valid;                                                        // ocram_64K_s1_agent:rp_valid -> router_014:sink_valid
+	wire  [122:0] ocram_64k_s1_agent_rp_data;                                                         // ocram_64K_s1_agent:rp_data -> router_014:sink_data
+	wire          ocram_64k_s1_agent_rp_ready;                                                        // router_014:sink_ready -> ocram_64K_s1_agent:rp_ready
+	wire          ocram_64k_s1_agent_rp_startofpacket;                                                // ocram_64K_s1_agent:rp_startofpacket -> router_014:sink_startofpacket
+	wire          ocram_64k_s1_agent_rp_endofpacket;                                                  // ocram_64K_s1_agent:rp_endofpacket -> router_014:sink_endofpacket
 	wire          router_014_src_valid;                                                               // router_014:src_valid -> rsp_demux_007:sink_valid
 	wire  [122:0] router_014_src_data;                                                                // router_014:src_data -> rsp_demux_007:sink_data
 	wire          router_014_src_ready;                                                               // rsp_demux_007:sink_ready -> router_014:src_ready
@@ -716,30 +710,30 @@ module soc_system_mm_interconnect_0 (
 	wire    [7:0] nios2_gen2_0_debug_mem_slave_burst_adapter_source0_channel;                         // nios2_gen2_0_debug_mem_slave_burst_adapter:source0_channel -> nios2_gen2_0_debug_mem_slave_agent:cp_channel
 	wire          nios2_gen2_0_debug_mem_slave_burst_adapter_source0_startofpacket;                   // nios2_gen2_0_debug_mem_slave_burst_adapter:source0_startofpacket -> nios2_gen2_0_debug_mem_slave_agent:cp_startofpacket
 	wire          nios2_gen2_0_debug_mem_slave_burst_adapter_source0_endofpacket;                     // nios2_gen2_0_debug_mem_slave_burst_adapter:source0_endofpacket -> nios2_gen2_0_debug_mem_slave_agent:cp_endofpacket
-	wire          cmd_mux_003_src_valid;                                                              // cmd_mux_003:src_valid -> ocram_64K_s1_burst_adapter:sink0_valid
-	wire  [122:0] cmd_mux_003_src_data;                                                               // cmd_mux_003:src_data -> ocram_64K_s1_burst_adapter:sink0_data
-	wire          cmd_mux_003_src_ready;                                                              // ocram_64K_s1_burst_adapter:sink0_ready -> cmd_mux_003:src_ready
-	wire    [7:0] cmd_mux_003_src_channel;                                                            // cmd_mux_003:src_channel -> ocram_64K_s1_burst_adapter:sink0_channel
-	wire          cmd_mux_003_src_startofpacket;                                                      // cmd_mux_003:src_startofpacket -> ocram_64K_s1_burst_adapter:sink0_startofpacket
-	wire          cmd_mux_003_src_endofpacket;                                                        // cmd_mux_003:src_endofpacket -> ocram_64K_s1_burst_adapter:sink0_endofpacket
-	wire          ocram_64k_s1_burst_adapter_source0_valid;                                           // ocram_64K_s1_burst_adapter:source0_valid -> ocram_64K_s1_agent:cp_valid
-	wire  [122:0] ocram_64k_s1_burst_adapter_source0_data;                                            // ocram_64K_s1_burst_adapter:source0_data -> ocram_64K_s1_agent:cp_data
-	wire          ocram_64k_s1_burst_adapter_source0_ready;                                           // ocram_64K_s1_agent:cp_ready -> ocram_64K_s1_burst_adapter:source0_ready
-	wire    [7:0] ocram_64k_s1_burst_adapter_source0_channel;                                         // ocram_64K_s1_burst_adapter:source0_channel -> ocram_64K_s1_agent:cp_channel
-	wire          ocram_64k_s1_burst_adapter_source0_startofpacket;                                   // ocram_64K_s1_burst_adapter:source0_startofpacket -> ocram_64K_s1_agent:cp_startofpacket
-	wire          ocram_64k_s1_burst_adapter_source0_endofpacket;                                     // ocram_64K_s1_burst_adapter:source0_endofpacket -> ocram_64K_s1_agent:cp_endofpacket
-	wire          cmd_mux_004_src_valid;                                                              // cmd_mux_004:src_valid -> ocram_16b_s1_burst_adapter:sink0_valid
-	wire  [122:0] cmd_mux_004_src_data;                                                               // cmd_mux_004:src_data -> ocram_16b_s1_burst_adapter:sink0_data
-	wire          cmd_mux_004_src_ready;                                                              // ocram_16b_s1_burst_adapter:sink0_ready -> cmd_mux_004:src_ready
-	wire    [7:0] cmd_mux_004_src_channel;                                                            // cmd_mux_004:src_channel -> ocram_16b_s1_burst_adapter:sink0_channel
-	wire          cmd_mux_004_src_startofpacket;                                                      // cmd_mux_004:src_startofpacket -> ocram_16b_s1_burst_adapter:sink0_startofpacket
-	wire          cmd_mux_004_src_endofpacket;                                                        // cmd_mux_004:src_endofpacket -> ocram_16b_s1_burst_adapter:sink0_endofpacket
-	wire          ocram_16b_s1_burst_adapter_source0_valid;                                           // ocram_16b_s1_burst_adapter:source0_valid -> ocram_16b_s1_agent:cp_valid
-	wire  [122:0] ocram_16b_s1_burst_adapter_source0_data;                                            // ocram_16b_s1_burst_adapter:source0_data -> ocram_16b_s1_agent:cp_data
-	wire          ocram_16b_s1_burst_adapter_source0_ready;                                           // ocram_16b_s1_agent:cp_ready -> ocram_16b_s1_burst_adapter:source0_ready
-	wire    [7:0] ocram_16b_s1_burst_adapter_source0_channel;                                         // ocram_16b_s1_burst_adapter:source0_channel -> ocram_16b_s1_agent:cp_channel
-	wire          ocram_16b_s1_burst_adapter_source0_startofpacket;                                   // ocram_16b_s1_burst_adapter:source0_startofpacket -> ocram_16b_s1_agent:cp_startofpacket
-	wire          ocram_16b_s1_burst_adapter_source0_endofpacket;                                     // ocram_16b_s1_burst_adapter:source0_endofpacket -> ocram_16b_s1_agent:cp_endofpacket
+	wire          cmd_mux_003_src_valid;                                                              // cmd_mux_003:src_valid -> switch_pio_s1_burst_adapter:sink0_valid
+	wire  [122:0] cmd_mux_003_src_data;                                                               // cmd_mux_003:src_data -> switch_pio_s1_burst_adapter:sink0_data
+	wire          cmd_mux_003_src_ready;                                                              // switch_pio_s1_burst_adapter:sink0_ready -> cmd_mux_003:src_ready
+	wire    [7:0] cmd_mux_003_src_channel;                                                            // cmd_mux_003:src_channel -> switch_pio_s1_burst_adapter:sink0_channel
+	wire          cmd_mux_003_src_startofpacket;                                                      // cmd_mux_003:src_startofpacket -> switch_pio_s1_burst_adapter:sink0_startofpacket
+	wire          cmd_mux_003_src_endofpacket;                                                        // cmd_mux_003:src_endofpacket -> switch_pio_s1_burst_adapter:sink0_endofpacket
+	wire          switch_pio_s1_burst_adapter_source0_valid;                                          // switch_pio_s1_burst_adapter:source0_valid -> switch_pio_s1_agent:cp_valid
+	wire  [122:0] switch_pio_s1_burst_adapter_source0_data;                                           // switch_pio_s1_burst_adapter:source0_data -> switch_pio_s1_agent:cp_data
+	wire          switch_pio_s1_burst_adapter_source0_ready;                                          // switch_pio_s1_agent:cp_ready -> switch_pio_s1_burst_adapter:source0_ready
+	wire    [7:0] switch_pio_s1_burst_adapter_source0_channel;                                        // switch_pio_s1_burst_adapter:source0_channel -> switch_pio_s1_agent:cp_channel
+	wire          switch_pio_s1_burst_adapter_source0_startofpacket;                                  // switch_pio_s1_burst_adapter:source0_startofpacket -> switch_pio_s1_agent:cp_startofpacket
+	wire          switch_pio_s1_burst_adapter_source0_endofpacket;                                    // switch_pio_s1_burst_adapter:source0_endofpacket -> switch_pio_s1_agent:cp_endofpacket
+	wire          cmd_mux_004_src_valid;                                                              // cmd_mux_004:src_valid -> button_pio_s1_burst_adapter:sink0_valid
+	wire  [122:0] cmd_mux_004_src_data;                                                               // cmd_mux_004:src_data -> button_pio_s1_burst_adapter:sink0_data
+	wire          cmd_mux_004_src_ready;                                                              // button_pio_s1_burst_adapter:sink0_ready -> cmd_mux_004:src_ready
+	wire    [7:0] cmd_mux_004_src_channel;                                                            // cmd_mux_004:src_channel -> button_pio_s1_burst_adapter:sink0_channel
+	wire          cmd_mux_004_src_startofpacket;                                                      // cmd_mux_004:src_startofpacket -> button_pio_s1_burst_adapter:sink0_startofpacket
+	wire          cmd_mux_004_src_endofpacket;                                                        // cmd_mux_004:src_endofpacket -> button_pio_s1_burst_adapter:sink0_endofpacket
+	wire          button_pio_s1_burst_adapter_source0_valid;                                          // button_pio_s1_burst_adapter:source0_valid -> button_pio_s1_agent:cp_valid
+	wire  [122:0] button_pio_s1_burst_adapter_source0_data;                                           // button_pio_s1_burst_adapter:source0_data -> button_pio_s1_agent:cp_data
+	wire          button_pio_s1_burst_adapter_source0_ready;                                          // button_pio_s1_agent:cp_ready -> button_pio_s1_burst_adapter:source0_ready
+	wire    [7:0] button_pio_s1_burst_adapter_source0_channel;                                        // button_pio_s1_burst_adapter:source0_channel -> button_pio_s1_agent:cp_channel
+	wire          button_pio_s1_burst_adapter_source0_startofpacket;                                  // button_pio_s1_burst_adapter:source0_startofpacket -> button_pio_s1_agent:cp_startofpacket
+	wire          button_pio_s1_burst_adapter_source0_endofpacket;                                    // button_pio_s1_burst_adapter:source0_endofpacket -> button_pio_s1_agent:cp_endofpacket
 	wire          cmd_mux_005_src_valid;                                                              // cmd_mux_005:src_valid -> led_pio_s1_burst_adapter:sink0_valid
 	wire  [122:0] cmd_mux_005_src_data;                                                               // cmd_mux_005:src_data -> led_pio_s1_burst_adapter:sink0_data
 	wire          cmd_mux_005_src_ready;                                                              // led_pio_s1_burst_adapter:sink0_ready -> cmd_mux_005:src_ready
@@ -752,18 +746,30 @@ module soc_system_mm_interconnect_0 (
 	wire    [7:0] led_pio_s1_burst_adapter_source0_channel;                                           // led_pio_s1_burst_adapter:source0_channel -> led_pio_s1_agent:cp_channel
 	wire          led_pio_s1_burst_adapter_source0_startofpacket;                                     // led_pio_s1_burst_adapter:source0_startofpacket -> led_pio_s1_agent:cp_startofpacket
 	wire          led_pio_s1_burst_adapter_source0_endofpacket;                                       // led_pio_s1_burst_adapter:source0_endofpacket -> led_pio_s1_agent:cp_endofpacket
-	wire          cmd_mux_006_src_valid;                                                              // cmd_mux_006:src_valid -> button_pio_s1_burst_adapter:sink0_valid
-	wire  [122:0] cmd_mux_006_src_data;                                                               // cmd_mux_006:src_data -> button_pio_s1_burst_adapter:sink0_data
-	wire          cmd_mux_006_src_ready;                                                              // button_pio_s1_burst_adapter:sink0_ready -> cmd_mux_006:src_ready
-	wire    [7:0] cmd_mux_006_src_channel;                                                            // cmd_mux_006:src_channel -> button_pio_s1_burst_adapter:sink0_channel
-	wire          cmd_mux_006_src_startofpacket;                                                      // cmd_mux_006:src_startofpacket -> button_pio_s1_burst_adapter:sink0_startofpacket
-	wire          cmd_mux_006_src_endofpacket;                                                        // cmd_mux_006:src_endofpacket -> button_pio_s1_burst_adapter:sink0_endofpacket
-	wire          button_pio_s1_burst_adapter_source0_valid;                                          // button_pio_s1_burst_adapter:source0_valid -> button_pio_s1_agent:cp_valid
-	wire  [122:0] button_pio_s1_burst_adapter_source0_data;                                           // button_pio_s1_burst_adapter:source0_data -> button_pio_s1_agent:cp_data
-	wire          button_pio_s1_burst_adapter_source0_ready;                                          // button_pio_s1_agent:cp_ready -> button_pio_s1_burst_adapter:source0_ready
-	wire    [7:0] button_pio_s1_burst_adapter_source0_channel;                                        // button_pio_s1_burst_adapter:source0_channel -> button_pio_s1_agent:cp_channel
-	wire          button_pio_s1_burst_adapter_source0_startofpacket;                                  // button_pio_s1_burst_adapter:source0_startofpacket -> button_pio_s1_agent:cp_startofpacket
-	wire          button_pio_s1_burst_adapter_source0_endofpacket;                                    // button_pio_s1_burst_adapter:source0_endofpacket -> button_pio_s1_agent:cp_endofpacket
+	wire          cmd_mux_006_src_valid;                                                              // cmd_mux_006:src_valid -> ocram_16b_s1_burst_adapter:sink0_valid
+	wire  [122:0] cmd_mux_006_src_data;                                                               // cmd_mux_006:src_data -> ocram_16b_s1_burst_adapter:sink0_data
+	wire          cmd_mux_006_src_ready;                                                              // ocram_16b_s1_burst_adapter:sink0_ready -> cmd_mux_006:src_ready
+	wire    [7:0] cmd_mux_006_src_channel;                                                            // cmd_mux_006:src_channel -> ocram_16b_s1_burst_adapter:sink0_channel
+	wire          cmd_mux_006_src_startofpacket;                                                      // cmd_mux_006:src_startofpacket -> ocram_16b_s1_burst_adapter:sink0_startofpacket
+	wire          cmd_mux_006_src_endofpacket;                                                        // cmd_mux_006:src_endofpacket -> ocram_16b_s1_burst_adapter:sink0_endofpacket
+	wire          ocram_16b_s1_burst_adapter_source0_valid;                                           // ocram_16b_s1_burst_adapter:source0_valid -> ocram_16b_s1_agent:cp_valid
+	wire  [122:0] ocram_16b_s1_burst_adapter_source0_data;                                            // ocram_16b_s1_burst_adapter:source0_data -> ocram_16b_s1_agent:cp_data
+	wire          ocram_16b_s1_burst_adapter_source0_ready;                                           // ocram_16b_s1_agent:cp_ready -> ocram_16b_s1_burst_adapter:source0_ready
+	wire    [7:0] ocram_16b_s1_burst_adapter_source0_channel;                                         // ocram_16b_s1_burst_adapter:source0_channel -> ocram_16b_s1_agent:cp_channel
+	wire          ocram_16b_s1_burst_adapter_source0_startofpacket;                                   // ocram_16b_s1_burst_adapter:source0_startofpacket -> ocram_16b_s1_agent:cp_startofpacket
+	wire          ocram_16b_s1_burst_adapter_source0_endofpacket;                                     // ocram_16b_s1_burst_adapter:source0_endofpacket -> ocram_16b_s1_agent:cp_endofpacket
+	wire          cmd_mux_007_src_valid;                                                              // cmd_mux_007:src_valid -> ocram_64K_s1_burst_adapter:sink0_valid
+	wire  [122:0] cmd_mux_007_src_data;                                                               // cmd_mux_007:src_data -> ocram_64K_s1_burst_adapter:sink0_data
+	wire          cmd_mux_007_src_ready;                                                              // ocram_64K_s1_burst_adapter:sink0_ready -> cmd_mux_007:src_ready
+	wire    [7:0] cmd_mux_007_src_channel;                                                            // cmd_mux_007:src_channel -> ocram_64K_s1_burst_adapter:sink0_channel
+	wire          cmd_mux_007_src_startofpacket;                                                      // cmd_mux_007:src_startofpacket -> ocram_64K_s1_burst_adapter:sink0_startofpacket
+	wire          cmd_mux_007_src_endofpacket;                                                        // cmd_mux_007:src_endofpacket -> ocram_64K_s1_burst_adapter:sink0_endofpacket
+	wire          ocram_64k_s1_burst_adapter_source0_valid;                                           // ocram_64K_s1_burst_adapter:source0_valid -> ocram_64K_s1_agent:cp_valid
+	wire  [122:0] ocram_64k_s1_burst_adapter_source0_data;                                            // ocram_64K_s1_burst_adapter:source0_data -> ocram_64K_s1_agent:cp_data
+	wire          ocram_64k_s1_burst_adapter_source0_ready;                                           // ocram_64K_s1_agent:cp_ready -> ocram_64K_s1_burst_adapter:source0_ready
+	wire    [7:0] ocram_64k_s1_burst_adapter_source0_channel;                                         // ocram_64K_s1_burst_adapter:source0_channel -> ocram_64K_s1_agent:cp_channel
+	wire          ocram_64k_s1_burst_adapter_source0_startofpacket;                                   // ocram_64K_s1_burst_adapter:source0_startofpacket -> ocram_64K_s1_agent:cp_startofpacket
+	wire          ocram_64k_s1_burst_adapter_source0_endofpacket;                                     // ocram_64K_s1_burst_adapter:source0_endofpacket -> ocram_64K_s1_agent:cp_endofpacket
 	wire          cmd_demux_src0_valid;                                                               // cmd_demux:src0_valid -> cmd_mux:sink0_valid
 	wire  [122:0] cmd_demux_src0_data;                                                                // cmd_demux:src0_data -> cmd_mux:sink0_data
 	wire          cmd_demux_src0_ready;                                                               // cmd_mux:sink0_ready -> cmd_demux:src0_ready
@@ -806,6 +812,12 @@ module soc_system_mm_interconnect_0 (
 	wire    [7:0] cmd_demux_src6_channel;                                                             // cmd_demux:src6_channel -> cmd_mux_006:sink0_channel
 	wire          cmd_demux_src6_startofpacket;                                                       // cmd_demux:src6_startofpacket -> cmd_mux_006:sink0_startofpacket
 	wire          cmd_demux_src6_endofpacket;                                                         // cmd_demux:src6_endofpacket -> cmd_mux_006:sink0_endofpacket
+	wire          cmd_demux_src7_valid;                                                               // cmd_demux:src7_valid -> cmd_mux_007:sink0_valid
+	wire  [122:0] cmd_demux_src7_data;                                                                // cmd_demux:src7_data -> cmd_mux_007:sink0_data
+	wire          cmd_demux_src7_ready;                                                               // cmd_mux_007:sink0_ready -> cmd_demux:src7_ready
+	wire    [7:0] cmd_demux_src7_channel;                                                             // cmd_demux:src7_channel -> cmd_mux_007:sink0_channel
+	wire          cmd_demux_src7_startofpacket;                                                       // cmd_demux:src7_startofpacket -> cmd_mux_007:sink0_startofpacket
+	wire          cmd_demux_src7_endofpacket;                                                         // cmd_demux:src7_endofpacket -> cmd_mux_007:sink0_endofpacket
 	wire          cmd_demux_001_src0_valid;                                                           // cmd_demux_001:src0_valid -> cmd_mux:sink1_valid
 	wire  [122:0] cmd_demux_001_src0_data;                                                            // cmd_demux_001:src0_data -> cmd_mux:sink1_data
 	wire          cmd_demux_001_src0_ready;                                                           // cmd_mux:sink1_ready -> cmd_demux_001:src0_ready
@@ -848,6 +860,12 @@ module soc_system_mm_interconnect_0 (
 	wire    [7:0] cmd_demux_001_src6_channel;                                                         // cmd_demux_001:src6_channel -> cmd_mux_006:sink1_channel
 	wire          cmd_demux_001_src6_startofpacket;                                                   // cmd_demux_001:src6_startofpacket -> cmd_mux_006:sink1_startofpacket
 	wire          cmd_demux_001_src6_endofpacket;                                                     // cmd_demux_001:src6_endofpacket -> cmd_mux_006:sink1_endofpacket
+	wire          cmd_demux_001_src7_valid;                                                           // cmd_demux_001:src7_valid -> cmd_mux_007:sink1_valid
+	wire  [122:0] cmd_demux_001_src7_data;                                                            // cmd_demux_001:src7_data -> cmd_mux_007:sink1_data
+	wire          cmd_demux_001_src7_ready;                                                           // cmd_mux_007:sink1_ready -> cmd_demux_001:src7_ready
+	wire    [7:0] cmd_demux_001_src7_channel;                                                         // cmd_demux_001:src7_channel -> cmd_mux_007:sink1_channel
+	wire          cmd_demux_001_src7_startofpacket;                                                   // cmd_demux_001:src7_startofpacket -> cmd_mux_007:sink1_startofpacket
+	wire          cmd_demux_001_src7_endofpacket;                                                     // cmd_demux_001:src7_endofpacket -> cmd_mux_007:sink1_endofpacket
 	wire          cmd_demux_002_src0_valid;                                                           // cmd_demux_002:src0_valid -> cmd_mux:sink2_valid
 	wire  [122:0] cmd_demux_002_src0_data;                                                            // cmd_demux_002:src0_data -> cmd_mux:sink2_data
 	wire          cmd_demux_002_src0_ready;                                                           // cmd_mux:sink2_ready -> cmd_demux_002:src0_ready
@@ -890,12 +908,12 @@ module soc_system_mm_interconnect_0 (
 	wire    [7:0] cmd_demux_002_src6_channel;                                                         // cmd_demux_002:src6_channel -> cmd_mux_006:sink2_channel
 	wire          cmd_demux_002_src6_startofpacket;                                                   // cmd_demux_002:src6_startofpacket -> cmd_mux_006:sink2_startofpacket
 	wire          cmd_demux_002_src6_endofpacket;                                                     // cmd_demux_002:src6_endofpacket -> cmd_mux_006:sink2_endofpacket
-	wire          cmd_demux_002_src7_valid;                                                           // cmd_demux_002:src7_valid -> cmd_mux_007:sink0_valid
-	wire  [122:0] cmd_demux_002_src7_data;                                                            // cmd_demux_002:src7_data -> cmd_mux_007:sink0_data
-	wire          cmd_demux_002_src7_ready;                                                           // cmd_mux_007:sink0_ready -> cmd_demux_002:src7_ready
-	wire    [7:0] cmd_demux_002_src7_channel;                                                         // cmd_demux_002:src7_channel -> cmd_mux_007:sink0_channel
-	wire          cmd_demux_002_src7_startofpacket;                                                   // cmd_demux_002:src7_startofpacket -> cmd_mux_007:sink0_startofpacket
-	wire          cmd_demux_002_src7_endofpacket;                                                     // cmd_demux_002:src7_endofpacket -> cmd_mux_007:sink0_endofpacket
+	wire          cmd_demux_002_src7_valid;                                                           // cmd_demux_002:src7_valid -> cmd_mux_007:sink2_valid
+	wire  [122:0] cmd_demux_002_src7_data;                                                            // cmd_demux_002:src7_data -> cmd_mux_007:sink2_data
+	wire          cmd_demux_002_src7_ready;                                                           // cmd_mux_007:sink2_ready -> cmd_demux_002:src7_ready
+	wire    [7:0] cmd_demux_002_src7_channel;                                                         // cmd_demux_002:src7_channel -> cmd_mux_007:sink2_channel
+	wire          cmd_demux_002_src7_startofpacket;                                                   // cmd_demux_002:src7_startofpacket -> cmd_mux_007:sink2_startofpacket
+	wire          cmd_demux_002_src7_endofpacket;                                                     // cmd_demux_002:src7_endofpacket -> cmd_mux_007:sink2_endofpacket
 	wire          cmd_demux_003_src0_valid;                                                           // cmd_demux_003:src0_valid -> cmd_mux:sink3_valid
 	wire  [122:0] cmd_demux_003_src0_data;                                                            // cmd_demux_003:src0_data -> cmd_mux:sink3_data
 	wire          cmd_demux_003_src0_ready;                                                           // cmd_mux:sink3_ready -> cmd_demux_003:src0_ready
@@ -938,54 +956,54 @@ module soc_system_mm_interconnect_0 (
 	wire    [7:0] cmd_demux_003_src6_channel;                                                         // cmd_demux_003:src6_channel -> cmd_mux_006:sink3_channel
 	wire          cmd_demux_003_src6_startofpacket;                                                   // cmd_demux_003:src6_startofpacket -> cmd_mux_006:sink3_startofpacket
 	wire          cmd_demux_003_src6_endofpacket;                                                     // cmd_demux_003:src6_endofpacket -> cmd_mux_006:sink3_endofpacket
-	wire          cmd_demux_003_src7_valid;                                                           // cmd_demux_003:src7_valid -> cmd_mux_007:sink1_valid
-	wire  [122:0] cmd_demux_003_src7_data;                                                            // cmd_demux_003:src7_data -> cmd_mux_007:sink1_data
-	wire          cmd_demux_003_src7_ready;                                                           // cmd_mux_007:sink1_ready -> cmd_demux_003:src7_ready
-	wire    [7:0] cmd_demux_003_src7_channel;                                                         // cmd_demux_003:src7_channel -> cmd_mux_007:sink1_channel
-	wire          cmd_demux_003_src7_startofpacket;                                                   // cmd_demux_003:src7_startofpacket -> cmd_mux_007:sink1_startofpacket
-	wire          cmd_demux_003_src7_endofpacket;                                                     // cmd_demux_003:src7_endofpacket -> cmd_mux_007:sink1_endofpacket
-	wire          cmd_demux_004_src0_valid;                                                           // cmd_demux_004:src0_valid -> cmd_mux_003:sink4_valid
-	wire  [122:0] cmd_demux_004_src0_data;                                                            // cmd_demux_004:src0_data -> cmd_mux_003:sink4_data
-	wire          cmd_demux_004_src0_ready;                                                           // cmd_mux_003:sink4_ready -> cmd_demux_004:src0_ready
-	wire    [7:0] cmd_demux_004_src0_channel;                                                         // cmd_demux_004:src0_channel -> cmd_mux_003:sink4_channel
-	wire          cmd_demux_004_src0_startofpacket;                                                   // cmd_demux_004:src0_startofpacket -> cmd_mux_003:sink4_startofpacket
-	wire          cmd_demux_004_src0_endofpacket;                                                     // cmd_demux_004:src0_endofpacket -> cmd_mux_003:sink4_endofpacket
-	wire          cmd_demux_004_src1_valid;                                                           // cmd_demux_004:src1_valid -> cmd_mux_004:sink4_valid
-	wire  [122:0] cmd_demux_004_src1_data;                                                            // cmd_demux_004:src1_data -> cmd_mux_004:sink4_data
-	wire          cmd_demux_004_src1_ready;                                                           // cmd_mux_004:sink4_ready -> cmd_demux_004:src1_ready
-	wire    [7:0] cmd_demux_004_src1_channel;                                                         // cmd_demux_004:src1_channel -> cmd_mux_004:sink4_channel
-	wire          cmd_demux_004_src1_startofpacket;                                                   // cmd_demux_004:src1_startofpacket -> cmd_mux_004:sink4_startofpacket
-	wire          cmd_demux_004_src1_endofpacket;                                                     // cmd_demux_004:src1_endofpacket -> cmd_mux_004:sink4_endofpacket
-	wire          cmd_demux_005_src0_valid;                                                           // cmd_demux_005:src0_valid -> cmd_mux_003:sink5_valid
-	wire  [122:0] cmd_demux_005_src0_data;                                                            // cmd_demux_005:src0_data -> cmd_mux_003:sink5_data
-	wire          cmd_demux_005_src0_ready;                                                           // cmd_mux_003:sink5_ready -> cmd_demux_005:src0_ready
-	wire    [7:0] cmd_demux_005_src0_channel;                                                         // cmd_demux_005:src0_channel -> cmd_mux_003:sink5_channel
-	wire          cmd_demux_005_src0_startofpacket;                                                   // cmd_demux_005:src0_startofpacket -> cmd_mux_003:sink5_startofpacket
-	wire          cmd_demux_005_src0_endofpacket;                                                     // cmd_demux_005:src0_endofpacket -> cmd_mux_003:sink5_endofpacket
-	wire          cmd_demux_005_src1_valid;                                                           // cmd_demux_005:src1_valid -> cmd_mux_004:sink5_valid
-	wire  [122:0] cmd_demux_005_src1_data;                                                            // cmd_demux_005:src1_data -> cmd_mux_004:sink5_data
-	wire          cmd_demux_005_src1_ready;                                                           // cmd_mux_004:sink5_ready -> cmd_demux_005:src1_ready
-	wire    [7:0] cmd_demux_005_src1_channel;                                                         // cmd_demux_005:src1_channel -> cmd_mux_004:sink5_channel
-	wire          cmd_demux_005_src1_startofpacket;                                                   // cmd_demux_005:src1_startofpacket -> cmd_mux_004:sink5_startofpacket
-	wire          cmd_demux_005_src1_endofpacket;                                                     // cmd_demux_005:src1_endofpacket -> cmd_mux_004:sink5_endofpacket
+	wire          cmd_demux_003_src7_valid;                                                           // cmd_demux_003:src7_valid -> cmd_mux_007:sink3_valid
+	wire  [122:0] cmd_demux_003_src7_data;                                                            // cmd_demux_003:src7_data -> cmd_mux_007:sink3_data
+	wire          cmd_demux_003_src7_ready;                                                           // cmd_mux_007:sink3_ready -> cmd_demux_003:src7_ready
+	wire    [7:0] cmd_demux_003_src7_channel;                                                         // cmd_demux_003:src7_channel -> cmd_mux_007:sink3_channel
+	wire          cmd_demux_003_src7_startofpacket;                                                   // cmd_demux_003:src7_startofpacket -> cmd_mux_007:sink3_startofpacket
+	wire          cmd_demux_003_src7_endofpacket;                                                     // cmd_demux_003:src7_endofpacket -> cmd_mux_007:sink3_endofpacket
+	wire          cmd_demux_004_src0_valid;                                                           // cmd_demux_004:src0_valid -> cmd_mux_006:sink4_valid
+	wire  [122:0] cmd_demux_004_src0_data;                                                            // cmd_demux_004:src0_data -> cmd_mux_006:sink4_data
+	wire          cmd_demux_004_src0_ready;                                                           // cmd_mux_006:sink4_ready -> cmd_demux_004:src0_ready
+	wire    [7:0] cmd_demux_004_src0_channel;                                                         // cmd_demux_004:src0_channel -> cmd_mux_006:sink4_channel
+	wire          cmd_demux_004_src0_startofpacket;                                                   // cmd_demux_004:src0_startofpacket -> cmd_mux_006:sink4_startofpacket
+	wire          cmd_demux_004_src0_endofpacket;                                                     // cmd_demux_004:src0_endofpacket -> cmd_mux_006:sink4_endofpacket
+	wire          cmd_demux_004_src1_valid;                                                           // cmd_demux_004:src1_valid -> cmd_mux_007:sink4_valid
+	wire  [122:0] cmd_demux_004_src1_data;                                                            // cmd_demux_004:src1_data -> cmd_mux_007:sink4_data
+	wire          cmd_demux_004_src1_ready;                                                           // cmd_mux_007:sink4_ready -> cmd_demux_004:src1_ready
+	wire    [7:0] cmd_demux_004_src1_channel;                                                         // cmd_demux_004:src1_channel -> cmd_mux_007:sink4_channel
+	wire          cmd_demux_004_src1_startofpacket;                                                   // cmd_demux_004:src1_startofpacket -> cmd_mux_007:sink4_startofpacket
+	wire          cmd_demux_004_src1_endofpacket;                                                     // cmd_demux_004:src1_endofpacket -> cmd_mux_007:sink4_endofpacket
+	wire          cmd_demux_005_src0_valid;                                                           // cmd_demux_005:src0_valid -> cmd_mux_006:sink5_valid
+	wire  [122:0] cmd_demux_005_src0_data;                                                            // cmd_demux_005:src0_data -> cmd_mux_006:sink5_data
+	wire          cmd_demux_005_src0_ready;                                                           // cmd_mux_006:sink5_ready -> cmd_demux_005:src0_ready
+	wire    [7:0] cmd_demux_005_src0_channel;                                                         // cmd_demux_005:src0_channel -> cmd_mux_006:sink5_channel
+	wire          cmd_demux_005_src0_startofpacket;                                                   // cmd_demux_005:src0_startofpacket -> cmd_mux_006:sink5_startofpacket
+	wire          cmd_demux_005_src0_endofpacket;                                                     // cmd_demux_005:src0_endofpacket -> cmd_mux_006:sink5_endofpacket
+	wire          cmd_demux_005_src1_valid;                                                           // cmd_demux_005:src1_valid -> cmd_mux_007:sink5_valid
+	wire  [122:0] cmd_demux_005_src1_data;                                                            // cmd_demux_005:src1_data -> cmd_mux_007:sink5_data
+	wire          cmd_demux_005_src1_ready;                                                           // cmd_mux_007:sink5_ready -> cmd_demux_005:src1_ready
+	wire    [7:0] cmd_demux_005_src1_channel;                                                         // cmd_demux_005:src1_channel -> cmd_mux_007:sink5_channel
+	wire          cmd_demux_005_src1_startofpacket;                                                   // cmd_demux_005:src1_startofpacket -> cmd_mux_007:sink5_startofpacket
+	wire          cmd_demux_005_src1_endofpacket;                                                     // cmd_demux_005:src1_endofpacket -> cmd_mux_007:sink5_endofpacket
 	wire          cmd_demux_006_src0_valid;                                                           // cmd_demux_006:src0_valid -> cmd_mux_002:sink4_valid
 	wire  [122:0] cmd_demux_006_src0_data;                                                            // cmd_demux_006:src0_data -> cmd_mux_002:sink4_data
 	wire          cmd_demux_006_src0_ready;                                                           // cmd_mux_002:sink4_ready -> cmd_demux_006:src0_ready
 	wire    [7:0] cmd_demux_006_src0_channel;                                                         // cmd_demux_006:src0_channel -> cmd_mux_002:sink4_channel
 	wire          cmd_demux_006_src0_startofpacket;                                                   // cmd_demux_006:src0_startofpacket -> cmd_mux_002:sink4_startofpacket
 	wire          cmd_demux_006_src0_endofpacket;                                                     // cmd_demux_006:src0_endofpacket -> cmd_mux_002:sink4_endofpacket
-	wire          cmd_demux_006_src1_valid;                                                           // cmd_demux_006:src1_valid -> cmd_mux_003:sink6_valid
-	wire  [122:0] cmd_demux_006_src1_data;                                                            // cmd_demux_006:src1_data -> cmd_mux_003:sink6_data
-	wire          cmd_demux_006_src1_ready;                                                           // cmd_mux_003:sink6_ready -> cmd_demux_006:src1_ready
-	wire    [7:0] cmd_demux_006_src1_channel;                                                         // cmd_demux_006:src1_channel -> cmd_mux_003:sink6_channel
-	wire          cmd_demux_006_src1_startofpacket;                                                   // cmd_demux_006:src1_startofpacket -> cmd_mux_003:sink6_startofpacket
-	wire          cmd_demux_006_src1_endofpacket;                                                     // cmd_demux_006:src1_endofpacket -> cmd_mux_003:sink6_endofpacket
-	wire          cmd_demux_006_src2_valid;                                                           // cmd_demux_006:src2_valid -> cmd_mux_004:sink6_valid
-	wire  [122:0] cmd_demux_006_src2_data;                                                            // cmd_demux_006:src2_data -> cmd_mux_004:sink6_data
-	wire          cmd_demux_006_src2_ready;                                                           // cmd_mux_004:sink6_ready -> cmd_demux_006:src2_ready
-	wire    [7:0] cmd_demux_006_src2_channel;                                                         // cmd_demux_006:src2_channel -> cmd_mux_004:sink6_channel
-	wire          cmd_demux_006_src2_startofpacket;                                                   // cmd_demux_006:src2_startofpacket -> cmd_mux_004:sink6_startofpacket
-	wire          cmd_demux_006_src2_endofpacket;                                                     // cmd_demux_006:src2_endofpacket -> cmd_mux_004:sink6_endofpacket
+	wire          cmd_demux_006_src1_valid;                                                           // cmd_demux_006:src1_valid -> cmd_mux_006:sink6_valid
+	wire  [122:0] cmd_demux_006_src1_data;                                                            // cmd_demux_006:src1_data -> cmd_mux_006:sink6_data
+	wire          cmd_demux_006_src1_ready;                                                           // cmd_mux_006:sink6_ready -> cmd_demux_006:src1_ready
+	wire    [7:0] cmd_demux_006_src1_channel;                                                         // cmd_demux_006:src1_channel -> cmd_mux_006:sink6_channel
+	wire          cmd_demux_006_src1_startofpacket;                                                   // cmd_demux_006:src1_startofpacket -> cmd_mux_006:sink6_startofpacket
+	wire          cmd_demux_006_src1_endofpacket;                                                     // cmd_demux_006:src1_endofpacket -> cmd_mux_006:sink6_endofpacket
+	wire          cmd_demux_006_src2_valid;                                                           // cmd_demux_006:src2_valid -> cmd_mux_007:sink6_valid
+	wire  [122:0] cmd_demux_006_src2_data;                                                            // cmd_demux_006:src2_data -> cmd_mux_007:sink6_data
+	wire          cmd_demux_006_src2_ready;                                                           // cmd_mux_007:sink6_ready -> cmd_demux_006:src2_ready
+	wire    [7:0] cmd_demux_006_src2_channel;                                                         // cmd_demux_006:src2_channel -> cmd_mux_007:sink6_channel
+	wire          cmd_demux_006_src2_startofpacket;                                                   // cmd_demux_006:src2_startofpacket -> cmd_mux_007:sink6_startofpacket
+	wire          cmd_demux_006_src2_endofpacket;                                                     // cmd_demux_006:src2_endofpacket -> cmd_mux_007:sink6_endofpacket
 	wire          rsp_demux_src0_valid;                                                               // rsp_demux:src0_valid -> rsp_mux:sink0_valid
 	wire  [122:0] rsp_demux_src0_data;                                                                // rsp_demux:src0_data -> rsp_mux:sink0_data
 	wire          rsp_demux_src0_ready;                                                               // rsp_mux:sink0_ready -> rsp_demux:src0_ready
@@ -1088,24 +1106,6 @@ module soc_system_mm_interconnect_0 (
 	wire    [7:0] rsp_demux_003_src3_channel;                                                         // rsp_demux_003:src3_channel -> rsp_mux_003:sink3_channel
 	wire          rsp_demux_003_src3_startofpacket;                                                   // rsp_demux_003:src3_startofpacket -> rsp_mux_003:sink3_startofpacket
 	wire          rsp_demux_003_src3_endofpacket;                                                     // rsp_demux_003:src3_endofpacket -> rsp_mux_003:sink3_endofpacket
-	wire          rsp_demux_003_src4_valid;                                                           // rsp_demux_003:src4_valid -> rsp_mux_004:sink0_valid
-	wire  [122:0] rsp_demux_003_src4_data;                                                            // rsp_demux_003:src4_data -> rsp_mux_004:sink0_data
-	wire          rsp_demux_003_src4_ready;                                                           // rsp_mux_004:sink0_ready -> rsp_demux_003:src4_ready
-	wire    [7:0] rsp_demux_003_src4_channel;                                                         // rsp_demux_003:src4_channel -> rsp_mux_004:sink0_channel
-	wire          rsp_demux_003_src4_startofpacket;                                                   // rsp_demux_003:src4_startofpacket -> rsp_mux_004:sink0_startofpacket
-	wire          rsp_demux_003_src4_endofpacket;                                                     // rsp_demux_003:src4_endofpacket -> rsp_mux_004:sink0_endofpacket
-	wire          rsp_demux_003_src5_valid;                                                           // rsp_demux_003:src5_valid -> rsp_mux_005:sink0_valid
-	wire  [122:0] rsp_demux_003_src5_data;                                                            // rsp_demux_003:src5_data -> rsp_mux_005:sink0_data
-	wire          rsp_demux_003_src5_ready;                                                           // rsp_mux_005:sink0_ready -> rsp_demux_003:src5_ready
-	wire    [7:0] rsp_demux_003_src5_channel;                                                         // rsp_demux_003:src5_channel -> rsp_mux_005:sink0_channel
-	wire          rsp_demux_003_src5_startofpacket;                                                   // rsp_demux_003:src5_startofpacket -> rsp_mux_005:sink0_startofpacket
-	wire          rsp_demux_003_src5_endofpacket;                                                     // rsp_demux_003:src5_endofpacket -> rsp_mux_005:sink0_endofpacket
-	wire          rsp_demux_003_src6_valid;                                                           // rsp_demux_003:src6_valid -> rsp_mux_006:sink1_valid
-	wire  [122:0] rsp_demux_003_src6_data;                                                            // rsp_demux_003:src6_data -> rsp_mux_006:sink1_data
-	wire          rsp_demux_003_src6_ready;                                                           // rsp_mux_006:sink1_ready -> rsp_demux_003:src6_ready
-	wire    [7:0] rsp_demux_003_src6_channel;                                                         // rsp_demux_003:src6_channel -> rsp_mux_006:sink1_channel
-	wire          rsp_demux_003_src6_startofpacket;                                                   // rsp_demux_003:src6_startofpacket -> rsp_mux_006:sink1_startofpacket
-	wire          rsp_demux_003_src6_endofpacket;                                                     // rsp_demux_003:src6_endofpacket -> rsp_mux_006:sink1_endofpacket
 	wire          rsp_demux_004_src0_valid;                                                           // rsp_demux_004:src0_valid -> rsp_mux:sink4_valid
 	wire  [122:0] rsp_demux_004_src0_data;                                                            // rsp_demux_004:src0_data -> rsp_mux:sink4_data
 	wire          rsp_demux_004_src0_ready;                                                           // rsp_mux:sink4_ready -> rsp_demux_004:src0_ready
@@ -1130,24 +1130,6 @@ module soc_system_mm_interconnect_0 (
 	wire    [7:0] rsp_demux_004_src3_channel;                                                         // rsp_demux_004:src3_channel -> rsp_mux_003:sink4_channel
 	wire          rsp_demux_004_src3_startofpacket;                                                   // rsp_demux_004:src3_startofpacket -> rsp_mux_003:sink4_startofpacket
 	wire          rsp_demux_004_src3_endofpacket;                                                     // rsp_demux_004:src3_endofpacket -> rsp_mux_003:sink4_endofpacket
-	wire          rsp_demux_004_src4_valid;                                                           // rsp_demux_004:src4_valid -> rsp_mux_004:sink1_valid
-	wire  [122:0] rsp_demux_004_src4_data;                                                            // rsp_demux_004:src4_data -> rsp_mux_004:sink1_data
-	wire          rsp_demux_004_src4_ready;                                                           // rsp_mux_004:sink1_ready -> rsp_demux_004:src4_ready
-	wire    [7:0] rsp_demux_004_src4_channel;                                                         // rsp_demux_004:src4_channel -> rsp_mux_004:sink1_channel
-	wire          rsp_demux_004_src4_startofpacket;                                                   // rsp_demux_004:src4_startofpacket -> rsp_mux_004:sink1_startofpacket
-	wire          rsp_demux_004_src4_endofpacket;                                                     // rsp_demux_004:src4_endofpacket -> rsp_mux_004:sink1_endofpacket
-	wire          rsp_demux_004_src5_valid;                                                           // rsp_demux_004:src5_valid -> rsp_mux_005:sink1_valid
-	wire  [122:0] rsp_demux_004_src5_data;                                                            // rsp_demux_004:src5_data -> rsp_mux_005:sink1_data
-	wire          rsp_demux_004_src5_ready;                                                           // rsp_mux_005:sink1_ready -> rsp_demux_004:src5_ready
-	wire    [7:0] rsp_demux_004_src5_channel;                                                         // rsp_demux_004:src5_channel -> rsp_mux_005:sink1_channel
-	wire          rsp_demux_004_src5_startofpacket;                                                   // rsp_demux_004:src5_startofpacket -> rsp_mux_005:sink1_startofpacket
-	wire          rsp_demux_004_src5_endofpacket;                                                     // rsp_demux_004:src5_endofpacket -> rsp_mux_005:sink1_endofpacket
-	wire          rsp_demux_004_src6_valid;                                                           // rsp_demux_004:src6_valid -> rsp_mux_006:sink2_valid
-	wire  [122:0] rsp_demux_004_src6_data;                                                            // rsp_demux_004:src6_data -> rsp_mux_006:sink2_data
-	wire          rsp_demux_004_src6_ready;                                                           // rsp_mux_006:sink2_ready -> rsp_demux_004:src6_ready
-	wire    [7:0] rsp_demux_004_src6_channel;                                                         // rsp_demux_004:src6_channel -> rsp_mux_006:sink2_channel
-	wire          rsp_demux_004_src6_startofpacket;                                                   // rsp_demux_004:src6_startofpacket -> rsp_mux_006:sink2_startofpacket
-	wire          rsp_demux_004_src6_endofpacket;                                                     // rsp_demux_004:src6_endofpacket -> rsp_mux_006:sink2_endofpacket
 	wire          rsp_demux_005_src0_valid;                                                           // rsp_demux_005:src0_valid -> rsp_mux:sink5_valid
 	wire  [122:0] rsp_demux_005_src0_data;                                                            // rsp_demux_005:src0_data -> rsp_mux:sink5_data
 	wire          rsp_demux_005_src0_ready;                                                           // rsp_mux:sink5_ready -> rsp_demux_005:src0_ready
@@ -1196,18 +1178,66 @@ module soc_system_mm_interconnect_0 (
 	wire    [7:0] rsp_demux_006_src3_channel;                                                         // rsp_demux_006:src3_channel -> rsp_mux_003:sink6_channel
 	wire          rsp_demux_006_src3_startofpacket;                                                   // rsp_demux_006:src3_startofpacket -> rsp_mux_003:sink6_startofpacket
 	wire          rsp_demux_006_src3_endofpacket;                                                     // rsp_demux_006:src3_endofpacket -> rsp_mux_003:sink6_endofpacket
-	wire          rsp_demux_007_src0_valid;                                                           // rsp_demux_007:src0_valid -> rsp_mux_002:sink7_valid
-	wire  [122:0] rsp_demux_007_src0_data;                                                            // rsp_demux_007:src0_data -> rsp_mux_002:sink7_data
-	wire          rsp_demux_007_src0_ready;                                                           // rsp_mux_002:sink7_ready -> rsp_demux_007:src0_ready
-	wire    [7:0] rsp_demux_007_src0_channel;                                                         // rsp_demux_007:src0_channel -> rsp_mux_002:sink7_channel
-	wire          rsp_demux_007_src0_startofpacket;                                                   // rsp_demux_007:src0_startofpacket -> rsp_mux_002:sink7_startofpacket
-	wire          rsp_demux_007_src0_endofpacket;                                                     // rsp_demux_007:src0_endofpacket -> rsp_mux_002:sink7_endofpacket
-	wire          rsp_demux_007_src1_valid;                                                           // rsp_demux_007:src1_valid -> rsp_mux_003:sink7_valid
-	wire  [122:0] rsp_demux_007_src1_data;                                                            // rsp_demux_007:src1_data -> rsp_mux_003:sink7_data
-	wire          rsp_demux_007_src1_ready;                                                           // rsp_mux_003:sink7_ready -> rsp_demux_007:src1_ready
-	wire    [7:0] rsp_demux_007_src1_channel;                                                         // rsp_demux_007:src1_channel -> rsp_mux_003:sink7_channel
-	wire          rsp_demux_007_src1_startofpacket;                                                   // rsp_demux_007:src1_startofpacket -> rsp_mux_003:sink7_startofpacket
-	wire          rsp_demux_007_src1_endofpacket;                                                     // rsp_demux_007:src1_endofpacket -> rsp_mux_003:sink7_endofpacket
+	wire          rsp_demux_006_src4_valid;                                                           // rsp_demux_006:src4_valid -> rsp_mux_004:sink0_valid
+	wire  [122:0] rsp_demux_006_src4_data;                                                            // rsp_demux_006:src4_data -> rsp_mux_004:sink0_data
+	wire          rsp_demux_006_src4_ready;                                                           // rsp_mux_004:sink0_ready -> rsp_demux_006:src4_ready
+	wire    [7:0] rsp_demux_006_src4_channel;                                                         // rsp_demux_006:src4_channel -> rsp_mux_004:sink0_channel
+	wire          rsp_demux_006_src4_startofpacket;                                                   // rsp_demux_006:src4_startofpacket -> rsp_mux_004:sink0_startofpacket
+	wire          rsp_demux_006_src4_endofpacket;                                                     // rsp_demux_006:src4_endofpacket -> rsp_mux_004:sink0_endofpacket
+	wire          rsp_demux_006_src5_valid;                                                           // rsp_demux_006:src5_valid -> rsp_mux_005:sink0_valid
+	wire  [122:0] rsp_demux_006_src5_data;                                                            // rsp_demux_006:src5_data -> rsp_mux_005:sink0_data
+	wire          rsp_demux_006_src5_ready;                                                           // rsp_mux_005:sink0_ready -> rsp_demux_006:src5_ready
+	wire    [7:0] rsp_demux_006_src5_channel;                                                         // rsp_demux_006:src5_channel -> rsp_mux_005:sink0_channel
+	wire          rsp_demux_006_src5_startofpacket;                                                   // rsp_demux_006:src5_startofpacket -> rsp_mux_005:sink0_startofpacket
+	wire          rsp_demux_006_src5_endofpacket;                                                     // rsp_demux_006:src5_endofpacket -> rsp_mux_005:sink0_endofpacket
+	wire          rsp_demux_006_src6_valid;                                                           // rsp_demux_006:src6_valid -> rsp_mux_006:sink1_valid
+	wire  [122:0] rsp_demux_006_src6_data;                                                            // rsp_demux_006:src6_data -> rsp_mux_006:sink1_data
+	wire          rsp_demux_006_src6_ready;                                                           // rsp_mux_006:sink1_ready -> rsp_demux_006:src6_ready
+	wire    [7:0] rsp_demux_006_src6_channel;                                                         // rsp_demux_006:src6_channel -> rsp_mux_006:sink1_channel
+	wire          rsp_demux_006_src6_startofpacket;                                                   // rsp_demux_006:src6_startofpacket -> rsp_mux_006:sink1_startofpacket
+	wire          rsp_demux_006_src6_endofpacket;                                                     // rsp_demux_006:src6_endofpacket -> rsp_mux_006:sink1_endofpacket
+	wire          rsp_demux_007_src0_valid;                                                           // rsp_demux_007:src0_valid -> rsp_mux:sink7_valid
+	wire  [122:0] rsp_demux_007_src0_data;                                                            // rsp_demux_007:src0_data -> rsp_mux:sink7_data
+	wire          rsp_demux_007_src0_ready;                                                           // rsp_mux:sink7_ready -> rsp_demux_007:src0_ready
+	wire    [7:0] rsp_demux_007_src0_channel;                                                         // rsp_demux_007:src0_channel -> rsp_mux:sink7_channel
+	wire          rsp_demux_007_src0_startofpacket;                                                   // rsp_demux_007:src0_startofpacket -> rsp_mux:sink7_startofpacket
+	wire          rsp_demux_007_src0_endofpacket;                                                     // rsp_demux_007:src0_endofpacket -> rsp_mux:sink7_endofpacket
+	wire          rsp_demux_007_src1_valid;                                                           // rsp_demux_007:src1_valid -> rsp_mux_001:sink7_valid
+	wire  [122:0] rsp_demux_007_src1_data;                                                            // rsp_demux_007:src1_data -> rsp_mux_001:sink7_data
+	wire          rsp_demux_007_src1_ready;                                                           // rsp_mux_001:sink7_ready -> rsp_demux_007:src1_ready
+	wire    [7:0] rsp_demux_007_src1_channel;                                                         // rsp_demux_007:src1_channel -> rsp_mux_001:sink7_channel
+	wire          rsp_demux_007_src1_startofpacket;                                                   // rsp_demux_007:src1_startofpacket -> rsp_mux_001:sink7_startofpacket
+	wire          rsp_demux_007_src1_endofpacket;                                                     // rsp_demux_007:src1_endofpacket -> rsp_mux_001:sink7_endofpacket
+	wire          rsp_demux_007_src2_valid;                                                           // rsp_demux_007:src2_valid -> rsp_mux_002:sink7_valid
+	wire  [122:0] rsp_demux_007_src2_data;                                                            // rsp_demux_007:src2_data -> rsp_mux_002:sink7_data
+	wire          rsp_demux_007_src2_ready;                                                           // rsp_mux_002:sink7_ready -> rsp_demux_007:src2_ready
+	wire    [7:0] rsp_demux_007_src2_channel;                                                         // rsp_demux_007:src2_channel -> rsp_mux_002:sink7_channel
+	wire          rsp_demux_007_src2_startofpacket;                                                   // rsp_demux_007:src2_startofpacket -> rsp_mux_002:sink7_startofpacket
+	wire          rsp_demux_007_src2_endofpacket;                                                     // rsp_demux_007:src2_endofpacket -> rsp_mux_002:sink7_endofpacket
+	wire          rsp_demux_007_src3_valid;                                                           // rsp_demux_007:src3_valid -> rsp_mux_003:sink7_valid
+	wire  [122:0] rsp_demux_007_src3_data;                                                            // rsp_demux_007:src3_data -> rsp_mux_003:sink7_data
+	wire          rsp_demux_007_src3_ready;                                                           // rsp_mux_003:sink7_ready -> rsp_demux_007:src3_ready
+	wire    [7:0] rsp_demux_007_src3_channel;                                                         // rsp_demux_007:src3_channel -> rsp_mux_003:sink7_channel
+	wire          rsp_demux_007_src3_startofpacket;                                                   // rsp_demux_007:src3_startofpacket -> rsp_mux_003:sink7_startofpacket
+	wire          rsp_demux_007_src3_endofpacket;                                                     // rsp_demux_007:src3_endofpacket -> rsp_mux_003:sink7_endofpacket
+	wire          rsp_demux_007_src4_valid;                                                           // rsp_demux_007:src4_valid -> rsp_mux_004:sink1_valid
+	wire  [122:0] rsp_demux_007_src4_data;                                                            // rsp_demux_007:src4_data -> rsp_mux_004:sink1_data
+	wire          rsp_demux_007_src4_ready;                                                           // rsp_mux_004:sink1_ready -> rsp_demux_007:src4_ready
+	wire    [7:0] rsp_demux_007_src4_channel;                                                         // rsp_demux_007:src4_channel -> rsp_mux_004:sink1_channel
+	wire          rsp_demux_007_src4_startofpacket;                                                   // rsp_demux_007:src4_startofpacket -> rsp_mux_004:sink1_startofpacket
+	wire          rsp_demux_007_src4_endofpacket;                                                     // rsp_demux_007:src4_endofpacket -> rsp_mux_004:sink1_endofpacket
+	wire          rsp_demux_007_src5_valid;                                                           // rsp_demux_007:src5_valid -> rsp_mux_005:sink1_valid
+	wire  [122:0] rsp_demux_007_src5_data;                                                            // rsp_demux_007:src5_data -> rsp_mux_005:sink1_data
+	wire          rsp_demux_007_src5_ready;                                                           // rsp_mux_005:sink1_ready -> rsp_demux_007:src5_ready
+	wire    [7:0] rsp_demux_007_src5_channel;                                                         // rsp_demux_007:src5_channel -> rsp_mux_005:sink1_channel
+	wire          rsp_demux_007_src5_startofpacket;                                                   // rsp_demux_007:src5_startofpacket -> rsp_mux_005:sink1_startofpacket
+	wire          rsp_demux_007_src5_endofpacket;                                                     // rsp_demux_007:src5_endofpacket -> rsp_mux_005:sink1_endofpacket
+	wire          rsp_demux_007_src6_valid;                                                           // rsp_demux_007:src6_valid -> rsp_mux_006:sink2_valid
+	wire  [122:0] rsp_demux_007_src6_data;                                                            // rsp_demux_007:src6_data -> rsp_mux_006:sink2_data
+	wire          rsp_demux_007_src6_ready;                                                           // rsp_mux_006:sink2_ready -> rsp_demux_007:src6_ready
+	wire    [7:0] rsp_demux_007_src6_channel;                                                         // rsp_demux_007:src6_channel -> rsp_mux_006:sink2_channel
+	wire          rsp_demux_007_src6_startofpacket;                                                   // rsp_demux_007:src6_startofpacket -> rsp_mux_006:sink2_startofpacket
+	wire          rsp_demux_007_src6_endofpacket;                                                     // rsp_demux_007:src6_endofpacket -> rsp_mux_006:sink2_endofpacket
 	wire    [7:0] master_0_master_limiter_cmd_valid_data;                                             // master_0_master_limiter:cmd_src_valid -> cmd_demux_003:sink_valid
 	wire          jtag_uart_0_avalon_jtag_slave_agent_rdata_fifo_out_valid;                           // jtag_uart_0_avalon_jtag_slave_agent_rdata_fifo:out_valid -> avalon_st_adapter:in_0_valid
 	wire   [33:0] jtag_uart_0_avalon_jtag_slave_agent_rdata_fifo_out_data;                            // jtag_uart_0_avalon_jtag_slave_agent_rdata_fifo:out_data -> avalon_st_adapter:in_0_data
@@ -1230,20 +1260,20 @@ module soc_system_mm_interconnect_0 (
 	wire   [33:0] avalon_st_adapter_002_out_0_data;                                                   // avalon_st_adapter_002:out_0_data -> nios2_gen2_0_debug_mem_slave_agent:rdata_fifo_sink_data
 	wire          avalon_st_adapter_002_out_0_ready;                                                  // nios2_gen2_0_debug_mem_slave_agent:rdata_fifo_sink_ready -> avalon_st_adapter_002:out_0_ready
 	wire    [0:0] avalon_st_adapter_002_out_0_error;                                                  // avalon_st_adapter_002:out_0_error -> nios2_gen2_0_debug_mem_slave_agent:rdata_fifo_sink_error
-	wire          ocram_64k_s1_agent_rdata_fifo_out_valid;                                            // ocram_64K_s1_agent_rdata_fifo:out_valid -> avalon_st_adapter_003:in_0_valid
-	wire   [33:0] ocram_64k_s1_agent_rdata_fifo_out_data;                                             // ocram_64K_s1_agent_rdata_fifo:out_data -> avalon_st_adapter_003:in_0_data
-	wire          ocram_64k_s1_agent_rdata_fifo_out_ready;                                            // avalon_st_adapter_003:in_0_ready -> ocram_64K_s1_agent_rdata_fifo:out_ready
-	wire          avalon_st_adapter_003_out_0_valid;                                                  // avalon_st_adapter_003:out_0_valid -> ocram_64K_s1_agent:rdata_fifo_sink_valid
-	wire   [33:0] avalon_st_adapter_003_out_0_data;                                                   // avalon_st_adapter_003:out_0_data -> ocram_64K_s1_agent:rdata_fifo_sink_data
-	wire          avalon_st_adapter_003_out_0_ready;                                                  // ocram_64K_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_003:out_0_ready
-	wire    [0:0] avalon_st_adapter_003_out_0_error;                                                  // avalon_st_adapter_003:out_0_error -> ocram_64K_s1_agent:rdata_fifo_sink_error
-	wire          ocram_16b_s1_agent_rdata_fifo_out_valid;                                            // ocram_16b_s1_agent_rdata_fifo:out_valid -> avalon_st_adapter_004:in_0_valid
-	wire   [33:0] ocram_16b_s1_agent_rdata_fifo_out_data;                                             // ocram_16b_s1_agent_rdata_fifo:out_data -> avalon_st_adapter_004:in_0_data
-	wire          ocram_16b_s1_agent_rdata_fifo_out_ready;                                            // avalon_st_adapter_004:in_0_ready -> ocram_16b_s1_agent_rdata_fifo:out_ready
-	wire          avalon_st_adapter_004_out_0_valid;                                                  // avalon_st_adapter_004:out_0_valid -> ocram_16b_s1_agent:rdata_fifo_sink_valid
-	wire   [33:0] avalon_st_adapter_004_out_0_data;                                                   // avalon_st_adapter_004:out_0_data -> ocram_16b_s1_agent:rdata_fifo_sink_data
-	wire          avalon_st_adapter_004_out_0_ready;                                                  // ocram_16b_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_004:out_0_ready
-	wire    [0:0] avalon_st_adapter_004_out_0_error;                                                  // avalon_st_adapter_004:out_0_error -> ocram_16b_s1_agent:rdata_fifo_sink_error
+	wire          switch_pio_s1_agent_rdata_fifo_out_valid;                                           // switch_pio_s1_agent_rdata_fifo:out_valid -> avalon_st_adapter_003:in_0_valid
+	wire   [33:0] switch_pio_s1_agent_rdata_fifo_out_data;                                            // switch_pio_s1_agent_rdata_fifo:out_data -> avalon_st_adapter_003:in_0_data
+	wire          switch_pio_s1_agent_rdata_fifo_out_ready;                                           // avalon_st_adapter_003:in_0_ready -> switch_pio_s1_agent_rdata_fifo:out_ready
+	wire          avalon_st_adapter_003_out_0_valid;                                                  // avalon_st_adapter_003:out_0_valid -> switch_pio_s1_agent:rdata_fifo_sink_valid
+	wire   [33:0] avalon_st_adapter_003_out_0_data;                                                   // avalon_st_adapter_003:out_0_data -> switch_pio_s1_agent:rdata_fifo_sink_data
+	wire          avalon_st_adapter_003_out_0_ready;                                                  // switch_pio_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_003:out_0_ready
+	wire    [0:0] avalon_st_adapter_003_out_0_error;                                                  // avalon_st_adapter_003:out_0_error -> switch_pio_s1_agent:rdata_fifo_sink_error
+	wire          button_pio_s1_agent_rdata_fifo_out_valid;                                           // button_pio_s1_agent_rdata_fifo:out_valid -> avalon_st_adapter_004:in_0_valid
+	wire   [33:0] button_pio_s1_agent_rdata_fifo_out_data;                                            // button_pio_s1_agent_rdata_fifo:out_data -> avalon_st_adapter_004:in_0_data
+	wire          button_pio_s1_agent_rdata_fifo_out_ready;                                           // avalon_st_adapter_004:in_0_ready -> button_pio_s1_agent_rdata_fifo:out_ready
+	wire          avalon_st_adapter_004_out_0_valid;                                                  // avalon_st_adapter_004:out_0_valid -> button_pio_s1_agent:rdata_fifo_sink_valid
+	wire   [33:0] avalon_st_adapter_004_out_0_data;                                                   // avalon_st_adapter_004:out_0_data -> button_pio_s1_agent:rdata_fifo_sink_data
+	wire          avalon_st_adapter_004_out_0_ready;                                                  // button_pio_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_004:out_0_ready
+	wire    [0:0] avalon_st_adapter_004_out_0_error;                                                  // avalon_st_adapter_004:out_0_error -> button_pio_s1_agent:rdata_fifo_sink_error
 	wire          led_pio_s1_agent_rdata_fifo_out_valid;                                              // led_pio_s1_agent_rdata_fifo:out_valid -> avalon_st_adapter_005:in_0_valid
 	wire   [33:0] led_pio_s1_agent_rdata_fifo_out_data;                                               // led_pio_s1_agent_rdata_fifo:out_data -> avalon_st_adapter_005:in_0_data
 	wire          led_pio_s1_agent_rdata_fifo_out_ready;                                              // avalon_st_adapter_005:in_0_ready -> led_pio_s1_agent_rdata_fifo:out_ready
@@ -1251,20 +1281,20 @@ module soc_system_mm_interconnect_0 (
 	wire   [33:0] avalon_st_adapter_005_out_0_data;                                                   // avalon_st_adapter_005:out_0_data -> led_pio_s1_agent:rdata_fifo_sink_data
 	wire          avalon_st_adapter_005_out_0_ready;                                                  // led_pio_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_005:out_0_ready
 	wire    [0:0] avalon_st_adapter_005_out_0_error;                                                  // avalon_st_adapter_005:out_0_error -> led_pio_s1_agent:rdata_fifo_sink_error
-	wire          button_pio_s1_agent_rdata_fifo_out_valid;                                           // button_pio_s1_agent_rdata_fifo:out_valid -> avalon_st_adapter_006:in_0_valid
-	wire   [33:0] button_pio_s1_agent_rdata_fifo_out_data;                                            // button_pio_s1_agent_rdata_fifo:out_data -> avalon_st_adapter_006:in_0_data
-	wire          button_pio_s1_agent_rdata_fifo_out_ready;                                           // avalon_st_adapter_006:in_0_ready -> button_pio_s1_agent_rdata_fifo:out_ready
-	wire          avalon_st_adapter_006_out_0_valid;                                                  // avalon_st_adapter_006:out_0_valid -> button_pio_s1_agent:rdata_fifo_sink_valid
-	wire   [33:0] avalon_st_adapter_006_out_0_data;                                                   // avalon_st_adapter_006:out_0_data -> button_pio_s1_agent:rdata_fifo_sink_data
-	wire          avalon_st_adapter_006_out_0_ready;                                                  // button_pio_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_006:out_0_ready
-	wire    [0:0] avalon_st_adapter_006_out_0_error;                                                  // avalon_st_adapter_006:out_0_error -> button_pio_s1_agent:rdata_fifo_sink_error
-	wire          switch_pio_s1_agent_rdata_fifo_out_valid;                                           // switch_pio_s1_agent_rdata_fifo:out_valid -> avalon_st_adapter_007:in_0_valid
-	wire   [33:0] switch_pio_s1_agent_rdata_fifo_out_data;                                            // switch_pio_s1_agent_rdata_fifo:out_data -> avalon_st_adapter_007:in_0_data
-	wire          switch_pio_s1_agent_rdata_fifo_out_ready;                                           // avalon_st_adapter_007:in_0_ready -> switch_pio_s1_agent_rdata_fifo:out_ready
-	wire          avalon_st_adapter_007_out_0_valid;                                                  // avalon_st_adapter_007:out_0_valid -> switch_pio_s1_agent:rdata_fifo_sink_valid
-	wire   [33:0] avalon_st_adapter_007_out_0_data;                                                   // avalon_st_adapter_007:out_0_data -> switch_pio_s1_agent:rdata_fifo_sink_data
-	wire          avalon_st_adapter_007_out_0_ready;                                                  // switch_pio_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_007:out_0_ready
-	wire    [0:0] avalon_st_adapter_007_out_0_error;                                                  // avalon_st_adapter_007:out_0_error -> switch_pio_s1_agent:rdata_fifo_sink_error
+	wire          ocram_16b_s1_agent_rdata_fifo_out_valid;                                            // ocram_16b_s1_agent_rdata_fifo:out_valid -> avalon_st_adapter_006:in_0_valid
+	wire   [33:0] ocram_16b_s1_agent_rdata_fifo_out_data;                                             // ocram_16b_s1_agent_rdata_fifo:out_data -> avalon_st_adapter_006:in_0_data
+	wire          ocram_16b_s1_agent_rdata_fifo_out_ready;                                            // avalon_st_adapter_006:in_0_ready -> ocram_16b_s1_agent_rdata_fifo:out_ready
+	wire          avalon_st_adapter_006_out_0_valid;                                                  // avalon_st_adapter_006:out_0_valid -> ocram_16b_s1_agent:rdata_fifo_sink_valid
+	wire   [33:0] avalon_st_adapter_006_out_0_data;                                                   // avalon_st_adapter_006:out_0_data -> ocram_16b_s1_agent:rdata_fifo_sink_data
+	wire          avalon_st_adapter_006_out_0_ready;                                                  // ocram_16b_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_006:out_0_ready
+	wire    [0:0] avalon_st_adapter_006_out_0_error;                                                  // avalon_st_adapter_006:out_0_error -> ocram_16b_s1_agent:rdata_fifo_sink_error
+	wire          ocram_64k_s1_agent_rdata_fifo_out_valid;                                            // ocram_64K_s1_agent_rdata_fifo:out_valid -> avalon_st_adapter_007:in_0_valid
+	wire   [33:0] ocram_64k_s1_agent_rdata_fifo_out_data;                                             // ocram_64K_s1_agent_rdata_fifo:out_data -> avalon_st_adapter_007:in_0_data
+	wire          ocram_64k_s1_agent_rdata_fifo_out_ready;                                            // avalon_st_adapter_007:in_0_ready -> ocram_64K_s1_agent_rdata_fifo:out_ready
+	wire          avalon_st_adapter_007_out_0_valid;                                                  // avalon_st_adapter_007:out_0_valid -> ocram_64K_s1_agent:rdata_fifo_sink_valid
+	wire   [33:0] avalon_st_adapter_007_out_0_data;                                                   // avalon_st_adapter_007:out_0_data -> ocram_64K_s1_agent:rdata_fifo_sink_data
+	wire          avalon_st_adapter_007_out_0_ready;                                                  // ocram_64K_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_007:out_0_ready
+	wire    [0:0] avalon_st_adapter_007_out_0_error;                                                  // avalon_st_adapter_007:out_0_error -> ocram_64K_s1_agent:rdata_fifo_sink_error
 
 	altera_merlin_axi_translator #(
 		.USE_S0_AWID                       (1),
@@ -1333,99 +1363,99 @@ module soc_system_mm_interconnect_0 (
 		.M0_LOCK_WIDTH                     (1),
 		.S0_LOCK_WIDTH                     (1),
 		.S0_AXI_VERSION                    ("AXI4")
-	) vexriscvaxi4_0_dbusaxi_translator (
-		.aclk        (clk_0_clk_clk),                                     //       clk.clk
-		.aresetn     (~VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset_n
-		.m0_awid     (vexriscvaxi4_0_dbusaxi_translator_m0_awid),         //        m0.awid
-		.m0_awaddr   (vexriscvaxi4_0_dbusaxi_translator_m0_awaddr),       //          .awaddr
-		.m0_awlen    (vexriscvaxi4_0_dbusaxi_translator_m0_awlen),        //          .awlen
-		.m0_awsize   (vexriscvaxi4_0_dbusaxi_translator_m0_awsize),       //          .awsize
-		.m0_awburst  (vexriscvaxi4_0_dbusaxi_translator_m0_awburst),      //          .awburst
-		.m0_awlock   (vexriscvaxi4_0_dbusaxi_translator_m0_awlock),       //          .awlock
-		.m0_awcache  (vexriscvaxi4_0_dbusaxi_translator_m0_awcache),      //          .awcache
-		.m0_awprot   (vexriscvaxi4_0_dbusaxi_translator_m0_awprot),       //          .awprot
-		.m0_awuser   (vexriscvaxi4_0_dbusaxi_translator_m0_awuser),       //          .awuser
-		.m0_awqos    (vexriscvaxi4_0_dbusaxi_translator_m0_awqos),        //          .awqos
-		.m0_awregion (vexriscvaxi4_0_dbusaxi_translator_m0_awregion),     //          .awregion
-		.m0_awvalid  (vexriscvaxi4_0_dbusaxi_translator_m0_awvalid),      //          .awvalid
-		.m0_awready  (vexriscvaxi4_0_dbusaxi_translator_m0_awready),      //          .awready
-		.m0_wdata    (vexriscvaxi4_0_dbusaxi_translator_m0_wdata),        //          .wdata
-		.m0_wstrb    (vexriscvaxi4_0_dbusaxi_translator_m0_wstrb),        //          .wstrb
-		.m0_wlast    (vexriscvaxi4_0_dbusaxi_translator_m0_wlast),        //          .wlast
-		.m0_wvalid   (vexriscvaxi4_0_dbusaxi_translator_m0_wvalid),       //          .wvalid
-		.m0_wuser    (vexriscvaxi4_0_dbusaxi_translator_m0_wuser),        //          .wuser
-		.m0_wready   (vexriscvaxi4_0_dbusaxi_translator_m0_wready),       //          .wready
-		.m0_bid      (vexriscvaxi4_0_dbusaxi_translator_m0_bid),          //          .bid
-		.m0_bresp    (vexriscvaxi4_0_dbusaxi_translator_m0_bresp),        //          .bresp
-		.m0_buser    (vexriscvaxi4_0_dbusaxi_translator_m0_buser),        //          .buser
-		.m0_bvalid   (vexriscvaxi4_0_dbusaxi_translator_m0_bvalid),       //          .bvalid
-		.m0_bready   (vexriscvaxi4_0_dbusaxi_translator_m0_bready),       //          .bready
-		.m0_arid     (vexriscvaxi4_0_dbusaxi_translator_m0_arid),         //          .arid
-		.m0_araddr   (vexriscvaxi4_0_dbusaxi_translator_m0_araddr),       //          .araddr
-		.m0_arlen    (vexriscvaxi4_0_dbusaxi_translator_m0_arlen),        //          .arlen
-		.m0_arsize   (vexriscvaxi4_0_dbusaxi_translator_m0_arsize),       //          .arsize
-		.m0_arburst  (vexriscvaxi4_0_dbusaxi_translator_m0_arburst),      //          .arburst
-		.m0_arlock   (vexriscvaxi4_0_dbusaxi_translator_m0_arlock),       //          .arlock
-		.m0_arcache  (vexriscvaxi4_0_dbusaxi_translator_m0_arcache),      //          .arcache
-		.m0_arprot   (vexriscvaxi4_0_dbusaxi_translator_m0_arprot),       //          .arprot
-		.m0_aruser   (vexriscvaxi4_0_dbusaxi_translator_m0_aruser),       //          .aruser
-		.m0_arqos    (vexriscvaxi4_0_dbusaxi_translator_m0_arqos),        //          .arqos
-		.m0_arregion (vexriscvaxi4_0_dbusaxi_translator_m0_arregion),     //          .arregion
-		.m0_arvalid  (vexriscvaxi4_0_dbusaxi_translator_m0_arvalid),      //          .arvalid
-		.m0_arready  (vexriscvaxi4_0_dbusaxi_translator_m0_arready),      //          .arready
-		.m0_rid      (vexriscvaxi4_0_dbusaxi_translator_m0_rid),          //          .rid
-		.m0_rdata    (vexriscvaxi4_0_dbusaxi_translator_m0_rdata),        //          .rdata
-		.m0_rresp    (vexriscvaxi4_0_dbusaxi_translator_m0_rresp),        //          .rresp
-		.m0_rlast    (vexriscvaxi4_0_dbusaxi_translator_m0_rlast),        //          .rlast
-		.m0_rvalid   (vexriscvaxi4_0_dbusaxi_translator_m0_rvalid),       //          .rvalid
-		.m0_rready   (vexriscvaxi4_0_dbusaxi_translator_m0_rready),       //          .rready
-		.m0_ruser    (vexriscvaxi4_0_dbusaxi_translator_m0_ruser),        //          .ruser
-		.s0_awid     (VexRiscvAxi4_0_dBusaxi_awid),                       //        s0.awid
-		.s0_awaddr   (VexRiscvAxi4_0_dBusaxi_awaddr),                     //          .awaddr
-		.s0_awlen    (VexRiscvAxi4_0_dBusaxi_awlen),                      //          .awlen
-		.s0_awsize   (VexRiscvAxi4_0_dBusaxi_awsize),                     //          .awsize
-		.s0_awburst  (VexRiscvAxi4_0_dBusaxi_awburst),                    //          .awburst
-		.s0_awlock   (VexRiscvAxi4_0_dBusaxi_awlock),                     //          .awlock
-		.s0_awcache  (VexRiscvAxi4_0_dBusaxi_awcache),                    //          .awcache
-		.s0_awprot   (VexRiscvAxi4_0_dBusaxi_awprot),                     //          .awprot
-		.s0_awqos    (VexRiscvAxi4_0_dBusaxi_awqos),                      //          .awqos
-		.s0_awregion (VexRiscvAxi4_0_dBusaxi_awregion),                   //          .awregion
-		.s0_awvalid  (VexRiscvAxi4_0_dBusaxi_awvalid),                    //          .awvalid
-		.s0_awready  (VexRiscvAxi4_0_dBusaxi_awready),                    //          .awready
-		.s0_wdata    (VexRiscvAxi4_0_dBusaxi_wdata),                      //          .wdata
-		.s0_wstrb    (VexRiscvAxi4_0_dBusaxi_wstrb),                      //          .wstrb
-		.s0_wlast    (VexRiscvAxi4_0_dBusaxi_wlast),                      //          .wlast
-		.s0_wvalid   (VexRiscvAxi4_0_dBusaxi_wvalid),                     //          .wvalid
-		.s0_wready   (VexRiscvAxi4_0_dBusaxi_wready),                     //          .wready
-		.s0_bid      (VexRiscvAxi4_0_dBusaxi_bid),                        //          .bid
-		.s0_bresp    (VexRiscvAxi4_0_dBusaxi_bresp),                      //          .bresp
-		.s0_bvalid   (VexRiscvAxi4_0_dBusaxi_bvalid),                     //          .bvalid
-		.s0_bready   (VexRiscvAxi4_0_dBusaxi_bready),                     //          .bready
-		.s0_arid     (VexRiscvAxi4_0_dBusaxi_arid),                       //          .arid
-		.s0_araddr   (VexRiscvAxi4_0_dBusaxi_araddr),                     //          .araddr
-		.s0_arlen    (VexRiscvAxi4_0_dBusaxi_arlen),                      //          .arlen
-		.s0_arsize   (VexRiscvAxi4_0_dBusaxi_arsize),                     //          .arsize
-		.s0_arburst  (VexRiscvAxi4_0_dBusaxi_arburst),                    //          .arburst
-		.s0_arlock   (VexRiscvAxi4_0_dBusaxi_arlock),                     //          .arlock
-		.s0_arcache  (VexRiscvAxi4_0_dBusaxi_arcache),                    //          .arcache
-		.s0_arprot   (VexRiscvAxi4_0_dBusaxi_arprot),                     //          .arprot
-		.s0_arqos    (VexRiscvAxi4_0_dBusaxi_arqos),                      //          .arqos
-		.s0_arregion (VexRiscvAxi4_0_dBusaxi_arregion),                   //          .arregion
-		.s0_arvalid  (VexRiscvAxi4_0_dBusaxi_arvalid),                    //          .arvalid
-		.s0_arready  (VexRiscvAxi4_0_dBusaxi_arready),                    //          .arready
-		.s0_rid      (VexRiscvAxi4_0_dBusaxi_rid),                        //          .rid
-		.s0_rdata    (VexRiscvAxi4_0_dBusaxi_rdata),                      //          .rdata
-		.s0_rresp    (VexRiscvAxi4_0_dBusaxi_rresp),                      //          .rresp
-		.s0_rlast    (VexRiscvAxi4_0_dBusaxi_rlast),                      //          .rlast
-		.s0_rvalid   (VexRiscvAxi4_0_dBusaxi_rvalid),                     //          .rvalid
-		.s0_rready   (VexRiscvAxi4_0_dBusaxi_rready),                     //          .rready
-		.s0_awuser   (1'b0),                                              // (terminated)
-		.s0_wuser    (1'b0),                                              // (terminated)
-		.s0_buser    (),                                                  // (terminated)
-		.s0_aruser   (1'b0),                                              // (terminated)
-		.s0_ruser    (),                                                  // (terminated)
-		.s0_wid      (1'b0),                                              // (terminated)
-		.m0_wid      ()                                                   // (terminated)
+	) vexriscv_0_dbusaxi_translator (
+		.aclk        (clk_0_clk_clk),                                 //       clk.clk
+		.aresetn     (~VexRiscv_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset_n
+		.m0_awid     (vexriscv_0_dbusaxi_translator_m0_awid),         //        m0.awid
+		.m0_awaddr   (vexriscv_0_dbusaxi_translator_m0_awaddr),       //          .awaddr
+		.m0_awlen    (vexriscv_0_dbusaxi_translator_m0_awlen),        //          .awlen
+		.m0_awsize   (vexriscv_0_dbusaxi_translator_m0_awsize),       //          .awsize
+		.m0_awburst  (vexriscv_0_dbusaxi_translator_m0_awburst),      //          .awburst
+		.m0_awlock   (vexriscv_0_dbusaxi_translator_m0_awlock),       //          .awlock
+		.m0_awcache  (vexriscv_0_dbusaxi_translator_m0_awcache),      //          .awcache
+		.m0_awprot   (vexriscv_0_dbusaxi_translator_m0_awprot),       //          .awprot
+		.m0_awuser   (vexriscv_0_dbusaxi_translator_m0_awuser),       //          .awuser
+		.m0_awqos    (vexriscv_0_dbusaxi_translator_m0_awqos),        //          .awqos
+		.m0_awregion (vexriscv_0_dbusaxi_translator_m0_awregion),     //          .awregion
+		.m0_awvalid  (vexriscv_0_dbusaxi_translator_m0_awvalid),      //          .awvalid
+		.m0_awready  (vexriscv_0_dbusaxi_translator_m0_awready),      //          .awready
+		.m0_wdata    (vexriscv_0_dbusaxi_translator_m0_wdata),        //          .wdata
+		.m0_wstrb    (vexriscv_0_dbusaxi_translator_m0_wstrb),        //          .wstrb
+		.m0_wlast    (vexriscv_0_dbusaxi_translator_m0_wlast),        //          .wlast
+		.m0_wvalid   (vexriscv_0_dbusaxi_translator_m0_wvalid),       //          .wvalid
+		.m0_wuser    (vexriscv_0_dbusaxi_translator_m0_wuser),        //          .wuser
+		.m0_wready   (vexriscv_0_dbusaxi_translator_m0_wready),       //          .wready
+		.m0_bid      (vexriscv_0_dbusaxi_translator_m0_bid),          //          .bid
+		.m0_bresp    (vexriscv_0_dbusaxi_translator_m0_bresp),        //          .bresp
+		.m0_buser    (vexriscv_0_dbusaxi_translator_m0_buser),        //          .buser
+		.m0_bvalid   (vexriscv_0_dbusaxi_translator_m0_bvalid),       //          .bvalid
+		.m0_bready   (vexriscv_0_dbusaxi_translator_m0_bready),       //          .bready
+		.m0_arid     (vexriscv_0_dbusaxi_translator_m0_arid),         //          .arid
+		.m0_araddr   (vexriscv_0_dbusaxi_translator_m0_araddr),       //          .araddr
+		.m0_arlen    (vexriscv_0_dbusaxi_translator_m0_arlen),        //          .arlen
+		.m0_arsize   (vexriscv_0_dbusaxi_translator_m0_arsize),       //          .arsize
+		.m0_arburst  (vexriscv_0_dbusaxi_translator_m0_arburst),      //          .arburst
+		.m0_arlock   (vexriscv_0_dbusaxi_translator_m0_arlock),       //          .arlock
+		.m0_arcache  (vexriscv_0_dbusaxi_translator_m0_arcache),      //          .arcache
+		.m0_arprot   (vexriscv_0_dbusaxi_translator_m0_arprot),       //          .arprot
+		.m0_aruser   (vexriscv_0_dbusaxi_translator_m0_aruser),       //          .aruser
+		.m0_arqos    (vexriscv_0_dbusaxi_translator_m0_arqos),        //          .arqos
+		.m0_arregion (vexriscv_0_dbusaxi_translator_m0_arregion),     //          .arregion
+		.m0_arvalid  (vexriscv_0_dbusaxi_translator_m0_arvalid),      //          .arvalid
+		.m0_arready  (vexriscv_0_dbusaxi_translator_m0_arready),      //          .arready
+		.m0_rid      (vexriscv_0_dbusaxi_translator_m0_rid),          //          .rid
+		.m0_rdata    (vexriscv_0_dbusaxi_translator_m0_rdata),        //          .rdata
+		.m0_rresp    (vexriscv_0_dbusaxi_translator_m0_rresp),        //          .rresp
+		.m0_rlast    (vexriscv_0_dbusaxi_translator_m0_rlast),        //          .rlast
+		.m0_rvalid   (vexriscv_0_dbusaxi_translator_m0_rvalid),       //          .rvalid
+		.m0_rready   (vexriscv_0_dbusaxi_translator_m0_rready),       //          .rready
+		.m0_ruser    (vexriscv_0_dbusaxi_translator_m0_ruser),        //          .ruser
+		.s0_awid     (VexRiscv_0_dBusaxi_awid),                       //        s0.awid
+		.s0_awaddr   (VexRiscv_0_dBusaxi_awaddr),                     //          .awaddr
+		.s0_awlen    (VexRiscv_0_dBusaxi_awlen),                      //          .awlen
+		.s0_awsize   (VexRiscv_0_dBusaxi_awsize),                     //          .awsize
+		.s0_awburst  (VexRiscv_0_dBusaxi_awburst),                    //          .awburst
+		.s0_awlock   (VexRiscv_0_dBusaxi_awlock),                     //          .awlock
+		.s0_awcache  (VexRiscv_0_dBusaxi_awcache),                    //          .awcache
+		.s0_awprot   (VexRiscv_0_dBusaxi_awprot),                     //          .awprot
+		.s0_awqos    (VexRiscv_0_dBusaxi_awqos),                      //          .awqos
+		.s0_awregion (VexRiscv_0_dBusaxi_awregion),                   //          .awregion
+		.s0_awvalid  (VexRiscv_0_dBusaxi_awvalid),                    //          .awvalid
+		.s0_awready  (VexRiscv_0_dBusaxi_awready),                    //          .awready
+		.s0_wdata    (VexRiscv_0_dBusaxi_wdata),                      //          .wdata
+		.s0_wstrb    (VexRiscv_0_dBusaxi_wstrb),                      //          .wstrb
+		.s0_wlast    (VexRiscv_0_dBusaxi_wlast),                      //          .wlast
+		.s0_wvalid   (VexRiscv_0_dBusaxi_wvalid),                     //          .wvalid
+		.s0_wready   (VexRiscv_0_dBusaxi_wready),                     //          .wready
+		.s0_bid      (VexRiscv_0_dBusaxi_bid),                        //          .bid
+		.s0_bresp    (VexRiscv_0_dBusaxi_bresp),                      //          .bresp
+		.s0_bvalid   (VexRiscv_0_dBusaxi_bvalid),                     //          .bvalid
+		.s0_bready   (VexRiscv_0_dBusaxi_bready),                     //          .bready
+		.s0_arid     (VexRiscv_0_dBusaxi_arid),                       //          .arid
+		.s0_araddr   (VexRiscv_0_dBusaxi_araddr),                     //          .araddr
+		.s0_arlen    (VexRiscv_0_dBusaxi_arlen),                      //          .arlen
+		.s0_arsize   (VexRiscv_0_dBusaxi_arsize),                     //          .arsize
+		.s0_arburst  (VexRiscv_0_dBusaxi_arburst),                    //          .arburst
+		.s0_arlock   (VexRiscv_0_dBusaxi_arlock),                     //          .arlock
+		.s0_arcache  (VexRiscv_0_dBusaxi_arcache),                    //          .arcache
+		.s0_arprot   (VexRiscv_0_dBusaxi_arprot),                     //          .arprot
+		.s0_arqos    (VexRiscv_0_dBusaxi_arqos),                      //          .arqos
+		.s0_arregion (VexRiscv_0_dBusaxi_arregion),                   //          .arregion
+		.s0_arvalid  (VexRiscv_0_dBusaxi_arvalid),                    //          .arvalid
+		.s0_arready  (VexRiscv_0_dBusaxi_arready),                    //          .arready
+		.s0_rid      (VexRiscv_0_dBusaxi_rid),                        //          .rid
+		.s0_rdata    (VexRiscv_0_dBusaxi_rdata),                      //          .rdata
+		.s0_rresp    (VexRiscv_0_dBusaxi_rresp),                      //          .rresp
+		.s0_rlast    (VexRiscv_0_dBusaxi_rlast),                      //          .rlast
+		.s0_rvalid   (VexRiscv_0_dBusaxi_rvalid),                     //          .rvalid
+		.s0_rready   (VexRiscv_0_dBusaxi_rready),                     //          .rready
+		.s0_awuser   (1'b0),                                          // (terminated)
+		.s0_wuser    (1'b0),                                          // (terminated)
+		.s0_buser    (),                                              // (terminated)
+		.s0_aruser   (1'b0),                                          // (terminated)
+		.s0_ruser    (),                                              // (terminated)
+		.s0_wid      (1'b0),                                          // (terminated)
+		.m0_wid      ()                                               // (terminated)
 	);
 
 	altera_merlin_master_translator #(
@@ -1615,99 +1645,99 @@ module soc_system_mm_interconnect_0 (
 		.M0_LOCK_WIDTH                     (1),
 		.S0_LOCK_WIDTH                     (1),
 		.S0_AXI_VERSION                    ("AXI4")
-	) vexriscvaxi4_0_ibusaxi_translator (
-		.aclk        (clk_0_clk_clk),                                     //       clk.clk
-		.aresetn     (~VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset_n
-		.m0_awid     (vexriscvaxi4_0_ibusaxi_translator_m0_awid),         //        m0.awid
-		.m0_awaddr   (vexriscvaxi4_0_ibusaxi_translator_m0_awaddr),       //          .awaddr
-		.m0_awlen    (vexriscvaxi4_0_ibusaxi_translator_m0_awlen),        //          .awlen
-		.m0_awsize   (vexriscvaxi4_0_ibusaxi_translator_m0_awsize),       //          .awsize
-		.m0_awburst  (vexriscvaxi4_0_ibusaxi_translator_m0_awburst),      //          .awburst
-		.m0_awlock   (vexriscvaxi4_0_ibusaxi_translator_m0_awlock),       //          .awlock
-		.m0_awcache  (vexriscvaxi4_0_ibusaxi_translator_m0_awcache),      //          .awcache
-		.m0_awprot   (vexriscvaxi4_0_ibusaxi_translator_m0_awprot),       //          .awprot
-		.m0_awuser   (vexriscvaxi4_0_ibusaxi_translator_m0_awuser),       //          .awuser
-		.m0_awqos    (vexriscvaxi4_0_ibusaxi_translator_m0_awqos),        //          .awqos
-		.m0_awregion (vexriscvaxi4_0_ibusaxi_translator_m0_awregion),     //          .awregion
-		.m0_awvalid  (vexriscvaxi4_0_ibusaxi_translator_m0_awvalid),      //          .awvalid
-		.m0_awready  (vexriscvaxi4_0_ibusaxi_translator_m0_awready),      //          .awready
-		.m0_wdata    (vexriscvaxi4_0_ibusaxi_translator_m0_wdata),        //          .wdata
-		.m0_wstrb    (vexriscvaxi4_0_ibusaxi_translator_m0_wstrb),        //          .wstrb
-		.m0_wlast    (vexriscvaxi4_0_ibusaxi_translator_m0_wlast),        //          .wlast
-		.m0_wvalid   (vexriscvaxi4_0_ibusaxi_translator_m0_wvalid),       //          .wvalid
-		.m0_wuser    (vexriscvaxi4_0_ibusaxi_translator_m0_wuser),        //          .wuser
-		.m0_wready   (vexriscvaxi4_0_ibusaxi_translator_m0_wready),       //          .wready
-		.m0_bid      (vexriscvaxi4_0_ibusaxi_translator_m0_bid),          //          .bid
-		.m0_bresp    (vexriscvaxi4_0_ibusaxi_translator_m0_bresp),        //          .bresp
-		.m0_buser    (vexriscvaxi4_0_ibusaxi_translator_m0_buser),        //          .buser
-		.m0_bvalid   (vexriscvaxi4_0_ibusaxi_translator_m0_bvalid),       //          .bvalid
-		.m0_bready   (vexriscvaxi4_0_ibusaxi_translator_m0_bready),       //          .bready
-		.m0_arid     (vexriscvaxi4_0_ibusaxi_translator_m0_arid),         //          .arid
-		.m0_araddr   (vexriscvaxi4_0_ibusaxi_translator_m0_araddr),       //          .araddr
-		.m0_arlen    (vexriscvaxi4_0_ibusaxi_translator_m0_arlen),        //          .arlen
-		.m0_arsize   (vexriscvaxi4_0_ibusaxi_translator_m0_arsize),       //          .arsize
-		.m0_arburst  (vexriscvaxi4_0_ibusaxi_translator_m0_arburst),      //          .arburst
-		.m0_arlock   (vexriscvaxi4_0_ibusaxi_translator_m0_arlock),       //          .arlock
-		.m0_arcache  (vexriscvaxi4_0_ibusaxi_translator_m0_arcache),      //          .arcache
-		.m0_arprot   (vexriscvaxi4_0_ibusaxi_translator_m0_arprot),       //          .arprot
-		.m0_aruser   (vexriscvaxi4_0_ibusaxi_translator_m0_aruser),       //          .aruser
-		.m0_arqos    (vexriscvaxi4_0_ibusaxi_translator_m0_arqos),        //          .arqos
-		.m0_arregion (vexriscvaxi4_0_ibusaxi_translator_m0_arregion),     //          .arregion
-		.m0_arvalid  (vexriscvaxi4_0_ibusaxi_translator_m0_arvalid),      //          .arvalid
-		.m0_arready  (vexriscvaxi4_0_ibusaxi_translator_m0_arready),      //          .arready
-		.m0_rid      (vexriscvaxi4_0_ibusaxi_translator_m0_rid),          //          .rid
-		.m0_rdata    (vexriscvaxi4_0_ibusaxi_translator_m0_rdata),        //          .rdata
-		.m0_rresp    (vexriscvaxi4_0_ibusaxi_translator_m0_rresp),        //          .rresp
-		.m0_rlast    (vexriscvaxi4_0_ibusaxi_translator_m0_rlast),        //          .rlast
-		.m0_rvalid   (vexriscvaxi4_0_ibusaxi_translator_m0_rvalid),       //          .rvalid
-		.m0_rready   (vexriscvaxi4_0_ibusaxi_translator_m0_rready),       //          .rready
-		.m0_ruser    (vexriscvaxi4_0_ibusaxi_translator_m0_ruser),        //          .ruser
-		.s0_awid     (VexRiscvAxi4_0_iBusaxi_awid),                       //        s0.awid
-		.s0_awaddr   (VexRiscvAxi4_0_iBusaxi_awaddr),                     //          .awaddr
-		.s0_awlock   (VexRiscvAxi4_0_iBusaxi_awlock),                     //          .awlock
-		.s0_awprot   (VexRiscvAxi4_0_iBusaxi_awprot),                     //          .awprot
-		.s0_awvalid  (VexRiscvAxi4_0_iBusaxi_awvalid),                    //          .awvalid
-		.s0_awready  (VexRiscvAxi4_0_iBusaxi_awready),                    //          .awready
-		.s0_wdata    (VexRiscvAxi4_0_iBusaxi_wdata),                      //          .wdata
-		.s0_wlast    (VexRiscvAxi4_0_iBusaxi_wlast),                      //          .wlast
-		.s0_wvalid   (VexRiscvAxi4_0_iBusaxi_wvalid),                     //          .wvalid
-		.s0_wready   (VexRiscvAxi4_0_iBusaxi_wready),                     //          .wready
-		.s0_bid      (VexRiscvAxi4_0_iBusaxi_bid),                        //          .bid
-		.s0_bvalid   (VexRiscvAxi4_0_iBusaxi_bvalid),                     //          .bvalid
-		.s0_bready   (VexRiscvAxi4_0_iBusaxi_bready),                     //          .bready
-		.s0_arid     (VexRiscvAxi4_0_iBusaxi_arid),                       //          .arid
-		.s0_araddr   (VexRiscvAxi4_0_iBusaxi_araddr),                     //          .araddr
-		.s0_arlen    (VexRiscvAxi4_0_iBusaxi_arlen),                      //          .arlen
-		.s0_arsize   (VexRiscvAxi4_0_iBusaxi_arsize),                     //          .arsize
-		.s0_arburst  (VexRiscvAxi4_0_iBusaxi_arburst),                    //          .arburst
-		.s0_arlock   (VexRiscvAxi4_0_iBusaxi_arlock),                     //          .arlock
-		.s0_arcache  (VexRiscvAxi4_0_iBusaxi_arcache),                    //          .arcache
-		.s0_arprot   (VexRiscvAxi4_0_iBusaxi_arprot),                     //          .arprot
-		.s0_arqos    (VexRiscvAxi4_0_iBusaxi_arqos),                      //          .arqos
-		.s0_arregion (VexRiscvAxi4_0_iBusaxi_arregion),                   //          .arregion
-		.s0_arvalid  (VexRiscvAxi4_0_iBusaxi_arvalid),                    //          .arvalid
-		.s0_arready  (VexRiscvAxi4_0_iBusaxi_arready),                    //          .arready
-		.s0_rid      (VexRiscvAxi4_0_iBusaxi_rid),                        //          .rid
-		.s0_rdata    (VexRiscvAxi4_0_iBusaxi_rdata),                      //          .rdata
-		.s0_rresp    (VexRiscvAxi4_0_iBusaxi_rresp),                      //          .rresp
-		.s0_rlast    (VexRiscvAxi4_0_iBusaxi_rlast),                      //          .rlast
-		.s0_rvalid   (VexRiscvAxi4_0_iBusaxi_rvalid),                     //          .rvalid
-		.s0_rready   (VexRiscvAxi4_0_iBusaxi_rready),                     //          .rready
-		.s0_awlen    (8'b00000000),                                       // (terminated)
-		.s0_awsize   (3'b000),                                            // (terminated)
-		.s0_awburst  (2'b00),                                             // (terminated)
-		.s0_awcache  (4'b0000),                                           // (terminated)
-		.s0_awuser   (1'b0),                                              // (terminated)
-		.s0_awqos    (4'b0000),                                           // (terminated)
-		.s0_awregion (4'b0000),                                           // (terminated)
-		.s0_wstrb    (4'b1111),                                           // (terminated)
-		.s0_wuser    (1'b0),                                              // (terminated)
-		.s0_bresp    (),                                                  // (terminated)
-		.s0_buser    (),                                                  // (terminated)
-		.s0_aruser   (1'b0),                                              // (terminated)
-		.s0_ruser    (),                                                  // (terminated)
-		.s0_wid      (1'b0),                                              // (terminated)
-		.m0_wid      ()                                                   // (terminated)
+	) vexriscv_0_ibusaxi_translator (
+		.aclk        (clk_0_clk_clk),                                 //       clk.clk
+		.aresetn     (~VexRiscv_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset_n
+		.m0_awid     (vexriscv_0_ibusaxi_translator_m0_awid),         //        m0.awid
+		.m0_awaddr   (vexriscv_0_ibusaxi_translator_m0_awaddr),       //          .awaddr
+		.m0_awlen    (vexriscv_0_ibusaxi_translator_m0_awlen),        //          .awlen
+		.m0_awsize   (vexriscv_0_ibusaxi_translator_m0_awsize),       //          .awsize
+		.m0_awburst  (vexriscv_0_ibusaxi_translator_m0_awburst),      //          .awburst
+		.m0_awlock   (vexriscv_0_ibusaxi_translator_m0_awlock),       //          .awlock
+		.m0_awcache  (vexriscv_0_ibusaxi_translator_m0_awcache),      //          .awcache
+		.m0_awprot   (vexriscv_0_ibusaxi_translator_m0_awprot),       //          .awprot
+		.m0_awuser   (vexriscv_0_ibusaxi_translator_m0_awuser),       //          .awuser
+		.m0_awqos    (vexriscv_0_ibusaxi_translator_m0_awqos),        //          .awqos
+		.m0_awregion (vexriscv_0_ibusaxi_translator_m0_awregion),     //          .awregion
+		.m0_awvalid  (vexriscv_0_ibusaxi_translator_m0_awvalid),      //          .awvalid
+		.m0_awready  (vexriscv_0_ibusaxi_translator_m0_awready),      //          .awready
+		.m0_wdata    (vexriscv_0_ibusaxi_translator_m0_wdata),        //          .wdata
+		.m0_wstrb    (vexriscv_0_ibusaxi_translator_m0_wstrb),        //          .wstrb
+		.m0_wlast    (vexriscv_0_ibusaxi_translator_m0_wlast),        //          .wlast
+		.m0_wvalid   (vexriscv_0_ibusaxi_translator_m0_wvalid),       //          .wvalid
+		.m0_wuser    (vexriscv_0_ibusaxi_translator_m0_wuser),        //          .wuser
+		.m0_wready   (vexriscv_0_ibusaxi_translator_m0_wready),       //          .wready
+		.m0_bid      (vexriscv_0_ibusaxi_translator_m0_bid),          //          .bid
+		.m0_bresp    (vexriscv_0_ibusaxi_translator_m0_bresp),        //          .bresp
+		.m0_buser    (vexriscv_0_ibusaxi_translator_m0_buser),        //          .buser
+		.m0_bvalid   (vexriscv_0_ibusaxi_translator_m0_bvalid),       //          .bvalid
+		.m0_bready   (vexriscv_0_ibusaxi_translator_m0_bready),       //          .bready
+		.m0_arid     (vexriscv_0_ibusaxi_translator_m0_arid),         //          .arid
+		.m0_araddr   (vexriscv_0_ibusaxi_translator_m0_araddr),       //          .araddr
+		.m0_arlen    (vexriscv_0_ibusaxi_translator_m0_arlen),        //          .arlen
+		.m0_arsize   (vexriscv_0_ibusaxi_translator_m0_arsize),       //          .arsize
+		.m0_arburst  (vexriscv_0_ibusaxi_translator_m0_arburst),      //          .arburst
+		.m0_arlock   (vexriscv_0_ibusaxi_translator_m0_arlock),       //          .arlock
+		.m0_arcache  (vexriscv_0_ibusaxi_translator_m0_arcache),      //          .arcache
+		.m0_arprot   (vexriscv_0_ibusaxi_translator_m0_arprot),       //          .arprot
+		.m0_aruser   (vexriscv_0_ibusaxi_translator_m0_aruser),       //          .aruser
+		.m0_arqos    (vexriscv_0_ibusaxi_translator_m0_arqos),        //          .arqos
+		.m0_arregion (vexriscv_0_ibusaxi_translator_m0_arregion),     //          .arregion
+		.m0_arvalid  (vexriscv_0_ibusaxi_translator_m0_arvalid),      //          .arvalid
+		.m0_arready  (vexriscv_0_ibusaxi_translator_m0_arready),      //          .arready
+		.m0_rid      (vexriscv_0_ibusaxi_translator_m0_rid),          //          .rid
+		.m0_rdata    (vexriscv_0_ibusaxi_translator_m0_rdata),        //          .rdata
+		.m0_rresp    (vexriscv_0_ibusaxi_translator_m0_rresp),        //          .rresp
+		.m0_rlast    (vexriscv_0_ibusaxi_translator_m0_rlast),        //          .rlast
+		.m0_rvalid   (vexriscv_0_ibusaxi_translator_m0_rvalid),       //          .rvalid
+		.m0_rready   (vexriscv_0_ibusaxi_translator_m0_rready),       //          .rready
+		.m0_ruser    (vexriscv_0_ibusaxi_translator_m0_ruser),        //          .ruser
+		.s0_awid     (VexRiscv_0_iBusaxi_awid),                       //        s0.awid
+		.s0_awaddr   (VexRiscv_0_iBusaxi_awaddr),                     //          .awaddr
+		.s0_awlock   (VexRiscv_0_iBusaxi_awlock),                     //          .awlock
+		.s0_awprot   (VexRiscv_0_iBusaxi_awprot),                     //          .awprot
+		.s0_awvalid  (VexRiscv_0_iBusaxi_awvalid),                    //          .awvalid
+		.s0_awready  (VexRiscv_0_iBusaxi_awready),                    //          .awready
+		.s0_wdata    (VexRiscv_0_iBusaxi_wdata),                      //          .wdata
+		.s0_wlast    (VexRiscv_0_iBusaxi_wlast),                      //          .wlast
+		.s0_wvalid   (VexRiscv_0_iBusaxi_wvalid),                     //          .wvalid
+		.s0_wready   (VexRiscv_0_iBusaxi_wready),                     //          .wready
+		.s0_bid      (VexRiscv_0_iBusaxi_bid),                        //          .bid
+		.s0_bvalid   (VexRiscv_0_iBusaxi_bvalid),                     //          .bvalid
+		.s0_bready   (VexRiscv_0_iBusaxi_bready),                     //          .bready
+		.s0_arid     (VexRiscv_0_iBusaxi_arid),                       //          .arid
+		.s0_araddr   (VexRiscv_0_iBusaxi_araddr),                     //          .araddr
+		.s0_arlen    (VexRiscv_0_iBusaxi_arlen),                      //          .arlen
+		.s0_arsize   (VexRiscv_0_iBusaxi_arsize),                     //          .arsize
+		.s0_arburst  (VexRiscv_0_iBusaxi_arburst),                    //          .arburst
+		.s0_arlock   (VexRiscv_0_iBusaxi_arlock),                     //          .arlock
+		.s0_arcache  (VexRiscv_0_iBusaxi_arcache),                    //          .arcache
+		.s0_arprot   (VexRiscv_0_iBusaxi_arprot),                     //          .arprot
+		.s0_arqos    (VexRiscv_0_iBusaxi_arqos),                      //          .arqos
+		.s0_arregion (VexRiscv_0_iBusaxi_arregion),                   //          .arregion
+		.s0_arvalid  (VexRiscv_0_iBusaxi_arvalid),                    //          .arvalid
+		.s0_arready  (VexRiscv_0_iBusaxi_arready),                    //          .arready
+		.s0_rid      (VexRiscv_0_iBusaxi_rid),                        //          .rid
+		.s0_rdata    (VexRiscv_0_iBusaxi_rdata),                      //          .rdata
+		.s0_rresp    (VexRiscv_0_iBusaxi_rresp),                      //          .rresp
+		.s0_rlast    (VexRiscv_0_iBusaxi_rlast),                      //          .rlast
+		.s0_rvalid   (VexRiscv_0_iBusaxi_rvalid),                     //          .rvalid
+		.s0_rready   (VexRiscv_0_iBusaxi_rready),                     //          .rready
+		.s0_awlen    (8'b00000000),                                   // (terminated)
+		.s0_awsize   (3'b000),                                        // (terminated)
+		.s0_awburst  (2'b00),                                         // (terminated)
+		.s0_awcache  (4'b0000),                                       // (terminated)
+		.s0_awuser   (1'b0),                                          // (terminated)
+		.s0_awqos    (4'b0000),                                       // (terminated)
+		.s0_awregion (4'b0000),                                       // (terminated)
+		.s0_wstrb    (4'b1111),                                       // (terminated)
+		.s0_wuser    (1'b0),                                          // (terminated)
+		.s0_bresp    (),                                              // (terminated)
+		.s0_buser    (),                                              // (terminated)
+		.s0_aruser   (1'b0),                                          // (terminated)
+		.s0_ruser    (),                                              // (terminated)
+		.s0_wid      (1'b0),                                          // (terminated)
+		.m0_wid      ()                                               // (terminated)
 	);
 
 	altera_merlin_master_translator #(
@@ -1963,134 +1993,6 @@ module soc_system_mm_interconnect_0 (
 	);
 
 	altera_merlin_slave_translator #(
-		.AV_ADDRESS_W                   (14),
-		.AV_DATA_W                      (32),
-		.UAV_DATA_W                     (32),
-		.AV_BURSTCOUNT_W                (1),
-		.AV_BYTEENABLE_W                (4),
-		.UAV_BYTEENABLE_W               (4),
-		.UAV_ADDRESS_W                  (32),
-		.UAV_BURSTCOUNT_W               (3),
-		.AV_READLATENCY                 (1),
-		.USE_READDATAVALID              (0),
-		.USE_WAITREQUEST                (0),
-		.USE_UAV_CLKEN                  (0),
-		.USE_READRESPONSE               (0),
-		.USE_WRITERESPONSE              (0),
-		.AV_SYMBOLS_PER_WORD            (4),
-		.AV_ADDRESS_SYMBOLS             (0),
-		.AV_BURSTCOUNT_SYMBOLS          (0),
-		.AV_CONSTANT_BURST_BEHAVIOR     (0),
-		.UAV_CONSTANT_BURST_BEHAVIOR    (0),
-		.AV_REQUIRE_UNALIGNED_ADDRESSES (0),
-		.CHIPSELECT_THROUGH_READLATENCY (0),
-		.AV_READ_WAIT_CYCLES            (0),
-		.AV_WRITE_WAIT_CYCLES           (0),
-		.AV_SETUP_WAIT_CYCLES           (0),
-		.AV_DATA_HOLD_CYCLES            (0)
-	) ocram_64k_s1_translator (
-		.clk                    (clk_0_clk_clk),                                  //                      clk.clk
-		.reset                  (nios2_gen2_0_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (ocram_64k_s1_agent_m0_address),                  // avalon_universal_slave_0.address
-		.uav_burstcount         (ocram_64k_s1_agent_m0_burstcount),               //                         .burstcount
-		.uav_read               (ocram_64k_s1_agent_m0_read),                     //                         .read
-		.uav_write              (ocram_64k_s1_agent_m0_write),                    //                         .write
-		.uav_waitrequest        (ocram_64k_s1_agent_m0_waitrequest),              //                         .waitrequest
-		.uav_readdatavalid      (ocram_64k_s1_agent_m0_readdatavalid),            //                         .readdatavalid
-		.uav_byteenable         (ocram_64k_s1_agent_m0_byteenable),               //                         .byteenable
-		.uav_readdata           (ocram_64k_s1_agent_m0_readdata),                 //                         .readdata
-		.uav_writedata          (ocram_64k_s1_agent_m0_writedata),                //                         .writedata
-		.uav_lock               (ocram_64k_s1_agent_m0_lock),                     //                         .lock
-		.uav_debugaccess        (ocram_64k_s1_agent_m0_debugaccess),              //                         .debugaccess
-		.av_address             (ocram_64K_s1_address),                           //      avalon_anti_slave_0.address
-		.av_write               (ocram_64K_s1_write),                             //                         .write
-		.av_readdata            (ocram_64K_s1_readdata),                          //                         .readdata
-		.av_writedata           (ocram_64K_s1_writedata),                         //                         .writedata
-		.av_byteenable          (ocram_64K_s1_byteenable),                        //                         .byteenable
-		.av_chipselect          (ocram_64K_s1_chipselect),                        //                         .chipselect
-		.av_clken               (ocram_64K_s1_clken),                             //                         .clken
-		.av_read                (),                                               //              (terminated)
-		.av_begintransfer       (),                                               //              (terminated)
-		.av_beginbursttransfer  (),                                               //              (terminated)
-		.av_burstcount          (),                                               //              (terminated)
-		.av_readdatavalid       (1'b0),                                           //              (terminated)
-		.av_waitrequest         (1'b0),                                           //              (terminated)
-		.av_writebyteenable     (),                                               //              (terminated)
-		.av_lock                (),                                               //              (terminated)
-		.uav_clken              (1'b0),                                           //              (terminated)
-		.av_debugaccess         (),                                               //              (terminated)
-		.av_outputenable        (),                                               //              (terminated)
-		.uav_response           (),                                               //              (terminated)
-		.av_response            (2'b00),                                          //              (terminated)
-		.uav_writeresponsevalid (),                                               //              (terminated)
-		.av_writeresponsevalid  (1'b0)                                            //              (terminated)
-	);
-
-	altera_merlin_slave_translator #(
-		.AV_ADDRESS_W                   (12),
-		.AV_DATA_W                      (32),
-		.UAV_DATA_W                     (32),
-		.AV_BURSTCOUNT_W                (1),
-		.AV_BYTEENABLE_W                (4),
-		.UAV_BYTEENABLE_W               (4),
-		.UAV_ADDRESS_W                  (32),
-		.UAV_BURSTCOUNT_W               (3),
-		.AV_READLATENCY                 (1),
-		.USE_READDATAVALID              (0),
-		.USE_WAITREQUEST                (0),
-		.USE_UAV_CLKEN                  (0),
-		.USE_READRESPONSE               (0),
-		.USE_WRITERESPONSE              (0),
-		.AV_SYMBOLS_PER_WORD            (4),
-		.AV_ADDRESS_SYMBOLS             (0),
-		.AV_BURSTCOUNT_SYMBOLS          (0),
-		.AV_CONSTANT_BURST_BEHAVIOR     (0),
-		.UAV_CONSTANT_BURST_BEHAVIOR    (0),
-		.AV_REQUIRE_UNALIGNED_ADDRESSES (0),
-		.CHIPSELECT_THROUGH_READLATENCY (0),
-		.AV_READ_WAIT_CYCLES            (0),
-		.AV_WRITE_WAIT_CYCLES           (0),
-		.AV_SETUP_WAIT_CYCLES           (0),
-		.AV_DATA_HOLD_CYCLES            (0)
-	) ocram_16b_s1_translator (
-		.clk                    (clk_0_clk_clk),                                  //                      clk.clk
-		.reset                  (nios2_gen2_0_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (ocram_16b_s1_agent_m0_address),                  // avalon_universal_slave_0.address
-		.uav_burstcount         (ocram_16b_s1_agent_m0_burstcount),               //                         .burstcount
-		.uav_read               (ocram_16b_s1_agent_m0_read),                     //                         .read
-		.uav_write              (ocram_16b_s1_agent_m0_write),                    //                         .write
-		.uav_waitrequest        (ocram_16b_s1_agent_m0_waitrequest),              //                         .waitrequest
-		.uav_readdatavalid      (ocram_16b_s1_agent_m0_readdatavalid),            //                         .readdatavalid
-		.uav_byteenable         (ocram_16b_s1_agent_m0_byteenable),               //                         .byteenable
-		.uav_readdata           (ocram_16b_s1_agent_m0_readdata),                 //                         .readdata
-		.uav_writedata          (ocram_16b_s1_agent_m0_writedata),                //                         .writedata
-		.uav_lock               (ocram_16b_s1_agent_m0_lock),                     //                         .lock
-		.uav_debugaccess        (ocram_16b_s1_agent_m0_debugaccess),              //                         .debugaccess
-		.av_address             (ocram_16b_s1_address),                           //      avalon_anti_slave_0.address
-		.av_write               (ocram_16b_s1_write),                             //                         .write
-		.av_readdata            (ocram_16b_s1_readdata),                          //                         .readdata
-		.av_writedata           (ocram_16b_s1_writedata),                         //                         .writedata
-		.av_byteenable          (ocram_16b_s1_byteenable),                        //                         .byteenable
-		.av_chipselect          (ocram_16b_s1_chipselect),                        //                         .chipselect
-		.av_clken               (ocram_16b_s1_clken),                             //                         .clken
-		.av_read                (),                                               //              (terminated)
-		.av_begintransfer       (),                                               //              (terminated)
-		.av_beginbursttransfer  (),                                               //              (terminated)
-		.av_burstcount          (),                                               //              (terminated)
-		.av_readdatavalid       (1'b0),                                           //              (terminated)
-		.av_waitrequest         (1'b0),                                           //              (terminated)
-		.av_writebyteenable     (),                                               //              (terminated)
-		.av_lock                (),                                               //              (terminated)
-		.uav_clken              (1'b0),                                           //              (terminated)
-		.av_debugaccess         (),                                               //              (terminated)
-		.av_outputenable        (),                                               //              (terminated)
-		.uav_response           (),                                               //              (terminated)
-		.av_response            (2'b00),                                          //              (terminated)
-		.uav_writeresponsevalid (),                                               //              (terminated)
-		.av_writeresponsevalid  (1'b0)                                            //              (terminated)
-	);
-
-	altera_merlin_slave_translator #(
 		.AV_ADDRESS_W                   (2),
 		.AV_DATA_W                      (32),
 		.UAV_DATA_W                     (32),
@@ -2116,26 +2018,25 @@ module soc_system_mm_interconnect_0 (
 		.AV_WRITE_WAIT_CYCLES           (0),
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
-	) led_pio_s1_translator (
+	) switch_pio_s1_translator (
 		.clk                    (clk_0_clk_clk),                                  //                      clk.clk
 		.reset                  (nios2_gen2_0_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (led_pio_s1_agent_m0_address),                    // avalon_universal_slave_0.address
-		.uav_burstcount         (led_pio_s1_agent_m0_burstcount),                 //                         .burstcount
-		.uav_read               (led_pio_s1_agent_m0_read),                       //                         .read
-		.uav_write              (led_pio_s1_agent_m0_write),                      //                         .write
-		.uav_waitrequest        (led_pio_s1_agent_m0_waitrequest),                //                         .waitrequest
-		.uav_readdatavalid      (led_pio_s1_agent_m0_readdatavalid),              //                         .readdatavalid
-		.uav_byteenable         (led_pio_s1_agent_m0_byteenable),                 //                         .byteenable
-		.uav_readdata           (led_pio_s1_agent_m0_readdata),                   //                         .readdata
-		.uav_writedata          (led_pio_s1_agent_m0_writedata),                  //                         .writedata
-		.uav_lock               (led_pio_s1_agent_m0_lock),                       //                         .lock
-		.uav_debugaccess        (led_pio_s1_agent_m0_debugaccess),                //                         .debugaccess
-		.av_address             (led_pio_s1_address),                             //      avalon_anti_slave_0.address
-		.av_write               (led_pio_s1_write),                               //                         .write
-		.av_readdata            (led_pio_s1_readdata),                            //                         .readdata
-		.av_writedata           (led_pio_s1_writedata),                           //                         .writedata
-		.av_chipselect          (led_pio_s1_chipselect),                          //                         .chipselect
+		.uav_address            (switch_pio_s1_agent_m0_address),                 // avalon_universal_slave_0.address
+		.uav_burstcount         (switch_pio_s1_agent_m0_burstcount),              //                         .burstcount
+		.uav_read               (switch_pio_s1_agent_m0_read),                    //                         .read
+		.uav_write              (switch_pio_s1_agent_m0_write),                   //                         .write
+		.uav_waitrequest        (switch_pio_s1_agent_m0_waitrequest),             //                         .waitrequest
+		.uav_readdatavalid      (switch_pio_s1_agent_m0_readdatavalid),           //                         .readdatavalid
+		.uav_byteenable         (switch_pio_s1_agent_m0_byteenable),              //                         .byteenable
+		.uav_readdata           (switch_pio_s1_agent_m0_readdata),                //                         .readdata
+		.uav_writedata          (switch_pio_s1_agent_m0_writedata),               //                         .writedata
+		.uav_lock               (switch_pio_s1_agent_m0_lock),                    //                         .lock
+		.uav_debugaccess        (switch_pio_s1_agent_m0_debugaccess),             //                         .debugaccess
+		.av_address             (switch_pio_s1_address),                          //      avalon_anti_slave_0.address
+		.av_readdata            (switch_pio_s1_readdata),                         //                         .readdata
+		.av_write               (),                                               //              (terminated)
 		.av_read                (),                                               //              (terminated)
+		.av_writedata           (),                                               //              (terminated)
 		.av_begintransfer       (),                                               //              (terminated)
 		.av_beginbursttransfer  (),                                               //              (terminated)
 		.av_burstcount          (),                                               //              (terminated)
@@ -2144,6 +2045,7 @@ module soc_system_mm_interconnect_0 (
 		.av_waitrequest         (1'b0),                                           //              (terminated)
 		.av_writebyteenable     (),                                               //              (terminated)
 		.av_lock                (),                                               //              (terminated)
+		.av_chipselect          (),                                               //              (terminated)
 		.av_clken               (),                                               //              (terminated)
 		.uav_clken              (1'b0),                                           //              (terminated)
 		.av_debugaccess         (),                                               //              (terminated)
@@ -2244,25 +2146,26 @@ module soc_system_mm_interconnect_0 (
 		.AV_WRITE_WAIT_CYCLES           (0),
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
-	) switch_pio_s1_translator (
+	) led_pio_s1_translator (
 		.clk                    (clk_0_clk_clk),                                  //                      clk.clk
 		.reset                  (nios2_gen2_0_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (switch_pio_s1_agent_m0_address),                 // avalon_universal_slave_0.address
-		.uav_burstcount         (switch_pio_s1_agent_m0_burstcount),              //                         .burstcount
-		.uav_read               (switch_pio_s1_agent_m0_read),                    //                         .read
-		.uav_write              (switch_pio_s1_agent_m0_write),                   //                         .write
-		.uav_waitrequest        (switch_pio_s1_agent_m0_waitrequest),             //                         .waitrequest
-		.uav_readdatavalid      (switch_pio_s1_agent_m0_readdatavalid),           //                         .readdatavalid
-		.uav_byteenable         (switch_pio_s1_agent_m0_byteenable),              //                         .byteenable
-		.uav_readdata           (switch_pio_s1_agent_m0_readdata),                //                         .readdata
-		.uav_writedata          (switch_pio_s1_agent_m0_writedata),               //                         .writedata
-		.uav_lock               (switch_pio_s1_agent_m0_lock),                    //                         .lock
-		.uav_debugaccess        (switch_pio_s1_agent_m0_debugaccess),             //                         .debugaccess
-		.av_address             (switch_pio_s1_address),                          //      avalon_anti_slave_0.address
-		.av_readdata            (switch_pio_s1_readdata),                         //                         .readdata
-		.av_write               (),                                               //              (terminated)
+		.uav_address            (led_pio_s1_agent_m0_address),                    // avalon_universal_slave_0.address
+		.uav_burstcount         (led_pio_s1_agent_m0_burstcount),                 //                         .burstcount
+		.uav_read               (led_pio_s1_agent_m0_read),                       //                         .read
+		.uav_write              (led_pio_s1_agent_m0_write),                      //                         .write
+		.uav_waitrequest        (led_pio_s1_agent_m0_waitrequest),                //                         .waitrequest
+		.uav_readdatavalid      (led_pio_s1_agent_m0_readdatavalid),              //                         .readdatavalid
+		.uav_byteenable         (led_pio_s1_agent_m0_byteenable),                 //                         .byteenable
+		.uav_readdata           (led_pio_s1_agent_m0_readdata),                   //                         .readdata
+		.uav_writedata          (led_pio_s1_agent_m0_writedata),                  //                         .writedata
+		.uav_lock               (led_pio_s1_agent_m0_lock),                       //                         .lock
+		.uav_debugaccess        (led_pio_s1_agent_m0_debugaccess),                //                         .debugaccess
+		.av_address             (led_pio_s1_address),                             //      avalon_anti_slave_0.address
+		.av_write               (led_pio_s1_write),                               //                         .write
+		.av_readdata            (led_pio_s1_readdata),                            //                         .readdata
+		.av_writedata           (led_pio_s1_writedata),                           //                         .writedata
+		.av_chipselect          (led_pio_s1_chipselect),                          //                         .chipselect
 		.av_read                (),                                               //              (terminated)
-		.av_writedata           (),                                               //              (terminated)
 		.av_begintransfer       (),                                               //              (terminated)
 		.av_beginbursttransfer  (),                                               //              (terminated)
 		.av_burstcount          (),                                               //              (terminated)
@@ -2271,8 +2174,135 @@ module soc_system_mm_interconnect_0 (
 		.av_waitrequest         (1'b0),                                           //              (terminated)
 		.av_writebyteenable     (),                                               //              (terminated)
 		.av_lock                (),                                               //              (terminated)
-		.av_chipselect          (),                                               //              (terminated)
 		.av_clken               (),                                               //              (terminated)
+		.uav_clken              (1'b0),                                           //              (terminated)
+		.av_debugaccess         (),                                               //              (terminated)
+		.av_outputenable        (),                                               //              (terminated)
+		.uav_response           (),                                               //              (terminated)
+		.av_response            (2'b00),                                          //              (terminated)
+		.uav_writeresponsevalid (),                                               //              (terminated)
+		.av_writeresponsevalid  (1'b0)                                            //              (terminated)
+	);
+
+	altera_merlin_slave_translator #(
+		.AV_ADDRESS_W                   (12),
+		.AV_DATA_W                      (32),
+		.UAV_DATA_W                     (32),
+		.AV_BURSTCOUNT_W                (1),
+		.AV_BYTEENABLE_W                (4),
+		.UAV_BYTEENABLE_W               (4),
+		.UAV_ADDRESS_W                  (32),
+		.UAV_BURSTCOUNT_W               (3),
+		.AV_READLATENCY                 (1),
+		.USE_READDATAVALID              (0),
+		.USE_WAITREQUEST                (0),
+		.USE_UAV_CLKEN                  (0),
+		.USE_READRESPONSE               (0),
+		.USE_WRITERESPONSE              (0),
+		.AV_SYMBOLS_PER_WORD            (4),
+		.AV_ADDRESS_SYMBOLS             (0),
+		.AV_BURSTCOUNT_SYMBOLS          (0),
+		.AV_CONSTANT_BURST_BEHAVIOR     (0),
+		.UAV_CONSTANT_BURST_BEHAVIOR    (0),
+		.AV_REQUIRE_UNALIGNED_ADDRESSES (0),
+		.CHIPSELECT_THROUGH_READLATENCY (0),
+		.AV_READ_WAIT_CYCLES            (0),
+		.AV_WRITE_WAIT_CYCLES           (0),
+		.AV_SETUP_WAIT_CYCLES           (0),
+		.AV_DATA_HOLD_CYCLES            (0)
+	) ocram_16b_s1_translator (
+		.clk                    (clk_0_clk_clk),                                  //                      clk.clk
+		.reset                  (nios2_gen2_0_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.uav_address            (ocram_16b_s1_agent_m0_address),                  // avalon_universal_slave_0.address
+		.uav_burstcount         (ocram_16b_s1_agent_m0_burstcount),               //                         .burstcount
+		.uav_read               (ocram_16b_s1_agent_m0_read),                     //                         .read
+		.uav_write              (ocram_16b_s1_agent_m0_write),                    //                         .write
+		.uav_waitrequest        (ocram_16b_s1_agent_m0_waitrequest),              //                         .waitrequest
+		.uav_readdatavalid      (ocram_16b_s1_agent_m0_readdatavalid),            //                         .readdatavalid
+		.uav_byteenable         (ocram_16b_s1_agent_m0_byteenable),               //                         .byteenable
+		.uav_readdata           (ocram_16b_s1_agent_m0_readdata),                 //                         .readdata
+		.uav_writedata          (ocram_16b_s1_agent_m0_writedata),                //                         .writedata
+		.uav_lock               (ocram_16b_s1_agent_m0_lock),                     //                         .lock
+		.uav_debugaccess        (ocram_16b_s1_agent_m0_debugaccess),              //                         .debugaccess
+		.av_address             (ocram_16b_s1_address),                           //      avalon_anti_slave_0.address
+		.av_write               (ocram_16b_s1_write),                             //                         .write
+		.av_readdata            (ocram_16b_s1_readdata),                          //                         .readdata
+		.av_writedata           (ocram_16b_s1_writedata),                         //                         .writedata
+		.av_byteenable          (ocram_16b_s1_byteenable),                        //                         .byteenable
+		.av_chipselect          (ocram_16b_s1_chipselect),                        //                         .chipselect
+		.av_clken               (ocram_16b_s1_clken),                             //                         .clken
+		.av_read                (),                                               //              (terminated)
+		.av_begintransfer       (),                                               //              (terminated)
+		.av_beginbursttransfer  (),                                               //              (terminated)
+		.av_burstcount          (),                                               //              (terminated)
+		.av_readdatavalid       (1'b0),                                           //              (terminated)
+		.av_waitrequest         (1'b0),                                           //              (terminated)
+		.av_writebyteenable     (),                                               //              (terminated)
+		.av_lock                (),                                               //              (terminated)
+		.uav_clken              (1'b0),                                           //              (terminated)
+		.av_debugaccess         (),                                               //              (terminated)
+		.av_outputenable        (),                                               //              (terminated)
+		.uav_response           (),                                               //              (terminated)
+		.av_response            (2'b00),                                          //              (terminated)
+		.uav_writeresponsevalid (),                                               //              (terminated)
+		.av_writeresponsevalid  (1'b0)                                            //              (terminated)
+	);
+
+	altera_merlin_slave_translator #(
+		.AV_ADDRESS_W                   (14),
+		.AV_DATA_W                      (32),
+		.UAV_DATA_W                     (32),
+		.AV_BURSTCOUNT_W                (1),
+		.AV_BYTEENABLE_W                (4),
+		.UAV_BYTEENABLE_W               (4),
+		.UAV_ADDRESS_W                  (32),
+		.UAV_BURSTCOUNT_W               (3),
+		.AV_READLATENCY                 (1),
+		.USE_READDATAVALID              (0),
+		.USE_WAITREQUEST                (0),
+		.USE_UAV_CLKEN                  (0),
+		.USE_READRESPONSE               (0),
+		.USE_WRITERESPONSE              (0),
+		.AV_SYMBOLS_PER_WORD            (4),
+		.AV_ADDRESS_SYMBOLS             (0),
+		.AV_BURSTCOUNT_SYMBOLS          (0),
+		.AV_CONSTANT_BURST_BEHAVIOR     (0),
+		.UAV_CONSTANT_BURST_BEHAVIOR    (0),
+		.AV_REQUIRE_UNALIGNED_ADDRESSES (0),
+		.CHIPSELECT_THROUGH_READLATENCY (0),
+		.AV_READ_WAIT_CYCLES            (0),
+		.AV_WRITE_WAIT_CYCLES           (0),
+		.AV_SETUP_WAIT_CYCLES           (0),
+		.AV_DATA_HOLD_CYCLES            (0)
+	) ocram_64k_s1_translator (
+		.clk                    (clk_0_clk_clk),                                  //                      clk.clk
+		.reset                  (nios2_gen2_0_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.uav_address            (ocram_64k_s1_agent_m0_address),                  // avalon_universal_slave_0.address
+		.uav_burstcount         (ocram_64k_s1_agent_m0_burstcount),               //                         .burstcount
+		.uav_read               (ocram_64k_s1_agent_m0_read),                     //                         .read
+		.uav_write              (ocram_64k_s1_agent_m0_write),                    //                         .write
+		.uav_waitrequest        (ocram_64k_s1_agent_m0_waitrequest),              //                         .waitrequest
+		.uav_readdatavalid      (ocram_64k_s1_agent_m0_readdatavalid),            //                         .readdatavalid
+		.uav_byteenable         (ocram_64k_s1_agent_m0_byteenable),               //                         .byteenable
+		.uav_readdata           (ocram_64k_s1_agent_m0_readdata),                 //                         .readdata
+		.uav_writedata          (ocram_64k_s1_agent_m0_writedata),                //                         .writedata
+		.uav_lock               (ocram_64k_s1_agent_m0_lock),                     //                         .lock
+		.uav_debugaccess        (ocram_64k_s1_agent_m0_debugaccess),              //                         .debugaccess
+		.av_address             (ocram_64K_s1_address),                           //      avalon_anti_slave_0.address
+		.av_write               (ocram_64K_s1_write),                             //                         .write
+		.av_readdata            (ocram_64K_s1_readdata),                          //                         .readdata
+		.av_writedata           (ocram_64K_s1_writedata),                         //                         .writedata
+		.av_byteenable          (ocram_64K_s1_byteenable),                        //                         .byteenable
+		.av_chipselect          (ocram_64K_s1_chipselect),                        //                         .chipselect
+		.av_clken               (ocram_64K_s1_clken),                             //                         .clken
+		.av_read                (),                                               //              (terminated)
+		.av_begintransfer       (),                                               //              (terminated)
+		.av_beginbursttransfer  (),                                               //              (terminated)
+		.av_burstcount          (),                                               //              (terminated)
+		.av_readdatavalid       (1'b0),                                           //              (terminated)
+		.av_waitrequest         (1'b0),                                           //              (terminated)
+		.av_writebyteenable     (),                                               //              (terminated)
+		.av_lock                (),                                               //              (terminated)
 		.uav_clken              (1'b0),                                           //              (terminated)
 		.av_debugaccess         (),                                               //              (terminated)
 		.av_outputenable        (),                                               //              (terminated)
@@ -2338,76 +2368,76 @@ module soc_system_mm_interconnect_0 (
 		.ST_DATA_W                 (123),
 		.ST_CHANNEL_W              (8),
 		.ID                        (0)
-	) vexriscvaxi4_0_dbusaxi_agent (
-		.aclk                   (clk_0_clk_clk),                                       //              clk.clk
-		.aresetn                (~VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset),   //        clk_reset.reset_n
-		.write_cp_valid         (vexriscvaxi4_0_dbusaxi_agent_write_cp_valid),         //         write_cp.valid
-		.write_cp_data          (vexriscvaxi4_0_dbusaxi_agent_write_cp_data),          //                 .data
-		.write_cp_startofpacket (vexriscvaxi4_0_dbusaxi_agent_write_cp_startofpacket), //                 .startofpacket
-		.write_cp_endofpacket   (vexriscvaxi4_0_dbusaxi_agent_write_cp_endofpacket),   //                 .endofpacket
-		.write_cp_ready         (vexriscvaxi4_0_dbusaxi_agent_write_cp_ready),         //                 .ready
-		.write_rp_valid         (rsp_mux_src_valid),                                   //         write_rp.valid
-		.write_rp_data          (rsp_mux_src_data),                                    //                 .data
-		.write_rp_channel       (rsp_mux_src_channel),                                 //                 .channel
-		.write_rp_startofpacket (rsp_mux_src_startofpacket),                           //                 .startofpacket
-		.write_rp_endofpacket   (rsp_mux_src_endofpacket),                             //                 .endofpacket
-		.write_rp_ready         (rsp_mux_src_ready),                                   //                 .ready
-		.read_cp_valid          (vexriscvaxi4_0_dbusaxi_agent_read_cp_valid),          //          read_cp.valid
-		.read_cp_data           (vexriscvaxi4_0_dbusaxi_agent_read_cp_data),           //                 .data
-		.read_cp_startofpacket  (vexriscvaxi4_0_dbusaxi_agent_read_cp_startofpacket),  //                 .startofpacket
-		.read_cp_endofpacket    (vexriscvaxi4_0_dbusaxi_agent_read_cp_endofpacket),    //                 .endofpacket
-		.read_cp_ready          (vexriscvaxi4_0_dbusaxi_agent_read_cp_ready),          //                 .ready
-		.read_rp_valid          (rsp_mux_001_src_valid),                               //          read_rp.valid
-		.read_rp_data           (rsp_mux_001_src_data),                                //                 .data
-		.read_rp_channel        (rsp_mux_001_src_channel),                             //                 .channel
-		.read_rp_startofpacket  (rsp_mux_001_src_startofpacket),                       //                 .startofpacket
-		.read_rp_endofpacket    (rsp_mux_001_src_endofpacket),                         //                 .endofpacket
-		.read_rp_ready          (rsp_mux_001_src_ready),                               //                 .ready
-		.awid                   (vexriscvaxi4_0_dbusaxi_translator_m0_awid),           // altera_axi_slave.awid
-		.awaddr                 (vexriscvaxi4_0_dbusaxi_translator_m0_awaddr),         //                 .awaddr
-		.awlen                  (vexriscvaxi4_0_dbusaxi_translator_m0_awlen),          //                 .awlen
-		.awsize                 (vexriscvaxi4_0_dbusaxi_translator_m0_awsize),         //                 .awsize
-		.awburst                (vexriscvaxi4_0_dbusaxi_translator_m0_awburst),        //                 .awburst
-		.awlock                 (vexriscvaxi4_0_dbusaxi_translator_m0_awlock),         //                 .awlock
-		.awcache                (vexriscvaxi4_0_dbusaxi_translator_m0_awcache),        //                 .awcache
-		.awprot                 (vexriscvaxi4_0_dbusaxi_translator_m0_awprot),         //                 .awprot
-		.awuser                 (vexriscvaxi4_0_dbusaxi_translator_m0_awuser),         //                 .awuser
-		.awqos                  (vexriscvaxi4_0_dbusaxi_translator_m0_awqos),          //                 .awqos
-		.awregion               (vexriscvaxi4_0_dbusaxi_translator_m0_awregion),       //                 .awregion
-		.awvalid                (vexriscvaxi4_0_dbusaxi_translator_m0_awvalid),        //                 .awvalid
-		.awready                (vexriscvaxi4_0_dbusaxi_translator_m0_awready),        //                 .awready
-		.wdata                  (vexriscvaxi4_0_dbusaxi_translator_m0_wdata),          //                 .wdata
-		.wstrb                  (vexriscvaxi4_0_dbusaxi_translator_m0_wstrb),          //                 .wstrb
-		.wlast                  (vexriscvaxi4_0_dbusaxi_translator_m0_wlast),          //                 .wlast
-		.wvalid                 (vexriscvaxi4_0_dbusaxi_translator_m0_wvalid),         //                 .wvalid
-		.wuser                  (vexriscvaxi4_0_dbusaxi_translator_m0_wuser),          //                 .wuser
-		.wready                 (vexriscvaxi4_0_dbusaxi_translator_m0_wready),         //                 .wready
-		.bid                    (vexriscvaxi4_0_dbusaxi_translator_m0_bid),            //                 .bid
-		.bresp                  (vexriscvaxi4_0_dbusaxi_translator_m0_bresp),          //                 .bresp
-		.buser                  (vexriscvaxi4_0_dbusaxi_translator_m0_buser),          //                 .buser
-		.bvalid                 (vexriscvaxi4_0_dbusaxi_translator_m0_bvalid),         //                 .bvalid
-		.bready                 (vexriscvaxi4_0_dbusaxi_translator_m0_bready),         //                 .bready
-		.arid                   (vexriscvaxi4_0_dbusaxi_translator_m0_arid),           //                 .arid
-		.araddr                 (vexriscvaxi4_0_dbusaxi_translator_m0_araddr),         //                 .araddr
-		.arlen                  (vexriscvaxi4_0_dbusaxi_translator_m0_arlen),          //                 .arlen
-		.arsize                 (vexriscvaxi4_0_dbusaxi_translator_m0_arsize),         //                 .arsize
-		.arburst                (vexriscvaxi4_0_dbusaxi_translator_m0_arburst),        //                 .arburst
-		.arlock                 (vexriscvaxi4_0_dbusaxi_translator_m0_arlock),         //                 .arlock
-		.arcache                (vexriscvaxi4_0_dbusaxi_translator_m0_arcache),        //                 .arcache
-		.arprot                 (vexriscvaxi4_0_dbusaxi_translator_m0_arprot),         //                 .arprot
-		.aruser                 (vexriscvaxi4_0_dbusaxi_translator_m0_aruser),         //                 .aruser
-		.arqos                  (vexriscvaxi4_0_dbusaxi_translator_m0_arqos),          //                 .arqos
-		.arregion               (vexriscvaxi4_0_dbusaxi_translator_m0_arregion),       //                 .arregion
-		.arvalid                (vexriscvaxi4_0_dbusaxi_translator_m0_arvalid),        //                 .arvalid
-		.arready                (vexriscvaxi4_0_dbusaxi_translator_m0_arready),        //                 .arready
-		.rid                    (vexriscvaxi4_0_dbusaxi_translator_m0_rid),            //                 .rid
-		.rdata                  (vexriscvaxi4_0_dbusaxi_translator_m0_rdata),          //                 .rdata
-		.rresp                  (vexriscvaxi4_0_dbusaxi_translator_m0_rresp),          //                 .rresp
-		.rlast                  (vexriscvaxi4_0_dbusaxi_translator_m0_rlast),          //                 .rlast
-		.rvalid                 (vexriscvaxi4_0_dbusaxi_translator_m0_rvalid),         //                 .rvalid
-		.rready                 (vexriscvaxi4_0_dbusaxi_translator_m0_rready),         //                 .rready
-		.ruser                  (vexriscvaxi4_0_dbusaxi_translator_m0_ruser),          //                 .ruser
-		.wid                    (1'b0)                                                 //      (terminated)
+	) vexriscv_0_dbusaxi_agent (
+		.aclk                   (clk_0_clk_clk),                                   //              clk.clk
+		.aresetn                (~VexRiscv_0_reset_reset_bridge_in_reset_reset),   //        clk_reset.reset_n
+		.write_cp_valid         (vexriscv_0_dbusaxi_agent_write_cp_valid),         //         write_cp.valid
+		.write_cp_data          (vexriscv_0_dbusaxi_agent_write_cp_data),          //                 .data
+		.write_cp_startofpacket (vexriscv_0_dbusaxi_agent_write_cp_startofpacket), //                 .startofpacket
+		.write_cp_endofpacket   (vexriscv_0_dbusaxi_agent_write_cp_endofpacket),   //                 .endofpacket
+		.write_cp_ready         (vexriscv_0_dbusaxi_agent_write_cp_ready),         //                 .ready
+		.write_rp_valid         (rsp_mux_src_valid),                               //         write_rp.valid
+		.write_rp_data          (rsp_mux_src_data),                                //                 .data
+		.write_rp_channel       (rsp_mux_src_channel),                             //                 .channel
+		.write_rp_startofpacket (rsp_mux_src_startofpacket),                       //                 .startofpacket
+		.write_rp_endofpacket   (rsp_mux_src_endofpacket),                         //                 .endofpacket
+		.write_rp_ready         (rsp_mux_src_ready),                               //                 .ready
+		.read_cp_valid          (vexriscv_0_dbusaxi_agent_read_cp_valid),          //          read_cp.valid
+		.read_cp_data           (vexriscv_0_dbusaxi_agent_read_cp_data),           //                 .data
+		.read_cp_startofpacket  (vexriscv_0_dbusaxi_agent_read_cp_startofpacket),  //                 .startofpacket
+		.read_cp_endofpacket    (vexriscv_0_dbusaxi_agent_read_cp_endofpacket),    //                 .endofpacket
+		.read_cp_ready          (vexriscv_0_dbusaxi_agent_read_cp_ready),          //                 .ready
+		.read_rp_valid          (rsp_mux_001_src_valid),                           //          read_rp.valid
+		.read_rp_data           (rsp_mux_001_src_data),                            //                 .data
+		.read_rp_channel        (rsp_mux_001_src_channel),                         //                 .channel
+		.read_rp_startofpacket  (rsp_mux_001_src_startofpacket),                   //                 .startofpacket
+		.read_rp_endofpacket    (rsp_mux_001_src_endofpacket),                     //                 .endofpacket
+		.read_rp_ready          (rsp_mux_001_src_ready),                           //                 .ready
+		.awid                   (vexriscv_0_dbusaxi_translator_m0_awid),           // altera_axi_slave.awid
+		.awaddr                 (vexriscv_0_dbusaxi_translator_m0_awaddr),         //                 .awaddr
+		.awlen                  (vexriscv_0_dbusaxi_translator_m0_awlen),          //                 .awlen
+		.awsize                 (vexriscv_0_dbusaxi_translator_m0_awsize),         //                 .awsize
+		.awburst                (vexriscv_0_dbusaxi_translator_m0_awburst),        //                 .awburst
+		.awlock                 (vexriscv_0_dbusaxi_translator_m0_awlock),         //                 .awlock
+		.awcache                (vexriscv_0_dbusaxi_translator_m0_awcache),        //                 .awcache
+		.awprot                 (vexriscv_0_dbusaxi_translator_m0_awprot),         //                 .awprot
+		.awuser                 (vexriscv_0_dbusaxi_translator_m0_awuser),         //                 .awuser
+		.awqos                  (vexriscv_0_dbusaxi_translator_m0_awqos),          //                 .awqos
+		.awregion               (vexriscv_0_dbusaxi_translator_m0_awregion),       //                 .awregion
+		.awvalid                (vexriscv_0_dbusaxi_translator_m0_awvalid),        //                 .awvalid
+		.awready                (vexriscv_0_dbusaxi_translator_m0_awready),        //                 .awready
+		.wdata                  (vexriscv_0_dbusaxi_translator_m0_wdata),          //                 .wdata
+		.wstrb                  (vexriscv_0_dbusaxi_translator_m0_wstrb),          //                 .wstrb
+		.wlast                  (vexriscv_0_dbusaxi_translator_m0_wlast),          //                 .wlast
+		.wvalid                 (vexriscv_0_dbusaxi_translator_m0_wvalid),         //                 .wvalid
+		.wuser                  (vexriscv_0_dbusaxi_translator_m0_wuser),          //                 .wuser
+		.wready                 (vexriscv_0_dbusaxi_translator_m0_wready),         //                 .wready
+		.bid                    (vexriscv_0_dbusaxi_translator_m0_bid),            //                 .bid
+		.bresp                  (vexriscv_0_dbusaxi_translator_m0_bresp),          //                 .bresp
+		.buser                  (vexriscv_0_dbusaxi_translator_m0_buser),          //                 .buser
+		.bvalid                 (vexriscv_0_dbusaxi_translator_m0_bvalid),         //                 .bvalid
+		.bready                 (vexriscv_0_dbusaxi_translator_m0_bready),         //                 .bready
+		.arid                   (vexriscv_0_dbusaxi_translator_m0_arid),           //                 .arid
+		.araddr                 (vexriscv_0_dbusaxi_translator_m0_araddr),         //                 .araddr
+		.arlen                  (vexriscv_0_dbusaxi_translator_m0_arlen),          //                 .arlen
+		.arsize                 (vexriscv_0_dbusaxi_translator_m0_arsize),         //                 .arsize
+		.arburst                (vexriscv_0_dbusaxi_translator_m0_arburst),        //                 .arburst
+		.arlock                 (vexriscv_0_dbusaxi_translator_m0_arlock),         //                 .arlock
+		.arcache                (vexriscv_0_dbusaxi_translator_m0_arcache),        //                 .arcache
+		.arprot                 (vexriscv_0_dbusaxi_translator_m0_arprot),         //                 .arprot
+		.aruser                 (vexriscv_0_dbusaxi_translator_m0_aruser),         //                 .aruser
+		.arqos                  (vexriscv_0_dbusaxi_translator_m0_arqos),          //                 .arqos
+		.arregion               (vexriscv_0_dbusaxi_translator_m0_arregion),       //                 .arregion
+		.arvalid                (vexriscv_0_dbusaxi_translator_m0_arvalid),        //                 .arvalid
+		.arready                (vexriscv_0_dbusaxi_translator_m0_arready),        //                 .arready
+		.rid                    (vexriscv_0_dbusaxi_translator_m0_rid),            //                 .rid
+		.rdata                  (vexriscv_0_dbusaxi_translator_m0_rdata),          //                 .rdata
+		.rresp                  (vexriscv_0_dbusaxi_translator_m0_rresp),          //                 .rresp
+		.rlast                  (vexriscv_0_dbusaxi_translator_m0_rlast),          //                 .rlast
+		.rvalid                 (vexriscv_0_dbusaxi_translator_m0_rvalid),         //                 .rvalid
+		.rready                 (vexriscv_0_dbusaxi_translator_m0_rready),         //                 .rready
+		.ruser                  (vexriscv_0_dbusaxi_translator_m0_ruser),          //                 .ruser
+		.wid                    (1'b0)                                             //      (terminated)
 	);
 
 	altera_merlin_master_agent #(
@@ -2628,76 +2658,76 @@ module soc_system_mm_interconnect_0 (
 		.ST_DATA_W                 (123),
 		.ST_CHANNEL_W              (8),
 		.ID                        (1)
-	) vexriscvaxi4_0_ibusaxi_agent (
-		.aclk                   (clk_0_clk_clk),                                       //              clk.clk
-		.aresetn                (~VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset),   //        clk_reset.reset_n
-		.write_cp_valid         (vexriscvaxi4_0_ibusaxi_agent_write_cp_valid),         //         write_cp.valid
-		.write_cp_data          (vexriscvaxi4_0_ibusaxi_agent_write_cp_data),          //                 .data
-		.write_cp_startofpacket (vexriscvaxi4_0_ibusaxi_agent_write_cp_startofpacket), //                 .startofpacket
-		.write_cp_endofpacket   (vexriscvaxi4_0_ibusaxi_agent_write_cp_endofpacket),   //                 .endofpacket
-		.write_cp_ready         (vexriscvaxi4_0_ibusaxi_agent_write_cp_ready),         //                 .ready
-		.write_rp_valid         (rsp_mux_004_src_valid),                               //         write_rp.valid
-		.write_rp_data          (rsp_mux_004_src_data),                                //                 .data
-		.write_rp_channel       (rsp_mux_004_src_channel),                             //                 .channel
-		.write_rp_startofpacket (rsp_mux_004_src_startofpacket),                       //                 .startofpacket
-		.write_rp_endofpacket   (rsp_mux_004_src_endofpacket),                         //                 .endofpacket
-		.write_rp_ready         (rsp_mux_004_src_ready),                               //                 .ready
-		.read_cp_valid          (vexriscvaxi4_0_ibusaxi_agent_read_cp_valid),          //          read_cp.valid
-		.read_cp_data           (vexriscvaxi4_0_ibusaxi_agent_read_cp_data),           //                 .data
-		.read_cp_startofpacket  (vexriscvaxi4_0_ibusaxi_agent_read_cp_startofpacket),  //                 .startofpacket
-		.read_cp_endofpacket    (vexriscvaxi4_0_ibusaxi_agent_read_cp_endofpacket),    //                 .endofpacket
-		.read_cp_ready          (vexriscvaxi4_0_ibusaxi_agent_read_cp_ready),          //                 .ready
-		.read_rp_valid          (rsp_mux_005_src_valid),                               //          read_rp.valid
-		.read_rp_data           (rsp_mux_005_src_data),                                //                 .data
-		.read_rp_channel        (rsp_mux_005_src_channel),                             //                 .channel
-		.read_rp_startofpacket  (rsp_mux_005_src_startofpacket),                       //                 .startofpacket
-		.read_rp_endofpacket    (rsp_mux_005_src_endofpacket),                         //                 .endofpacket
-		.read_rp_ready          (rsp_mux_005_src_ready),                               //                 .ready
-		.awid                   (vexriscvaxi4_0_ibusaxi_translator_m0_awid),           // altera_axi_slave.awid
-		.awaddr                 (vexriscvaxi4_0_ibusaxi_translator_m0_awaddr),         //                 .awaddr
-		.awlen                  (vexriscvaxi4_0_ibusaxi_translator_m0_awlen),          //                 .awlen
-		.awsize                 (vexriscvaxi4_0_ibusaxi_translator_m0_awsize),         //                 .awsize
-		.awburst                (vexriscvaxi4_0_ibusaxi_translator_m0_awburst),        //                 .awburst
-		.awlock                 (vexriscvaxi4_0_ibusaxi_translator_m0_awlock),         //                 .awlock
-		.awcache                (vexriscvaxi4_0_ibusaxi_translator_m0_awcache),        //                 .awcache
-		.awprot                 (vexriscvaxi4_0_ibusaxi_translator_m0_awprot),         //                 .awprot
-		.awuser                 (vexriscvaxi4_0_ibusaxi_translator_m0_awuser),         //                 .awuser
-		.awqos                  (vexriscvaxi4_0_ibusaxi_translator_m0_awqos),          //                 .awqos
-		.awregion               (vexriscvaxi4_0_ibusaxi_translator_m0_awregion),       //                 .awregion
-		.awvalid                (vexriscvaxi4_0_ibusaxi_translator_m0_awvalid),        //                 .awvalid
-		.awready                (vexriscvaxi4_0_ibusaxi_translator_m0_awready),        //                 .awready
-		.wdata                  (vexriscvaxi4_0_ibusaxi_translator_m0_wdata),          //                 .wdata
-		.wstrb                  (vexriscvaxi4_0_ibusaxi_translator_m0_wstrb),          //                 .wstrb
-		.wlast                  (vexriscvaxi4_0_ibusaxi_translator_m0_wlast),          //                 .wlast
-		.wvalid                 (vexriscvaxi4_0_ibusaxi_translator_m0_wvalid),         //                 .wvalid
-		.wuser                  (vexriscvaxi4_0_ibusaxi_translator_m0_wuser),          //                 .wuser
-		.wready                 (vexriscvaxi4_0_ibusaxi_translator_m0_wready),         //                 .wready
-		.bid                    (vexriscvaxi4_0_ibusaxi_translator_m0_bid),            //                 .bid
-		.bresp                  (vexriscvaxi4_0_ibusaxi_translator_m0_bresp),          //                 .bresp
-		.buser                  (vexriscvaxi4_0_ibusaxi_translator_m0_buser),          //                 .buser
-		.bvalid                 (vexriscvaxi4_0_ibusaxi_translator_m0_bvalid),         //                 .bvalid
-		.bready                 (vexriscvaxi4_0_ibusaxi_translator_m0_bready),         //                 .bready
-		.arid                   (vexriscvaxi4_0_ibusaxi_translator_m0_arid),           //                 .arid
-		.araddr                 (vexriscvaxi4_0_ibusaxi_translator_m0_araddr),         //                 .araddr
-		.arlen                  (vexriscvaxi4_0_ibusaxi_translator_m0_arlen),          //                 .arlen
-		.arsize                 (vexriscvaxi4_0_ibusaxi_translator_m0_arsize),         //                 .arsize
-		.arburst                (vexriscvaxi4_0_ibusaxi_translator_m0_arburst),        //                 .arburst
-		.arlock                 (vexriscvaxi4_0_ibusaxi_translator_m0_arlock),         //                 .arlock
-		.arcache                (vexriscvaxi4_0_ibusaxi_translator_m0_arcache),        //                 .arcache
-		.arprot                 (vexriscvaxi4_0_ibusaxi_translator_m0_arprot),         //                 .arprot
-		.aruser                 (vexriscvaxi4_0_ibusaxi_translator_m0_aruser),         //                 .aruser
-		.arqos                  (vexriscvaxi4_0_ibusaxi_translator_m0_arqos),          //                 .arqos
-		.arregion               (vexriscvaxi4_0_ibusaxi_translator_m0_arregion),       //                 .arregion
-		.arvalid                (vexriscvaxi4_0_ibusaxi_translator_m0_arvalid),        //                 .arvalid
-		.arready                (vexriscvaxi4_0_ibusaxi_translator_m0_arready),        //                 .arready
-		.rid                    (vexriscvaxi4_0_ibusaxi_translator_m0_rid),            //                 .rid
-		.rdata                  (vexriscvaxi4_0_ibusaxi_translator_m0_rdata),          //                 .rdata
-		.rresp                  (vexriscvaxi4_0_ibusaxi_translator_m0_rresp),          //                 .rresp
-		.rlast                  (vexriscvaxi4_0_ibusaxi_translator_m0_rlast),          //                 .rlast
-		.rvalid                 (vexriscvaxi4_0_ibusaxi_translator_m0_rvalid),         //                 .rvalid
-		.rready                 (vexriscvaxi4_0_ibusaxi_translator_m0_rready),         //                 .rready
-		.ruser                  (vexriscvaxi4_0_ibusaxi_translator_m0_ruser),          //                 .ruser
-		.wid                    (1'b0)                                                 //      (terminated)
+	) vexriscv_0_ibusaxi_agent (
+		.aclk                   (clk_0_clk_clk),                                   //              clk.clk
+		.aresetn                (~VexRiscv_0_reset_reset_bridge_in_reset_reset),   //        clk_reset.reset_n
+		.write_cp_valid         (vexriscv_0_ibusaxi_agent_write_cp_valid),         //         write_cp.valid
+		.write_cp_data          (vexriscv_0_ibusaxi_agent_write_cp_data),          //                 .data
+		.write_cp_startofpacket (vexriscv_0_ibusaxi_agent_write_cp_startofpacket), //                 .startofpacket
+		.write_cp_endofpacket   (vexriscv_0_ibusaxi_agent_write_cp_endofpacket),   //                 .endofpacket
+		.write_cp_ready         (vexriscv_0_ibusaxi_agent_write_cp_ready),         //                 .ready
+		.write_rp_valid         (rsp_mux_004_src_valid),                           //         write_rp.valid
+		.write_rp_data          (rsp_mux_004_src_data),                            //                 .data
+		.write_rp_channel       (rsp_mux_004_src_channel),                         //                 .channel
+		.write_rp_startofpacket (rsp_mux_004_src_startofpacket),                   //                 .startofpacket
+		.write_rp_endofpacket   (rsp_mux_004_src_endofpacket),                     //                 .endofpacket
+		.write_rp_ready         (rsp_mux_004_src_ready),                           //                 .ready
+		.read_cp_valid          (vexriscv_0_ibusaxi_agent_read_cp_valid),          //          read_cp.valid
+		.read_cp_data           (vexriscv_0_ibusaxi_agent_read_cp_data),           //                 .data
+		.read_cp_startofpacket  (vexriscv_0_ibusaxi_agent_read_cp_startofpacket),  //                 .startofpacket
+		.read_cp_endofpacket    (vexriscv_0_ibusaxi_agent_read_cp_endofpacket),    //                 .endofpacket
+		.read_cp_ready          (vexriscv_0_ibusaxi_agent_read_cp_ready),          //                 .ready
+		.read_rp_valid          (rsp_mux_005_src_valid),                           //          read_rp.valid
+		.read_rp_data           (rsp_mux_005_src_data),                            //                 .data
+		.read_rp_channel        (rsp_mux_005_src_channel),                         //                 .channel
+		.read_rp_startofpacket  (rsp_mux_005_src_startofpacket),                   //                 .startofpacket
+		.read_rp_endofpacket    (rsp_mux_005_src_endofpacket),                     //                 .endofpacket
+		.read_rp_ready          (rsp_mux_005_src_ready),                           //                 .ready
+		.awid                   (vexriscv_0_ibusaxi_translator_m0_awid),           // altera_axi_slave.awid
+		.awaddr                 (vexriscv_0_ibusaxi_translator_m0_awaddr),         //                 .awaddr
+		.awlen                  (vexriscv_0_ibusaxi_translator_m0_awlen),          //                 .awlen
+		.awsize                 (vexriscv_0_ibusaxi_translator_m0_awsize),         //                 .awsize
+		.awburst                (vexriscv_0_ibusaxi_translator_m0_awburst),        //                 .awburst
+		.awlock                 (vexriscv_0_ibusaxi_translator_m0_awlock),         //                 .awlock
+		.awcache                (vexriscv_0_ibusaxi_translator_m0_awcache),        //                 .awcache
+		.awprot                 (vexriscv_0_ibusaxi_translator_m0_awprot),         //                 .awprot
+		.awuser                 (vexriscv_0_ibusaxi_translator_m0_awuser),         //                 .awuser
+		.awqos                  (vexriscv_0_ibusaxi_translator_m0_awqos),          //                 .awqos
+		.awregion               (vexriscv_0_ibusaxi_translator_m0_awregion),       //                 .awregion
+		.awvalid                (vexriscv_0_ibusaxi_translator_m0_awvalid),        //                 .awvalid
+		.awready                (vexriscv_0_ibusaxi_translator_m0_awready),        //                 .awready
+		.wdata                  (vexriscv_0_ibusaxi_translator_m0_wdata),          //                 .wdata
+		.wstrb                  (vexriscv_0_ibusaxi_translator_m0_wstrb),          //                 .wstrb
+		.wlast                  (vexriscv_0_ibusaxi_translator_m0_wlast),          //                 .wlast
+		.wvalid                 (vexriscv_0_ibusaxi_translator_m0_wvalid),         //                 .wvalid
+		.wuser                  (vexriscv_0_ibusaxi_translator_m0_wuser),          //                 .wuser
+		.wready                 (vexriscv_0_ibusaxi_translator_m0_wready),         //                 .wready
+		.bid                    (vexriscv_0_ibusaxi_translator_m0_bid),            //                 .bid
+		.bresp                  (vexriscv_0_ibusaxi_translator_m0_bresp),          //                 .bresp
+		.buser                  (vexriscv_0_ibusaxi_translator_m0_buser),          //                 .buser
+		.bvalid                 (vexriscv_0_ibusaxi_translator_m0_bvalid),         //                 .bvalid
+		.bready                 (vexriscv_0_ibusaxi_translator_m0_bready),         //                 .bready
+		.arid                   (vexriscv_0_ibusaxi_translator_m0_arid),           //                 .arid
+		.araddr                 (vexriscv_0_ibusaxi_translator_m0_araddr),         //                 .araddr
+		.arlen                  (vexriscv_0_ibusaxi_translator_m0_arlen),          //                 .arlen
+		.arsize                 (vexriscv_0_ibusaxi_translator_m0_arsize),         //                 .arsize
+		.arburst                (vexriscv_0_ibusaxi_translator_m0_arburst),        //                 .arburst
+		.arlock                 (vexriscv_0_ibusaxi_translator_m0_arlock),         //                 .arlock
+		.arcache                (vexriscv_0_ibusaxi_translator_m0_arcache),        //                 .arcache
+		.arprot                 (vexriscv_0_ibusaxi_translator_m0_arprot),         //                 .arprot
+		.aruser                 (vexriscv_0_ibusaxi_translator_m0_aruser),         //                 .aruser
+		.arqos                  (vexriscv_0_ibusaxi_translator_m0_arqos),          //                 .arqos
+		.arregion               (vexriscv_0_ibusaxi_translator_m0_arregion),       //                 .arregion
+		.arvalid                (vexriscv_0_ibusaxi_translator_m0_arvalid),        //                 .arvalid
+		.arready                (vexriscv_0_ibusaxi_translator_m0_arready),        //                 .arready
+		.rid                    (vexriscv_0_ibusaxi_translator_m0_rid),            //                 .rid
+		.rdata                  (vexriscv_0_ibusaxi_translator_m0_rdata),          //                 .rdata
+		.rresp                  (vexriscv_0_ibusaxi_translator_m0_rresp),          //                 .rresp
+		.rlast                  (vexriscv_0_ibusaxi_translator_m0_rlast),          //                 .rlast
+		.rvalid                 (vexriscv_0_ibusaxi_translator_m0_rvalid),         //                 .rvalid
+		.rready                 (vexriscv_0_ibusaxi_translator_m0_rready),         //                 .rready
+		.ruser                  (vexriscv_0_ibusaxi_translator_m0_ruser),          //                 .ruser
+		.wid                    (1'b0)                                             //      (terminated)
 	);
 
 	altera_merlin_master_agent #(
@@ -3317,50 +3347,50 @@ module soc_system_mm_interconnect_0 (
 		.USE_READRESPONSE          (0),
 		.USE_WRITERESPONSE         (0),
 		.ECC_ENABLE                (0)
-	) ocram_64k_s1_agent (
-		.clk                     (clk_0_clk_clk),                                    //             clk.clk
-		.reset                   (nios2_gen2_0_reset_reset_bridge_in_reset_reset),   //       clk_reset.reset
-		.m0_address              (ocram_64k_s1_agent_m0_address),                    //              m0.address
-		.m0_burstcount           (ocram_64k_s1_agent_m0_burstcount),                 //                .burstcount
-		.m0_byteenable           (ocram_64k_s1_agent_m0_byteenable),                 //                .byteenable
-		.m0_debugaccess          (ocram_64k_s1_agent_m0_debugaccess),                //                .debugaccess
-		.m0_lock                 (ocram_64k_s1_agent_m0_lock),                       //                .lock
-		.m0_readdata             (ocram_64k_s1_agent_m0_readdata),                   //                .readdata
-		.m0_readdatavalid        (ocram_64k_s1_agent_m0_readdatavalid),              //                .readdatavalid
-		.m0_read                 (ocram_64k_s1_agent_m0_read),                       //                .read
-		.m0_waitrequest          (ocram_64k_s1_agent_m0_waitrequest),                //                .waitrequest
-		.m0_writedata            (ocram_64k_s1_agent_m0_writedata),                  //                .writedata
-		.m0_write                (ocram_64k_s1_agent_m0_write),                      //                .write
-		.rp_endofpacket          (ocram_64k_s1_agent_rp_endofpacket),                //              rp.endofpacket
-		.rp_ready                (ocram_64k_s1_agent_rp_ready),                      //                .ready
-		.rp_valid                (ocram_64k_s1_agent_rp_valid),                      //                .valid
-		.rp_data                 (ocram_64k_s1_agent_rp_data),                       //                .data
-		.rp_startofpacket        (ocram_64k_s1_agent_rp_startofpacket),              //                .startofpacket
-		.cp_ready                (ocram_64k_s1_burst_adapter_source0_ready),         //              cp.ready
-		.cp_valid                (ocram_64k_s1_burst_adapter_source0_valid),         //                .valid
-		.cp_data                 (ocram_64k_s1_burst_adapter_source0_data),          //                .data
-		.cp_startofpacket        (ocram_64k_s1_burst_adapter_source0_startofpacket), //                .startofpacket
-		.cp_endofpacket          (ocram_64k_s1_burst_adapter_source0_endofpacket),   //                .endofpacket
-		.cp_channel              (ocram_64k_s1_burst_adapter_source0_channel),       //                .channel
-		.rf_sink_ready           (ocram_64k_s1_agent_rsp_fifo_out_ready),            //         rf_sink.ready
-		.rf_sink_valid           (ocram_64k_s1_agent_rsp_fifo_out_valid),            //                .valid
-		.rf_sink_startofpacket   (ocram_64k_s1_agent_rsp_fifo_out_startofpacket),    //                .startofpacket
-		.rf_sink_endofpacket     (ocram_64k_s1_agent_rsp_fifo_out_endofpacket),      //                .endofpacket
-		.rf_sink_data            (ocram_64k_s1_agent_rsp_fifo_out_data),             //                .data
-		.rf_source_ready         (ocram_64k_s1_agent_rf_source_ready),               //       rf_source.ready
-		.rf_source_valid         (ocram_64k_s1_agent_rf_source_valid),               //                .valid
-		.rf_source_startofpacket (ocram_64k_s1_agent_rf_source_startofpacket),       //                .startofpacket
-		.rf_source_endofpacket   (ocram_64k_s1_agent_rf_source_endofpacket),         //                .endofpacket
-		.rf_source_data          (ocram_64k_s1_agent_rf_source_data),                //                .data
-		.rdata_fifo_sink_ready   (avalon_st_adapter_003_out_0_ready),                // rdata_fifo_sink.ready
-		.rdata_fifo_sink_valid   (avalon_st_adapter_003_out_0_valid),                //                .valid
-		.rdata_fifo_sink_data    (avalon_st_adapter_003_out_0_data),                 //                .data
-		.rdata_fifo_sink_error   (avalon_st_adapter_003_out_0_error),                //                .error
-		.rdata_fifo_src_ready    (ocram_64k_s1_agent_rdata_fifo_src_ready),          //  rdata_fifo_src.ready
-		.rdata_fifo_src_valid    (ocram_64k_s1_agent_rdata_fifo_src_valid),          //                .valid
-		.rdata_fifo_src_data     (ocram_64k_s1_agent_rdata_fifo_src_data),           //                .data
-		.m0_response             (2'b00),                                            //     (terminated)
-		.m0_writeresponsevalid   (1'b0)                                              //     (terminated)
+	) switch_pio_s1_agent (
+		.clk                     (clk_0_clk_clk),                                     //             clk.clk
+		.reset                   (nios2_gen2_0_reset_reset_bridge_in_reset_reset),    //       clk_reset.reset
+		.m0_address              (switch_pio_s1_agent_m0_address),                    //              m0.address
+		.m0_burstcount           (switch_pio_s1_agent_m0_burstcount),                 //                .burstcount
+		.m0_byteenable           (switch_pio_s1_agent_m0_byteenable),                 //                .byteenable
+		.m0_debugaccess          (switch_pio_s1_agent_m0_debugaccess),                //                .debugaccess
+		.m0_lock                 (switch_pio_s1_agent_m0_lock),                       //                .lock
+		.m0_readdata             (switch_pio_s1_agent_m0_readdata),                   //                .readdata
+		.m0_readdatavalid        (switch_pio_s1_agent_m0_readdatavalid),              //                .readdatavalid
+		.m0_read                 (switch_pio_s1_agent_m0_read),                       //                .read
+		.m0_waitrequest          (switch_pio_s1_agent_m0_waitrequest),                //                .waitrequest
+		.m0_writedata            (switch_pio_s1_agent_m0_writedata),                  //                .writedata
+		.m0_write                (switch_pio_s1_agent_m0_write),                      //                .write
+		.rp_endofpacket          (switch_pio_s1_agent_rp_endofpacket),                //              rp.endofpacket
+		.rp_ready                (switch_pio_s1_agent_rp_ready),                      //                .ready
+		.rp_valid                (switch_pio_s1_agent_rp_valid),                      //                .valid
+		.rp_data                 (switch_pio_s1_agent_rp_data),                       //                .data
+		.rp_startofpacket        (switch_pio_s1_agent_rp_startofpacket),              //                .startofpacket
+		.cp_ready                (switch_pio_s1_burst_adapter_source0_ready),         //              cp.ready
+		.cp_valid                (switch_pio_s1_burst_adapter_source0_valid),         //                .valid
+		.cp_data                 (switch_pio_s1_burst_adapter_source0_data),          //                .data
+		.cp_startofpacket        (switch_pio_s1_burst_adapter_source0_startofpacket), //                .startofpacket
+		.cp_endofpacket          (switch_pio_s1_burst_adapter_source0_endofpacket),   //                .endofpacket
+		.cp_channel              (switch_pio_s1_burst_adapter_source0_channel),       //                .channel
+		.rf_sink_ready           (switch_pio_s1_agent_rsp_fifo_out_ready),            //         rf_sink.ready
+		.rf_sink_valid           (switch_pio_s1_agent_rsp_fifo_out_valid),            //                .valid
+		.rf_sink_startofpacket   (switch_pio_s1_agent_rsp_fifo_out_startofpacket),    //                .startofpacket
+		.rf_sink_endofpacket     (switch_pio_s1_agent_rsp_fifo_out_endofpacket),      //                .endofpacket
+		.rf_sink_data            (switch_pio_s1_agent_rsp_fifo_out_data),             //                .data
+		.rf_source_ready         (switch_pio_s1_agent_rf_source_ready),               //       rf_source.ready
+		.rf_source_valid         (switch_pio_s1_agent_rf_source_valid),               //                .valid
+		.rf_source_startofpacket (switch_pio_s1_agent_rf_source_startofpacket),       //                .startofpacket
+		.rf_source_endofpacket   (switch_pio_s1_agent_rf_source_endofpacket),         //                .endofpacket
+		.rf_source_data          (switch_pio_s1_agent_rf_source_data),                //                .data
+		.rdata_fifo_sink_ready   (avalon_st_adapter_003_out_0_ready),                 // rdata_fifo_sink.ready
+		.rdata_fifo_sink_valid   (avalon_st_adapter_003_out_0_valid),                 //                .valid
+		.rdata_fifo_sink_data    (avalon_st_adapter_003_out_0_data),                  //                .data
+		.rdata_fifo_sink_error   (avalon_st_adapter_003_out_0_error),                 //                .error
+		.rdata_fifo_src_ready    (switch_pio_s1_agent_rdata_fifo_src_ready),          //  rdata_fifo_src.ready
+		.rdata_fifo_src_valid    (switch_pio_s1_agent_rdata_fifo_src_valid),          //                .valid
+		.rdata_fifo_src_data     (switch_pio_s1_agent_rdata_fifo_src_data),           //                .data
+		.m0_response             (2'b00),                                             //     (terminated)
+		.m0_writeresponsevalid   (1'b0)                                               //     (terminated)
 	);
 
 	altera_avalon_sc_fifo #(
@@ -3376,19 +3406,19 @@ module soc_system_mm_interconnect_0 (
 		.USE_STORE_FORWARD   (0),
 		.USE_ALMOST_FULL_IF  (0),
 		.USE_ALMOST_EMPTY_IF (0)
-	) ocram_64k_s1_agent_rsp_fifo (
+	) switch_pio_s1_agent_rsp_fifo (
 		.clk               (clk_0_clk_clk),                                  //       clk.clk
 		.reset             (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.in_data           (ocram_64k_s1_agent_rf_source_data),              //        in.data
-		.in_valid          (ocram_64k_s1_agent_rf_source_valid),             //          .valid
-		.in_ready          (ocram_64k_s1_agent_rf_source_ready),             //          .ready
-		.in_startofpacket  (ocram_64k_s1_agent_rf_source_startofpacket),     //          .startofpacket
-		.in_endofpacket    (ocram_64k_s1_agent_rf_source_endofpacket),       //          .endofpacket
-		.out_data          (ocram_64k_s1_agent_rsp_fifo_out_data),           //       out.data
-		.out_valid         (ocram_64k_s1_agent_rsp_fifo_out_valid),          //          .valid
-		.out_ready         (ocram_64k_s1_agent_rsp_fifo_out_ready),          //          .ready
-		.out_startofpacket (ocram_64k_s1_agent_rsp_fifo_out_startofpacket),  //          .startofpacket
-		.out_endofpacket   (ocram_64k_s1_agent_rsp_fifo_out_endofpacket),    //          .endofpacket
+		.in_data           (switch_pio_s1_agent_rf_source_data),             //        in.data
+		.in_valid          (switch_pio_s1_agent_rf_source_valid),            //          .valid
+		.in_ready          (switch_pio_s1_agent_rf_source_ready),            //          .ready
+		.in_startofpacket  (switch_pio_s1_agent_rf_source_startofpacket),    //          .startofpacket
+		.in_endofpacket    (switch_pio_s1_agent_rf_source_endofpacket),      //          .endofpacket
+		.out_data          (switch_pio_s1_agent_rsp_fifo_out_data),          //       out.data
+		.out_valid         (switch_pio_s1_agent_rsp_fifo_out_valid),         //          .valid
+		.out_ready         (switch_pio_s1_agent_rsp_fifo_out_ready),         //          .ready
+		.out_startofpacket (switch_pio_s1_agent_rsp_fifo_out_startofpacket), //          .startofpacket
+		.out_endofpacket   (switch_pio_s1_agent_rsp_fifo_out_endofpacket),   //          .endofpacket
 		.csr_address       (2'b00),                                          // (terminated)
 		.csr_read          (1'b0),                                           // (terminated)
 		.csr_write         (1'b0),                                           // (terminated)
@@ -3417,15 +3447,15 @@ module soc_system_mm_interconnect_0 (
 		.USE_STORE_FORWARD   (0),
 		.USE_ALMOST_FULL_IF  (0),
 		.USE_ALMOST_EMPTY_IF (0)
-	) ocram_64k_s1_agent_rdata_fifo (
+	) switch_pio_s1_agent_rdata_fifo (
 		.clk               (clk_0_clk_clk),                                  //       clk.clk
 		.reset             (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.in_data           (ocram_64k_s1_agent_rdata_fifo_src_data),         //        in.data
-		.in_valid          (ocram_64k_s1_agent_rdata_fifo_src_valid),        //          .valid
-		.in_ready          (ocram_64k_s1_agent_rdata_fifo_src_ready),        //          .ready
-		.out_data          (ocram_64k_s1_agent_rdata_fifo_out_data),         //       out.data
-		.out_valid         (ocram_64k_s1_agent_rdata_fifo_out_valid),        //          .valid
-		.out_ready         (ocram_64k_s1_agent_rdata_fifo_out_ready),        //          .ready
+		.in_data           (switch_pio_s1_agent_rdata_fifo_src_data),        //        in.data
+		.in_valid          (switch_pio_s1_agent_rdata_fifo_src_valid),       //          .valid
+		.in_ready          (switch_pio_s1_agent_rdata_fifo_src_ready),       //          .ready
+		.out_data          (switch_pio_s1_agent_rdata_fifo_out_data),        //       out.data
+		.out_valid         (switch_pio_s1_agent_rdata_fifo_out_valid),       //          .valid
+		.out_ready         (switch_pio_s1_agent_rdata_fifo_out_ready),       //          .ready
 		.csr_address       (2'b00),                                          // (terminated)
 		.csr_read          (1'b0),                                           // (terminated)
 		.csr_write         (1'b0),                                           // (terminated)
@@ -3483,50 +3513,50 @@ module soc_system_mm_interconnect_0 (
 		.USE_READRESPONSE          (0),
 		.USE_WRITERESPONSE         (0),
 		.ECC_ENABLE                (0)
-	) ocram_16b_s1_agent (
-		.clk                     (clk_0_clk_clk),                                    //             clk.clk
-		.reset                   (nios2_gen2_0_reset_reset_bridge_in_reset_reset),   //       clk_reset.reset
-		.m0_address              (ocram_16b_s1_agent_m0_address),                    //              m0.address
-		.m0_burstcount           (ocram_16b_s1_agent_m0_burstcount),                 //                .burstcount
-		.m0_byteenable           (ocram_16b_s1_agent_m0_byteenable),                 //                .byteenable
-		.m0_debugaccess          (ocram_16b_s1_agent_m0_debugaccess),                //                .debugaccess
-		.m0_lock                 (ocram_16b_s1_agent_m0_lock),                       //                .lock
-		.m0_readdata             (ocram_16b_s1_agent_m0_readdata),                   //                .readdata
-		.m0_readdatavalid        (ocram_16b_s1_agent_m0_readdatavalid),              //                .readdatavalid
-		.m0_read                 (ocram_16b_s1_agent_m0_read),                       //                .read
-		.m0_waitrequest          (ocram_16b_s1_agent_m0_waitrequest),                //                .waitrequest
-		.m0_writedata            (ocram_16b_s1_agent_m0_writedata),                  //                .writedata
-		.m0_write                (ocram_16b_s1_agent_m0_write),                      //                .write
-		.rp_endofpacket          (ocram_16b_s1_agent_rp_endofpacket),                //              rp.endofpacket
-		.rp_ready                (ocram_16b_s1_agent_rp_ready),                      //                .ready
-		.rp_valid                (ocram_16b_s1_agent_rp_valid),                      //                .valid
-		.rp_data                 (ocram_16b_s1_agent_rp_data),                       //                .data
-		.rp_startofpacket        (ocram_16b_s1_agent_rp_startofpacket),              //                .startofpacket
-		.cp_ready                (ocram_16b_s1_burst_adapter_source0_ready),         //              cp.ready
-		.cp_valid                (ocram_16b_s1_burst_adapter_source0_valid),         //                .valid
-		.cp_data                 (ocram_16b_s1_burst_adapter_source0_data),          //                .data
-		.cp_startofpacket        (ocram_16b_s1_burst_adapter_source0_startofpacket), //                .startofpacket
-		.cp_endofpacket          (ocram_16b_s1_burst_adapter_source0_endofpacket),   //                .endofpacket
-		.cp_channel              (ocram_16b_s1_burst_adapter_source0_channel),       //                .channel
-		.rf_sink_ready           (ocram_16b_s1_agent_rsp_fifo_out_ready),            //         rf_sink.ready
-		.rf_sink_valid           (ocram_16b_s1_agent_rsp_fifo_out_valid),            //                .valid
-		.rf_sink_startofpacket   (ocram_16b_s1_agent_rsp_fifo_out_startofpacket),    //                .startofpacket
-		.rf_sink_endofpacket     (ocram_16b_s1_agent_rsp_fifo_out_endofpacket),      //                .endofpacket
-		.rf_sink_data            (ocram_16b_s1_agent_rsp_fifo_out_data),             //                .data
-		.rf_source_ready         (ocram_16b_s1_agent_rf_source_ready),               //       rf_source.ready
-		.rf_source_valid         (ocram_16b_s1_agent_rf_source_valid),               //                .valid
-		.rf_source_startofpacket (ocram_16b_s1_agent_rf_source_startofpacket),       //                .startofpacket
-		.rf_source_endofpacket   (ocram_16b_s1_agent_rf_source_endofpacket),         //                .endofpacket
-		.rf_source_data          (ocram_16b_s1_agent_rf_source_data),                //                .data
-		.rdata_fifo_sink_ready   (avalon_st_adapter_004_out_0_ready),                // rdata_fifo_sink.ready
-		.rdata_fifo_sink_valid   (avalon_st_adapter_004_out_0_valid),                //                .valid
-		.rdata_fifo_sink_data    (avalon_st_adapter_004_out_0_data),                 //                .data
-		.rdata_fifo_sink_error   (avalon_st_adapter_004_out_0_error),                //                .error
-		.rdata_fifo_src_ready    (ocram_16b_s1_agent_rdata_fifo_src_ready),          //  rdata_fifo_src.ready
-		.rdata_fifo_src_valid    (ocram_16b_s1_agent_rdata_fifo_src_valid),          //                .valid
-		.rdata_fifo_src_data     (ocram_16b_s1_agent_rdata_fifo_src_data),           //                .data
-		.m0_response             (2'b00),                                            //     (terminated)
-		.m0_writeresponsevalid   (1'b0)                                              //     (terminated)
+	) button_pio_s1_agent (
+		.clk                     (clk_0_clk_clk),                                     //             clk.clk
+		.reset                   (nios2_gen2_0_reset_reset_bridge_in_reset_reset),    //       clk_reset.reset
+		.m0_address              (button_pio_s1_agent_m0_address),                    //              m0.address
+		.m0_burstcount           (button_pio_s1_agent_m0_burstcount),                 //                .burstcount
+		.m0_byteenable           (button_pio_s1_agent_m0_byteenable),                 //                .byteenable
+		.m0_debugaccess          (button_pio_s1_agent_m0_debugaccess),                //                .debugaccess
+		.m0_lock                 (button_pio_s1_agent_m0_lock),                       //                .lock
+		.m0_readdata             (button_pio_s1_agent_m0_readdata),                   //                .readdata
+		.m0_readdatavalid        (button_pio_s1_agent_m0_readdatavalid),              //                .readdatavalid
+		.m0_read                 (button_pio_s1_agent_m0_read),                       //                .read
+		.m0_waitrequest          (button_pio_s1_agent_m0_waitrequest),                //                .waitrequest
+		.m0_writedata            (button_pio_s1_agent_m0_writedata),                  //                .writedata
+		.m0_write                (button_pio_s1_agent_m0_write),                      //                .write
+		.rp_endofpacket          (button_pio_s1_agent_rp_endofpacket),                //              rp.endofpacket
+		.rp_ready                (button_pio_s1_agent_rp_ready),                      //                .ready
+		.rp_valid                (button_pio_s1_agent_rp_valid),                      //                .valid
+		.rp_data                 (button_pio_s1_agent_rp_data),                       //                .data
+		.rp_startofpacket        (button_pio_s1_agent_rp_startofpacket),              //                .startofpacket
+		.cp_ready                (button_pio_s1_burst_adapter_source0_ready),         //              cp.ready
+		.cp_valid                (button_pio_s1_burst_adapter_source0_valid),         //                .valid
+		.cp_data                 (button_pio_s1_burst_adapter_source0_data),          //                .data
+		.cp_startofpacket        (button_pio_s1_burst_adapter_source0_startofpacket), //                .startofpacket
+		.cp_endofpacket          (button_pio_s1_burst_adapter_source0_endofpacket),   //                .endofpacket
+		.cp_channel              (button_pio_s1_burst_adapter_source0_channel),       //                .channel
+		.rf_sink_ready           (button_pio_s1_agent_rsp_fifo_out_ready),            //         rf_sink.ready
+		.rf_sink_valid           (button_pio_s1_agent_rsp_fifo_out_valid),            //                .valid
+		.rf_sink_startofpacket   (button_pio_s1_agent_rsp_fifo_out_startofpacket),    //                .startofpacket
+		.rf_sink_endofpacket     (button_pio_s1_agent_rsp_fifo_out_endofpacket),      //                .endofpacket
+		.rf_sink_data            (button_pio_s1_agent_rsp_fifo_out_data),             //                .data
+		.rf_source_ready         (button_pio_s1_agent_rf_source_ready),               //       rf_source.ready
+		.rf_source_valid         (button_pio_s1_agent_rf_source_valid),               //                .valid
+		.rf_source_startofpacket (button_pio_s1_agent_rf_source_startofpacket),       //                .startofpacket
+		.rf_source_endofpacket   (button_pio_s1_agent_rf_source_endofpacket),         //                .endofpacket
+		.rf_source_data          (button_pio_s1_agent_rf_source_data),                //                .data
+		.rdata_fifo_sink_ready   (avalon_st_adapter_004_out_0_ready),                 // rdata_fifo_sink.ready
+		.rdata_fifo_sink_valid   (avalon_st_adapter_004_out_0_valid),                 //                .valid
+		.rdata_fifo_sink_data    (avalon_st_adapter_004_out_0_data),                  //                .data
+		.rdata_fifo_sink_error   (avalon_st_adapter_004_out_0_error),                 //                .error
+		.rdata_fifo_src_ready    (button_pio_s1_agent_rdata_fifo_src_ready),          //  rdata_fifo_src.ready
+		.rdata_fifo_src_valid    (button_pio_s1_agent_rdata_fifo_src_valid),          //                .valid
+		.rdata_fifo_src_data     (button_pio_s1_agent_rdata_fifo_src_data),           //                .data
+		.m0_response             (2'b00),                                             //     (terminated)
+		.m0_writeresponsevalid   (1'b0)                                               //     (terminated)
 	);
 
 	altera_avalon_sc_fifo #(
@@ -3542,19 +3572,19 @@ module soc_system_mm_interconnect_0 (
 		.USE_STORE_FORWARD   (0),
 		.USE_ALMOST_FULL_IF  (0),
 		.USE_ALMOST_EMPTY_IF (0)
-	) ocram_16b_s1_agent_rsp_fifo (
+	) button_pio_s1_agent_rsp_fifo (
 		.clk               (clk_0_clk_clk),                                  //       clk.clk
 		.reset             (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.in_data           (ocram_16b_s1_agent_rf_source_data),              //        in.data
-		.in_valid          (ocram_16b_s1_agent_rf_source_valid),             //          .valid
-		.in_ready          (ocram_16b_s1_agent_rf_source_ready),             //          .ready
-		.in_startofpacket  (ocram_16b_s1_agent_rf_source_startofpacket),     //          .startofpacket
-		.in_endofpacket    (ocram_16b_s1_agent_rf_source_endofpacket),       //          .endofpacket
-		.out_data          (ocram_16b_s1_agent_rsp_fifo_out_data),           //       out.data
-		.out_valid         (ocram_16b_s1_agent_rsp_fifo_out_valid),          //          .valid
-		.out_ready         (ocram_16b_s1_agent_rsp_fifo_out_ready),          //          .ready
-		.out_startofpacket (ocram_16b_s1_agent_rsp_fifo_out_startofpacket),  //          .startofpacket
-		.out_endofpacket   (ocram_16b_s1_agent_rsp_fifo_out_endofpacket),    //          .endofpacket
+		.in_data           (button_pio_s1_agent_rf_source_data),             //        in.data
+		.in_valid          (button_pio_s1_agent_rf_source_valid),            //          .valid
+		.in_ready          (button_pio_s1_agent_rf_source_ready),            //          .ready
+		.in_startofpacket  (button_pio_s1_agent_rf_source_startofpacket),    //          .startofpacket
+		.in_endofpacket    (button_pio_s1_agent_rf_source_endofpacket),      //          .endofpacket
+		.out_data          (button_pio_s1_agent_rsp_fifo_out_data),          //       out.data
+		.out_valid         (button_pio_s1_agent_rsp_fifo_out_valid),         //          .valid
+		.out_ready         (button_pio_s1_agent_rsp_fifo_out_ready),         //          .ready
+		.out_startofpacket (button_pio_s1_agent_rsp_fifo_out_startofpacket), //          .startofpacket
+		.out_endofpacket   (button_pio_s1_agent_rsp_fifo_out_endofpacket),   //          .endofpacket
 		.csr_address       (2'b00),                                          // (terminated)
 		.csr_read          (1'b0),                                           // (terminated)
 		.csr_write         (1'b0),                                           // (terminated)
@@ -3583,15 +3613,15 @@ module soc_system_mm_interconnect_0 (
 		.USE_STORE_FORWARD   (0),
 		.USE_ALMOST_FULL_IF  (0),
 		.USE_ALMOST_EMPTY_IF (0)
-	) ocram_16b_s1_agent_rdata_fifo (
+	) button_pio_s1_agent_rdata_fifo (
 		.clk               (clk_0_clk_clk),                                  //       clk.clk
 		.reset             (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.in_data           (ocram_16b_s1_agent_rdata_fifo_src_data),         //        in.data
-		.in_valid          (ocram_16b_s1_agent_rdata_fifo_src_valid),        //          .valid
-		.in_ready          (ocram_16b_s1_agent_rdata_fifo_src_ready),        //          .ready
-		.out_data          (ocram_16b_s1_agent_rdata_fifo_out_data),         //       out.data
-		.out_valid         (ocram_16b_s1_agent_rdata_fifo_out_valid),        //          .valid
-		.out_ready         (ocram_16b_s1_agent_rdata_fifo_out_ready),        //          .ready
+		.in_data           (button_pio_s1_agent_rdata_fifo_src_data),        //        in.data
+		.in_valid          (button_pio_s1_agent_rdata_fifo_src_valid),       //          .valid
+		.in_ready          (button_pio_s1_agent_rdata_fifo_src_ready),       //          .ready
+		.out_data          (button_pio_s1_agent_rdata_fifo_out_data),        //       out.data
+		.out_valid         (button_pio_s1_agent_rdata_fifo_out_valid),       //          .valid
+		.out_ready         (button_pio_s1_agent_rdata_fifo_out_ready),       //          .ready
 		.csr_address       (2'b00),                                          // (terminated)
 		.csr_read          (1'b0),                                           // (terminated)
 		.csr_write         (1'b0),                                           // (terminated)
@@ -3815,50 +3845,50 @@ module soc_system_mm_interconnect_0 (
 		.USE_READRESPONSE          (0),
 		.USE_WRITERESPONSE         (0),
 		.ECC_ENABLE                (0)
-	) button_pio_s1_agent (
-		.clk                     (clk_0_clk_clk),                                     //             clk.clk
-		.reset                   (nios2_gen2_0_reset_reset_bridge_in_reset_reset),    //       clk_reset.reset
-		.m0_address              (button_pio_s1_agent_m0_address),                    //              m0.address
-		.m0_burstcount           (button_pio_s1_agent_m0_burstcount),                 //                .burstcount
-		.m0_byteenable           (button_pio_s1_agent_m0_byteenable),                 //                .byteenable
-		.m0_debugaccess          (button_pio_s1_agent_m0_debugaccess),                //                .debugaccess
-		.m0_lock                 (button_pio_s1_agent_m0_lock),                       //                .lock
-		.m0_readdata             (button_pio_s1_agent_m0_readdata),                   //                .readdata
-		.m0_readdatavalid        (button_pio_s1_agent_m0_readdatavalid),              //                .readdatavalid
-		.m0_read                 (button_pio_s1_agent_m0_read),                       //                .read
-		.m0_waitrequest          (button_pio_s1_agent_m0_waitrequest),                //                .waitrequest
-		.m0_writedata            (button_pio_s1_agent_m0_writedata),                  //                .writedata
-		.m0_write                (button_pio_s1_agent_m0_write),                      //                .write
-		.rp_endofpacket          (button_pio_s1_agent_rp_endofpacket),                //              rp.endofpacket
-		.rp_ready                (button_pio_s1_agent_rp_ready),                      //                .ready
-		.rp_valid                (button_pio_s1_agent_rp_valid),                      //                .valid
-		.rp_data                 (button_pio_s1_agent_rp_data),                       //                .data
-		.rp_startofpacket        (button_pio_s1_agent_rp_startofpacket),              //                .startofpacket
-		.cp_ready                (button_pio_s1_burst_adapter_source0_ready),         //              cp.ready
-		.cp_valid                (button_pio_s1_burst_adapter_source0_valid),         //                .valid
-		.cp_data                 (button_pio_s1_burst_adapter_source0_data),          //                .data
-		.cp_startofpacket        (button_pio_s1_burst_adapter_source0_startofpacket), //                .startofpacket
-		.cp_endofpacket          (button_pio_s1_burst_adapter_source0_endofpacket),   //                .endofpacket
-		.cp_channel              (button_pio_s1_burst_adapter_source0_channel),       //                .channel
-		.rf_sink_ready           (button_pio_s1_agent_rsp_fifo_out_ready),            //         rf_sink.ready
-		.rf_sink_valid           (button_pio_s1_agent_rsp_fifo_out_valid),            //                .valid
-		.rf_sink_startofpacket   (button_pio_s1_agent_rsp_fifo_out_startofpacket),    //                .startofpacket
-		.rf_sink_endofpacket     (button_pio_s1_agent_rsp_fifo_out_endofpacket),      //                .endofpacket
-		.rf_sink_data            (button_pio_s1_agent_rsp_fifo_out_data),             //                .data
-		.rf_source_ready         (button_pio_s1_agent_rf_source_ready),               //       rf_source.ready
-		.rf_source_valid         (button_pio_s1_agent_rf_source_valid),               //                .valid
-		.rf_source_startofpacket (button_pio_s1_agent_rf_source_startofpacket),       //                .startofpacket
-		.rf_source_endofpacket   (button_pio_s1_agent_rf_source_endofpacket),         //                .endofpacket
-		.rf_source_data          (button_pio_s1_agent_rf_source_data),                //                .data
-		.rdata_fifo_sink_ready   (avalon_st_adapter_006_out_0_ready),                 // rdata_fifo_sink.ready
-		.rdata_fifo_sink_valid   (avalon_st_adapter_006_out_0_valid),                 //                .valid
-		.rdata_fifo_sink_data    (avalon_st_adapter_006_out_0_data),                  //                .data
-		.rdata_fifo_sink_error   (avalon_st_adapter_006_out_0_error),                 //                .error
-		.rdata_fifo_src_ready    (button_pio_s1_agent_rdata_fifo_src_ready),          //  rdata_fifo_src.ready
-		.rdata_fifo_src_valid    (button_pio_s1_agent_rdata_fifo_src_valid),          //                .valid
-		.rdata_fifo_src_data     (button_pio_s1_agent_rdata_fifo_src_data),           //                .data
-		.m0_response             (2'b00),                                             //     (terminated)
-		.m0_writeresponsevalid   (1'b0)                                               //     (terminated)
+	) ocram_16b_s1_agent (
+		.clk                     (clk_0_clk_clk),                                    //             clk.clk
+		.reset                   (nios2_gen2_0_reset_reset_bridge_in_reset_reset),   //       clk_reset.reset
+		.m0_address              (ocram_16b_s1_agent_m0_address),                    //              m0.address
+		.m0_burstcount           (ocram_16b_s1_agent_m0_burstcount),                 //                .burstcount
+		.m0_byteenable           (ocram_16b_s1_agent_m0_byteenable),                 //                .byteenable
+		.m0_debugaccess          (ocram_16b_s1_agent_m0_debugaccess),                //                .debugaccess
+		.m0_lock                 (ocram_16b_s1_agent_m0_lock),                       //                .lock
+		.m0_readdata             (ocram_16b_s1_agent_m0_readdata),                   //                .readdata
+		.m0_readdatavalid        (ocram_16b_s1_agent_m0_readdatavalid),              //                .readdatavalid
+		.m0_read                 (ocram_16b_s1_agent_m0_read),                       //                .read
+		.m0_waitrequest          (ocram_16b_s1_agent_m0_waitrequest),                //                .waitrequest
+		.m0_writedata            (ocram_16b_s1_agent_m0_writedata),                  //                .writedata
+		.m0_write                (ocram_16b_s1_agent_m0_write),                      //                .write
+		.rp_endofpacket          (ocram_16b_s1_agent_rp_endofpacket),                //              rp.endofpacket
+		.rp_ready                (ocram_16b_s1_agent_rp_ready),                      //                .ready
+		.rp_valid                (ocram_16b_s1_agent_rp_valid),                      //                .valid
+		.rp_data                 (ocram_16b_s1_agent_rp_data),                       //                .data
+		.rp_startofpacket        (ocram_16b_s1_agent_rp_startofpacket),              //                .startofpacket
+		.cp_ready                (ocram_16b_s1_burst_adapter_source0_ready),         //              cp.ready
+		.cp_valid                (ocram_16b_s1_burst_adapter_source0_valid),         //                .valid
+		.cp_data                 (ocram_16b_s1_burst_adapter_source0_data),          //                .data
+		.cp_startofpacket        (ocram_16b_s1_burst_adapter_source0_startofpacket), //                .startofpacket
+		.cp_endofpacket          (ocram_16b_s1_burst_adapter_source0_endofpacket),   //                .endofpacket
+		.cp_channel              (ocram_16b_s1_burst_adapter_source0_channel),       //                .channel
+		.rf_sink_ready           (ocram_16b_s1_agent_rsp_fifo_out_ready),            //         rf_sink.ready
+		.rf_sink_valid           (ocram_16b_s1_agent_rsp_fifo_out_valid),            //                .valid
+		.rf_sink_startofpacket   (ocram_16b_s1_agent_rsp_fifo_out_startofpacket),    //                .startofpacket
+		.rf_sink_endofpacket     (ocram_16b_s1_agent_rsp_fifo_out_endofpacket),      //                .endofpacket
+		.rf_sink_data            (ocram_16b_s1_agent_rsp_fifo_out_data),             //                .data
+		.rf_source_ready         (ocram_16b_s1_agent_rf_source_ready),               //       rf_source.ready
+		.rf_source_valid         (ocram_16b_s1_agent_rf_source_valid),               //                .valid
+		.rf_source_startofpacket (ocram_16b_s1_agent_rf_source_startofpacket),       //                .startofpacket
+		.rf_source_endofpacket   (ocram_16b_s1_agent_rf_source_endofpacket),         //                .endofpacket
+		.rf_source_data          (ocram_16b_s1_agent_rf_source_data),                //                .data
+		.rdata_fifo_sink_ready   (avalon_st_adapter_006_out_0_ready),                // rdata_fifo_sink.ready
+		.rdata_fifo_sink_valid   (avalon_st_adapter_006_out_0_valid),                //                .valid
+		.rdata_fifo_sink_data    (avalon_st_adapter_006_out_0_data),                 //                .data
+		.rdata_fifo_sink_error   (avalon_st_adapter_006_out_0_error),                //                .error
+		.rdata_fifo_src_ready    (ocram_16b_s1_agent_rdata_fifo_src_ready),          //  rdata_fifo_src.ready
+		.rdata_fifo_src_valid    (ocram_16b_s1_agent_rdata_fifo_src_valid),          //                .valid
+		.rdata_fifo_src_data     (ocram_16b_s1_agent_rdata_fifo_src_data),           //                .data
+		.m0_response             (2'b00),                                            //     (terminated)
+		.m0_writeresponsevalid   (1'b0)                                              //     (terminated)
 	);
 
 	altera_avalon_sc_fifo #(
@@ -3874,19 +3904,19 @@ module soc_system_mm_interconnect_0 (
 		.USE_STORE_FORWARD   (0),
 		.USE_ALMOST_FULL_IF  (0),
 		.USE_ALMOST_EMPTY_IF (0)
-	) button_pio_s1_agent_rsp_fifo (
+	) ocram_16b_s1_agent_rsp_fifo (
 		.clk               (clk_0_clk_clk),                                  //       clk.clk
 		.reset             (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.in_data           (button_pio_s1_agent_rf_source_data),             //        in.data
-		.in_valid          (button_pio_s1_agent_rf_source_valid),            //          .valid
-		.in_ready          (button_pio_s1_agent_rf_source_ready),            //          .ready
-		.in_startofpacket  (button_pio_s1_agent_rf_source_startofpacket),    //          .startofpacket
-		.in_endofpacket    (button_pio_s1_agent_rf_source_endofpacket),      //          .endofpacket
-		.out_data          (button_pio_s1_agent_rsp_fifo_out_data),          //       out.data
-		.out_valid         (button_pio_s1_agent_rsp_fifo_out_valid),         //          .valid
-		.out_ready         (button_pio_s1_agent_rsp_fifo_out_ready),         //          .ready
-		.out_startofpacket (button_pio_s1_agent_rsp_fifo_out_startofpacket), //          .startofpacket
-		.out_endofpacket   (button_pio_s1_agent_rsp_fifo_out_endofpacket),   //          .endofpacket
+		.in_data           (ocram_16b_s1_agent_rf_source_data),              //        in.data
+		.in_valid          (ocram_16b_s1_agent_rf_source_valid),             //          .valid
+		.in_ready          (ocram_16b_s1_agent_rf_source_ready),             //          .ready
+		.in_startofpacket  (ocram_16b_s1_agent_rf_source_startofpacket),     //          .startofpacket
+		.in_endofpacket    (ocram_16b_s1_agent_rf_source_endofpacket),       //          .endofpacket
+		.out_data          (ocram_16b_s1_agent_rsp_fifo_out_data),           //       out.data
+		.out_valid         (ocram_16b_s1_agent_rsp_fifo_out_valid),          //          .valid
+		.out_ready         (ocram_16b_s1_agent_rsp_fifo_out_ready),          //          .ready
+		.out_startofpacket (ocram_16b_s1_agent_rsp_fifo_out_startofpacket),  //          .startofpacket
+		.out_endofpacket   (ocram_16b_s1_agent_rsp_fifo_out_endofpacket),    //          .endofpacket
 		.csr_address       (2'b00),                                          // (terminated)
 		.csr_read          (1'b0),                                           // (terminated)
 		.csr_write         (1'b0),                                           // (terminated)
@@ -3915,15 +3945,15 @@ module soc_system_mm_interconnect_0 (
 		.USE_STORE_FORWARD   (0),
 		.USE_ALMOST_FULL_IF  (0),
 		.USE_ALMOST_EMPTY_IF (0)
-	) button_pio_s1_agent_rdata_fifo (
+	) ocram_16b_s1_agent_rdata_fifo (
 		.clk               (clk_0_clk_clk),                                  //       clk.clk
 		.reset             (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.in_data           (button_pio_s1_agent_rdata_fifo_src_data),        //        in.data
-		.in_valid          (button_pio_s1_agent_rdata_fifo_src_valid),       //          .valid
-		.in_ready          (button_pio_s1_agent_rdata_fifo_src_ready),       //          .ready
-		.out_data          (button_pio_s1_agent_rdata_fifo_out_data),        //       out.data
-		.out_valid         (button_pio_s1_agent_rdata_fifo_out_valid),       //          .valid
-		.out_ready         (button_pio_s1_agent_rdata_fifo_out_ready),       //          .ready
+		.in_data           (ocram_16b_s1_agent_rdata_fifo_src_data),         //        in.data
+		.in_valid          (ocram_16b_s1_agent_rdata_fifo_src_valid),        //          .valid
+		.in_ready          (ocram_16b_s1_agent_rdata_fifo_src_ready),        //          .ready
+		.out_data          (ocram_16b_s1_agent_rdata_fifo_out_data),         //       out.data
+		.out_valid         (ocram_16b_s1_agent_rdata_fifo_out_valid),        //          .valid
+		.out_ready         (ocram_16b_s1_agent_rdata_fifo_out_ready),        //          .ready
 		.csr_address       (2'b00),                                          // (terminated)
 		.csr_read          (1'b0),                                           // (terminated)
 		.csr_write         (1'b0),                                           // (terminated)
@@ -3981,50 +4011,50 @@ module soc_system_mm_interconnect_0 (
 		.USE_READRESPONSE          (0),
 		.USE_WRITERESPONSE         (0),
 		.ECC_ENABLE                (0)
-	) switch_pio_s1_agent (
-		.clk                     (clk_0_clk_clk),                                  //             clk.clk
-		.reset                   (nios2_gen2_0_reset_reset_bridge_in_reset_reset), //       clk_reset.reset
-		.m0_address              (switch_pio_s1_agent_m0_address),                 //              m0.address
-		.m0_burstcount           (switch_pio_s1_agent_m0_burstcount),              //                .burstcount
-		.m0_byteenable           (switch_pio_s1_agent_m0_byteenable),              //                .byteenable
-		.m0_debugaccess          (switch_pio_s1_agent_m0_debugaccess),             //                .debugaccess
-		.m0_lock                 (switch_pio_s1_agent_m0_lock),                    //                .lock
-		.m0_readdata             (switch_pio_s1_agent_m0_readdata),                //                .readdata
-		.m0_readdatavalid        (switch_pio_s1_agent_m0_readdatavalid),           //                .readdatavalid
-		.m0_read                 (switch_pio_s1_agent_m0_read),                    //                .read
-		.m0_waitrequest          (switch_pio_s1_agent_m0_waitrequest),             //                .waitrequest
-		.m0_writedata            (switch_pio_s1_agent_m0_writedata),               //                .writedata
-		.m0_write                (switch_pio_s1_agent_m0_write),                   //                .write
-		.rp_endofpacket          (switch_pio_s1_agent_rp_endofpacket),             //              rp.endofpacket
-		.rp_ready                (switch_pio_s1_agent_rp_ready),                   //                .ready
-		.rp_valid                (switch_pio_s1_agent_rp_valid),                   //                .valid
-		.rp_data                 (switch_pio_s1_agent_rp_data),                    //                .data
-		.rp_startofpacket        (switch_pio_s1_agent_rp_startofpacket),           //                .startofpacket
-		.cp_ready                (cmd_mux_007_src_ready),                          //              cp.ready
-		.cp_valid                (cmd_mux_007_src_valid),                          //                .valid
-		.cp_data                 (cmd_mux_007_src_data),                           //                .data
-		.cp_startofpacket        (cmd_mux_007_src_startofpacket),                  //                .startofpacket
-		.cp_endofpacket          (cmd_mux_007_src_endofpacket),                    //                .endofpacket
-		.cp_channel              (cmd_mux_007_src_channel),                        //                .channel
-		.rf_sink_ready           (switch_pio_s1_agent_rsp_fifo_out_ready),         //         rf_sink.ready
-		.rf_sink_valid           (switch_pio_s1_agent_rsp_fifo_out_valid),         //                .valid
-		.rf_sink_startofpacket   (switch_pio_s1_agent_rsp_fifo_out_startofpacket), //                .startofpacket
-		.rf_sink_endofpacket     (switch_pio_s1_agent_rsp_fifo_out_endofpacket),   //                .endofpacket
-		.rf_sink_data            (switch_pio_s1_agent_rsp_fifo_out_data),          //                .data
-		.rf_source_ready         (switch_pio_s1_agent_rf_source_ready),            //       rf_source.ready
-		.rf_source_valid         (switch_pio_s1_agent_rf_source_valid),            //                .valid
-		.rf_source_startofpacket (switch_pio_s1_agent_rf_source_startofpacket),    //                .startofpacket
-		.rf_source_endofpacket   (switch_pio_s1_agent_rf_source_endofpacket),      //                .endofpacket
-		.rf_source_data          (switch_pio_s1_agent_rf_source_data),             //                .data
-		.rdata_fifo_sink_ready   (avalon_st_adapter_007_out_0_ready),              // rdata_fifo_sink.ready
-		.rdata_fifo_sink_valid   (avalon_st_adapter_007_out_0_valid),              //                .valid
-		.rdata_fifo_sink_data    (avalon_st_adapter_007_out_0_data),               //                .data
-		.rdata_fifo_sink_error   (avalon_st_adapter_007_out_0_error),              //                .error
-		.rdata_fifo_src_ready    (switch_pio_s1_agent_rdata_fifo_src_ready),       //  rdata_fifo_src.ready
-		.rdata_fifo_src_valid    (switch_pio_s1_agent_rdata_fifo_src_valid),       //                .valid
-		.rdata_fifo_src_data     (switch_pio_s1_agent_rdata_fifo_src_data),        //                .data
-		.m0_response             (2'b00),                                          //     (terminated)
-		.m0_writeresponsevalid   (1'b0)                                            //     (terminated)
+	) ocram_64k_s1_agent (
+		.clk                     (clk_0_clk_clk),                                    //             clk.clk
+		.reset                   (nios2_gen2_0_reset_reset_bridge_in_reset_reset),   //       clk_reset.reset
+		.m0_address              (ocram_64k_s1_agent_m0_address),                    //              m0.address
+		.m0_burstcount           (ocram_64k_s1_agent_m0_burstcount),                 //                .burstcount
+		.m0_byteenable           (ocram_64k_s1_agent_m0_byteenable),                 //                .byteenable
+		.m0_debugaccess          (ocram_64k_s1_agent_m0_debugaccess),                //                .debugaccess
+		.m0_lock                 (ocram_64k_s1_agent_m0_lock),                       //                .lock
+		.m0_readdata             (ocram_64k_s1_agent_m0_readdata),                   //                .readdata
+		.m0_readdatavalid        (ocram_64k_s1_agent_m0_readdatavalid),              //                .readdatavalid
+		.m0_read                 (ocram_64k_s1_agent_m0_read),                       //                .read
+		.m0_waitrequest          (ocram_64k_s1_agent_m0_waitrequest),                //                .waitrequest
+		.m0_writedata            (ocram_64k_s1_agent_m0_writedata),                  //                .writedata
+		.m0_write                (ocram_64k_s1_agent_m0_write),                      //                .write
+		.rp_endofpacket          (ocram_64k_s1_agent_rp_endofpacket),                //              rp.endofpacket
+		.rp_ready                (ocram_64k_s1_agent_rp_ready),                      //                .ready
+		.rp_valid                (ocram_64k_s1_agent_rp_valid),                      //                .valid
+		.rp_data                 (ocram_64k_s1_agent_rp_data),                       //                .data
+		.rp_startofpacket        (ocram_64k_s1_agent_rp_startofpacket),              //                .startofpacket
+		.cp_ready                (ocram_64k_s1_burst_adapter_source0_ready),         //              cp.ready
+		.cp_valid                (ocram_64k_s1_burst_adapter_source0_valid),         //                .valid
+		.cp_data                 (ocram_64k_s1_burst_adapter_source0_data),          //                .data
+		.cp_startofpacket        (ocram_64k_s1_burst_adapter_source0_startofpacket), //                .startofpacket
+		.cp_endofpacket          (ocram_64k_s1_burst_adapter_source0_endofpacket),   //                .endofpacket
+		.cp_channel              (ocram_64k_s1_burst_adapter_source0_channel),       //                .channel
+		.rf_sink_ready           (ocram_64k_s1_agent_rsp_fifo_out_ready),            //         rf_sink.ready
+		.rf_sink_valid           (ocram_64k_s1_agent_rsp_fifo_out_valid),            //                .valid
+		.rf_sink_startofpacket   (ocram_64k_s1_agent_rsp_fifo_out_startofpacket),    //                .startofpacket
+		.rf_sink_endofpacket     (ocram_64k_s1_agent_rsp_fifo_out_endofpacket),      //                .endofpacket
+		.rf_sink_data            (ocram_64k_s1_agent_rsp_fifo_out_data),             //                .data
+		.rf_source_ready         (ocram_64k_s1_agent_rf_source_ready),               //       rf_source.ready
+		.rf_source_valid         (ocram_64k_s1_agent_rf_source_valid),               //                .valid
+		.rf_source_startofpacket (ocram_64k_s1_agent_rf_source_startofpacket),       //                .startofpacket
+		.rf_source_endofpacket   (ocram_64k_s1_agent_rf_source_endofpacket),         //                .endofpacket
+		.rf_source_data          (ocram_64k_s1_agent_rf_source_data),                //                .data
+		.rdata_fifo_sink_ready   (avalon_st_adapter_007_out_0_ready),                // rdata_fifo_sink.ready
+		.rdata_fifo_sink_valid   (avalon_st_adapter_007_out_0_valid),                //                .valid
+		.rdata_fifo_sink_data    (avalon_st_adapter_007_out_0_data),                 //                .data
+		.rdata_fifo_sink_error   (avalon_st_adapter_007_out_0_error),                //                .error
+		.rdata_fifo_src_ready    (ocram_64k_s1_agent_rdata_fifo_src_ready),          //  rdata_fifo_src.ready
+		.rdata_fifo_src_valid    (ocram_64k_s1_agent_rdata_fifo_src_valid),          //                .valid
+		.rdata_fifo_src_data     (ocram_64k_s1_agent_rdata_fifo_src_data),           //                .data
+		.m0_response             (2'b00),                                            //     (terminated)
+		.m0_writeresponsevalid   (1'b0)                                              //     (terminated)
 	);
 
 	altera_avalon_sc_fifo #(
@@ -4040,19 +4070,19 @@ module soc_system_mm_interconnect_0 (
 		.USE_STORE_FORWARD   (0),
 		.USE_ALMOST_FULL_IF  (0),
 		.USE_ALMOST_EMPTY_IF (0)
-	) switch_pio_s1_agent_rsp_fifo (
+	) ocram_64k_s1_agent_rsp_fifo (
 		.clk               (clk_0_clk_clk),                                  //       clk.clk
 		.reset             (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.in_data           (switch_pio_s1_agent_rf_source_data),             //        in.data
-		.in_valid          (switch_pio_s1_agent_rf_source_valid),            //          .valid
-		.in_ready          (switch_pio_s1_agent_rf_source_ready),            //          .ready
-		.in_startofpacket  (switch_pio_s1_agent_rf_source_startofpacket),    //          .startofpacket
-		.in_endofpacket    (switch_pio_s1_agent_rf_source_endofpacket),      //          .endofpacket
-		.out_data          (switch_pio_s1_agent_rsp_fifo_out_data),          //       out.data
-		.out_valid         (switch_pio_s1_agent_rsp_fifo_out_valid),         //          .valid
-		.out_ready         (switch_pio_s1_agent_rsp_fifo_out_ready),         //          .ready
-		.out_startofpacket (switch_pio_s1_agent_rsp_fifo_out_startofpacket), //          .startofpacket
-		.out_endofpacket   (switch_pio_s1_agent_rsp_fifo_out_endofpacket),   //          .endofpacket
+		.in_data           (ocram_64k_s1_agent_rf_source_data),              //        in.data
+		.in_valid          (ocram_64k_s1_agent_rf_source_valid),             //          .valid
+		.in_ready          (ocram_64k_s1_agent_rf_source_ready),             //          .ready
+		.in_startofpacket  (ocram_64k_s1_agent_rf_source_startofpacket),     //          .startofpacket
+		.in_endofpacket    (ocram_64k_s1_agent_rf_source_endofpacket),       //          .endofpacket
+		.out_data          (ocram_64k_s1_agent_rsp_fifo_out_data),           //       out.data
+		.out_valid         (ocram_64k_s1_agent_rsp_fifo_out_valid),          //          .valid
+		.out_ready         (ocram_64k_s1_agent_rsp_fifo_out_ready),          //          .ready
+		.out_startofpacket (ocram_64k_s1_agent_rsp_fifo_out_startofpacket),  //          .startofpacket
+		.out_endofpacket   (ocram_64k_s1_agent_rsp_fifo_out_endofpacket),    //          .endofpacket
 		.csr_address       (2'b00),                                          // (terminated)
 		.csr_read          (1'b0),                                           // (terminated)
 		.csr_write         (1'b0),                                           // (terminated)
@@ -4081,15 +4111,15 @@ module soc_system_mm_interconnect_0 (
 		.USE_STORE_FORWARD   (0),
 		.USE_ALMOST_FULL_IF  (0),
 		.USE_ALMOST_EMPTY_IF (0)
-	) switch_pio_s1_agent_rdata_fifo (
+	) ocram_64k_s1_agent_rdata_fifo (
 		.clk               (clk_0_clk_clk),                                  //       clk.clk
 		.reset             (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.in_data           (switch_pio_s1_agent_rdata_fifo_src_data),        //        in.data
-		.in_valid          (switch_pio_s1_agent_rdata_fifo_src_valid),       //          .valid
-		.in_ready          (switch_pio_s1_agent_rdata_fifo_src_ready),       //          .ready
-		.out_data          (switch_pio_s1_agent_rdata_fifo_out_data),        //       out.data
-		.out_valid         (switch_pio_s1_agent_rdata_fifo_out_valid),       //          .valid
-		.out_ready         (switch_pio_s1_agent_rdata_fifo_out_ready),       //          .ready
+		.in_data           (ocram_64k_s1_agent_rdata_fifo_src_data),         //        in.data
+		.in_valid          (ocram_64k_s1_agent_rdata_fifo_src_valid),        //          .valid
+		.in_ready          (ocram_64k_s1_agent_rdata_fifo_src_ready),        //          .ready
+		.out_data          (ocram_64k_s1_agent_rdata_fifo_out_data),         //       out.data
+		.out_valid         (ocram_64k_s1_agent_rdata_fifo_out_valid),        //          .valid
+		.out_ready         (ocram_64k_s1_agent_rdata_fifo_out_ready),        //          .ready
 		.csr_address       (2'b00),                                          // (terminated)
 		.csr_read          (1'b0),                                           // (terminated)
 		.csr_write         (1'b0),                                           // (terminated)
@@ -4110,38 +4140,38 @@ module soc_system_mm_interconnect_0 (
 	);
 
 	soc_system_mm_interconnect_0_router router (
-		.sink_ready         (vexriscvaxi4_0_dbusaxi_agent_write_cp_ready),         //      sink.ready
-		.sink_valid         (vexriscvaxi4_0_dbusaxi_agent_write_cp_valid),         //          .valid
-		.sink_data          (vexriscvaxi4_0_dbusaxi_agent_write_cp_data),          //          .data
-		.sink_startofpacket (vexriscvaxi4_0_dbusaxi_agent_write_cp_startofpacket), //          .startofpacket
-		.sink_endofpacket   (vexriscvaxi4_0_dbusaxi_agent_write_cp_endofpacket),   //          .endofpacket
-		.clk                (clk_0_clk_clk),                                       //       clk.clk
-		.reset              (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset),    // clk_reset.reset
-		.src_ready          (router_src_ready),                                    //       src.ready
-		.src_valid          (router_src_valid),                                    //          .valid
-		.src_data           (router_src_data),                                     //          .data
-		.src_channel        (router_src_channel),                                  //          .channel
-		.src_startofpacket  (router_src_startofpacket),                            //          .startofpacket
-		.src_endofpacket    (router_src_endofpacket)                               //          .endofpacket
+		.sink_ready         (vexriscv_0_dbusaxi_agent_write_cp_ready),         //      sink.ready
+		.sink_valid         (vexriscv_0_dbusaxi_agent_write_cp_valid),         //          .valid
+		.sink_data          (vexriscv_0_dbusaxi_agent_write_cp_data),          //          .data
+		.sink_startofpacket (vexriscv_0_dbusaxi_agent_write_cp_startofpacket), //          .startofpacket
+		.sink_endofpacket   (vexriscv_0_dbusaxi_agent_write_cp_endofpacket),   //          .endofpacket
+		.clk                (clk_0_clk_clk),                                   //       clk.clk
+		.reset              (VexRiscv_0_reset_reset_bridge_in_reset_reset),    // clk_reset.reset
+		.src_ready          (router_src_ready),                                //       src.ready
+		.src_valid          (router_src_valid),                                //          .valid
+		.src_data           (router_src_data),                                 //          .data
+		.src_channel        (router_src_channel),                              //          .channel
+		.src_startofpacket  (router_src_startofpacket),                        //          .startofpacket
+		.src_endofpacket    (router_src_endofpacket)                           //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_router router_001 (
-		.sink_ready         (vexriscvaxi4_0_dbusaxi_agent_read_cp_ready),         //      sink.ready
-		.sink_valid         (vexriscvaxi4_0_dbusaxi_agent_read_cp_valid),         //          .valid
-		.sink_data          (vexriscvaxi4_0_dbusaxi_agent_read_cp_data),          //          .data
-		.sink_startofpacket (vexriscvaxi4_0_dbusaxi_agent_read_cp_startofpacket), //          .startofpacket
-		.sink_endofpacket   (vexriscvaxi4_0_dbusaxi_agent_read_cp_endofpacket),   //          .endofpacket
-		.clk                (clk_0_clk_clk),                                      //       clk.clk
-		.reset              (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset),   // clk_reset.reset
-		.src_ready          (router_001_src_ready),                               //       src.ready
-		.src_valid          (router_001_src_valid),                               //          .valid
-		.src_data           (router_001_src_data),                                //          .data
-		.src_channel        (router_001_src_channel),                             //          .channel
-		.src_startofpacket  (router_001_src_startofpacket),                       //          .startofpacket
-		.src_endofpacket    (router_001_src_endofpacket)                          //          .endofpacket
+		.sink_ready         (vexriscv_0_dbusaxi_agent_read_cp_ready),         //      sink.ready
+		.sink_valid         (vexriscv_0_dbusaxi_agent_read_cp_valid),         //          .valid
+		.sink_data          (vexriscv_0_dbusaxi_agent_read_cp_data),          //          .data
+		.sink_startofpacket (vexriscv_0_dbusaxi_agent_read_cp_startofpacket), //          .startofpacket
+		.sink_endofpacket   (vexriscv_0_dbusaxi_agent_read_cp_endofpacket),   //          .endofpacket
+		.clk                (clk_0_clk_clk),                                  //       clk.clk
+		.reset              (VexRiscv_0_reset_reset_bridge_in_reset_reset),   // clk_reset.reset
+		.src_ready          (router_001_src_ready),                           //       src.ready
+		.src_valid          (router_001_src_valid),                           //          .valid
+		.src_data           (router_001_src_data),                            //          .data
+		.src_channel        (router_001_src_channel),                         //          .channel
+		.src_startofpacket  (router_001_src_startofpacket),                   //          .startofpacket
+		.src_endofpacket    (router_001_src_endofpacket)                      //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_router_002 router_002 (
+	soc_system_mm_interconnect_0_router router_002 (
 		.sink_ready         (nios2_gen2_0_data_master_agent_cp_ready),         //      sink.ready
 		.sink_valid         (nios2_gen2_0_data_master_agent_cp_valid),         //          .valid
 		.sink_data          (nios2_gen2_0_data_master_agent_cp_data),          //          .data
@@ -4157,7 +4187,7 @@ module soc_system_mm_interconnect_0 (
 		.src_endofpacket    (router_002_src_endofpacket)                       //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_router_002 router_003 (
+	soc_system_mm_interconnect_0_router router_003 (
 		.sink_ready         (master_0_master_agent_cp_ready),                 //      sink.ready
 		.sink_valid         (master_0_master_agent_cp_valid),                 //          .valid
 		.sink_data          (master_0_master_agent_cp_data),                  //          .data
@@ -4174,35 +4204,35 @@ module soc_system_mm_interconnect_0 (
 	);
 
 	soc_system_mm_interconnect_0_router_004 router_004 (
-		.sink_ready         (vexriscvaxi4_0_ibusaxi_agent_write_cp_ready),         //      sink.ready
-		.sink_valid         (vexriscvaxi4_0_ibusaxi_agent_write_cp_valid),         //          .valid
-		.sink_data          (vexriscvaxi4_0_ibusaxi_agent_write_cp_data),          //          .data
-		.sink_startofpacket (vexriscvaxi4_0_ibusaxi_agent_write_cp_startofpacket), //          .startofpacket
-		.sink_endofpacket   (vexriscvaxi4_0_ibusaxi_agent_write_cp_endofpacket),   //          .endofpacket
-		.clk                (clk_0_clk_clk),                                       //       clk.clk
-		.reset              (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset),    // clk_reset.reset
-		.src_ready          (router_004_src_ready),                                //       src.ready
-		.src_valid          (router_004_src_valid),                                //          .valid
-		.src_data           (router_004_src_data),                                 //          .data
-		.src_channel        (router_004_src_channel),                              //          .channel
-		.src_startofpacket  (router_004_src_startofpacket),                        //          .startofpacket
-		.src_endofpacket    (router_004_src_endofpacket)                           //          .endofpacket
+		.sink_ready         (vexriscv_0_ibusaxi_agent_write_cp_ready),         //      sink.ready
+		.sink_valid         (vexriscv_0_ibusaxi_agent_write_cp_valid),         //          .valid
+		.sink_data          (vexriscv_0_ibusaxi_agent_write_cp_data),          //          .data
+		.sink_startofpacket (vexriscv_0_ibusaxi_agent_write_cp_startofpacket), //          .startofpacket
+		.sink_endofpacket   (vexriscv_0_ibusaxi_agent_write_cp_endofpacket),   //          .endofpacket
+		.clk                (clk_0_clk_clk),                                   //       clk.clk
+		.reset              (VexRiscv_0_reset_reset_bridge_in_reset_reset),    // clk_reset.reset
+		.src_ready          (router_004_src_ready),                            //       src.ready
+		.src_valid          (router_004_src_valid),                            //          .valid
+		.src_data           (router_004_src_data),                             //          .data
+		.src_channel        (router_004_src_channel),                          //          .channel
+		.src_startofpacket  (router_004_src_startofpacket),                    //          .startofpacket
+		.src_endofpacket    (router_004_src_endofpacket)                       //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_router_004 router_005 (
-		.sink_ready         (vexriscvaxi4_0_ibusaxi_agent_read_cp_ready),         //      sink.ready
-		.sink_valid         (vexriscvaxi4_0_ibusaxi_agent_read_cp_valid),         //          .valid
-		.sink_data          (vexriscvaxi4_0_ibusaxi_agent_read_cp_data),          //          .data
-		.sink_startofpacket (vexriscvaxi4_0_ibusaxi_agent_read_cp_startofpacket), //          .startofpacket
-		.sink_endofpacket   (vexriscvaxi4_0_ibusaxi_agent_read_cp_endofpacket),   //          .endofpacket
-		.clk                (clk_0_clk_clk),                                      //       clk.clk
-		.reset              (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset),   // clk_reset.reset
-		.src_ready          (router_005_src_ready),                               //       src.ready
-		.src_valid          (router_005_src_valid),                               //          .valid
-		.src_data           (router_005_src_data),                                //          .data
-		.src_channel        (router_005_src_channel),                             //          .channel
-		.src_startofpacket  (router_005_src_startofpacket),                       //          .startofpacket
-		.src_endofpacket    (router_005_src_endofpacket)                          //          .endofpacket
+		.sink_ready         (vexriscv_0_ibusaxi_agent_read_cp_ready),         //      sink.ready
+		.sink_valid         (vexriscv_0_ibusaxi_agent_read_cp_valid),         //          .valid
+		.sink_data          (vexriscv_0_ibusaxi_agent_read_cp_data),          //          .data
+		.sink_startofpacket (vexriscv_0_ibusaxi_agent_read_cp_startofpacket), //          .startofpacket
+		.sink_endofpacket   (vexriscv_0_ibusaxi_agent_read_cp_endofpacket),   //          .endofpacket
+		.clk                (clk_0_clk_clk),                                  //       clk.clk
+		.reset              (VexRiscv_0_reset_reset_bridge_in_reset_reset),   // clk_reset.reset
+		.src_ready          (router_005_src_ready),                           //       src.ready
+		.src_valid          (router_005_src_valid),                           //          .valid
+		.src_data           (router_005_src_data),                            //          .data
+		.src_channel        (router_005_src_channel),                         //          .channel
+		.src_startofpacket  (router_005_src_startofpacket),                   //          .startofpacket
+		.src_endofpacket    (router_005_src_endofpacket)                      //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_router_006 router_006 (
@@ -4269,12 +4299,12 @@ module soc_system_mm_interconnect_0 (
 		.src_endofpacket    (router_009_src_endofpacket)                           //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_router_010 router_010 (
-		.sink_ready         (ocram_64k_s1_agent_rp_ready),                    //      sink.ready
-		.sink_valid         (ocram_64k_s1_agent_rp_valid),                    //          .valid
-		.sink_data          (ocram_64k_s1_agent_rp_data),                     //          .data
-		.sink_startofpacket (ocram_64k_s1_agent_rp_startofpacket),            //          .startofpacket
-		.sink_endofpacket   (ocram_64k_s1_agent_rp_endofpacket),              //          .endofpacket
+	soc_system_mm_interconnect_0_router_007 router_010 (
+		.sink_ready         (switch_pio_s1_agent_rp_ready),                   //      sink.ready
+		.sink_valid         (switch_pio_s1_agent_rp_valid),                   //          .valid
+		.sink_data          (switch_pio_s1_agent_rp_data),                    //          .data
+		.sink_startofpacket (switch_pio_s1_agent_rp_startofpacket),           //          .startofpacket
+		.sink_endofpacket   (switch_pio_s1_agent_rp_endofpacket),             //          .endofpacket
 		.clk                (clk_0_clk_clk),                                  //       clk.clk
 		.reset              (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready          (router_010_src_ready),                           //       src.ready
@@ -4285,12 +4315,12 @@ module soc_system_mm_interconnect_0 (
 		.src_endofpacket    (router_010_src_endofpacket)                      //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_router_010 router_011 (
-		.sink_ready         (ocram_16b_s1_agent_rp_ready),                    //      sink.ready
-		.sink_valid         (ocram_16b_s1_agent_rp_valid),                    //          .valid
-		.sink_data          (ocram_16b_s1_agent_rp_data),                     //          .data
-		.sink_startofpacket (ocram_16b_s1_agent_rp_startofpacket),            //          .startofpacket
-		.sink_endofpacket   (ocram_16b_s1_agent_rp_endofpacket),              //          .endofpacket
+	soc_system_mm_interconnect_0_router_007 router_011 (
+		.sink_ready         (button_pio_s1_agent_rp_ready),                   //      sink.ready
+		.sink_valid         (button_pio_s1_agent_rp_valid),                   //          .valid
+		.sink_data          (button_pio_s1_agent_rp_data),                    //          .data
+		.sink_startofpacket (button_pio_s1_agent_rp_startofpacket),           //          .startofpacket
+		.sink_endofpacket   (button_pio_s1_agent_rp_endofpacket),             //          .endofpacket
 		.clk                (clk_0_clk_clk),                                  //       clk.clk
 		.reset              (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready          (router_011_src_ready),                           //       src.ready
@@ -4317,12 +4347,12 @@ module soc_system_mm_interconnect_0 (
 		.src_endofpacket    (router_012_src_endofpacket)                      //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_router_007 router_013 (
-		.sink_ready         (button_pio_s1_agent_rp_ready),                   //      sink.ready
-		.sink_valid         (button_pio_s1_agent_rp_valid),                   //          .valid
-		.sink_data          (button_pio_s1_agent_rp_data),                    //          .data
-		.sink_startofpacket (button_pio_s1_agent_rp_startofpacket),           //          .startofpacket
-		.sink_endofpacket   (button_pio_s1_agent_rp_endofpacket),             //          .endofpacket
+	soc_system_mm_interconnect_0_router_013 router_013 (
+		.sink_ready         (ocram_16b_s1_agent_rp_ready),                    //      sink.ready
+		.sink_valid         (ocram_16b_s1_agent_rp_valid),                    //          .valid
+		.sink_data          (ocram_16b_s1_agent_rp_data),                     //          .data
+		.sink_startofpacket (ocram_16b_s1_agent_rp_startofpacket),            //          .startofpacket
+		.sink_endofpacket   (ocram_16b_s1_agent_rp_endofpacket),              //          .endofpacket
 		.clk                (clk_0_clk_clk),                                  //       clk.clk
 		.reset              (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready          (router_013_src_ready),                           //       src.ready
@@ -4333,12 +4363,12 @@ module soc_system_mm_interconnect_0 (
 		.src_endofpacket    (router_013_src_endofpacket)                      //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_router_014 router_014 (
-		.sink_ready         (switch_pio_s1_agent_rp_ready),                   //      sink.ready
-		.sink_valid         (switch_pio_s1_agent_rp_valid),                   //          .valid
-		.sink_data          (switch_pio_s1_agent_rp_data),                    //          .data
-		.sink_startofpacket (switch_pio_s1_agent_rp_startofpacket),           //          .startofpacket
-		.sink_endofpacket   (switch_pio_s1_agent_rp_endofpacket),             //          .endofpacket
+	soc_system_mm_interconnect_0_router_013 router_014 (
+		.sink_ready         (ocram_64k_s1_agent_rp_ready),                    //      sink.ready
+		.sink_valid         (ocram_64k_s1_agent_rp_valid),                    //          .valid
+		.sink_data          (ocram_64k_s1_agent_rp_data),                     //          .data
+		.sink_startofpacket (ocram_64k_s1_agent_rp_startofpacket),            //          .startofpacket
+		.sink_endofpacket   (ocram_64k_s1_agent_rp_endofpacket),              //          .endofpacket
 		.clk                (clk_0_clk_clk),                                  //       clk.clk
 		.reset              (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready          (router_014_src_ready),                           //       src.ready
@@ -4582,21 +4612,21 @@ module soc_system_mm_interconnect_0 (
 		.BURSTWRAP_CONST_MASK      (0),
 		.BURSTWRAP_CONST_VALUE     (0),
 		.ADAPTER_VERSION           ("13.1")
-	) ocram_64k_s1_burst_adapter (
-		.clk                   (clk_0_clk_clk),                                    //       cr0.clk
-		.reset                 (nios2_gen2_0_reset_reset_bridge_in_reset_reset),   // cr0_reset.reset
-		.sink0_valid           (cmd_mux_003_src_valid),                            //     sink0.valid
-		.sink0_data            (cmd_mux_003_src_data),                             //          .data
-		.sink0_channel         (cmd_mux_003_src_channel),                          //          .channel
-		.sink0_startofpacket   (cmd_mux_003_src_startofpacket),                    //          .startofpacket
-		.sink0_endofpacket     (cmd_mux_003_src_endofpacket),                      //          .endofpacket
-		.sink0_ready           (cmd_mux_003_src_ready),                            //          .ready
-		.source0_valid         (ocram_64k_s1_burst_adapter_source0_valid),         //   source0.valid
-		.source0_data          (ocram_64k_s1_burst_adapter_source0_data),          //          .data
-		.source0_channel       (ocram_64k_s1_burst_adapter_source0_channel),       //          .channel
-		.source0_startofpacket (ocram_64k_s1_burst_adapter_source0_startofpacket), //          .startofpacket
-		.source0_endofpacket   (ocram_64k_s1_burst_adapter_source0_endofpacket),   //          .endofpacket
-		.source0_ready         (ocram_64k_s1_burst_adapter_source0_ready)          //          .ready
+	) switch_pio_s1_burst_adapter (
+		.clk                   (clk_0_clk_clk),                                     //       cr0.clk
+		.reset                 (nios2_gen2_0_reset_reset_bridge_in_reset_reset),    // cr0_reset.reset
+		.sink0_valid           (cmd_mux_003_src_valid),                             //     sink0.valid
+		.sink0_data            (cmd_mux_003_src_data),                              //          .data
+		.sink0_channel         (cmd_mux_003_src_channel),                           //          .channel
+		.sink0_startofpacket   (cmd_mux_003_src_startofpacket),                     //          .startofpacket
+		.sink0_endofpacket     (cmd_mux_003_src_endofpacket),                       //          .endofpacket
+		.sink0_ready           (cmd_mux_003_src_ready),                             //          .ready
+		.source0_valid         (switch_pio_s1_burst_adapter_source0_valid),         //   source0.valid
+		.source0_data          (switch_pio_s1_burst_adapter_source0_data),          //          .data
+		.source0_channel       (switch_pio_s1_burst_adapter_source0_channel),       //          .channel
+		.source0_startofpacket (switch_pio_s1_burst_adapter_source0_startofpacket), //          .startofpacket
+		.source0_endofpacket   (switch_pio_s1_burst_adapter_source0_endofpacket),   //          .endofpacket
+		.source0_ready         (switch_pio_s1_burst_adapter_source0_ready)          //          .ready
 	);
 
 	altera_merlin_burst_adapter #(
@@ -4632,21 +4662,21 @@ module soc_system_mm_interconnect_0 (
 		.BURSTWRAP_CONST_MASK      (0),
 		.BURSTWRAP_CONST_VALUE     (0),
 		.ADAPTER_VERSION           ("13.1")
-	) ocram_16b_s1_burst_adapter (
-		.clk                   (clk_0_clk_clk),                                    //       cr0.clk
-		.reset                 (nios2_gen2_0_reset_reset_bridge_in_reset_reset),   // cr0_reset.reset
-		.sink0_valid           (cmd_mux_004_src_valid),                            //     sink0.valid
-		.sink0_data            (cmd_mux_004_src_data),                             //          .data
-		.sink0_channel         (cmd_mux_004_src_channel),                          //          .channel
-		.sink0_startofpacket   (cmd_mux_004_src_startofpacket),                    //          .startofpacket
-		.sink0_endofpacket     (cmd_mux_004_src_endofpacket),                      //          .endofpacket
-		.sink0_ready           (cmd_mux_004_src_ready),                            //          .ready
-		.source0_valid         (ocram_16b_s1_burst_adapter_source0_valid),         //   source0.valid
-		.source0_data          (ocram_16b_s1_burst_adapter_source0_data),          //          .data
-		.source0_channel       (ocram_16b_s1_burst_adapter_source0_channel),       //          .channel
-		.source0_startofpacket (ocram_16b_s1_burst_adapter_source0_startofpacket), //          .startofpacket
-		.source0_endofpacket   (ocram_16b_s1_burst_adapter_source0_endofpacket),   //          .endofpacket
-		.source0_ready         (ocram_16b_s1_burst_adapter_source0_ready)          //          .ready
+	) button_pio_s1_burst_adapter (
+		.clk                   (clk_0_clk_clk),                                     //       cr0.clk
+		.reset                 (nios2_gen2_0_reset_reset_bridge_in_reset_reset),    // cr0_reset.reset
+		.sink0_valid           (cmd_mux_004_src_valid),                             //     sink0.valid
+		.sink0_data            (cmd_mux_004_src_data),                              //          .data
+		.sink0_channel         (cmd_mux_004_src_channel),                           //          .channel
+		.sink0_startofpacket   (cmd_mux_004_src_startofpacket),                     //          .startofpacket
+		.sink0_endofpacket     (cmd_mux_004_src_endofpacket),                       //          .endofpacket
+		.sink0_ready           (cmd_mux_004_src_ready),                             //          .ready
+		.source0_valid         (button_pio_s1_burst_adapter_source0_valid),         //   source0.valid
+		.source0_data          (button_pio_s1_burst_adapter_source0_data),          //          .data
+		.source0_channel       (button_pio_s1_burst_adapter_source0_channel),       //          .channel
+		.source0_startofpacket (button_pio_s1_burst_adapter_source0_startofpacket), //          .startofpacket
+		.source0_endofpacket   (button_pio_s1_burst_adapter_source0_endofpacket),   //          .endofpacket
+		.source0_ready         (button_pio_s1_burst_adapter_source0_ready)          //          .ready
 	);
 
 	altera_merlin_burst_adapter #(
@@ -4732,130 +4762,192 @@ module soc_system_mm_interconnect_0 (
 		.BURSTWRAP_CONST_MASK      (0),
 		.BURSTWRAP_CONST_VALUE     (0),
 		.ADAPTER_VERSION           ("13.1")
-	) button_pio_s1_burst_adapter (
-		.clk                   (clk_0_clk_clk),                                     //       cr0.clk
-		.reset                 (nios2_gen2_0_reset_reset_bridge_in_reset_reset),    // cr0_reset.reset
-		.sink0_valid           (cmd_mux_006_src_valid),                             //     sink0.valid
-		.sink0_data            (cmd_mux_006_src_data),                              //          .data
-		.sink0_channel         (cmd_mux_006_src_channel),                           //          .channel
-		.sink0_startofpacket   (cmd_mux_006_src_startofpacket),                     //          .startofpacket
-		.sink0_endofpacket     (cmd_mux_006_src_endofpacket),                       //          .endofpacket
-		.sink0_ready           (cmd_mux_006_src_ready),                             //          .ready
-		.source0_valid         (button_pio_s1_burst_adapter_source0_valid),         //   source0.valid
-		.source0_data          (button_pio_s1_burst_adapter_source0_data),          //          .data
-		.source0_channel       (button_pio_s1_burst_adapter_source0_channel),       //          .channel
-		.source0_startofpacket (button_pio_s1_burst_adapter_source0_startofpacket), //          .startofpacket
-		.source0_endofpacket   (button_pio_s1_burst_adapter_source0_endofpacket),   //          .endofpacket
-		.source0_ready         (button_pio_s1_burst_adapter_source0_ready)          //          .ready
+	) ocram_16b_s1_burst_adapter (
+		.clk                   (clk_0_clk_clk),                                    //       cr0.clk
+		.reset                 (nios2_gen2_0_reset_reset_bridge_in_reset_reset),   // cr0_reset.reset
+		.sink0_valid           (cmd_mux_006_src_valid),                            //     sink0.valid
+		.sink0_data            (cmd_mux_006_src_data),                             //          .data
+		.sink0_channel         (cmd_mux_006_src_channel),                          //          .channel
+		.sink0_startofpacket   (cmd_mux_006_src_startofpacket),                    //          .startofpacket
+		.sink0_endofpacket     (cmd_mux_006_src_endofpacket),                      //          .endofpacket
+		.sink0_ready           (cmd_mux_006_src_ready),                            //          .ready
+		.source0_valid         (ocram_16b_s1_burst_adapter_source0_valid),         //   source0.valid
+		.source0_data          (ocram_16b_s1_burst_adapter_source0_data),          //          .data
+		.source0_channel       (ocram_16b_s1_burst_adapter_source0_channel),       //          .channel
+		.source0_startofpacket (ocram_16b_s1_burst_adapter_source0_startofpacket), //          .startofpacket
+		.source0_endofpacket   (ocram_16b_s1_burst_adapter_source0_endofpacket),   //          .endofpacket
+		.source0_ready         (ocram_16b_s1_burst_adapter_source0_ready)          //          .ready
+	);
+
+	altera_merlin_burst_adapter #(
+		.PKT_ADDR_H                (67),
+		.PKT_ADDR_L                (36),
+		.PKT_BEGIN_BURST           (99),
+		.PKT_BYTE_CNT_H            (84),
+		.PKT_BYTE_CNT_L            (74),
+		.PKT_BYTEEN_H              (35),
+		.PKT_BYTEEN_L              (32),
+		.PKT_BURST_SIZE_H          (94),
+		.PKT_BURST_SIZE_L          (92),
+		.PKT_BURST_TYPE_H          (96),
+		.PKT_BURST_TYPE_L          (95),
+		.PKT_BURSTWRAP_H           (91),
+		.PKT_BURSTWRAP_L           (85),
+		.PKT_TRANS_COMPRESSED_READ (68),
+		.PKT_TRANS_WRITE           (70),
+		.PKT_TRANS_READ            (71),
+		.OUT_NARROW_SIZE           (0),
+		.IN_NARROW_SIZE            (1),
+		.OUT_FIXED                 (0),
+		.OUT_COMPLETE_WRAP         (0),
+		.ST_DATA_W                 (123),
+		.ST_CHANNEL_W              (8),
+		.OUT_BYTE_CNT_H            (76),
+		.OUT_BURSTWRAP_H           (91),
+		.COMPRESSED_READ_SUPPORT   (1),
+		.BYTEENABLE_SYNTHESIS      (1),
+		.PIPE_INPUTS               (0),
+		.NO_WRAP_SUPPORT           (0),
+		.INCOMPLETE_WRAP_SUPPORT   (0),
+		.BURSTWRAP_CONST_MASK      (0),
+		.BURSTWRAP_CONST_VALUE     (0),
+		.ADAPTER_VERSION           ("13.1")
+	) ocram_64k_s1_burst_adapter (
+		.clk                   (clk_0_clk_clk),                                    //       cr0.clk
+		.reset                 (nios2_gen2_0_reset_reset_bridge_in_reset_reset),   // cr0_reset.reset
+		.sink0_valid           (cmd_mux_007_src_valid),                            //     sink0.valid
+		.sink0_data            (cmd_mux_007_src_data),                             //          .data
+		.sink0_channel         (cmd_mux_007_src_channel),                          //          .channel
+		.sink0_startofpacket   (cmd_mux_007_src_startofpacket),                    //          .startofpacket
+		.sink0_endofpacket     (cmd_mux_007_src_endofpacket),                      //          .endofpacket
+		.sink0_ready           (cmd_mux_007_src_ready),                            //          .ready
+		.source0_valid         (ocram_64k_s1_burst_adapter_source0_valid),         //   source0.valid
+		.source0_data          (ocram_64k_s1_burst_adapter_source0_data),          //          .data
+		.source0_channel       (ocram_64k_s1_burst_adapter_source0_channel),       //          .channel
+		.source0_startofpacket (ocram_64k_s1_burst_adapter_source0_startofpacket), //          .startofpacket
+		.source0_endofpacket   (ocram_64k_s1_burst_adapter_source0_endofpacket),   //          .endofpacket
+		.source0_ready         (ocram_64k_s1_burst_adapter_source0_ready)          //          .ready
 	);
 
 	soc_system_mm_interconnect_0_cmd_demux cmd_demux (
-		.clk                (clk_0_clk_clk),                                    //       clk.clk
-		.reset              (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.sink_ready         (router_src_ready),                                 //      sink.ready
-		.sink_channel       (router_src_channel),                               //          .channel
-		.sink_data          (router_src_data),                                  //          .data
-		.sink_startofpacket (router_src_startofpacket),                         //          .startofpacket
-		.sink_endofpacket   (router_src_endofpacket),                           //          .endofpacket
-		.sink_valid         (router_src_valid),                                 //          .valid
-		.src0_ready         (cmd_demux_src0_ready),                             //      src0.ready
-		.src0_valid         (cmd_demux_src0_valid),                             //          .valid
-		.src0_data          (cmd_demux_src0_data),                              //          .data
-		.src0_channel       (cmd_demux_src0_channel),                           //          .channel
-		.src0_startofpacket (cmd_demux_src0_startofpacket),                     //          .startofpacket
-		.src0_endofpacket   (cmd_demux_src0_endofpacket),                       //          .endofpacket
-		.src1_ready         (cmd_demux_src1_ready),                             //      src1.ready
-		.src1_valid         (cmd_demux_src1_valid),                             //          .valid
-		.src1_data          (cmd_demux_src1_data),                              //          .data
-		.src1_channel       (cmd_demux_src1_channel),                           //          .channel
-		.src1_startofpacket (cmd_demux_src1_startofpacket),                     //          .startofpacket
-		.src1_endofpacket   (cmd_demux_src1_endofpacket),                       //          .endofpacket
-		.src2_ready         (cmd_demux_src2_ready),                             //      src2.ready
-		.src2_valid         (cmd_demux_src2_valid),                             //          .valid
-		.src2_data          (cmd_demux_src2_data),                              //          .data
-		.src2_channel       (cmd_demux_src2_channel),                           //          .channel
-		.src2_startofpacket (cmd_demux_src2_startofpacket),                     //          .startofpacket
-		.src2_endofpacket   (cmd_demux_src2_endofpacket),                       //          .endofpacket
-		.src3_ready         (cmd_demux_src3_ready),                             //      src3.ready
-		.src3_valid         (cmd_demux_src3_valid),                             //          .valid
-		.src3_data          (cmd_demux_src3_data),                              //          .data
-		.src3_channel       (cmd_demux_src3_channel),                           //          .channel
-		.src3_startofpacket (cmd_demux_src3_startofpacket),                     //          .startofpacket
-		.src3_endofpacket   (cmd_demux_src3_endofpacket),                       //          .endofpacket
-		.src4_ready         (cmd_demux_src4_ready),                             //      src4.ready
-		.src4_valid         (cmd_demux_src4_valid),                             //          .valid
-		.src4_data          (cmd_demux_src4_data),                              //          .data
-		.src4_channel       (cmd_demux_src4_channel),                           //          .channel
-		.src4_startofpacket (cmd_demux_src4_startofpacket),                     //          .startofpacket
-		.src4_endofpacket   (cmd_demux_src4_endofpacket),                       //          .endofpacket
-		.src5_ready         (cmd_demux_src5_ready),                             //      src5.ready
-		.src5_valid         (cmd_demux_src5_valid),                             //          .valid
-		.src5_data          (cmd_demux_src5_data),                              //          .data
-		.src5_channel       (cmd_demux_src5_channel),                           //          .channel
-		.src5_startofpacket (cmd_demux_src5_startofpacket),                     //          .startofpacket
-		.src5_endofpacket   (cmd_demux_src5_endofpacket),                       //          .endofpacket
-		.src6_ready         (cmd_demux_src6_ready),                             //      src6.ready
-		.src6_valid         (cmd_demux_src6_valid),                             //          .valid
-		.src6_data          (cmd_demux_src6_data),                              //          .data
-		.src6_channel       (cmd_demux_src6_channel),                           //          .channel
-		.src6_startofpacket (cmd_demux_src6_startofpacket),                     //          .startofpacket
-		.src6_endofpacket   (cmd_demux_src6_endofpacket)                        //          .endofpacket
+		.clk                (clk_0_clk_clk),                                //       clk.clk
+		.reset              (VexRiscv_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.sink_ready         (router_src_ready),                             //      sink.ready
+		.sink_channel       (router_src_channel),                           //          .channel
+		.sink_data          (router_src_data),                              //          .data
+		.sink_startofpacket (router_src_startofpacket),                     //          .startofpacket
+		.sink_endofpacket   (router_src_endofpacket),                       //          .endofpacket
+		.sink_valid         (router_src_valid),                             //          .valid
+		.src0_ready         (cmd_demux_src0_ready),                         //      src0.ready
+		.src0_valid         (cmd_demux_src0_valid),                         //          .valid
+		.src0_data          (cmd_demux_src0_data),                          //          .data
+		.src0_channel       (cmd_demux_src0_channel),                       //          .channel
+		.src0_startofpacket (cmd_demux_src0_startofpacket),                 //          .startofpacket
+		.src0_endofpacket   (cmd_demux_src0_endofpacket),                   //          .endofpacket
+		.src1_ready         (cmd_demux_src1_ready),                         //      src1.ready
+		.src1_valid         (cmd_demux_src1_valid),                         //          .valid
+		.src1_data          (cmd_demux_src1_data),                          //          .data
+		.src1_channel       (cmd_demux_src1_channel),                       //          .channel
+		.src1_startofpacket (cmd_demux_src1_startofpacket),                 //          .startofpacket
+		.src1_endofpacket   (cmd_demux_src1_endofpacket),                   //          .endofpacket
+		.src2_ready         (cmd_demux_src2_ready),                         //      src2.ready
+		.src2_valid         (cmd_demux_src2_valid),                         //          .valid
+		.src2_data          (cmd_demux_src2_data),                          //          .data
+		.src2_channel       (cmd_demux_src2_channel),                       //          .channel
+		.src2_startofpacket (cmd_demux_src2_startofpacket),                 //          .startofpacket
+		.src2_endofpacket   (cmd_demux_src2_endofpacket),                   //          .endofpacket
+		.src3_ready         (cmd_demux_src3_ready),                         //      src3.ready
+		.src3_valid         (cmd_demux_src3_valid),                         //          .valid
+		.src3_data          (cmd_demux_src3_data),                          //          .data
+		.src3_channel       (cmd_demux_src3_channel),                       //          .channel
+		.src3_startofpacket (cmd_demux_src3_startofpacket),                 //          .startofpacket
+		.src3_endofpacket   (cmd_demux_src3_endofpacket),                   //          .endofpacket
+		.src4_ready         (cmd_demux_src4_ready),                         //      src4.ready
+		.src4_valid         (cmd_demux_src4_valid),                         //          .valid
+		.src4_data          (cmd_demux_src4_data),                          //          .data
+		.src4_channel       (cmd_demux_src4_channel),                       //          .channel
+		.src4_startofpacket (cmd_demux_src4_startofpacket),                 //          .startofpacket
+		.src4_endofpacket   (cmd_demux_src4_endofpacket),                   //          .endofpacket
+		.src5_ready         (cmd_demux_src5_ready),                         //      src5.ready
+		.src5_valid         (cmd_demux_src5_valid),                         //          .valid
+		.src5_data          (cmd_demux_src5_data),                          //          .data
+		.src5_channel       (cmd_demux_src5_channel),                       //          .channel
+		.src5_startofpacket (cmd_demux_src5_startofpacket),                 //          .startofpacket
+		.src5_endofpacket   (cmd_demux_src5_endofpacket),                   //          .endofpacket
+		.src6_ready         (cmd_demux_src6_ready),                         //      src6.ready
+		.src6_valid         (cmd_demux_src6_valid),                         //          .valid
+		.src6_data          (cmd_demux_src6_data),                          //          .data
+		.src6_channel       (cmd_demux_src6_channel),                       //          .channel
+		.src6_startofpacket (cmd_demux_src6_startofpacket),                 //          .startofpacket
+		.src6_endofpacket   (cmd_demux_src6_endofpacket),                   //          .endofpacket
+		.src7_ready         (cmd_demux_src7_ready),                         //      src7.ready
+		.src7_valid         (cmd_demux_src7_valid),                         //          .valid
+		.src7_data          (cmd_demux_src7_data),                          //          .data
+		.src7_channel       (cmd_demux_src7_channel),                       //          .channel
+		.src7_startofpacket (cmd_demux_src7_startofpacket),                 //          .startofpacket
+		.src7_endofpacket   (cmd_demux_src7_endofpacket)                    //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_cmd_demux cmd_demux_001 (
-		.clk                (clk_0_clk_clk),                                    //       clk.clk
-		.reset              (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.sink_ready         (router_001_src_ready),                             //      sink.ready
-		.sink_channel       (router_001_src_channel),                           //          .channel
-		.sink_data          (router_001_src_data),                              //          .data
-		.sink_startofpacket (router_001_src_startofpacket),                     //          .startofpacket
-		.sink_endofpacket   (router_001_src_endofpacket),                       //          .endofpacket
-		.sink_valid         (router_001_src_valid),                             //          .valid
-		.src0_ready         (cmd_demux_001_src0_ready),                         //      src0.ready
-		.src0_valid         (cmd_demux_001_src0_valid),                         //          .valid
-		.src0_data          (cmd_demux_001_src0_data),                          //          .data
-		.src0_channel       (cmd_demux_001_src0_channel),                       //          .channel
-		.src0_startofpacket (cmd_demux_001_src0_startofpacket),                 //          .startofpacket
-		.src0_endofpacket   (cmd_demux_001_src0_endofpacket),                   //          .endofpacket
-		.src1_ready         (cmd_demux_001_src1_ready),                         //      src1.ready
-		.src1_valid         (cmd_demux_001_src1_valid),                         //          .valid
-		.src1_data          (cmd_demux_001_src1_data),                          //          .data
-		.src1_channel       (cmd_demux_001_src1_channel),                       //          .channel
-		.src1_startofpacket (cmd_demux_001_src1_startofpacket),                 //          .startofpacket
-		.src1_endofpacket   (cmd_demux_001_src1_endofpacket),                   //          .endofpacket
-		.src2_ready         (cmd_demux_001_src2_ready),                         //      src2.ready
-		.src2_valid         (cmd_demux_001_src2_valid),                         //          .valid
-		.src2_data          (cmd_demux_001_src2_data),                          //          .data
-		.src2_channel       (cmd_demux_001_src2_channel),                       //          .channel
-		.src2_startofpacket (cmd_demux_001_src2_startofpacket),                 //          .startofpacket
-		.src2_endofpacket   (cmd_demux_001_src2_endofpacket),                   //          .endofpacket
-		.src3_ready         (cmd_demux_001_src3_ready),                         //      src3.ready
-		.src3_valid         (cmd_demux_001_src3_valid),                         //          .valid
-		.src3_data          (cmd_demux_001_src3_data),                          //          .data
-		.src3_channel       (cmd_demux_001_src3_channel),                       //          .channel
-		.src3_startofpacket (cmd_demux_001_src3_startofpacket),                 //          .startofpacket
-		.src3_endofpacket   (cmd_demux_001_src3_endofpacket),                   //          .endofpacket
-		.src4_ready         (cmd_demux_001_src4_ready),                         //      src4.ready
-		.src4_valid         (cmd_demux_001_src4_valid),                         //          .valid
-		.src4_data          (cmd_demux_001_src4_data),                          //          .data
-		.src4_channel       (cmd_demux_001_src4_channel),                       //          .channel
-		.src4_startofpacket (cmd_demux_001_src4_startofpacket),                 //          .startofpacket
-		.src4_endofpacket   (cmd_demux_001_src4_endofpacket),                   //          .endofpacket
-		.src5_ready         (cmd_demux_001_src5_ready),                         //      src5.ready
-		.src5_valid         (cmd_demux_001_src5_valid),                         //          .valid
-		.src5_data          (cmd_demux_001_src5_data),                          //          .data
-		.src5_channel       (cmd_demux_001_src5_channel),                       //          .channel
-		.src5_startofpacket (cmd_demux_001_src5_startofpacket),                 //          .startofpacket
-		.src5_endofpacket   (cmd_demux_001_src5_endofpacket),                   //          .endofpacket
-		.src6_ready         (cmd_demux_001_src6_ready),                         //      src6.ready
-		.src6_valid         (cmd_demux_001_src6_valid),                         //          .valid
-		.src6_data          (cmd_demux_001_src6_data),                          //          .data
-		.src6_channel       (cmd_demux_001_src6_channel),                       //          .channel
-		.src6_startofpacket (cmd_demux_001_src6_startofpacket),                 //          .startofpacket
-		.src6_endofpacket   (cmd_demux_001_src6_endofpacket)                    //          .endofpacket
+		.clk                (clk_0_clk_clk),                                //       clk.clk
+		.reset              (VexRiscv_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.sink_ready         (router_001_src_ready),                         //      sink.ready
+		.sink_channel       (router_001_src_channel),                       //          .channel
+		.sink_data          (router_001_src_data),                          //          .data
+		.sink_startofpacket (router_001_src_startofpacket),                 //          .startofpacket
+		.sink_endofpacket   (router_001_src_endofpacket),                   //          .endofpacket
+		.sink_valid         (router_001_src_valid),                         //          .valid
+		.src0_ready         (cmd_demux_001_src0_ready),                     //      src0.ready
+		.src0_valid         (cmd_demux_001_src0_valid),                     //          .valid
+		.src0_data          (cmd_demux_001_src0_data),                      //          .data
+		.src0_channel       (cmd_demux_001_src0_channel),                   //          .channel
+		.src0_startofpacket (cmd_demux_001_src0_startofpacket),             //          .startofpacket
+		.src0_endofpacket   (cmd_demux_001_src0_endofpacket),               //          .endofpacket
+		.src1_ready         (cmd_demux_001_src1_ready),                     //      src1.ready
+		.src1_valid         (cmd_demux_001_src1_valid),                     //          .valid
+		.src1_data          (cmd_demux_001_src1_data),                      //          .data
+		.src1_channel       (cmd_demux_001_src1_channel),                   //          .channel
+		.src1_startofpacket (cmd_demux_001_src1_startofpacket),             //          .startofpacket
+		.src1_endofpacket   (cmd_demux_001_src1_endofpacket),               //          .endofpacket
+		.src2_ready         (cmd_demux_001_src2_ready),                     //      src2.ready
+		.src2_valid         (cmd_demux_001_src2_valid),                     //          .valid
+		.src2_data          (cmd_demux_001_src2_data),                      //          .data
+		.src2_channel       (cmd_demux_001_src2_channel),                   //          .channel
+		.src2_startofpacket (cmd_demux_001_src2_startofpacket),             //          .startofpacket
+		.src2_endofpacket   (cmd_demux_001_src2_endofpacket),               //          .endofpacket
+		.src3_ready         (cmd_demux_001_src3_ready),                     //      src3.ready
+		.src3_valid         (cmd_demux_001_src3_valid),                     //          .valid
+		.src3_data          (cmd_demux_001_src3_data),                      //          .data
+		.src3_channel       (cmd_demux_001_src3_channel),                   //          .channel
+		.src3_startofpacket (cmd_demux_001_src3_startofpacket),             //          .startofpacket
+		.src3_endofpacket   (cmd_demux_001_src3_endofpacket),               //          .endofpacket
+		.src4_ready         (cmd_demux_001_src4_ready),                     //      src4.ready
+		.src4_valid         (cmd_demux_001_src4_valid),                     //          .valid
+		.src4_data          (cmd_demux_001_src4_data),                      //          .data
+		.src4_channel       (cmd_demux_001_src4_channel),                   //          .channel
+		.src4_startofpacket (cmd_demux_001_src4_startofpacket),             //          .startofpacket
+		.src4_endofpacket   (cmd_demux_001_src4_endofpacket),               //          .endofpacket
+		.src5_ready         (cmd_demux_001_src5_ready),                     //      src5.ready
+		.src5_valid         (cmd_demux_001_src5_valid),                     //          .valid
+		.src5_data          (cmd_demux_001_src5_data),                      //          .data
+		.src5_channel       (cmd_demux_001_src5_channel),                   //          .channel
+		.src5_startofpacket (cmd_demux_001_src5_startofpacket),             //          .startofpacket
+		.src5_endofpacket   (cmd_demux_001_src5_endofpacket),               //          .endofpacket
+		.src6_ready         (cmd_demux_001_src6_ready),                     //      src6.ready
+		.src6_valid         (cmd_demux_001_src6_valid),                     //          .valid
+		.src6_data          (cmd_demux_001_src6_data),                      //          .data
+		.src6_channel       (cmd_demux_001_src6_channel),                   //          .channel
+		.src6_startofpacket (cmd_demux_001_src6_startofpacket),             //          .startofpacket
+		.src6_endofpacket   (cmd_demux_001_src6_endofpacket),               //          .endofpacket
+		.src7_ready         (cmd_demux_001_src7_ready),                     //      src7.ready
+		.src7_valid         (cmd_demux_001_src7_valid),                     //          .valid
+		.src7_data          (cmd_demux_001_src7_data),                      //          .data
+		.src7_channel       (cmd_demux_001_src7_channel),                   //          .channel
+		.src7_startofpacket (cmd_demux_001_src7_startofpacket),             //          .startofpacket
+		.src7_endofpacket   (cmd_demux_001_src7_endofpacket)                //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_cmd_demux_002 cmd_demux_002 (
+	soc_system_mm_interconnect_0_cmd_demux cmd_demux_002 (
 		.clk                (clk_0_clk_clk),                                  //       clk.clk
 		.reset              (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.sink_ready         (router_002_src_ready),                           //      sink.ready
@@ -4974,49 +5066,49 @@ module soc_system_mm_interconnect_0 (
 	);
 
 	soc_system_mm_interconnect_0_cmd_demux_004 cmd_demux_004 (
-		.clk                (clk_0_clk_clk),                                    //       clk.clk
-		.reset              (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.sink_ready         (router_004_src_ready),                             //      sink.ready
-		.sink_channel       (router_004_src_channel),                           //          .channel
-		.sink_data          (router_004_src_data),                              //          .data
-		.sink_startofpacket (router_004_src_startofpacket),                     //          .startofpacket
-		.sink_endofpacket   (router_004_src_endofpacket),                       //          .endofpacket
-		.sink_valid         (router_004_src_valid),                             //          .valid
-		.src0_ready         (cmd_demux_004_src0_ready),                         //      src0.ready
-		.src0_valid         (cmd_demux_004_src0_valid),                         //          .valid
-		.src0_data          (cmd_demux_004_src0_data),                          //          .data
-		.src0_channel       (cmd_demux_004_src0_channel),                       //          .channel
-		.src0_startofpacket (cmd_demux_004_src0_startofpacket),                 //          .startofpacket
-		.src0_endofpacket   (cmd_demux_004_src0_endofpacket),                   //          .endofpacket
-		.src1_ready         (cmd_demux_004_src1_ready),                         //      src1.ready
-		.src1_valid         (cmd_demux_004_src1_valid),                         //          .valid
-		.src1_data          (cmd_demux_004_src1_data),                          //          .data
-		.src1_channel       (cmd_demux_004_src1_channel),                       //          .channel
-		.src1_startofpacket (cmd_demux_004_src1_startofpacket),                 //          .startofpacket
-		.src1_endofpacket   (cmd_demux_004_src1_endofpacket)                    //          .endofpacket
+		.clk                (clk_0_clk_clk),                                //       clk.clk
+		.reset              (VexRiscv_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.sink_ready         (router_004_src_ready),                         //      sink.ready
+		.sink_channel       (router_004_src_channel),                       //          .channel
+		.sink_data          (router_004_src_data),                          //          .data
+		.sink_startofpacket (router_004_src_startofpacket),                 //          .startofpacket
+		.sink_endofpacket   (router_004_src_endofpacket),                   //          .endofpacket
+		.sink_valid         (router_004_src_valid),                         //          .valid
+		.src0_ready         (cmd_demux_004_src0_ready),                     //      src0.ready
+		.src0_valid         (cmd_demux_004_src0_valid),                     //          .valid
+		.src0_data          (cmd_demux_004_src0_data),                      //          .data
+		.src0_channel       (cmd_demux_004_src0_channel),                   //          .channel
+		.src0_startofpacket (cmd_demux_004_src0_startofpacket),             //          .startofpacket
+		.src0_endofpacket   (cmd_demux_004_src0_endofpacket),               //          .endofpacket
+		.src1_ready         (cmd_demux_004_src1_ready),                     //      src1.ready
+		.src1_valid         (cmd_demux_004_src1_valid),                     //          .valid
+		.src1_data          (cmd_demux_004_src1_data),                      //          .data
+		.src1_channel       (cmd_demux_004_src1_channel),                   //          .channel
+		.src1_startofpacket (cmd_demux_004_src1_startofpacket),             //          .startofpacket
+		.src1_endofpacket   (cmd_demux_004_src1_endofpacket)                //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_cmd_demux_004 cmd_demux_005 (
-		.clk                (clk_0_clk_clk),                                    //       clk.clk
-		.reset              (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.sink_ready         (router_005_src_ready),                             //      sink.ready
-		.sink_channel       (router_005_src_channel),                           //          .channel
-		.sink_data          (router_005_src_data),                              //          .data
-		.sink_startofpacket (router_005_src_startofpacket),                     //          .startofpacket
-		.sink_endofpacket   (router_005_src_endofpacket),                       //          .endofpacket
-		.sink_valid         (router_005_src_valid),                             //          .valid
-		.src0_ready         (cmd_demux_005_src0_ready),                         //      src0.ready
-		.src0_valid         (cmd_demux_005_src0_valid),                         //          .valid
-		.src0_data          (cmd_demux_005_src0_data),                          //          .data
-		.src0_channel       (cmd_demux_005_src0_channel),                       //          .channel
-		.src0_startofpacket (cmd_demux_005_src0_startofpacket),                 //          .startofpacket
-		.src0_endofpacket   (cmd_demux_005_src0_endofpacket),                   //          .endofpacket
-		.src1_ready         (cmd_demux_005_src1_ready),                         //      src1.ready
-		.src1_valid         (cmd_demux_005_src1_valid),                         //          .valid
-		.src1_data          (cmd_demux_005_src1_data),                          //          .data
-		.src1_channel       (cmd_demux_005_src1_channel),                       //          .channel
-		.src1_startofpacket (cmd_demux_005_src1_startofpacket),                 //          .startofpacket
-		.src1_endofpacket   (cmd_demux_005_src1_endofpacket)                    //          .endofpacket
+		.clk                (clk_0_clk_clk),                                //       clk.clk
+		.reset              (VexRiscv_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.sink_ready         (router_005_src_ready),                         //      sink.ready
+		.sink_channel       (router_005_src_channel),                       //          .channel
+		.sink_data          (router_005_src_data),                          //          .data
+		.sink_startofpacket (router_005_src_startofpacket),                 //          .startofpacket
+		.sink_endofpacket   (router_005_src_endofpacket),                   //          .endofpacket
+		.sink_valid         (router_005_src_valid),                         //          .valid
+		.src0_ready         (cmd_demux_005_src0_ready),                     //      src0.ready
+		.src0_valid         (cmd_demux_005_src0_valid),                     //          .valid
+		.src0_data          (cmd_demux_005_src0_data),                      //          .data
+		.src0_channel       (cmd_demux_005_src0_channel),                   //          .channel
+		.src0_startofpacket (cmd_demux_005_src0_startofpacket),             //          .startofpacket
+		.src0_endofpacket   (cmd_demux_005_src0_endofpacket),               //          .endofpacket
+		.src1_ready         (cmd_demux_005_src1_ready),                     //      src1.ready
+		.src1_valid         (cmd_demux_005_src1_valid),                     //          .valid
+		.src1_data          (cmd_demux_005_src1_data),                      //          .data
+		.src1_channel       (cmd_demux_005_src1_channel),                   //          .channel
+		.src1_startofpacket (cmd_demux_005_src1_startofpacket),             //          .startofpacket
+		.src1_endofpacket   (cmd_demux_005_src1_endofpacket)                //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_cmd_demux_006 cmd_demux_006 (
@@ -5159,7 +5251,7 @@ module soc_system_mm_interconnect_0 (
 		.sink4_endofpacket   (cmd_demux_006_src0_endofpacket)                  //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_cmd_mux_003 cmd_mux_003 (
+	soc_system_mm_interconnect_0_cmd_mux cmd_mux_003 (
 		.clk                 (clk_0_clk_clk),                                  //       clk.clk
 		.reset               (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready           (cmd_mux_003_src_ready),                          //       src.ready
@@ -5191,28 +5283,10 @@ module soc_system_mm_interconnect_0 (
 		.sink3_channel       (cmd_demux_003_src3_channel),                     //          .channel
 		.sink3_data          (cmd_demux_003_src3_data),                        //          .data
 		.sink3_startofpacket (cmd_demux_003_src3_startofpacket),               //          .startofpacket
-		.sink3_endofpacket   (cmd_demux_003_src3_endofpacket),                 //          .endofpacket
-		.sink4_ready         (cmd_demux_004_src0_ready),                       //     sink4.ready
-		.sink4_valid         (cmd_demux_004_src0_valid),                       //          .valid
-		.sink4_channel       (cmd_demux_004_src0_channel),                     //          .channel
-		.sink4_data          (cmd_demux_004_src0_data),                        //          .data
-		.sink4_startofpacket (cmd_demux_004_src0_startofpacket),               //          .startofpacket
-		.sink4_endofpacket   (cmd_demux_004_src0_endofpacket),                 //          .endofpacket
-		.sink5_ready         (cmd_demux_005_src0_ready),                       //     sink5.ready
-		.sink5_valid         (cmd_demux_005_src0_valid),                       //          .valid
-		.sink5_channel       (cmd_demux_005_src0_channel),                     //          .channel
-		.sink5_data          (cmd_demux_005_src0_data),                        //          .data
-		.sink5_startofpacket (cmd_demux_005_src0_startofpacket),               //          .startofpacket
-		.sink5_endofpacket   (cmd_demux_005_src0_endofpacket),                 //          .endofpacket
-		.sink6_ready         (cmd_demux_006_src1_ready),                       //     sink6.ready
-		.sink6_valid         (cmd_demux_006_src1_valid),                       //          .valid
-		.sink6_channel       (cmd_demux_006_src1_channel),                     //          .channel
-		.sink6_data          (cmd_demux_006_src1_data),                        //          .data
-		.sink6_startofpacket (cmd_demux_006_src1_startofpacket),               //          .startofpacket
-		.sink6_endofpacket   (cmd_demux_006_src1_endofpacket)                  //          .endofpacket
+		.sink3_endofpacket   (cmd_demux_003_src3_endofpacket)                  //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_cmd_mux_003 cmd_mux_004 (
+	soc_system_mm_interconnect_0_cmd_mux cmd_mux_004 (
 		.clk                 (clk_0_clk_clk),                                  //       clk.clk
 		.reset               (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready           (cmd_mux_004_src_ready),                          //       src.ready
@@ -5244,25 +5318,7 @@ module soc_system_mm_interconnect_0 (
 		.sink3_channel       (cmd_demux_003_src4_channel),                     //          .channel
 		.sink3_data          (cmd_demux_003_src4_data),                        //          .data
 		.sink3_startofpacket (cmd_demux_003_src4_startofpacket),               //          .startofpacket
-		.sink3_endofpacket   (cmd_demux_003_src4_endofpacket),                 //          .endofpacket
-		.sink4_ready         (cmd_demux_004_src1_ready),                       //     sink4.ready
-		.sink4_valid         (cmd_demux_004_src1_valid),                       //          .valid
-		.sink4_channel       (cmd_demux_004_src1_channel),                     //          .channel
-		.sink4_data          (cmd_demux_004_src1_data),                        //          .data
-		.sink4_startofpacket (cmd_demux_004_src1_startofpacket),               //          .startofpacket
-		.sink4_endofpacket   (cmd_demux_004_src1_endofpacket),                 //          .endofpacket
-		.sink5_ready         (cmd_demux_005_src1_ready),                       //     sink5.ready
-		.sink5_valid         (cmd_demux_005_src1_valid),                       //          .valid
-		.sink5_channel       (cmd_demux_005_src1_channel),                     //          .channel
-		.sink5_data          (cmd_demux_005_src1_data),                        //          .data
-		.sink5_startofpacket (cmd_demux_005_src1_startofpacket),               //          .startofpacket
-		.sink5_endofpacket   (cmd_demux_005_src1_endofpacket),                 //          .endofpacket
-		.sink6_ready         (cmd_demux_006_src2_ready),                       //     sink6.ready
-		.sink6_valid         (cmd_demux_006_src2_valid),                       //          .valid
-		.sink6_channel       (cmd_demux_006_src2_channel),                     //          .channel
-		.sink6_data          (cmd_demux_006_src2_data),                        //          .data
-		.sink6_startofpacket (cmd_demux_006_src2_startofpacket),               //          .startofpacket
-		.sink6_endofpacket   (cmd_demux_006_src2_endofpacket)                  //          .endofpacket
+		.sink3_endofpacket   (cmd_demux_003_src4_endofpacket)                  //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_cmd_mux cmd_mux_005 (
@@ -5300,7 +5356,7 @@ module soc_system_mm_interconnect_0 (
 		.sink3_endofpacket   (cmd_demux_003_src5_endofpacket)                  //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_cmd_mux cmd_mux_006 (
+	soc_system_mm_interconnect_0_cmd_mux_006 cmd_mux_006 (
 		.clk                 (clk_0_clk_clk),                                  //       clk.clk
 		.reset               (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready           (cmd_mux_006_src_ready),                          //       src.ready
@@ -5332,10 +5388,28 @@ module soc_system_mm_interconnect_0 (
 		.sink3_channel       (cmd_demux_003_src6_channel),                     //          .channel
 		.sink3_data          (cmd_demux_003_src6_data),                        //          .data
 		.sink3_startofpacket (cmd_demux_003_src6_startofpacket),               //          .startofpacket
-		.sink3_endofpacket   (cmd_demux_003_src6_endofpacket)                  //          .endofpacket
+		.sink3_endofpacket   (cmd_demux_003_src6_endofpacket),                 //          .endofpacket
+		.sink4_ready         (cmd_demux_004_src0_ready),                       //     sink4.ready
+		.sink4_valid         (cmd_demux_004_src0_valid),                       //          .valid
+		.sink4_channel       (cmd_demux_004_src0_channel),                     //          .channel
+		.sink4_data          (cmd_demux_004_src0_data),                        //          .data
+		.sink4_startofpacket (cmd_demux_004_src0_startofpacket),               //          .startofpacket
+		.sink4_endofpacket   (cmd_demux_004_src0_endofpacket),                 //          .endofpacket
+		.sink5_ready         (cmd_demux_005_src0_ready),                       //     sink5.ready
+		.sink5_valid         (cmd_demux_005_src0_valid),                       //          .valid
+		.sink5_channel       (cmd_demux_005_src0_channel),                     //          .channel
+		.sink5_data          (cmd_demux_005_src0_data),                        //          .data
+		.sink5_startofpacket (cmd_demux_005_src0_startofpacket),               //          .startofpacket
+		.sink5_endofpacket   (cmd_demux_005_src0_endofpacket),                 //          .endofpacket
+		.sink6_ready         (cmd_demux_006_src1_ready),                       //     sink6.ready
+		.sink6_valid         (cmd_demux_006_src1_valid),                       //          .valid
+		.sink6_channel       (cmd_demux_006_src1_channel),                     //          .channel
+		.sink6_data          (cmd_demux_006_src1_data),                        //          .data
+		.sink6_startofpacket (cmd_demux_006_src1_startofpacket),               //          .startofpacket
+		.sink6_endofpacket   (cmd_demux_006_src1_endofpacket)                  //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_cmd_mux_007 cmd_mux_007 (
+	soc_system_mm_interconnect_0_cmd_mux_006 cmd_mux_007 (
 		.clk                 (clk_0_clk_clk),                                  //       clk.clk
 		.reset               (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready           (cmd_mux_007_src_ready),                          //       src.ready
@@ -5344,18 +5418,48 @@ module soc_system_mm_interconnect_0 (
 		.src_channel         (cmd_mux_007_src_channel),                        //          .channel
 		.src_startofpacket   (cmd_mux_007_src_startofpacket),                  //          .startofpacket
 		.src_endofpacket     (cmd_mux_007_src_endofpacket),                    //          .endofpacket
-		.sink0_ready         (cmd_demux_002_src7_ready),                       //     sink0.ready
-		.sink0_valid         (cmd_demux_002_src7_valid),                       //          .valid
-		.sink0_channel       (cmd_demux_002_src7_channel),                     //          .channel
-		.sink0_data          (cmd_demux_002_src7_data),                        //          .data
-		.sink0_startofpacket (cmd_demux_002_src7_startofpacket),               //          .startofpacket
-		.sink0_endofpacket   (cmd_demux_002_src7_endofpacket),                 //          .endofpacket
-		.sink1_ready         (cmd_demux_003_src7_ready),                       //     sink1.ready
-		.sink1_valid         (cmd_demux_003_src7_valid),                       //          .valid
-		.sink1_channel       (cmd_demux_003_src7_channel),                     //          .channel
-		.sink1_data          (cmd_demux_003_src7_data),                        //          .data
-		.sink1_startofpacket (cmd_demux_003_src7_startofpacket),               //          .startofpacket
-		.sink1_endofpacket   (cmd_demux_003_src7_endofpacket)                  //          .endofpacket
+		.sink0_ready         (cmd_demux_src7_ready),                           //     sink0.ready
+		.sink0_valid         (cmd_demux_src7_valid),                           //          .valid
+		.sink0_channel       (cmd_demux_src7_channel),                         //          .channel
+		.sink0_data          (cmd_demux_src7_data),                            //          .data
+		.sink0_startofpacket (cmd_demux_src7_startofpacket),                   //          .startofpacket
+		.sink0_endofpacket   (cmd_demux_src7_endofpacket),                     //          .endofpacket
+		.sink1_ready         (cmd_demux_001_src7_ready),                       //     sink1.ready
+		.sink1_valid         (cmd_demux_001_src7_valid),                       //          .valid
+		.sink1_channel       (cmd_demux_001_src7_channel),                     //          .channel
+		.sink1_data          (cmd_demux_001_src7_data),                        //          .data
+		.sink1_startofpacket (cmd_demux_001_src7_startofpacket),               //          .startofpacket
+		.sink1_endofpacket   (cmd_demux_001_src7_endofpacket),                 //          .endofpacket
+		.sink2_ready         (cmd_demux_002_src7_ready),                       //     sink2.ready
+		.sink2_valid         (cmd_demux_002_src7_valid),                       //          .valid
+		.sink2_channel       (cmd_demux_002_src7_channel),                     //          .channel
+		.sink2_data          (cmd_demux_002_src7_data),                        //          .data
+		.sink2_startofpacket (cmd_demux_002_src7_startofpacket),               //          .startofpacket
+		.sink2_endofpacket   (cmd_demux_002_src7_endofpacket),                 //          .endofpacket
+		.sink3_ready         (cmd_demux_003_src7_ready),                       //     sink3.ready
+		.sink3_valid         (cmd_demux_003_src7_valid),                       //          .valid
+		.sink3_channel       (cmd_demux_003_src7_channel),                     //          .channel
+		.sink3_data          (cmd_demux_003_src7_data),                        //          .data
+		.sink3_startofpacket (cmd_demux_003_src7_startofpacket),               //          .startofpacket
+		.sink3_endofpacket   (cmd_demux_003_src7_endofpacket),                 //          .endofpacket
+		.sink4_ready         (cmd_demux_004_src1_ready),                       //     sink4.ready
+		.sink4_valid         (cmd_demux_004_src1_valid),                       //          .valid
+		.sink4_channel       (cmd_demux_004_src1_channel),                     //          .channel
+		.sink4_data          (cmd_demux_004_src1_data),                        //          .data
+		.sink4_startofpacket (cmd_demux_004_src1_startofpacket),               //          .startofpacket
+		.sink4_endofpacket   (cmd_demux_004_src1_endofpacket),                 //          .endofpacket
+		.sink5_ready         (cmd_demux_005_src1_ready),                       //     sink5.ready
+		.sink5_valid         (cmd_demux_005_src1_valid),                       //          .valid
+		.sink5_channel       (cmd_demux_005_src1_channel),                     //          .channel
+		.sink5_data          (cmd_demux_005_src1_data),                        //          .data
+		.sink5_startofpacket (cmd_demux_005_src1_startofpacket),               //          .startofpacket
+		.sink5_endofpacket   (cmd_demux_005_src1_endofpacket),                 //          .endofpacket
+		.sink6_ready         (cmd_demux_006_src2_ready),                       //     sink6.ready
+		.sink6_valid         (cmd_demux_006_src2_valid),                       //          .valid
+		.sink6_channel       (cmd_demux_006_src2_channel),                     //          .channel
+		.sink6_data          (cmd_demux_006_src2_data),                        //          .data
+		.sink6_startofpacket (cmd_demux_006_src2_startofpacket),               //          .startofpacket
+		.sink6_endofpacket   (cmd_demux_006_src2_endofpacket)                  //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_rsp_demux rsp_demux (
@@ -5469,7 +5573,7 @@ module soc_system_mm_interconnect_0 (
 		.src4_endofpacket   (rsp_demux_002_src4_endofpacket)                  //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_cmd_demux rsp_demux_003 (
+	soc_system_mm_interconnect_0_rsp_demux rsp_demux_003 (
 		.clk                (clk_0_clk_clk),                                  //       clk.clk
 		.reset              (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.sink_ready         (router_010_src_ready),                           //      sink.ready
@@ -5501,28 +5605,10 @@ module soc_system_mm_interconnect_0 (
 		.src3_data          (rsp_demux_003_src3_data),                        //          .data
 		.src3_channel       (rsp_demux_003_src3_channel),                     //          .channel
 		.src3_startofpacket (rsp_demux_003_src3_startofpacket),               //          .startofpacket
-		.src3_endofpacket   (rsp_demux_003_src3_endofpacket),                 //          .endofpacket
-		.src4_ready         (rsp_demux_003_src4_ready),                       //      src4.ready
-		.src4_valid         (rsp_demux_003_src4_valid),                       //          .valid
-		.src4_data          (rsp_demux_003_src4_data),                        //          .data
-		.src4_channel       (rsp_demux_003_src4_channel),                     //          .channel
-		.src4_startofpacket (rsp_demux_003_src4_startofpacket),               //          .startofpacket
-		.src4_endofpacket   (rsp_demux_003_src4_endofpacket),                 //          .endofpacket
-		.src5_ready         (rsp_demux_003_src5_ready),                       //      src5.ready
-		.src5_valid         (rsp_demux_003_src5_valid),                       //          .valid
-		.src5_data          (rsp_demux_003_src5_data),                        //          .data
-		.src5_channel       (rsp_demux_003_src5_channel),                     //          .channel
-		.src5_startofpacket (rsp_demux_003_src5_startofpacket),               //          .startofpacket
-		.src5_endofpacket   (rsp_demux_003_src5_endofpacket),                 //          .endofpacket
-		.src6_ready         (rsp_demux_003_src6_ready),                       //      src6.ready
-		.src6_valid         (rsp_demux_003_src6_valid),                       //          .valid
-		.src6_data          (rsp_demux_003_src6_data),                        //          .data
-		.src6_channel       (rsp_demux_003_src6_channel),                     //          .channel
-		.src6_startofpacket (rsp_demux_003_src6_startofpacket),               //          .startofpacket
-		.src6_endofpacket   (rsp_demux_003_src6_endofpacket)                  //          .endofpacket
+		.src3_endofpacket   (rsp_demux_003_src3_endofpacket)                  //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_cmd_demux rsp_demux_004 (
+	soc_system_mm_interconnect_0_rsp_demux rsp_demux_004 (
 		.clk                (clk_0_clk_clk),                                  //       clk.clk
 		.reset              (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.sink_ready         (router_011_src_ready),                           //      sink.ready
@@ -5554,25 +5640,7 @@ module soc_system_mm_interconnect_0 (
 		.src3_data          (rsp_demux_004_src3_data),                        //          .data
 		.src3_channel       (rsp_demux_004_src3_channel),                     //          .channel
 		.src3_startofpacket (rsp_demux_004_src3_startofpacket),               //          .startofpacket
-		.src3_endofpacket   (rsp_demux_004_src3_endofpacket),                 //          .endofpacket
-		.src4_ready         (rsp_demux_004_src4_ready),                       //      src4.ready
-		.src4_valid         (rsp_demux_004_src4_valid),                       //          .valid
-		.src4_data          (rsp_demux_004_src4_data),                        //          .data
-		.src4_channel       (rsp_demux_004_src4_channel),                     //          .channel
-		.src4_startofpacket (rsp_demux_004_src4_startofpacket),               //          .startofpacket
-		.src4_endofpacket   (rsp_demux_004_src4_endofpacket),                 //          .endofpacket
-		.src5_ready         (rsp_demux_004_src5_ready),                       //      src5.ready
-		.src5_valid         (rsp_demux_004_src5_valid),                       //          .valid
-		.src5_data          (rsp_demux_004_src5_data),                        //          .data
-		.src5_channel       (rsp_demux_004_src5_channel),                     //          .channel
-		.src5_startofpacket (rsp_demux_004_src5_startofpacket),               //          .startofpacket
-		.src5_endofpacket   (rsp_demux_004_src5_endofpacket),                 //          .endofpacket
-		.src6_ready         (rsp_demux_004_src6_ready),                       //      src6.ready
-		.src6_valid         (rsp_demux_004_src6_valid),                       //          .valid
-		.src6_data          (rsp_demux_004_src6_data),                        //          .data
-		.src6_channel       (rsp_demux_004_src6_channel),                     //          .channel
-		.src6_startofpacket (rsp_demux_004_src6_startofpacket),               //          .startofpacket
-		.src6_endofpacket   (rsp_demux_004_src6_endofpacket)                  //          .endofpacket
+		.src3_endofpacket   (rsp_demux_004_src3_endofpacket)                  //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_rsp_demux rsp_demux_005 (
@@ -5610,7 +5678,7 @@ module soc_system_mm_interconnect_0 (
 		.src3_endofpacket   (rsp_demux_005_src3_endofpacket)                  //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_rsp_demux rsp_demux_006 (
+	soc_system_mm_interconnect_0_rsp_demux_006 rsp_demux_006 (
 		.clk                (clk_0_clk_clk),                                  //       clk.clk
 		.reset              (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.sink_ready         (router_013_src_ready),                           //      sink.ready
@@ -5642,10 +5710,28 @@ module soc_system_mm_interconnect_0 (
 		.src3_data          (rsp_demux_006_src3_data),                        //          .data
 		.src3_channel       (rsp_demux_006_src3_channel),                     //          .channel
 		.src3_startofpacket (rsp_demux_006_src3_startofpacket),               //          .startofpacket
-		.src3_endofpacket   (rsp_demux_006_src3_endofpacket)                  //          .endofpacket
+		.src3_endofpacket   (rsp_demux_006_src3_endofpacket),                 //          .endofpacket
+		.src4_ready         (rsp_demux_006_src4_ready),                       //      src4.ready
+		.src4_valid         (rsp_demux_006_src4_valid),                       //          .valid
+		.src4_data          (rsp_demux_006_src4_data),                        //          .data
+		.src4_channel       (rsp_demux_006_src4_channel),                     //          .channel
+		.src4_startofpacket (rsp_demux_006_src4_startofpacket),               //          .startofpacket
+		.src4_endofpacket   (rsp_demux_006_src4_endofpacket),                 //          .endofpacket
+		.src5_ready         (rsp_demux_006_src5_ready),                       //      src5.ready
+		.src5_valid         (rsp_demux_006_src5_valid),                       //          .valid
+		.src5_data          (rsp_demux_006_src5_data),                        //          .data
+		.src5_channel       (rsp_demux_006_src5_channel),                     //          .channel
+		.src5_startofpacket (rsp_demux_006_src5_startofpacket),               //          .startofpacket
+		.src5_endofpacket   (rsp_demux_006_src5_endofpacket),                 //          .endofpacket
+		.src6_ready         (rsp_demux_006_src6_ready),                       //      src6.ready
+		.src6_valid         (rsp_demux_006_src6_valid),                       //          .valid
+		.src6_data          (rsp_demux_006_src6_data),                        //          .data
+		.src6_channel       (rsp_demux_006_src6_channel),                     //          .channel
+		.src6_startofpacket (rsp_demux_006_src6_startofpacket),               //          .startofpacket
+		.src6_endofpacket   (rsp_demux_006_src6_endofpacket)                  //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_cmd_demux_004 rsp_demux_007 (
+	soc_system_mm_interconnect_0_rsp_demux_006 rsp_demux_007 (
 		.clk                (clk_0_clk_clk),                                  //       clk.clk
 		.reset              (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.sink_ready         (router_014_src_ready),                           //      sink.ready
@@ -5665,116 +5751,158 @@ module soc_system_mm_interconnect_0 (
 		.src1_data          (rsp_demux_007_src1_data),                        //          .data
 		.src1_channel       (rsp_demux_007_src1_channel),                     //          .channel
 		.src1_startofpacket (rsp_demux_007_src1_startofpacket),               //          .startofpacket
-		.src1_endofpacket   (rsp_demux_007_src1_endofpacket)                  //          .endofpacket
+		.src1_endofpacket   (rsp_demux_007_src1_endofpacket),                 //          .endofpacket
+		.src2_ready         (rsp_demux_007_src2_ready),                       //      src2.ready
+		.src2_valid         (rsp_demux_007_src2_valid),                       //          .valid
+		.src2_data          (rsp_demux_007_src2_data),                        //          .data
+		.src2_channel       (rsp_demux_007_src2_channel),                     //          .channel
+		.src2_startofpacket (rsp_demux_007_src2_startofpacket),               //          .startofpacket
+		.src2_endofpacket   (rsp_demux_007_src2_endofpacket),                 //          .endofpacket
+		.src3_ready         (rsp_demux_007_src3_ready),                       //      src3.ready
+		.src3_valid         (rsp_demux_007_src3_valid),                       //          .valid
+		.src3_data          (rsp_demux_007_src3_data),                        //          .data
+		.src3_channel       (rsp_demux_007_src3_channel),                     //          .channel
+		.src3_startofpacket (rsp_demux_007_src3_startofpacket),               //          .startofpacket
+		.src3_endofpacket   (rsp_demux_007_src3_endofpacket),                 //          .endofpacket
+		.src4_ready         (rsp_demux_007_src4_ready),                       //      src4.ready
+		.src4_valid         (rsp_demux_007_src4_valid),                       //          .valid
+		.src4_data          (rsp_demux_007_src4_data),                        //          .data
+		.src4_channel       (rsp_demux_007_src4_channel),                     //          .channel
+		.src4_startofpacket (rsp_demux_007_src4_startofpacket),               //          .startofpacket
+		.src4_endofpacket   (rsp_demux_007_src4_endofpacket),                 //          .endofpacket
+		.src5_ready         (rsp_demux_007_src5_ready),                       //      src5.ready
+		.src5_valid         (rsp_demux_007_src5_valid),                       //          .valid
+		.src5_data          (rsp_demux_007_src5_data),                        //          .data
+		.src5_channel       (rsp_demux_007_src5_channel),                     //          .channel
+		.src5_startofpacket (rsp_demux_007_src5_startofpacket),               //          .startofpacket
+		.src5_endofpacket   (rsp_demux_007_src5_endofpacket),                 //          .endofpacket
+		.src6_ready         (rsp_demux_007_src6_ready),                       //      src6.ready
+		.src6_valid         (rsp_demux_007_src6_valid),                       //          .valid
+		.src6_data          (rsp_demux_007_src6_data),                        //          .data
+		.src6_channel       (rsp_demux_007_src6_channel),                     //          .channel
+		.src6_startofpacket (rsp_demux_007_src6_startofpacket),               //          .startofpacket
+		.src6_endofpacket   (rsp_demux_007_src6_endofpacket)                  //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_rsp_mux rsp_mux (
-		.clk                 (clk_0_clk_clk),                                    //       clk.clk
-		.reset               (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (rsp_mux_src_ready),                                //       src.ready
-		.src_valid           (rsp_mux_src_valid),                                //          .valid
-		.src_data            (rsp_mux_src_data),                                 //          .data
-		.src_channel         (rsp_mux_src_channel),                              //          .channel
-		.src_startofpacket   (rsp_mux_src_startofpacket),                        //          .startofpacket
-		.src_endofpacket     (rsp_mux_src_endofpacket),                          //          .endofpacket
-		.sink0_ready         (rsp_demux_src0_ready),                             //     sink0.ready
-		.sink0_valid         (rsp_demux_src0_valid),                             //          .valid
-		.sink0_channel       (rsp_demux_src0_channel),                           //          .channel
-		.sink0_data          (rsp_demux_src0_data),                              //          .data
-		.sink0_startofpacket (rsp_demux_src0_startofpacket),                     //          .startofpacket
-		.sink0_endofpacket   (rsp_demux_src0_endofpacket),                       //          .endofpacket
-		.sink1_ready         (rsp_demux_001_src0_ready),                         //     sink1.ready
-		.sink1_valid         (rsp_demux_001_src0_valid),                         //          .valid
-		.sink1_channel       (rsp_demux_001_src0_channel),                       //          .channel
-		.sink1_data          (rsp_demux_001_src0_data),                          //          .data
-		.sink1_startofpacket (rsp_demux_001_src0_startofpacket),                 //          .startofpacket
-		.sink1_endofpacket   (rsp_demux_001_src0_endofpacket),                   //          .endofpacket
-		.sink2_ready         (rsp_demux_002_src0_ready),                         //     sink2.ready
-		.sink2_valid         (rsp_demux_002_src0_valid),                         //          .valid
-		.sink2_channel       (rsp_demux_002_src0_channel),                       //          .channel
-		.sink2_data          (rsp_demux_002_src0_data),                          //          .data
-		.sink2_startofpacket (rsp_demux_002_src0_startofpacket),                 //          .startofpacket
-		.sink2_endofpacket   (rsp_demux_002_src0_endofpacket),                   //          .endofpacket
-		.sink3_ready         (rsp_demux_003_src0_ready),                         //     sink3.ready
-		.sink3_valid         (rsp_demux_003_src0_valid),                         //          .valid
-		.sink3_channel       (rsp_demux_003_src0_channel),                       //          .channel
-		.sink3_data          (rsp_demux_003_src0_data),                          //          .data
-		.sink3_startofpacket (rsp_demux_003_src0_startofpacket),                 //          .startofpacket
-		.sink3_endofpacket   (rsp_demux_003_src0_endofpacket),                   //          .endofpacket
-		.sink4_ready         (rsp_demux_004_src0_ready),                         //     sink4.ready
-		.sink4_valid         (rsp_demux_004_src0_valid),                         //          .valid
-		.sink4_channel       (rsp_demux_004_src0_channel),                       //          .channel
-		.sink4_data          (rsp_demux_004_src0_data),                          //          .data
-		.sink4_startofpacket (rsp_demux_004_src0_startofpacket),                 //          .startofpacket
-		.sink4_endofpacket   (rsp_demux_004_src0_endofpacket),                   //          .endofpacket
-		.sink5_ready         (rsp_demux_005_src0_ready),                         //     sink5.ready
-		.sink5_valid         (rsp_demux_005_src0_valid),                         //          .valid
-		.sink5_channel       (rsp_demux_005_src0_channel),                       //          .channel
-		.sink5_data          (rsp_demux_005_src0_data),                          //          .data
-		.sink5_startofpacket (rsp_demux_005_src0_startofpacket),                 //          .startofpacket
-		.sink5_endofpacket   (rsp_demux_005_src0_endofpacket),                   //          .endofpacket
-		.sink6_ready         (rsp_demux_006_src0_ready),                         //     sink6.ready
-		.sink6_valid         (rsp_demux_006_src0_valid),                         //          .valid
-		.sink6_channel       (rsp_demux_006_src0_channel),                       //          .channel
-		.sink6_data          (rsp_demux_006_src0_data),                          //          .data
-		.sink6_startofpacket (rsp_demux_006_src0_startofpacket),                 //          .startofpacket
-		.sink6_endofpacket   (rsp_demux_006_src0_endofpacket)                    //          .endofpacket
+		.clk                 (clk_0_clk_clk),                                //       clk.clk
+		.reset               (VexRiscv_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (rsp_mux_src_ready),                            //       src.ready
+		.src_valid           (rsp_mux_src_valid),                            //          .valid
+		.src_data            (rsp_mux_src_data),                             //          .data
+		.src_channel         (rsp_mux_src_channel),                          //          .channel
+		.src_startofpacket   (rsp_mux_src_startofpacket),                    //          .startofpacket
+		.src_endofpacket     (rsp_mux_src_endofpacket),                      //          .endofpacket
+		.sink0_ready         (rsp_demux_src0_ready),                         //     sink0.ready
+		.sink0_valid         (rsp_demux_src0_valid),                         //          .valid
+		.sink0_channel       (rsp_demux_src0_channel),                       //          .channel
+		.sink0_data          (rsp_demux_src0_data),                          //          .data
+		.sink0_startofpacket (rsp_demux_src0_startofpacket),                 //          .startofpacket
+		.sink0_endofpacket   (rsp_demux_src0_endofpacket),                   //          .endofpacket
+		.sink1_ready         (rsp_demux_001_src0_ready),                     //     sink1.ready
+		.sink1_valid         (rsp_demux_001_src0_valid),                     //          .valid
+		.sink1_channel       (rsp_demux_001_src0_channel),                   //          .channel
+		.sink1_data          (rsp_demux_001_src0_data),                      //          .data
+		.sink1_startofpacket (rsp_demux_001_src0_startofpacket),             //          .startofpacket
+		.sink1_endofpacket   (rsp_demux_001_src0_endofpacket),               //          .endofpacket
+		.sink2_ready         (rsp_demux_002_src0_ready),                     //     sink2.ready
+		.sink2_valid         (rsp_demux_002_src0_valid),                     //          .valid
+		.sink2_channel       (rsp_demux_002_src0_channel),                   //          .channel
+		.sink2_data          (rsp_demux_002_src0_data),                      //          .data
+		.sink2_startofpacket (rsp_demux_002_src0_startofpacket),             //          .startofpacket
+		.sink2_endofpacket   (rsp_demux_002_src0_endofpacket),               //          .endofpacket
+		.sink3_ready         (rsp_demux_003_src0_ready),                     //     sink3.ready
+		.sink3_valid         (rsp_demux_003_src0_valid),                     //          .valid
+		.sink3_channel       (rsp_demux_003_src0_channel),                   //          .channel
+		.sink3_data          (rsp_demux_003_src0_data),                      //          .data
+		.sink3_startofpacket (rsp_demux_003_src0_startofpacket),             //          .startofpacket
+		.sink3_endofpacket   (rsp_demux_003_src0_endofpacket),               //          .endofpacket
+		.sink4_ready         (rsp_demux_004_src0_ready),                     //     sink4.ready
+		.sink4_valid         (rsp_demux_004_src0_valid),                     //          .valid
+		.sink4_channel       (rsp_demux_004_src0_channel),                   //          .channel
+		.sink4_data          (rsp_demux_004_src0_data),                      //          .data
+		.sink4_startofpacket (rsp_demux_004_src0_startofpacket),             //          .startofpacket
+		.sink4_endofpacket   (rsp_demux_004_src0_endofpacket),               //          .endofpacket
+		.sink5_ready         (rsp_demux_005_src0_ready),                     //     sink5.ready
+		.sink5_valid         (rsp_demux_005_src0_valid),                     //          .valid
+		.sink5_channel       (rsp_demux_005_src0_channel),                   //          .channel
+		.sink5_data          (rsp_demux_005_src0_data),                      //          .data
+		.sink5_startofpacket (rsp_demux_005_src0_startofpacket),             //          .startofpacket
+		.sink5_endofpacket   (rsp_demux_005_src0_endofpacket),               //          .endofpacket
+		.sink6_ready         (rsp_demux_006_src0_ready),                     //     sink6.ready
+		.sink6_valid         (rsp_demux_006_src0_valid),                     //          .valid
+		.sink6_channel       (rsp_demux_006_src0_channel),                   //          .channel
+		.sink6_data          (rsp_demux_006_src0_data),                      //          .data
+		.sink6_startofpacket (rsp_demux_006_src0_startofpacket),             //          .startofpacket
+		.sink6_endofpacket   (rsp_demux_006_src0_endofpacket),               //          .endofpacket
+		.sink7_ready         (rsp_demux_007_src0_ready),                     //     sink7.ready
+		.sink7_valid         (rsp_demux_007_src0_valid),                     //          .valid
+		.sink7_channel       (rsp_demux_007_src0_channel),                   //          .channel
+		.sink7_data          (rsp_demux_007_src0_data),                      //          .data
+		.sink7_startofpacket (rsp_demux_007_src0_startofpacket),             //          .startofpacket
+		.sink7_endofpacket   (rsp_demux_007_src0_endofpacket)                //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_rsp_mux rsp_mux_001 (
-		.clk                 (clk_0_clk_clk),                                    //       clk.clk
-		.reset               (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (rsp_mux_001_src_ready),                            //       src.ready
-		.src_valid           (rsp_mux_001_src_valid),                            //          .valid
-		.src_data            (rsp_mux_001_src_data),                             //          .data
-		.src_channel         (rsp_mux_001_src_channel),                          //          .channel
-		.src_startofpacket   (rsp_mux_001_src_startofpacket),                    //          .startofpacket
-		.src_endofpacket     (rsp_mux_001_src_endofpacket),                      //          .endofpacket
-		.sink0_ready         (rsp_demux_src1_ready),                             //     sink0.ready
-		.sink0_valid         (rsp_demux_src1_valid),                             //          .valid
-		.sink0_channel       (rsp_demux_src1_channel),                           //          .channel
-		.sink0_data          (rsp_demux_src1_data),                              //          .data
-		.sink0_startofpacket (rsp_demux_src1_startofpacket),                     //          .startofpacket
-		.sink0_endofpacket   (rsp_demux_src1_endofpacket),                       //          .endofpacket
-		.sink1_ready         (rsp_demux_001_src1_ready),                         //     sink1.ready
-		.sink1_valid         (rsp_demux_001_src1_valid),                         //          .valid
-		.sink1_channel       (rsp_demux_001_src1_channel),                       //          .channel
-		.sink1_data          (rsp_demux_001_src1_data),                          //          .data
-		.sink1_startofpacket (rsp_demux_001_src1_startofpacket),                 //          .startofpacket
-		.sink1_endofpacket   (rsp_demux_001_src1_endofpacket),                   //          .endofpacket
-		.sink2_ready         (rsp_demux_002_src1_ready),                         //     sink2.ready
-		.sink2_valid         (rsp_demux_002_src1_valid),                         //          .valid
-		.sink2_channel       (rsp_demux_002_src1_channel),                       //          .channel
-		.sink2_data          (rsp_demux_002_src1_data),                          //          .data
-		.sink2_startofpacket (rsp_demux_002_src1_startofpacket),                 //          .startofpacket
-		.sink2_endofpacket   (rsp_demux_002_src1_endofpacket),                   //          .endofpacket
-		.sink3_ready         (rsp_demux_003_src1_ready),                         //     sink3.ready
-		.sink3_valid         (rsp_demux_003_src1_valid),                         //          .valid
-		.sink3_channel       (rsp_demux_003_src1_channel),                       //          .channel
-		.sink3_data          (rsp_demux_003_src1_data),                          //          .data
-		.sink3_startofpacket (rsp_demux_003_src1_startofpacket),                 //          .startofpacket
-		.sink3_endofpacket   (rsp_demux_003_src1_endofpacket),                   //          .endofpacket
-		.sink4_ready         (rsp_demux_004_src1_ready),                         //     sink4.ready
-		.sink4_valid         (rsp_demux_004_src1_valid),                         //          .valid
-		.sink4_channel       (rsp_demux_004_src1_channel),                       //          .channel
-		.sink4_data          (rsp_demux_004_src1_data),                          //          .data
-		.sink4_startofpacket (rsp_demux_004_src1_startofpacket),                 //          .startofpacket
-		.sink4_endofpacket   (rsp_demux_004_src1_endofpacket),                   //          .endofpacket
-		.sink5_ready         (rsp_demux_005_src1_ready),                         //     sink5.ready
-		.sink5_valid         (rsp_demux_005_src1_valid),                         //          .valid
-		.sink5_channel       (rsp_demux_005_src1_channel),                       //          .channel
-		.sink5_data          (rsp_demux_005_src1_data),                          //          .data
-		.sink5_startofpacket (rsp_demux_005_src1_startofpacket),                 //          .startofpacket
-		.sink5_endofpacket   (rsp_demux_005_src1_endofpacket),                   //          .endofpacket
-		.sink6_ready         (rsp_demux_006_src1_ready),                         //     sink6.ready
-		.sink6_valid         (rsp_demux_006_src1_valid),                         //          .valid
-		.sink6_channel       (rsp_demux_006_src1_channel),                       //          .channel
-		.sink6_data          (rsp_demux_006_src1_data),                          //          .data
-		.sink6_startofpacket (rsp_demux_006_src1_startofpacket),                 //          .startofpacket
-		.sink6_endofpacket   (rsp_demux_006_src1_endofpacket)                    //          .endofpacket
+		.clk                 (clk_0_clk_clk),                                //       clk.clk
+		.reset               (VexRiscv_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (rsp_mux_001_src_ready),                        //       src.ready
+		.src_valid           (rsp_mux_001_src_valid),                        //          .valid
+		.src_data            (rsp_mux_001_src_data),                         //          .data
+		.src_channel         (rsp_mux_001_src_channel),                      //          .channel
+		.src_startofpacket   (rsp_mux_001_src_startofpacket),                //          .startofpacket
+		.src_endofpacket     (rsp_mux_001_src_endofpacket),                  //          .endofpacket
+		.sink0_ready         (rsp_demux_src1_ready),                         //     sink0.ready
+		.sink0_valid         (rsp_demux_src1_valid),                         //          .valid
+		.sink0_channel       (rsp_demux_src1_channel),                       //          .channel
+		.sink0_data          (rsp_demux_src1_data),                          //          .data
+		.sink0_startofpacket (rsp_demux_src1_startofpacket),                 //          .startofpacket
+		.sink0_endofpacket   (rsp_demux_src1_endofpacket),                   //          .endofpacket
+		.sink1_ready         (rsp_demux_001_src1_ready),                     //     sink1.ready
+		.sink1_valid         (rsp_demux_001_src1_valid),                     //          .valid
+		.sink1_channel       (rsp_demux_001_src1_channel),                   //          .channel
+		.sink1_data          (rsp_demux_001_src1_data),                      //          .data
+		.sink1_startofpacket (rsp_demux_001_src1_startofpacket),             //          .startofpacket
+		.sink1_endofpacket   (rsp_demux_001_src1_endofpacket),               //          .endofpacket
+		.sink2_ready         (rsp_demux_002_src1_ready),                     //     sink2.ready
+		.sink2_valid         (rsp_demux_002_src1_valid),                     //          .valid
+		.sink2_channel       (rsp_demux_002_src1_channel),                   //          .channel
+		.sink2_data          (rsp_demux_002_src1_data),                      //          .data
+		.sink2_startofpacket (rsp_demux_002_src1_startofpacket),             //          .startofpacket
+		.sink2_endofpacket   (rsp_demux_002_src1_endofpacket),               //          .endofpacket
+		.sink3_ready         (rsp_demux_003_src1_ready),                     //     sink3.ready
+		.sink3_valid         (rsp_demux_003_src1_valid),                     //          .valid
+		.sink3_channel       (rsp_demux_003_src1_channel),                   //          .channel
+		.sink3_data          (rsp_demux_003_src1_data),                      //          .data
+		.sink3_startofpacket (rsp_demux_003_src1_startofpacket),             //          .startofpacket
+		.sink3_endofpacket   (rsp_demux_003_src1_endofpacket),               //          .endofpacket
+		.sink4_ready         (rsp_demux_004_src1_ready),                     //     sink4.ready
+		.sink4_valid         (rsp_demux_004_src1_valid),                     //          .valid
+		.sink4_channel       (rsp_demux_004_src1_channel),                   //          .channel
+		.sink4_data          (rsp_demux_004_src1_data),                      //          .data
+		.sink4_startofpacket (rsp_demux_004_src1_startofpacket),             //          .startofpacket
+		.sink4_endofpacket   (rsp_demux_004_src1_endofpacket),               //          .endofpacket
+		.sink5_ready         (rsp_demux_005_src1_ready),                     //     sink5.ready
+		.sink5_valid         (rsp_demux_005_src1_valid),                     //          .valid
+		.sink5_channel       (rsp_demux_005_src1_channel),                   //          .channel
+		.sink5_data          (rsp_demux_005_src1_data),                      //          .data
+		.sink5_startofpacket (rsp_demux_005_src1_startofpacket),             //          .startofpacket
+		.sink5_endofpacket   (rsp_demux_005_src1_endofpacket),               //          .endofpacket
+		.sink6_ready         (rsp_demux_006_src1_ready),                     //     sink6.ready
+		.sink6_valid         (rsp_demux_006_src1_valid),                     //          .valid
+		.sink6_channel       (rsp_demux_006_src1_channel),                   //          .channel
+		.sink6_data          (rsp_demux_006_src1_data),                      //          .data
+		.sink6_startofpacket (rsp_demux_006_src1_startofpacket),             //          .startofpacket
+		.sink6_endofpacket   (rsp_demux_006_src1_endofpacket),               //          .endofpacket
+		.sink7_ready         (rsp_demux_007_src1_ready),                     //     sink7.ready
+		.sink7_valid         (rsp_demux_007_src1_valid),                     //          .valid
+		.sink7_channel       (rsp_demux_007_src1_channel),                   //          .channel
+		.sink7_data          (rsp_demux_007_src1_data),                      //          .data
+		.sink7_startofpacket (rsp_demux_007_src1_startofpacket),             //          .startofpacket
+		.sink7_endofpacket   (rsp_demux_007_src1_endofpacket)                //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_rsp_mux_002 rsp_mux_002 (
+	soc_system_mm_interconnect_0_rsp_mux rsp_mux_002 (
 		.clk                 (clk_0_clk_clk),                                  //       clk.clk
 		.reset               (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready           (rsp_mux_002_src_ready),                          //       src.ready
@@ -5825,15 +5953,15 @@ module soc_system_mm_interconnect_0 (
 		.sink6_data          (rsp_demux_006_src2_data),                        //          .data
 		.sink6_startofpacket (rsp_demux_006_src2_startofpacket),               //          .startofpacket
 		.sink6_endofpacket   (rsp_demux_006_src2_endofpacket),                 //          .endofpacket
-		.sink7_ready         (rsp_demux_007_src0_ready),                       //     sink7.ready
-		.sink7_valid         (rsp_demux_007_src0_valid),                       //          .valid
-		.sink7_channel       (rsp_demux_007_src0_channel),                     //          .channel
-		.sink7_data          (rsp_demux_007_src0_data),                        //          .data
-		.sink7_startofpacket (rsp_demux_007_src0_startofpacket),               //          .startofpacket
-		.sink7_endofpacket   (rsp_demux_007_src0_endofpacket)                  //          .endofpacket
+		.sink7_ready         (rsp_demux_007_src2_ready),                       //     sink7.ready
+		.sink7_valid         (rsp_demux_007_src2_valid),                       //          .valid
+		.sink7_channel       (rsp_demux_007_src2_channel),                     //          .channel
+		.sink7_data          (rsp_demux_007_src2_data),                        //          .data
+		.sink7_startofpacket (rsp_demux_007_src2_startofpacket),               //          .startofpacket
+		.sink7_endofpacket   (rsp_demux_007_src2_endofpacket)                  //          .endofpacket
 	);
 
-	soc_system_mm_interconnect_0_rsp_mux_002 rsp_mux_003 (
+	soc_system_mm_interconnect_0_rsp_mux rsp_mux_003 (
 		.clk                 (clk_0_clk_clk),                                  //       clk.clk
 		.reset               (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready           (rsp_mux_003_src_ready),                          //       src.ready
@@ -5884,58 +6012,58 @@ module soc_system_mm_interconnect_0 (
 		.sink6_data          (rsp_demux_006_src3_data),                        //          .data
 		.sink6_startofpacket (rsp_demux_006_src3_startofpacket),               //          .startofpacket
 		.sink6_endofpacket   (rsp_demux_006_src3_endofpacket),                 //          .endofpacket
-		.sink7_ready         (rsp_demux_007_src1_ready),                       //     sink7.ready
-		.sink7_valid         (rsp_demux_007_src1_valid),                       //          .valid
-		.sink7_channel       (rsp_demux_007_src1_channel),                     //          .channel
-		.sink7_data          (rsp_demux_007_src1_data),                        //          .data
-		.sink7_startofpacket (rsp_demux_007_src1_startofpacket),               //          .startofpacket
-		.sink7_endofpacket   (rsp_demux_007_src1_endofpacket)                  //          .endofpacket
+		.sink7_ready         (rsp_demux_007_src3_ready),                       //     sink7.ready
+		.sink7_valid         (rsp_demux_007_src3_valid),                       //          .valid
+		.sink7_channel       (rsp_demux_007_src3_channel),                     //          .channel
+		.sink7_data          (rsp_demux_007_src3_data),                        //          .data
+		.sink7_startofpacket (rsp_demux_007_src3_startofpacket),               //          .startofpacket
+		.sink7_endofpacket   (rsp_demux_007_src3_endofpacket)                  //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_rsp_mux_004 rsp_mux_004 (
-		.clk                 (clk_0_clk_clk),                                    //       clk.clk
-		.reset               (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (rsp_mux_004_src_ready),                            //       src.ready
-		.src_valid           (rsp_mux_004_src_valid),                            //          .valid
-		.src_data            (rsp_mux_004_src_data),                             //          .data
-		.src_channel         (rsp_mux_004_src_channel),                          //          .channel
-		.src_startofpacket   (rsp_mux_004_src_startofpacket),                    //          .startofpacket
-		.src_endofpacket     (rsp_mux_004_src_endofpacket),                      //          .endofpacket
-		.sink0_ready         (rsp_demux_003_src4_ready),                         //     sink0.ready
-		.sink0_valid         (rsp_demux_003_src4_valid),                         //          .valid
-		.sink0_channel       (rsp_demux_003_src4_channel),                       //          .channel
-		.sink0_data          (rsp_demux_003_src4_data),                          //          .data
-		.sink0_startofpacket (rsp_demux_003_src4_startofpacket),                 //          .startofpacket
-		.sink0_endofpacket   (rsp_demux_003_src4_endofpacket),                   //          .endofpacket
-		.sink1_ready         (rsp_demux_004_src4_ready),                         //     sink1.ready
-		.sink1_valid         (rsp_demux_004_src4_valid),                         //          .valid
-		.sink1_channel       (rsp_demux_004_src4_channel),                       //          .channel
-		.sink1_data          (rsp_demux_004_src4_data),                          //          .data
-		.sink1_startofpacket (rsp_demux_004_src4_startofpacket),                 //          .startofpacket
-		.sink1_endofpacket   (rsp_demux_004_src4_endofpacket)                    //          .endofpacket
+		.clk                 (clk_0_clk_clk),                                //       clk.clk
+		.reset               (VexRiscv_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (rsp_mux_004_src_ready),                        //       src.ready
+		.src_valid           (rsp_mux_004_src_valid),                        //          .valid
+		.src_data            (rsp_mux_004_src_data),                         //          .data
+		.src_channel         (rsp_mux_004_src_channel),                      //          .channel
+		.src_startofpacket   (rsp_mux_004_src_startofpacket),                //          .startofpacket
+		.src_endofpacket     (rsp_mux_004_src_endofpacket),                  //          .endofpacket
+		.sink0_ready         (rsp_demux_006_src4_ready),                     //     sink0.ready
+		.sink0_valid         (rsp_demux_006_src4_valid),                     //          .valid
+		.sink0_channel       (rsp_demux_006_src4_channel),                   //          .channel
+		.sink0_data          (rsp_demux_006_src4_data),                      //          .data
+		.sink0_startofpacket (rsp_demux_006_src4_startofpacket),             //          .startofpacket
+		.sink0_endofpacket   (rsp_demux_006_src4_endofpacket),               //          .endofpacket
+		.sink1_ready         (rsp_demux_007_src4_ready),                     //     sink1.ready
+		.sink1_valid         (rsp_demux_007_src4_valid),                     //          .valid
+		.sink1_channel       (rsp_demux_007_src4_channel),                   //          .channel
+		.sink1_data          (rsp_demux_007_src4_data),                      //          .data
+		.sink1_startofpacket (rsp_demux_007_src4_startofpacket),             //          .startofpacket
+		.sink1_endofpacket   (rsp_demux_007_src4_endofpacket)                //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_rsp_mux_004 rsp_mux_005 (
-		.clk                 (clk_0_clk_clk),                                    //       clk.clk
-		.reset               (VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (rsp_mux_005_src_ready),                            //       src.ready
-		.src_valid           (rsp_mux_005_src_valid),                            //          .valid
-		.src_data            (rsp_mux_005_src_data),                             //          .data
-		.src_channel         (rsp_mux_005_src_channel),                          //          .channel
-		.src_startofpacket   (rsp_mux_005_src_startofpacket),                    //          .startofpacket
-		.src_endofpacket     (rsp_mux_005_src_endofpacket),                      //          .endofpacket
-		.sink0_ready         (rsp_demux_003_src5_ready),                         //     sink0.ready
-		.sink0_valid         (rsp_demux_003_src5_valid),                         //          .valid
-		.sink0_channel       (rsp_demux_003_src5_channel),                       //          .channel
-		.sink0_data          (rsp_demux_003_src5_data),                          //          .data
-		.sink0_startofpacket (rsp_demux_003_src5_startofpacket),                 //          .startofpacket
-		.sink0_endofpacket   (rsp_demux_003_src5_endofpacket),                   //          .endofpacket
-		.sink1_ready         (rsp_demux_004_src5_ready),                         //     sink1.ready
-		.sink1_valid         (rsp_demux_004_src5_valid),                         //          .valid
-		.sink1_channel       (rsp_demux_004_src5_channel),                       //          .channel
-		.sink1_data          (rsp_demux_004_src5_data),                          //          .data
-		.sink1_startofpacket (rsp_demux_004_src5_startofpacket),                 //          .startofpacket
-		.sink1_endofpacket   (rsp_demux_004_src5_endofpacket)                    //          .endofpacket
+		.clk                 (clk_0_clk_clk),                                //       clk.clk
+		.reset               (VexRiscv_0_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (rsp_mux_005_src_ready),                        //       src.ready
+		.src_valid           (rsp_mux_005_src_valid),                        //          .valid
+		.src_data            (rsp_mux_005_src_data),                         //          .data
+		.src_channel         (rsp_mux_005_src_channel),                      //          .channel
+		.src_startofpacket   (rsp_mux_005_src_startofpacket),                //          .startofpacket
+		.src_endofpacket     (rsp_mux_005_src_endofpacket),                  //          .endofpacket
+		.sink0_ready         (rsp_demux_006_src5_ready),                     //     sink0.ready
+		.sink0_valid         (rsp_demux_006_src5_valid),                     //          .valid
+		.sink0_channel       (rsp_demux_006_src5_channel),                   //          .channel
+		.sink0_data          (rsp_demux_006_src5_data),                      //          .data
+		.sink0_startofpacket (rsp_demux_006_src5_startofpacket),             //          .startofpacket
+		.sink0_endofpacket   (rsp_demux_006_src5_endofpacket),               //          .endofpacket
+		.sink1_ready         (rsp_demux_007_src5_ready),                     //     sink1.ready
+		.sink1_valid         (rsp_demux_007_src5_valid),                     //          .valid
+		.sink1_channel       (rsp_demux_007_src5_channel),                   //          .channel
+		.sink1_data          (rsp_demux_007_src5_data),                      //          .data
+		.sink1_startofpacket (rsp_demux_007_src5_startofpacket),             //          .startofpacket
+		.sink1_endofpacket   (rsp_demux_007_src5_endofpacket)                //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_rsp_mux_006 rsp_mux_006 (
@@ -5953,18 +6081,18 @@ module soc_system_mm_interconnect_0 (
 		.sink0_data          (rsp_demux_002_src4_data),                        //          .data
 		.sink0_startofpacket (rsp_demux_002_src4_startofpacket),               //          .startofpacket
 		.sink0_endofpacket   (rsp_demux_002_src4_endofpacket),                 //          .endofpacket
-		.sink1_ready         (rsp_demux_003_src6_ready),                       //     sink1.ready
-		.sink1_valid         (rsp_demux_003_src6_valid),                       //          .valid
-		.sink1_channel       (rsp_demux_003_src6_channel),                     //          .channel
-		.sink1_data          (rsp_demux_003_src6_data),                        //          .data
-		.sink1_startofpacket (rsp_demux_003_src6_startofpacket),               //          .startofpacket
-		.sink1_endofpacket   (rsp_demux_003_src6_endofpacket),                 //          .endofpacket
-		.sink2_ready         (rsp_demux_004_src6_ready),                       //     sink2.ready
-		.sink2_valid         (rsp_demux_004_src6_valid),                       //          .valid
-		.sink2_channel       (rsp_demux_004_src6_channel),                     //          .channel
-		.sink2_data          (rsp_demux_004_src6_data),                        //          .data
-		.sink2_startofpacket (rsp_demux_004_src6_startofpacket),               //          .startofpacket
-		.sink2_endofpacket   (rsp_demux_004_src6_endofpacket)                  //          .endofpacket
+		.sink1_ready         (rsp_demux_006_src6_ready),                       //     sink1.ready
+		.sink1_valid         (rsp_demux_006_src6_valid),                       //          .valid
+		.sink1_channel       (rsp_demux_006_src6_channel),                     //          .channel
+		.sink1_data          (rsp_demux_006_src6_data),                        //          .data
+		.sink1_startofpacket (rsp_demux_006_src6_startofpacket),               //          .startofpacket
+		.sink1_endofpacket   (rsp_demux_006_src6_endofpacket),                 //          .endofpacket
+		.sink2_ready         (rsp_demux_007_src6_ready),                       //     sink2.ready
+		.sink2_valid         (rsp_demux_007_src6_valid),                       //          .valid
+		.sink2_channel       (rsp_demux_007_src6_channel),                     //          .channel
+		.sink2_data          (rsp_demux_007_src6_data),                        //          .data
+		.sink2_startofpacket (rsp_demux_007_src6_startofpacket),               //          .startofpacket
+		.sink2_endofpacket   (rsp_demux_007_src6_endofpacket)                  //          .endofpacket
 	);
 
 	soc_system_mm_interconnect_0_avalon_st_adapter #(
@@ -6074,9 +6202,9 @@ module soc_system_mm_interconnect_0 (
 	) avalon_st_adapter_003 (
 		.in_clk_0_clk   (clk_0_clk_clk),                                  // in_clk_0.clk
 		.in_rst_0_reset (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
-		.in_0_data      (ocram_64k_s1_agent_rdata_fifo_out_data),         //     in_0.data
-		.in_0_valid     (ocram_64k_s1_agent_rdata_fifo_out_valid),        //         .valid
-		.in_0_ready     (ocram_64k_s1_agent_rdata_fifo_out_ready),        //         .ready
+		.in_0_data      (switch_pio_s1_agent_rdata_fifo_out_data),        //     in_0.data
+		.in_0_valid     (switch_pio_s1_agent_rdata_fifo_out_valid),       //         .valid
+		.in_0_ready     (switch_pio_s1_agent_rdata_fifo_out_ready),       //         .ready
 		.out_0_data     (avalon_st_adapter_003_out_0_data),               //    out_0.data
 		.out_0_valid    (avalon_st_adapter_003_out_0_valid),              //         .valid
 		.out_0_ready    (avalon_st_adapter_003_out_0_ready),              //         .ready
@@ -6103,9 +6231,9 @@ module soc_system_mm_interconnect_0 (
 	) avalon_st_adapter_004 (
 		.in_clk_0_clk   (clk_0_clk_clk),                                  // in_clk_0.clk
 		.in_rst_0_reset (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
-		.in_0_data      (ocram_16b_s1_agent_rdata_fifo_out_data),         //     in_0.data
-		.in_0_valid     (ocram_16b_s1_agent_rdata_fifo_out_valid),        //         .valid
-		.in_0_ready     (ocram_16b_s1_agent_rdata_fifo_out_ready),        //         .ready
+		.in_0_data      (button_pio_s1_agent_rdata_fifo_out_data),        //     in_0.data
+		.in_0_valid     (button_pio_s1_agent_rdata_fifo_out_valid),       //         .valid
+		.in_0_ready     (button_pio_s1_agent_rdata_fifo_out_ready),       //         .ready
 		.out_0_data     (avalon_st_adapter_004_out_0_data),               //    out_0.data
 		.out_0_valid    (avalon_st_adapter_004_out_0_valid),              //         .valid
 		.out_0_ready    (avalon_st_adapter_004_out_0_ready),              //         .ready
@@ -6161,9 +6289,9 @@ module soc_system_mm_interconnect_0 (
 	) avalon_st_adapter_006 (
 		.in_clk_0_clk   (clk_0_clk_clk),                                  // in_clk_0.clk
 		.in_rst_0_reset (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
-		.in_0_data      (button_pio_s1_agent_rdata_fifo_out_data),        //     in_0.data
-		.in_0_valid     (button_pio_s1_agent_rdata_fifo_out_valid),       //         .valid
-		.in_0_ready     (button_pio_s1_agent_rdata_fifo_out_ready),       //         .ready
+		.in_0_data      (ocram_16b_s1_agent_rdata_fifo_out_data),         //     in_0.data
+		.in_0_valid     (ocram_16b_s1_agent_rdata_fifo_out_valid),        //         .valid
+		.in_0_ready     (ocram_16b_s1_agent_rdata_fifo_out_ready),        //         .ready
 		.out_0_data     (avalon_st_adapter_006_out_0_data),               //    out_0.data
 		.out_0_valid    (avalon_st_adapter_006_out_0_valid),              //         .valid
 		.out_0_ready    (avalon_st_adapter_006_out_0_ready),              //         .ready
@@ -6190,9 +6318,9 @@ module soc_system_mm_interconnect_0 (
 	) avalon_st_adapter_007 (
 		.in_clk_0_clk   (clk_0_clk_clk),                                  // in_clk_0.clk
 		.in_rst_0_reset (nios2_gen2_0_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
-		.in_0_data      (switch_pio_s1_agent_rdata_fifo_out_data),        //     in_0.data
-		.in_0_valid     (switch_pio_s1_agent_rdata_fifo_out_valid),       //         .valid
-		.in_0_ready     (switch_pio_s1_agent_rdata_fifo_out_ready),       //         .ready
+		.in_0_data      (ocram_64k_s1_agent_rdata_fifo_out_data),         //     in_0.data
+		.in_0_valid     (ocram_64k_s1_agent_rdata_fifo_out_valid),        //         .valid
+		.in_0_ready     (ocram_64k_s1_agent_rdata_fifo_out_ready),        //         .ready
 		.out_0_data     (avalon_st_adapter_007_out_0_data),               //    out_0.data
 		.out_0_valid    (avalon_st_adapter_007_out_0_valid),              //         .valid
 		.out_0_ready    (avalon_st_adapter_007_out_0_ready),              //         .ready

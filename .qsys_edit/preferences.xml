@@ -3,12 +3,12 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="255" />
-   <irq preferredWidth="63" />
+   <connections preferredWidth="271" />
+   <irq preferredWidth="111" />
    <defaultSlave visible="1" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
- <window width="1855" height="1048" x="65" y="32" />
+ <library expandedCategories="Project,Library" />
+ <window width="1855" height="1055" x="65" y="25" />
  <hdlexample language="VERILOG" />
 </preferences>

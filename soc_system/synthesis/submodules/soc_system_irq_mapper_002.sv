@@ -21,7 +21,7 @@
 //
 // Parameters
 //   NUM_RCVRS        : 1
-//   SENDER_IRW_WIDTH : 32
+//   SENDER_IRW_WIDTH : 1
 //   IRQ_MAP          : 0:0
 //
 // -------------------------------------------------------
@@ -44,7 +44,7 @@ module soc_system_irq_mapper_002
     // -------------------
     // Command Source (Output)
     // -------------------
-    output reg [31 : 0] sender_irq
+    output reg [0 : 0] sender_irq
 );
 
 

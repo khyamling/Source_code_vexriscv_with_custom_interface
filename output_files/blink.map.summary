@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Aug 12 15:08:28 2021
+Analysis & Synthesis Status : Successful - Tue Jan 11 15:49:17 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : blink
 Top-level Entity Name : blink
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 31058
+Total registers : 30510
 Total pins : 12
 Total virtual pins : 0
-Total block memory bits : 1,015,168
+Total block memory bits : 1,016,192
 Total DSP Blocks : 4
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

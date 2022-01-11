@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="soc_system" kind="soc_system" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2021.04.19.20:26:52 -->
+ <!-- 2021.12.23.23:46:55 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1618844212</value>
+  <value>1640283415</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -95,26 +95,32 @@
   <visible>true</visible>
   <valid>true</valid>
  </parameter>
- <module
-   name="VexRiscvAxi4_0"
-   kind="VexRiscvAxi4"
-   version="1.0"
-   path="VexRiscvAxi4_0">
+ <module name="VexRiscv_0" kind="VexRiscv" version="1.0" path="VexRiscv_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
-  <parameter name="AUTO_EXTERNALINTERRUPT_INTERRUPTS_USED">
+  <parameter name="AUTO_EXTERNALINTERRUPTARRAY_INTERRUPTS_USED">
    <type>java.math.BigInteger</type>
-   <value>0</value>
+   <value>1</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
    <valid>true</valid>
    <sysinfo_type>INTERRUPTS_USED</sysinfo_type>
-   <sysinfo_arg>externalInterrupt</sysinfo_arg>
+   <sysinfo_arg>externalInterruptArray</sysinfo_arg>
+  </parameter>
+  <parameter name="AUTO_EXTERNALRESETVECTOR_INTERRUPTS_USED">
+   <type>java.math.BigInteger</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>false</visible>
+   <valid>true</valid>
+   <sysinfo_type>INTERRUPTS_USED</sysinfo_type>
+   <sysinfo_arg>externalResetVector</sysinfo_arg>
   </parameter>
   <parameter name="AUTO_TIMERINTERRUPT_INTERRUPTS_USED">
    <type>java.math.BigInteger</type>
-   <value>0</value>
+   <value>1</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -138,7 +144,7 @@ the requested settings for a module instance. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <interface name="clock" kind="clock_sink" version="18.1">
+  <interface name="clk" kind="clock_sink" version="18.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -189,7 +195,7 @@ particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
    <parameter name="associatedClock">
     <type>java.lang.String</type>
-    <value>clock</value>
+    <value>clk</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -228,13 +234,119 @@ parameters are a RESULT of the module parameters. -->
     <role>reset</role>
    </port>
   </interface>
+  <interface name="debugReset" kind="reset_sink" version="18.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value>clk</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="synchronousEdges">
+    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
+    <value>DEASSERT</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>reset</type>
+   <isStart>false</isStart>
+   <port>
+    <name>debugReset</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>reset</role>
+   </port>
+  </interface>
+  <interface name="debug_resetOut" kind="reset_source" version="18.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value>clk</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedDirectReset">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedResetSinks">
+    <type>[Ljava.lang.String;</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="synchronousEdges">
+    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
+    <value>DEASSERT</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>reset</type>
+   <isStart>true</isStart>
+   <port>
+    <name>debug_resetOut</name>
+    <direction>Output</direction>
+    <width>1</width>
+    <role>reset</role>
+   </port>
+  </interface>
   <interface name="dBusaxi" kind="altera_axi4_master" version="18.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
    <parameter name="associatedClock">
     <type>java.lang.String</type>
-    <value>clock</value>
+    <value>clk</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -582,11 +694,19 @@ parameters are a RESULT of the module parameters. -->
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>ocram_64K</moduleName>
+    <moduleName>switch_pio</moduleName>
     <slaveName>s1</slaveName>
-    <name>ocram_64K.s1</name>
-    <baseAddress>0</baseAddress>
-    <span>65536</span>
+    <name>switch_pio.s1</name>
+    <baseAddress>67584</baseAddress>
+    <span>16</span>
+   </memoryBlock>
+   <memoryBlock>
+    <isBridge>false</isBridge>
+    <moduleName>button_pio</moduleName>
+    <slaveName>s1</slaveName>
+    <name>button_pio.s1</name>
+    <baseAddress>67600</baseAddress>
+    <span>16</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -598,11 +718,11 @@ parameters are a RESULT of the module parameters. -->
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>button_pio</moduleName>
+    <moduleName>ocram_64K</moduleName>
     <slaveName>s1</slaveName>
-    <name>button_pio.s1</name>
-    <baseAddress>67600</baseAddress>
-    <span>16</span>
+    <name>ocram_64K.s1</name>
+    <baseAddress>0</baseAddress>
+    <span>65536</span>
    </memoryBlock>
   </interface>
   <interface name="iBusaxi" kind="altera_axi4_master" version="18.1">
@@ -611,7 +731,7 @@ particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
    <parameter name="associatedClock">
     <type>java.lang.String</type>
-    <value>clock</value>
+    <value>clk</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -894,113 +1014,10 @@ parameters are a RESULT of the module parameters. -->
     <span>65536</span>
    </memoryBlock>
   </interface>
-  <interface name="debugReset" kind="reset_sink" version="18.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clock</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="synchronousEdges">
-    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
-    <value>DEASSERT</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>reset</type>
-   <isStart>false</isStart>
-   <port>
-    <name>debugReset</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>reset</role>
-   </port>
-  </interface>
-  <interface name="debug_resetOut" kind="reset_source" version="18.1">
-   <!-- The connection points exposed by a module instance for the
-particular module parameters. Connection points and their
-parameters are a RESULT of the module parameters. -->
-   <parameter name="associatedClock">
-    <type>java.lang.String</type>
-    <value>clock</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedDirectReset">
-    <type>java.lang.String</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="associatedResetSinks">
-    <type>[Ljava.lang.String;</type>
-    <value></value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="synchronousEdges">
-    <type>com.altera.sopcmodel.reset.Reset$Edges</type>
-    <value>DEASSERT</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="deviceFamily">
-    <type>java.lang.String</type>
-    <value>UNKNOWN</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <parameter name="generateLegacySim">
-    <type>boolean</type>
-    <value>false</value>
-    <derived>false</derived>
-    <enabled>true</enabled>
-    <visible>true</visible>
-    <valid>true</valid>
-   </parameter>
-   <type>reset</type>
-   <isStart>true</isStart>
-   <port>
-    <name>debug_resetOut</name>
-    <direction>Output</direction>
-    <width>1</width>
-    <role>reset</role>
-   </port>
-  </interface>
-  <interface name="externalInterrupt" kind="interrupt_receiver" version="18.1">
+  <interface
+     name="externalInterruptArray"
+     kind="interrupt_receiver"
+     version="18.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -1014,7 +1031,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="associatedClock">
     <type>java.lang.String</type>
-    <value>clock</value>
+    <value>clk</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -1063,11 +1080,94 @@ parameters are a RESULT of the module parameters. -->
    <type>interrupt</type>
    <isStart>true</isStart>
    <port>
-    <name>externalInterrupt</name>
+    <name>externalInterruptArray</name>
     <direction>Input</direction>
-    <width>1</width>
+    <width>32</width>
     <role>irq</role>
    </port>
+   <interrupt>
+    <isBridge>false</isBridge>
+    <moduleName>jtag_uart_0</moduleName>
+    <slaveName>irq</slaveName>
+    <name>jtag_uart_0.irq</name>
+    <interruptNumber>0</interruptNumber>
+   </interrupt>
+  </interface>
+  <interface name="externalResetVector" kind="interrupt_receiver" version="18.1">
+   <!-- The connection points exposed by a module instance for the
+particular module parameters. Connection points and their
+parameters are a RESULT of the module parameters. -->
+   <parameter name="associatedAddressablePoint">
+    <type>com.altera.entityinterfaces.IConnectionPoint</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedClock">
+    <type>java.lang.String</type>
+    <value>clk</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="associatedReset">
+    <type>java.lang.String</type>
+    <value>debug_resetOut</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="irqMap">
+    <type>java.lang.String</type>
+    <value></value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>false</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="irqScheme">
+    <type>com.altera.sopcmodel.interrupt.InterruptConnectionPoint$EIrqScheme</type>
+    <value>INDIVIDUAL_REQUESTS</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="deviceFamily">
+    <type>java.lang.String</type>
+    <value>UNKNOWN</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <parameter name="generateLegacySim">
+    <type>boolean</type>
+    <value>false</value>
+    <derived>false</derived>
+    <enabled>true</enabled>
+    <visible>true</visible>
+    <valid>true</valid>
+   </parameter>
+   <type>interrupt</type>
+   <isStart>true</isStart>
+   <port>
+    <name>externalResetVector</name>
+    <direction>Input</direction>
+    <width>32</width>
+    <role>irq</role>
+   </port>
+   <interrupt>
+    <isBridge>false</isBridge>
+    <moduleName>jtag_uart_0</moduleName>
+    <slaveName>irq</slaveName>
+    <name>jtag_uart_0.irq</name>
+    <interruptNumber>0</interruptNumber>
+   </interrupt>
   </interface>
   <interface name="timerInterrupt" kind="interrupt_receiver" version="18.1">
    <!-- The connection points exposed by a module instance for the
@@ -1083,7 +1183,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="associatedClock">
     <type>java.lang.String</type>
-    <value>clock</value>
+    <value>clk</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -1137,6 +1237,13 @@ parameters are a RESULT of the module parameters. -->
     <width>1</width>
     <role>irq</role>
    </port>
+   <interrupt>
+    <isBridge>false</isBridge>
+    <moduleName>jtag_uart_0</moduleName>
+    <slaveName>irq</slaveName>
+    <name>jtag_uart_0.irq</name>
+    <interruptNumber>0</interruptNumber>
+   </interrupt>
   </interface>
   <interface name="softwareInterrupt" kind="conduit_end" version="18.1">
    <!-- The connection points exposed by a module instance for the
@@ -1144,7 +1251,7 @@ particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
    <parameter name="associatedClock">
     <type>java.lang.String</type>
-    <value>clock</value>
+    <value>clk</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -1189,7 +1296,7 @@ particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
    <parameter name="associatedClock">
     <type>java.lang.String</type>
-    <value>clock</value>
+    <value>clk</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -2286,6 +2393,12 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
+    <moduleName>VexRiscv_0</moduleName>
+    <slaveName>clk</slaveName>
+    <name>VexRiscv_0.clk</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
     <moduleName>ocram_64K</moduleName>
     <slaveName>clk1</slaveName>
     <name>ocram_64K.clk1</name>
@@ -2295,12 +2408,6 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>ocram_16b</moduleName>
     <slaveName>clk1</slaveName>
     <name>ocram_16b.clk1</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
-    <moduleName>VexRiscvAxi4_0</moduleName>
-    <slaveName>clock</slaveName>
-    <name>VexRiscvAxi4_0.clock</name>
    </clockDomainMember>
   </interface>
   <interface name="clk_reset" kind="reset_source" version="18.1">
@@ -10261,7 +10368,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1618844212</value>
+   <value>1640283415</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -10281,7 +10388,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1618844212</value>
+   <value>1640283415</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -10297,7 +10404,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1618844212</value>
+   <value>1640283415</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -10755,10 +10862,10 @@ parameters are a RESULT of the module parameters. -->
   </interface>
  </module>
  <connection
-   name="VexRiscvAxi4_0.dBusaxi/jtag_uart_0.avalon_jtag_slave"
+   name="VexRiscv_0.dBusaxi/jtag_uart_0.avalon_jtag_slave"
    kind="avalon"
    version="18.1"
-   start="VexRiscvAxi4_0.dBusaxi"
+   start="VexRiscv_0.dBusaxi"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -10800,16 +10907,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
+  <startModule>VexRiscv_0</startModule>
   <startConnectionPoint>dBusaxi</startConnectionPoint>
   <endModule>jtag_uart_0</endModule>
   <endConnectionPoint>avalon_jtag_slave</endConnectionPoint>
  </connection>
  <connection
-   name="VexRiscvAxi4_0.dBusaxi/sysid_qsys_0.control_slave"
+   name="VexRiscv_0.dBusaxi/sysid_qsys_0.control_slave"
    kind="avalon"
    version="18.1"
-   start="VexRiscvAxi4_0.dBusaxi"
+   start="VexRiscv_0.dBusaxi"
    end="sysid_qsys_0.control_slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -10851,16 +10958,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
+  <startModule>VexRiscv_0</startModule>
   <startConnectionPoint>dBusaxi</startConnectionPoint>
   <endModule>sysid_qsys_0</endModule>
   <endConnectionPoint>control_slave</endConnectionPoint>
  </connection>
  <connection
-   name="VexRiscvAxi4_0.dBusaxi/nios2_gen2_0.debug_mem_slave"
+   name="VexRiscv_0.dBusaxi/nios2_gen2_0.debug_mem_slave"
    kind="avalon"
    version="18.1"
-   start="VexRiscvAxi4_0.dBusaxi"
+   start="VexRiscv_0.dBusaxi"
    end="nios2_gen2_0.debug_mem_slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -10902,17 +11009,17 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
+  <startModule>VexRiscv_0</startModule>
   <startConnectionPoint>dBusaxi</startConnectionPoint>
   <endModule>nios2_gen2_0</endModule>
   <endConnectionPoint>debug_mem_slave</endConnectionPoint>
  </connection>
  <connection
-   name="VexRiscvAxi4_0.dBusaxi/ocram_64K.s1"
+   name="VexRiscv_0.dBusaxi/switch_pio.s1"
    kind="avalon"
    version="18.1"
-   start="VexRiscvAxi4_0.dBusaxi"
-   end="ocram_64K.s1">
+   start="VexRiscv_0.dBusaxi"
+   end="switch_pio.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -10923,7 +11030,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0000</value>
+   <value>0x00010800</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -10953,118 +11060,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
+  <startModule>VexRiscv_0</startModule>
   <startConnectionPoint>dBusaxi</startConnectionPoint>
-  <endModule>ocram_64K</endModule>
+  <endModule>switch_pio</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="VexRiscvAxi4_0.dBusaxi/ocram_16b.s1"
+   name="VexRiscv_0.dBusaxi/button_pio.s1"
    kind="avalon"
    version="18.1"
-   start="VexRiscvAxi4_0.dBusaxi"
-   end="ocram_16b.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00010000</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>true</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>dBusaxi</startConnectionPoint>
-  <endModule>ocram_16b</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.dBusaxi/led_pio.s1"
-   kind="avalon"
-   version="18.1"
-   start="VexRiscvAxi4_0.dBusaxi"
-   end="led_pio.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00010820</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>dBusaxi</startConnectionPoint>
-  <endModule>led_pio</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.dBusaxi/button_pio.s1"
-   kind="avalon"
-   version="18.1"
-   start="VexRiscvAxi4_0.dBusaxi"
+   start="VexRiscv_0.dBusaxi"
    end="button_pio.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -11106,9 +11111,162 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
+  <startModule>VexRiscv_0</startModule>
   <startConnectionPoint>dBusaxi</startConnectionPoint>
   <endModule>button_pio</endModule>
+  <endConnectionPoint>s1</endConnectionPoint>
+ </connection>
+ <connection
+   name="VexRiscv_0.dBusaxi/led_pio.s1"
+   kind="avalon"
+   version="18.1"
+   start="VexRiscv_0.dBusaxi"
+   end="led_pio.s1">
+  <parameter name="arbitrationPriority">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="baseAddress">
+   <type>java.math.BigInteger</type>
+   <value>0x00010820</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="defaultConnection">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>VexRiscv_0</startModule>
+  <startConnectionPoint>dBusaxi</startConnectionPoint>
+  <endModule>led_pio</endModule>
+  <endConnectionPoint>s1</endConnectionPoint>
+ </connection>
+ <connection
+   name="VexRiscv_0.dBusaxi/ocram_16b.s1"
+   kind="avalon"
+   version="18.1"
+   start="VexRiscv_0.dBusaxi"
+   end="ocram_16b.s1">
+  <parameter name="arbitrationPriority">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="baseAddress">
+   <type>java.math.BigInteger</type>
+   <value>0x00010000</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="defaultConnection">
+   <type>boolean</type>
+   <value>true</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>VexRiscv_0</startModule>
+  <startConnectionPoint>dBusaxi</startConnectionPoint>
+  <endModule>ocram_16b</endModule>
+  <endConnectionPoint>s1</endConnectionPoint>
+ </connection>
+ <connection
+   name="VexRiscv_0.dBusaxi/ocram_64K.s1"
+   kind="avalon"
+   version="18.1"
+   start="VexRiscv_0.dBusaxi"
+   end="ocram_64K.s1">
+  <parameter name="arbitrationPriority">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="baseAddress">
+   <type>java.math.BigInteger</type>
+   <value>0x0000</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="defaultConnection">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>VexRiscv_0</startModule>
+  <startConnectionPoint>dBusaxi</startConnectionPoint>
+  <endModule>ocram_64K</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
@@ -11520,10 +11678,10 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="VexRiscvAxi4_0.iBusaxi/ocram_64K.s1"
+   name="VexRiscv_0.iBusaxi/ocram_64K.s1"
    kind="avalon"
    version="18.1"
-   start="VexRiscvAxi4_0.iBusaxi"
+   start="VexRiscv_0.iBusaxi"
    end="ocram_64K.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -11565,16 +11723,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
+  <startModule>VexRiscv_0</startModule>
   <startConnectionPoint>iBusaxi</startConnectionPoint>
   <endModule>ocram_64K</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="VexRiscvAxi4_0.iBusaxi/ocram_16b.s1"
+   name="VexRiscv_0.iBusaxi/ocram_16b.s1"
    kind="avalon"
    version="18.1"
-   start="VexRiscvAxi4_0.iBusaxi"
+   start="VexRiscv_0.iBusaxi"
    end="ocram_16b.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
@@ -11616,7 +11774,7 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
+  <startModule>VexRiscv_0</startModule>
   <startConnectionPoint>iBusaxi</startConnectionPoint>
   <endModule>ocram_16b</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
@@ -12372,6 +12530,33 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
+   name="clk_0.clk/VexRiscv_0.clk"
+   kind="clock"
+   version="18.1"
+   start="clk_0.clk"
+   end="VexRiscv_0.clk">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>clk_0</startModule>
+  <startConnectionPoint>clk</startConnectionPoint>
+  <endModule>VexRiscv_0</endModule>
+  <endConnectionPoint>clk</endConnectionPoint>
+ </connection>
+ <connection
    name="clk_0.clk/ocram_64K.clk1"
    kind="clock"
    version="18.1"
@@ -12426,11 +12611,19 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk1</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk/VexRiscvAxi4_0.clock"
-   kind="clock"
+   name="VexRiscv_0.externalInterruptArray/jtag_uart_0.irq"
+   kind="interrupt"
    version="18.1"
-   start="clk_0.clk"
-   end="VexRiscvAxi4_0.clock">
+   start="VexRiscv_0.externalInterruptArray"
+   end="jtag_uart_0.irq">
+  <parameter name="irqNumber">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -12447,10 +12640,45 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clk_0</startModule>
-  <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>VexRiscvAxi4_0</endModule>
-  <endConnectionPoint>clock</endConnectionPoint>
+  <startModule>VexRiscv_0</startModule>
+  <startConnectionPoint>externalInterruptArray</startConnectionPoint>
+  <endModule>jtag_uart_0</endModule>
+  <endConnectionPoint>irq</endConnectionPoint>
+ </connection>
+ <connection
+   name="VexRiscv_0.externalResetVector/jtag_uart_0.irq"
+   kind="interrupt"
+   version="18.1"
+   start="VexRiscv_0.externalResetVector"
+   end="jtag_uart_0.irq">
+  <parameter name="irqNumber">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>VexRiscv_0</startModule>
+  <startConnectionPoint>externalResetVector</startConnectionPoint>
+  <endModule>jtag_uart_0</endModule>
+  <endConnectionPoint>irq</endConnectionPoint>
  </connection>
  <connection
    name="nios2_gen2_0.irq/jtag_uart_0.irq"
@@ -12488,6 +12716,41 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>irq</endConnectionPoint>
  </connection>
  <connection
+   name="VexRiscv_0.timerInterrupt/jtag_uart_0.irq"
+   kind="interrupt"
+   version="18.1"
+   start="VexRiscv_0.timerInterrupt"
+   end="jtag_uart_0.irq">
+  <parameter name="irqNumber">
+   <type>int</type>
+   <value>0</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>VexRiscv_0</startModule>
+  <startConnectionPoint>timerInterrupt</startConnectionPoint>
+  <endModule>jtag_uart_0</endModule>
+  <endConnectionPoint>irq</endConnectionPoint>
+ </connection>
+ <connection
    name="clk_0.clk_reset/master_0.clk_reset"
    kind="reset"
    version="18.1"
@@ -12515,11 +12778,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk_reset</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk_reset/VexRiscvAxi4_0.debugReset"
+   name="clk_0.clk_reset/VexRiscv_0.debugReset"
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="VexRiscvAxi4_0.debugReset">
+   end="VexRiscv_0.debugReset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -12538,7 +12801,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
-  <endModule>VexRiscvAxi4_0</endModule>
+  <endModule>VexRiscv_0</endModule>
   <endConnectionPoint>debugReset</endConnectionPoint>
  </connection>
  <connection
@@ -12704,11 +12967,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk_reset/VexRiscvAxi4_0.reset"
+   name="clk_0.clk_reset/VexRiscv_0.reset"
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
-   end="VexRiscvAxi4_0.reset">
+   end="VexRiscv_0.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -12727,7 +12990,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
-  <endModule>VexRiscvAxi4_0</endModule>
+  <endModule>VexRiscv_0</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
@@ -12785,11 +13048,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset1</endConnectionPoint>
  </connection>
  <connection
-   name="VexRiscvAxi4_0.debug_resetOut/master_0.clk_reset"
+   name="VexRiscv_0.debug_resetOut/VexRiscv_0.debugReset"
    kind="reset"
    version="18.1"
-   start="VexRiscvAxi4_0.debug_resetOut"
-   end="master_0.clk_reset">
+   start="VexRiscv_0.debug_resetOut"
+   end="VexRiscv_0.debugReset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -12806,280 +13069,10 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
+  <startModule>VexRiscv_0</startModule>
   <startConnectionPoint>debug_resetOut</startConnectionPoint>
-  <endModule>master_0</endModule>
-  <endConnectionPoint>clk_reset</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.debug_resetOut/VexRiscvAxi4_0.debugReset"
-   kind="reset"
-   version="18.1"
-   start="VexRiscvAxi4_0.debug_resetOut"
-   end="VexRiscvAxi4_0.debugReset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>debug_resetOut</startConnectionPoint>
-  <endModule>VexRiscvAxi4_0</endModule>
+  <endModule>VexRiscv_0</endModule>
   <endConnectionPoint>debugReset</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.debug_resetOut/VexRiscvAxi4_0.reset"
-   kind="reset"
-   version="18.1"
-   start="VexRiscvAxi4_0.debug_resetOut"
-   end="VexRiscvAxi4_0.reset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>debug_resetOut</startConnectionPoint>
-  <endModule>VexRiscvAxi4_0</endModule>
-  <endConnectionPoint>reset</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.debug_resetOut/jtag_uart_0.reset"
-   kind="reset"
-   version="18.1"
-   start="VexRiscvAxi4_0.debug_resetOut"
-   end="jtag_uart_0.reset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>debug_resetOut</startConnectionPoint>
-  <endModule>jtag_uart_0</endModule>
-  <endConnectionPoint>reset</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.debug_resetOut/nios2_gen2_0.reset"
-   kind="reset"
-   version="18.1"
-   start="VexRiscvAxi4_0.debug_resetOut"
-   end="nios2_gen2_0.reset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>debug_resetOut</startConnectionPoint>
-  <endModule>nios2_gen2_0</endModule>
-  <endConnectionPoint>reset</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.debug_resetOut/sysid_qsys_0.reset"
-   kind="reset"
-   version="18.1"
-   start="VexRiscvAxi4_0.debug_resetOut"
-   end="sysid_qsys_0.reset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>debug_resetOut</startConnectionPoint>
-  <endModule>sysid_qsys_0</endModule>
-  <endConnectionPoint>reset</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.debug_resetOut/switch_pio.reset"
-   kind="reset"
-   version="18.1"
-   start="VexRiscvAxi4_0.debug_resetOut"
-   end="switch_pio.reset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>debug_resetOut</startConnectionPoint>
-  <endModule>switch_pio</endModule>
-  <endConnectionPoint>reset</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.debug_resetOut/button_pio.reset"
-   kind="reset"
-   version="18.1"
-   start="VexRiscvAxi4_0.debug_resetOut"
-   end="button_pio.reset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>debug_resetOut</startConnectionPoint>
-  <endModule>button_pio</endModule>
-  <endConnectionPoint>reset</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.debug_resetOut/led_pio.reset"
-   kind="reset"
-   version="18.1"
-   start="VexRiscvAxi4_0.debug_resetOut"
-   end="led_pio.reset">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>debug_resetOut</startConnectionPoint>
-  <endModule>led_pio</endModule>
-  <endConnectionPoint>reset</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.debug_resetOut/ocram_16b.reset1"
-   kind="reset"
-   version="18.1"
-   start="VexRiscvAxi4_0.debug_resetOut"
-   end="ocram_16b.reset1">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>debug_resetOut</startConnectionPoint>
-  <endModule>ocram_16b</endModule>
-  <endConnectionPoint>reset1</endConnectionPoint>
- </connection>
- <connection
-   name="VexRiscvAxi4_0.debug_resetOut/ocram_64K.reset1"
-   kind="reset"
-   version="18.1"
-   start="VexRiscvAxi4_0.debug_resetOut"
-   end="ocram_64K.reset1">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>VexRiscvAxi4_0</startModule>
-  <startConnectionPoint>debug_resetOut</startConnectionPoint>
-  <endModule>ocram_64K</endModule>
-  <endConnectionPoint>reset1</endConnectionPoint>
  </connection>
  <connection
    name="nios2_gen2_0.debug_reset_request/master_0.clk_reset"
@@ -13109,11 +13102,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk_reset</endConnectionPoint>
  </connection>
  <connection
-   name="nios2_gen2_0.debug_reset_request/VexRiscvAxi4_0.debugReset"
+   name="nios2_gen2_0.debug_reset_request/VexRiscv_0.debugReset"
    kind="reset"
    version="18.1"
    start="nios2_gen2_0.debug_reset_request"
-   end="VexRiscvAxi4_0.debugReset">
+   end="VexRiscv_0.debugReset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -13132,7 +13125,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>debug_reset_request</startConnectionPoint>
-  <endModule>VexRiscvAxi4_0</endModule>
+  <endModule>VexRiscv_0</endModule>
   <endConnectionPoint>debugReset</endConnectionPoint>
  </connection>
  <connection
@@ -13379,11 +13372,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk_reset</endConnectionPoint>
  </connection>
  <connection
-   name="master_0.master_reset/VexRiscvAxi4_0.debugReset"
+   name="master_0.master_reset/VexRiscv_0.debugReset"
    kind="reset"
    version="18.1"
    start="master_0.master_reset"
-   end="VexRiscvAxi4_0.debugReset">
+   end="VexRiscv_0.debugReset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -13402,7 +13395,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>master_0</startModule>
   <startConnectionPoint>master_reset</startConnectionPoint>
-  <endModule>VexRiscvAxi4_0</endModule>
+  <endModule>VexRiscv_0</endModule>
   <endConnectionPoint>debugReset</endConnectionPoint>
  </connection>
  <connection
@@ -13623,10 +13616,10 @@ parameters are a RESULT of the module parameters. -->
  </connection>
  <plugin>
   <instanceCount>1</instanceCount>
-  <name>VexRiscvAxi4</name>
+  <name>VexRiscv</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>VexRiscvAxi4</displayName>
+  <displayName>VexRiscv</displayName>
   <version>1.0</version>
  </plugin>
  <plugin>
@@ -13646,14 +13639,6 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-  <instanceCount>2</instanceCount>
-  <name>altera_axi4_master</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>AXI4 Master</displayName>
-  <version>18.1</version>
- </plugin>
- <plugin>
   <instanceCount>3</instanceCount>
   <name>reset_source</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
@@ -13662,7 +13647,15 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-  <instanceCount>3</instanceCount>
+  <instanceCount>2</instanceCount>
+  <name>altera_axi4_master</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>AXI4 Master</displayName>
+  <version>18.1</version>
+ </plugin>
+ <plugin>
+  <instanceCount>4</instanceCount>
   <name>interrupt_receiver</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
@@ -13798,7 +13791,7 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-  <instanceCount>28</instanceCount>
+  <instanceCount>29</instanceCount>
   <name>avalon</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
@@ -13814,7 +13807,7 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-  <instanceCount>1</instanceCount>
+  <instanceCount>4</instanceCount>
   <name>interrupt</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
@@ -13822,7 +13815,7 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-  <instanceCount>42</instanceCount>
+  <instanceCount>32</instanceCount>
   <name>reset</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>

@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2021.04.19.20:26:52</td>
+    <td class="l">2021.12.23.23:46:55</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -256,10 +256,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     <td class="empty"></td>
    </tr>
   </table>
-  <a name="module_VexRiscvAxi4_0"> </a>
+  <a name="module_VexRiscv_0"> </a>
   <div>
    <hr/>
-   <h2>VexRiscvAxi4_0</h2>VexRiscvAxi4 v1.0
+   <h2>VexRiscv_0</h2>VexRiscv v1.0
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
@@ -268,10 +268,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_clk_0">clk_0</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="56">VexRiscvAxi4_0</td>
+      <td class="main" rowspan="45">VexRiscv_0</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;clock</td>
+      <td class="to">&#160;&#160;clk</td>
      </tr>
      <tr>
       <td class="from">clk_reset&#160;&#160;</td>
@@ -313,7 +313,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="neighbor" rowspan="4">
+      <td class="neighbor" rowspan="8">
        <a href="#module_jtag_uart_0">jtag_uart_0</a>
       </td>
      </tr>
@@ -325,12 +325,32 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="from">debug_resetOut&#160;&#160;</td>
+      <td class="from">externalInterruptArray&#160;&#160;</td>
      </tr>
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;reset</td>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">externalResetVector&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">timerInterrupt&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;irq</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -339,7 +359,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td></td>
       <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="neighbor" rowspan="4">
+      <td class="neighbor" rowspan="2">
        <a href="#module_sysid_qsys_0">sysid_qsys_0</a>
       </td>
      </tr>
@@ -348,15 +368,69 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="to">&#160;&#160;control_slave</td>
      </tr>
-     <tr>
+     <tr style="height:6px">
       <td></td>
-      <td></td>
-      <td class="from">debug_resetOut&#160;&#160;</td>
      </tr>
      <tr>
       <td></td>
       <td></td>
-      <td class="to">&#160;&#160;reset</td>
+      <td class="from">dBusaxi&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_nios2_gen2_0">nios2_gen2_0</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;debug_mem_slave</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">dBusaxi&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_switch_pio">switch_pio</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">dBusaxi&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_button_pio">button_pio</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">dBusaxi&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_led_pio">led_pio</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;s1</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -366,68 +440,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">dBusaxi&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
-       <a href="#module_nios2_gen2_0">nios2_gen2_0</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;debug_mem_slave</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_ocram_64K">ocram_64K</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">iBusaxi&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset1</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="neighbor" rowspan="6">
        <a href="#module_ocram_16b">ocram_16b</a>
       </td>
      </tr>
@@ -446,16 +458,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="to">&#160;&#160;s1</td>
      </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset1</td>
-     </tr>
      <tr style="height:6px">
       <td></td>
      </tr>
@@ -464,7 +466,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">dBusaxi&#160;&#160;</td>
       <td class="neighbor" rowspan="4">
-       <a href="#module_led_pio">led_pio</a>
+       <a href="#module_ocram_64K">ocram_64K</a>
       </td>
      </tr>
      <tr>
@@ -475,70 +477,12 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <tr>
       <td></td>
       <td></td>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_button_pio">button_pio</a>
-      </td>
+      <td class="from">iBusaxi&#160;&#160;</td>
      </tr>
      <tr>
       <td></td>
       <td></td>
       <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_master_0">master_0</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;clk_reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_switch_pio">switch_pio</a>
-      </td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td class="to">&#160;&#160;reset</td>
      </tr>
     </table>
    </div>
@@ -550,12 +494,16 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <h2>Parameters</h2>
       <table>
        <tr>
-        <td class="parametername">AUTO_EXTERNALINTERRUPT_INTERRUPTS_USED</td>
-        <td class="parametervalue">0</td>
+        <td class="parametername">AUTO_EXTERNALINTERRUPTARRAY_INTERRUPTS_USED</td>
+        <td class="parametervalue">1</td>
+       </tr>
+       <tr>
+        <td class="parametername">AUTO_EXTERNALRESETVECTOR_INTERRUPTS_USED</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_TIMERINTERRUPT_INTERRUPTS_USED</td>
-        <td class="parametervalue">0</td>
+        <td class="parametervalue">1</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -584,20 +532,14 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_VexRiscvAxi4_0">VexRiscvAxi4_0</a>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_VexRiscv_0">VexRiscv_0</a>
       </td>
       <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="main" rowspan="19">button_pio</td>
+      <td class="main" rowspan="17">button_pio</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -871,20 +813,32 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_VexRiscvAxi4_0">VexRiscvAxi4_0</a>
+      <td class="neighbor" rowspan="8">
+       <a href="#module_VexRiscv_0">VexRiscv_0</a>
       </td>
       <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="main" rowspan="21">jtag_uart_0</td>
+      <td class="main" rowspan="25">jtag_uart_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;avalon_jtag_slave</td>
      </tr>
      <tr>
-      <td class="from">debug_resetOut&#160;&#160;</td>
+      <td class="from">externalInterruptArray&#160;&#160;</td>
      </tr>
      <tr>
-      <td class="to">&#160;&#160;reset</td>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr>
+      <td class="from">externalResetVector&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;irq</td>
+     </tr>
+     <tr>
+      <td class="from">timerInterrupt&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;irq</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -1065,20 +1019,14 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_VexRiscvAxi4_0">VexRiscvAxi4_0</a>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_VexRiscv_0">VexRiscv_0</a>
       </td>
       <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="main" rowspan="19">led_pio</td>
+      <td class="main" rowspan="17">led_pio</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -1309,25 +1257,13 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_clk_0">clk_0</a>
       </td>
       <td class="from">clk&#160;&#160;</td>
-      <td class="main" rowspan="52">master_0</td>
+      <td class="main" rowspan="49">master_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
      </tr>
      <tr>
       <td class="from">clk_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;clk_reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_VexRiscvAxi4_0">VexRiscvAxi4_0</a>
-      </td>
-      <td class="from">debug_resetOut&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk_reset</td>
@@ -1557,7 +1493,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">master_reset&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_VexRiscvAxi4_0">VexRiscvAxi4_0</a>
+       <a href="#module_VexRiscv_0">VexRiscv_0</a>
       </td>
      </tr>
      <tr>
@@ -1633,20 +1569,14 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_VexRiscvAxi4_0">VexRiscvAxi4_0</a>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_VexRiscv_0">VexRiscv_0</a>
       </td>
       <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="main" rowspan="60">nios2_gen2_0</td>
+      <td class="main" rowspan="58">nios2_gen2_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;debug_mem_slave</td>
-     </tr>
-     <tr>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -1917,7 +1847,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">debug_reset_request&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
-       <a href="#module_VexRiscvAxi4_0">VexRiscvAxi4_0</a>
+       <a href="#module_VexRiscv_0">VexRiscv_0</a>
       </td>
      </tr>
      <tr>
@@ -2856,11 +2786,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_VexRiscvAxi4_0">VexRiscvAxi4_0</a>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_VexRiscv_0">VexRiscv_0</a>
       </td>
       <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="main" rowspan="23">ocram_16b</td>
+      <td class="main" rowspan="21">ocram_16b</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
@@ -2870,12 +2800,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset1</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -3172,11 +3096,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="6">
-       <a href="#module_VexRiscvAxi4_0">VexRiscvAxi4_0</a>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_VexRiscv_0">VexRiscv_0</a>
       </td>
       <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="main" rowspan="23">ocram_64K</td>
+      <td class="main" rowspan="21">ocram_64K</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
@@ -3186,12 +3110,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
-     </tr>
-     <tr>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset1</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -3488,11 +3406,23 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_VexRiscv_0">VexRiscv_0</a>
+      </td>
+      <td class="from">dBusaxi&#160;&#160;</td>
+      <td class="main" rowspan="17">switch_pio</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;s1</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
       <td class="neighbor" rowspan="4">
        <a href="#module_nios2_gen2_0">nios2_gen2_0</a>
       </td>
       <td class="from">data_master&#160;&#160;</td>
-      <td class="main" rowspan="17">switch_pio</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
@@ -3535,18 +3465,6 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      </tr>
      <tr>
       <td class="from">clk_reset&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
-     </tr>
-     <tr style="height:6px">
-      <td></td>
-     </tr>
-     <tr>
-      <td class="neighbor" rowspan="2">
-       <a href="#module_VexRiscvAxi4_0">VexRiscvAxi4_0</a>
-      </td>
-      <td class="from">debug_resetOut&#160;&#160;</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;reset</td>
@@ -3722,20 +3640,14 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    <div class="greydiv">
     <table class="connectionboxes">
      <tr>
-      <td class="neighbor" rowspan="4">
-       <a href="#module_VexRiscvAxi4_0">VexRiscvAxi4_0</a>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_VexRiscv_0">VexRiscv_0</a>
       </td>
       <td class="from">dBusaxi&#160;&#160;</td>
-      <td class="main" rowspan="19">sysid_qsys_0</td>
+      <td class="main" rowspan="17">sysid_qsys_0</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;control_slave</td>
-     </tr>
-     <tr>
-      <td class="from">debug_resetOut&#160;&#160;</td>
-     </tr>
-     <tr>
-      <td class="to">&#160;&#160;reset</td>
      </tr>
      <tr style="height:6px">
       <td></td>
@@ -3806,7 +3718,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1618844212</td>
+        <td class="parametervalue">1640283415</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -3831,7 +3743,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1618844212</td>
+        <td class="parametervalue">1640283415</td>
        </tr>
       </table>
      </td>
@@ -3840,8 +3752,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0.01 seconds</td>
-    <td class="r">rendering took 0.07 seconds</td>
+    <td class="l">generation took 0.02 seconds</td>
+    <td class="r">rendering took 0.06 seconds</td>
    </tr>
   </table>
  </body>

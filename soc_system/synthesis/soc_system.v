@@ -11,45 +11,45 @@ module soc_system (
 		input  wire [2:0] switch_pio_export  // switch_pio.export
 	);
 
-	wire   [1:0] vexriscvaxi4_0_dbusaxi_awburst;                              // VexRiscvAxi4_0:dBusAxi_aw_payload_burst -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awburst
-	wire   [3:0] vexriscvaxi4_0_dbusaxi_arregion;                             // VexRiscvAxi4_0:dBusAxi_ar_payload_region -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_arregion
-	wire   [7:0] vexriscvaxi4_0_dbusaxi_arlen;                                // VexRiscvAxi4_0:dBusAxi_ar_payload_len -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_arlen
-	wire   [3:0] vexriscvaxi4_0_dbusaxi_arqos;                                // VexRiscvAxi4_0:dBusAxi_ar_payload_qos -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_arqos
-	wire         vexriscvaxi4_0_dbusaxi_wready;                               // mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_wready -> VexRiscvAxi4_0:dBusAxi_w_ready
-	wire   [3:0] vexriscvaxi4_0_dbusaxi_wstrb;                                // VexRiscvAxi4_0:dBusAxi_w_payload_strb -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_wstrb
-	wire         vexriscvaxi4_0_dbusaxi_rid;                                  // mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_rid -> VexRiscvAxi4_0:dBusAxi_r_payload_id
-	wire         vexriscvaxi4_0_dbusaxi_rready;                               // VexRiscvAxi4_0:dBusAxi_r_ready -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_rready
-	wire   [7:0] vexriscvaxi4_0_dbusaxi_awlen;                                // VexRiscvAxi4_0:dBusAxi_aw_payload_len -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awlen
-	wire   [3:0] vexriscvaxi4_0_dbusaxi_awqos;                                // VexRiscvAxi4_0:dBusAxi_aw_payload_qos -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awqos
-	wire   [3:0] vexriscvaxi4_0_dbusaxi_arcache;                              // VexRiscvAxi4_0:dBusAxi_ar_payload_cache -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_arcache
-	wire         vexriscvaxi4_0_dbusaxi_wvalid;                               // VexRiscvAxi4_0:dBusAxi_w_valid -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_wvalid
-	wire  [31:0] vexriscvaxi4_0_dbusaxi_araddr;                               // VexRiscvAxi4_0:dBusAxi_ar_payload_addr -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_araddr
-	wire   [2:0] vexriscvaxi4_0_dbusaxi_arprot;                               // VexRiscvAxi4_0:dBusAxi_ar_payload_prot -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_arprot
-	wire   [2:0] vexriscvaxi4_0_dbusaxi_awprot;                               // VexRiscvAxi4_0:dBusAxi_aw_payload_prot -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awprot
-	wire  [31:0] vexriscvaxi4_0_dbusaxi_wdata;                                // VexRiscvAxi4_0:dBusAxi_w_payload_data -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_wdata
-	wire         vexriscvaxi4_0_dbusaxi_arvalid;                              // VexRiscvAxi4_0:dBusAxi_ar_valid -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_arvalid
-	wire   [3:0] vexriscvaxi4_0_dbusaxi_awcache;                              // VexRiscvAxi4_0:dBusAxi_aw_payload_cache -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awcache
-	wire         vexriscvaxi4_0_dbusaxi_arid;                                 // VexRiscvAxi4_0:dBusAxi_ar_payload_id -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_arid
-	wire         vexriscvaxi4_0_dbusaxi_arlock;                               // VexRiscvAxi4_0:dBusAxi_ar_payload_lock -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_arlock
-	wire         vexriscvaxi4_0_dbusaxi_awlock;                               // VexRiscvAxi4_0:dBusAxi_aw_payload_lock -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awlock
-	wire  [31:0] vexriscvaxi4_0_dbusaxi_awaddr;                               // VexRiscvAxi4_0:dBusAxi_aw_payload_addr -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awaddr
-	wire   [1:0] vexriscvaxi4_0_dbusaxi_bresp;                                // mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_bresp -> VexRiscvAxi4_0:dBusAxi_b_payload_resp
-	wire         vexriscvaxi4_0_dbusaxi_arready;                              // mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_arready -> VexRiscvAxi4_0:dBusAxi_ar_ready
-	wire  [31:0] vexriscvaxi4_0_dbusaxi_rdata;                                // mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_rdata -> VexRiscvAxi4_0:dBusAxi_r_payload_data
-	wire         vexriscvaxi4_0_dbusaxi_awready;                              // mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awready -> VexRiscvAxi4_0:dBusAxi_aw_ready
-	wire   [1:0] vexriscvaxi4_0_dbusaxi_arburst;                              // VexRiscvAxi4_0:dBusAxi_ar_payload_burst -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_arburst
-	wire   [2:0] vexriscvaxi4_0_dbusaxi_arsize;                               // VexRiscvAxi4_0:dBusAxi_ar_payload_size -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_arsize
-	wire         vexriscvaxi4_0_dbusaxi_bready;                               // VexRiscvAxi4_0:dBusAxi_b_ready -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_bready
-	wire         vexriscvaxi4_0_dbusaxi_rlast;                                // mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_rlast -> VexRiscvAxi4_0:dBusAxi_r_payload_last
-	wire         vexriscvaxi4_0_dbusaxi_wlast;                                // VexRiscvAxi4_0:dBusAxi_w_payload_last -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_wlast
-	wire   [3:0] vexriscvaxi4_0_dbusaxi_awregion;                             // VexRiscvAxi4_0:dBusAxi_aw_payload_region -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awregion
-	wire   [1:0] vexriscvaxi4_0_dbusaxi_rresp;                                // mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_rresp -> VexRiscvAxi4_0:dBusAxi_r_payload_resp
-	wire         vexriscvaxi4_0_dbusaxi_awid;                                 // VexRiscvAxi4_0:dBusAxi_aw_payload_id -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awid
-	wire         vexriscvaxi4_0_dbusaxi_bid;                                  // mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_bid -> VexRiscvAxi4_0:dBusAxi_b_payload_id
-	wire         vexriscvaxi4_0_dbusaxi_bvalid;                               // mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_bvalid -> VexRiscvAxi4_0:dBusAxi_b_valid
-	wire         vexriscvaxi4_0_dbusaxi_awvalid;                              // VexRiscvAxi4_0:dBusAxi_aw_valid -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awvalid
-	wire   [2:0] vexriscvaxi4_0_dbusaxi_awsize;                               // VexRiscvAxi4_0:dBusAxi_aw_payload_size -> mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_awsize
-	wire         vexriscvaxi4_0_dbusaxi_rvalid;                               // mm_interconnect_0:VexRiscvAxi4_0_dBusaxi_rvalid -> VexRiscvAxi4_0:dBusAxi_r_valid
+	wire   [1:0] vexriscv_0_dbusaxi_awburst;                                  // VexRiscv_0:dBusAxi_aw_payload_burst -> mm_interconnect_0:VexRiscv_0_dBusaxi_awburst
+	wire   [3:0] vexriscv_0_dbusaxi_arregion;                                 // VexRiscv_0:dBusAxi_ar_payload_region -> mm_interconnect_0:VexRiscv_0_dBusaxi_arregion
+	wire   [7:0] vexriscv_0_dbusaxi_arlen;                                    // VexRiscv_0:dBusAxi_ar_payload_len -> mm_interconnect_0:VexRiscv_0_dBusaxi_arlen
+	wire   [3:0] vexriscv_0_dbusaxi_arqos;                                    // VexRiscv_0:dBusAxi_ar_payload_qos -> mm_interconnect_0:VexRiscv_0_dBusaxi_arqos
+	wire         vexriscv_0_dbusaxi_wready;                                   // mm_interconnect_0:VexRiscv_0_dBusaxi_wready -> VexRiscv_0:dBusAxi_w_ready
+	wire   [3:0] vexriscv_0_dbusaxi_wstrb;                                    // VexRiscv_0:dBusAxi_w_payload_strb -> mm_interconnect_0:VexRiscv_0_dBusaxi_wstrb
+	wire         vexriscv_0_dbusaxi_rid;                                      // mm_interconnect_0:VexRiscv_0_dBusaxi_rid -> VexRiscv_0:dBusAxi_r_payload_id
+	wire         vexriscv_0_dbusaxi_rready;                                   // VexRiscv_0:dBusAxi_r_ready -> mm_interconnect_0:VexRiscv_0_dBusaxi_rready
+	wire   [7:0] vexriscv_0_dbusaxi_awlen;                                    // VexRiscv_0:dBusAxi_aw_payload_len -> mm_interconnect_0:VexRiscv_0_dBusaxi_awlen
+	wire   [3:0] vexriscv_0_dbusaxi_awqos;                                    // VexRiscv_0:dBusAxi_aw_payload_qos -> mm_interconnect_0:VexRiscv_0_dBusaxi_awqos
+	wire   [3:0] vexriscv_0_dbusaxi_arcache;                                  // VexRiscv_0:dBusAxi_ar_payload_cache -> mm_interconnect_0:VexRiscv_0_dBusaxi_arcache
+	wire         vexriscv_0_dbusaxi_wvalid;                                   // VexRiscv_0:dBusAxi_w_valid -> mm_interconnect_0:VexRiscv_0_dBusaxi_wvalid
+	wire  [31:0] vexriscv_0_dbusaxi_araddr;                                   // VexRiscv_0:dBusAxi_ar_payload_addr -> mm_interconnect_0:VexRiscv_0_dBusaxi_araddr
+	wire   [2:0] vexriscv_0_dbusaxi_arprot;                                   // VexRiscv_0:dBusAxi_ar_payload_prot -> mm_interconnect_0:VexRiscv_0_dBusaxi_arprot
+	wire   [2:0] vexriscv_0_dbusaxi_awprot;                                   // VexRiscv_0:dBusAxi_aw_payload_prot -> mm_interconnect_0:VexRiscv_0_dBusaxi_awprot
+	wire  [31:0] vexriscv_0_dbusaxi_wdata;                                    // VexRiscv_0:dBusAxi_w_payload_data -> mm_interconnect_0:VexRiscv_0_dBusaxi_wdata
+	wire         vexriscv_0_dbusaxi_arvalid;                                  // VexRiscv_0:dBusAxi_ar_valid -> mm_interconnect_0:VexRiscv_0_dBusaxi_arvalid
+	wire   [3:0] vexriscv_0_dbusaxi_awcache;                                  // VexRiscv_0:dBusAxi_aw_payload_cache -> mm_interconnect_0:VexRiscv_0_dBusaxi_awcache
+	wire         vexriscv_0_dbusaxi_arid;                                     // VexRiscv_0:dBusAxi_ar_payload_id -> mm_interconnect_0:VexRiscv_0_dBusaxi_arid
+	wire         vexriscv_0_dbusaxi_arlock;                                   // VexRiscv_0:dBusAxi_ar_payload_lock -> mm_interconnect_0:VexRiscv_0_dBusaxi_arlock
+	wire         vexriscv_0_dbusaxi_awlock;                                   // VexRiscv_0:dBusAxi_aw_payload_lock -> mm_interconnect_0:VexRiscv_0_dBusaxi_awlock
+	wire  [31:0] vexriscv_0_dbusaxi_awaddr;                                   // VexRiscv_0:dBusAxi_aw_payload_addr -> mm_interconnect_0:VexRiscv_0_dBusaxi_awaddr
+	wire   [1:0] vexriscv_0_dbusaxi_bresp;                                    // mm_interconnect_0:VexRiscv_0_dBusaxi_bresp -> VexRiscv_0:dBusAxi_b_payload_resp
+	wire         vexriscv_0_dbusaxi_arready;                                  // mm_interconnect_0:VexRiscv_0_dBusaxi_arready -> VexRiscv_0:dBusAxi_ar_ready
+	wire  [31:0] vexriscv_0_dbusaxi_rdata;                                    // mm_interconnect_0:VexRiscv_0_dBusaxi_rdata -> VexRiscv_0:dBusAxi_r_payload_data
+	wire         vexriscv_0_dbusaxi_awready;                                  // mm_interconnect_0:VexRiscv_0_dBusaxi_awready -> VexRiscv_0:dBusAxi_aw_ready
+	wire   [1:0] vexriscv_0_dbusaxi_arburst;                                  // VexRiscv_0:dBusAxi_ar_payload_burst -> mm_interconnect_0:VexRiscv_0_dBusaxi_arburst
+	wire   [2:0] vexriscv_0_dbusaxi_arsize;                                   // VexRiscv_0:dBusAxi_ar_payload_size -> mm_interconnect_0:VexRiscv_0_dBusaxi_arsize
+	wire         vexriscv_0_dbusaxi_bready;                                   // VexRiscv_0:dBusAxi_b_ready -> mm_interconnect_0:VexRiscv_0_dBusaxi_bready
+	wire         vexriscv_0_dbusaxi_rlast;                                    // mm_interconnect_0:VexRiscv_0_dBusaxi_rlast -> VexRiscv_0:dBusAxi_r_payload_last
+	wire         vexriscv_0_dbusaxi_wlast;                                    // VexRiscv_0:dBusAxi_w_payload_last -> mm_interconnect_0:VexRiscv_0_dBusaxi_wlast
+	wire   [3:0] vexriscv_0_dbusaxi_awregion;                                 // VexRiscv_0:dBusAxi_aw_payload_region -> mm_interconnect_0:VexRiscv_0_dBusaxi_awregion
+	wire   [1:0] vexriscv_0_dbusaxi_rresp;                                    // mm_interconnect_0:VexRiscv_0_dBusaxi_rresp -> VexRiscv_0:dBusAxi_r_payload_resp
+	wire         vexriscv_0_dbusaxi_awid;                                     // VexRiscv_0:dBusAxi_aw_payload_id -> mm_interconnect_0:VexRiscv_0_dBusaxi_awid
+	wire         vexriscv_0_dbusaxi_bid;                                      // mm_interconnect_0:VexRiscv_0_dBusaxi_bid -> VexRiscv_0:dBusAxi_b_payload_id
+	wire         vexriscv_0_dbusaxi_bvalid;                                   // mm_interconnect_0:VexRiscv_0_dBusaxi_bvalid -> VexRiscv_0:dBusAxi_b_valid
+	wire         vexriscv_0_dbusaxi_awvalid;                                  // VexRiscv_0:dBusAxi_aw_valid -> mm_interconnect_0:VexRiscv_0_dBusaxi_awvalid
+	wire   [2:0] vexriscv_0_dbusaxi_awsize;                                   // VexRiscv_0:dBusAxi_aw_payload_size -> mm_interconnect_0:VexRiscv_0_dBusaxi_awsize
+	wire         vexriscv_0_dbusaxi_rvalid;                                   // mm_interconnect_0:VexRiscv_0_dBusaxi_rvalid -> VexRiscv_0:dBusAxi_r_valid
 	wire  [31:0] nios2_gen2_0_data_master_readdata;                           // mm_interconnect_0:nios2_gen2_0_data_master_readdata -> nios2_gen2_0:d_readdata
 	wire         nios2_gen2_0_data_master_waitrequest;                        // mm_interconnect_0:nios2_gen2_0_data_master_waitrequest -> nios2_gen2_0:d_waitrequest
 	wire         nios2_gen2_0_data_master_debugaccess;                        // nios2_gen2_0:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:nios2_gen2_0_data_master_debugaccess
@@ -66,37 +66,37 @@ module soc_system (
 	wire         master_0_master_readdatavalid;                               // mm_interconnect_0:master_0_master_readdatavalid -> master_0:master_readdatavalid
 	wire         master_0_master_write;                                       // master_0:master_write -> mm_interconnect_0:master_0_master_write
 	wire  [31:0] master_0_master_writedata;                                   // master_0:master_writedata -> mm_interconnect_0:master_0_master_writedata
-	wire   [3:0] vexriscvaxi4_0_ibusaxi_arregion;                             // VexRiscvAxi4_0:iBusAxi_ar_payload_region -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_arregion
-	wire   [7:0] vexriscvaxi4_0_ibusaxi_arlen;                                // VexRiscvAxi4_0:iBusAxi_ar_payload_len -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_arlen
-	wire   [3:0] vexriscvaxi4_0_ibusaxi_arqos;                                // VexRiscvAxi4_0:iBusAxi_ar_payload_qos -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_arqos
-	wire         vexriscvaxi4_0_ibusaxi_wready;                               // mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_wready -> VexRiscvAxi4_0:iBusaxi_wready
-	wire         vexriscvaxi4_0_ibusaxi_rid;                                  // mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_rid -> VexRiscvAxi4_0:iBusAxi_r_payload_id
-	wire         vexriscvaxi4_0_ibusaxi_rready;                               // VexRiscvAxi4_0:iBusAxi_r_ready -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_rready
-	wire   [3:0] vexriscvaxi4_0_ibusaxi_arcache;                              // VexRiscvAxi4_0:iBusAxi_ar_payload_cache -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_arcache
-	wire  [31:0] vexriscvaxi4_0_ibusaxi_araddr;                               // VexRiscvAxi4_0:iBusAxi_ar_payload_addr -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_araddr
-	wire         vexriscvaxi4_0_ibusaxi_wvalid;                               // VexRiscvAxi4_0:iBusaxi_wvalid -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_wvalid
-	wire   [2:0] vexriscvaxi4_0_ibusaxi_arprot;                               // VexRiscvAxi4_0:iBusAxi_ar_payload_prot -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_arprot
-	wire         vexriscvaxi4_0_ibusaxi_arvalid;                              // VexRiscvAxi4_0:iBusAxi_ar_valid -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_arvalid
-	wire   [2:0] vexriscvaxi4_0_ibusaxi_awprot;                               // VexRiscvAxi4_0:iBusaxi_awprot -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_awprot
-	wire  [31:0] vexriscvaxi4_0_ibusaxi_wdata;                                // VexRiscvAxi4_0:iBusaxi_wdata -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_wdata
-	wire         vexriscvaxi4_0_ibusaxi_arid;                                 // VexRiscvAxi4_0:iBusAxi_ar_payload_id -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_arid
-	wire         vexriscvaxi4_0_ibusaxi_arlock;                               // VexRiscvAxi4_0:iBusAxi_ar_payload_lock -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_arlock
-	wire         vexriscvaxi4_0_ibusaxi_awlock;                               // VexRiscvAxi4_0:iBusaxi_awlock -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_awlock
-	wire  [31:0] vexriscvaxi4_0_ibusaxi_awaddr;                               // VexRiscvAxi4_0:iBusaxi_awaddr -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_awaddr
-	wire         vexriscvaxi4_0_ibusaxi_arready;                              // mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_arready -> VexRiscvAxi4_0:iBusAxi_ar_ready
-	wire  [31:0] vexriscvaxi4_0_ibusaxi_rdata;                                // mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_rdata -> VexRiscvAxi4_0:iBusAxi_r_payload_data
-	wire   [1:0] vexriscvaxi4_0_ibusaxi_arburst;                              // VexRiscvAxi4_0:iBusAxi_ar_payload_burst -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_arburst
-	wire         vexriscvaxi4_0_ibusaxi_awready;                              // mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_awready -> VexRiscvAxi4_0:iBusaxi_awready
-	wire   [2:0] vexriscvaxi4_0_ibusaxi_arsize;                               // VexRiscvAxi4_0:iBusAxi_ar_payload_size -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_arsize
-	wire         vexriscvaxi4_0_ibusaxi_rlast;                                // mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_rlast -> VexRiscvAxi4_0:iBusAxi_r_payload_last
-	wire         vexriscvaxi4_0_ibusaxi_bready;                               // VexRiscvAxi4_0:iBusaxi_bready -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_bready
-	wire         vexriscvaxi4_0_ibusaxi_wlast;                                // VexRiscvAxi4_0:iBusaxi_wlast -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_wlast
-	wire   [1:0] vexriscvaxi4_0_ibusaxi_rresp;                                // mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_rresp -> VexRiscvAxi4_0:iBusAxi_r_payload_resp
-	wire         vexriscvaxi4_0_ibusaxi_bid;                                  // mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_bid -> VexRiscvAxi4_0:iBusaxi_bid
-	wire         vexriscvaxi4_0_ibusaxi_awid;                                 // VexRiscvAxi4_0:iBusaxi_awid -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_awid
-	wire         vexriscvaxi4_0_ibusaxi_bvalid;                               // mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_bvalid -> VexRiscvAxi4_0:iBusaxi_bvalid
-	wire         vexriscvaxi4_0_ibusaxi_rvalid;                               // mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_rvalid -> VexRiscvAxi4_0:iBusAxi_r_valid
-	wire         vexriscvaxi4_0_ibusaxi_awvalid;                              // VexRiscvAxi4_0:iBusaxi_awvalid -> mm_interconnect_0:VexRiscvAxi4_0_iBusaxi_awvalid
+	wire   [3:0] vexriscv_0_ibusaxi_arregion;                                 // VexRiscv_0:iBusAxi_ar_payload_region -> mm_interconnect_0:VexRiscv_0_iBusaxi_arregion
+	wire   [7:0] vexriscv_0_ibusaxi_arlen;                                    // VexRiscv_0:iBusAxi_ar_payload_len -> mm_interconnect_0:VexRiscv_0_iBusaxi_arlen
+	wire   [3:0] vexriscv_0_ibusaxi_arqos;                                    // VexRiscv_0:iBusAxi_ar_payload_qos -> mm_interconnect_0:VexRiscv_0_iBusaxi_arqos
+	wire         vexriscv_0_ibusaxi_wready;                                   // mm_interconnect_0:VexRiscv_0_iBusaxi_wready -> VexRiscv_0:iBusaxi_wready
+	wire         vexriscv_0_ibusaxi_rid;                                      // mm_interconnect_0:VexRiscv_0_iBusaxi_rid -> VexRiscv_0:iBusAxi_r_payload_id
+	wire         vexriscv_0_ibusaxi_rready;                                   // VexRiscv_0:iBusAxi_r_ready -> mm_interconnect_0:VexRiscv_0_iBusaxi_rready
+	wire   [3:0] vexriscv_0_ibusaxi_arcache;                                  // VexRiscv_0:iBusAxi_ar_payload_cache -> mm_interconnect_0:VexRiscv_0_iBusaxi_arcache
+	wire  [31:0] vexriscv_0_ibusaxi_araddr;                                   // VexRiscv_0:iBusAxi_ar_payload_addr -> mm_interconnect_0:VexRiscv_0_iBusaxi_araddr
+	wire         vexriscv_0_ibusaxi_wvalid;                                   // VexRiscv_0:iBusaxi_wvalid -> mm_interconnect_0:VexRiscv_0_iBusaxi_wvalid
+	wire   [2:0] vexriscv_0_ibusaxi_arprot;                                   // VexRiscv_0:iBusAxi_ar_payload_prot -> mm_interconnect_0:VexRiscv_0_iBusaxi_arprot
+	wire         vexriscv_0_ibusaxi_arvalid;                                  // VexRiscv_0:iBusAxi_ar_valid -> mm_interconnect_0:VexRiscv_0_iBusaxi_arvalid
+	wire   [2:0] vexriscv_0_ibusaxi_awprot;                                   // VexRiscv_0:iBusaxi_awprot -> mm_interconnect_0:VexRiscv_0_iBusaxi_awprot
+	wire  [31:0] vexriscv_0_ibusaxi_wdata;                                    // VexRiscv_0:iBusaxi_wdata -> mm_interconnect_0:VexRiscv_0_iBusaxi_wdata
+	wire         vexriscv_0_ibusaxi_arid;                                     // VexRiscv_0:iBusAxi_ar_payload_id -> mm_interconnect_0:VexRiscv_0_iBusaxi_arid
+	wire         vexriscv_0_ibusaxi_arlock;                                   // VexRiscv_0:iBusAxi_ar_payload_lock -> mm_interconnect_0:VexRiscv_0_iBusaxi_arlock
+	wire         vexriscv_0_ibusaxi_awlock;                                   // VexRiscv_0:iBusaxi_awlock -> mm_interconnect_0:VexRiscv_0_iBusaxi_awlock
+	wire  [31:0] vexriscv_0_ibusaxi_awaddr;                                   // VexRiscv_0:iBusaxi_awaddr -> mm_interconnect_0:VexRiscv_0_iBusaxi_awaddr
+	wire         vexriscv_0_ibusaxi_arready;                                  // mm_interconnect_0:VexRiscv_0_iBusaxi_arready -> VexRiscv_0:iBusAxi_ar_ready
+	wire  [31:0] vexriscv_0_ibusaxi_rdata;                                    // mm_interconnect_0:VexRiscv_0_iBusaxi_rdata -> VexRiscv_0:iBusAxi_r_payload_data
+	wire   [1:0] vexriscv_0_ibusaxi_arburst;                                  // VexRiscv_0:iBusAxi_ar_payload_burst -> mm_interconnect_0:VexRiscv_0_iBusaxi_arburst
+	wire         vexriscv_0_ibusaxi_awready;                                  // mm_interconnect_0:VexRiscv_0_iBusaxi_awready -> VexRiscv_0:iBusaxi_awready
+	wire   [2:0] vexriscv_0_ibusaxi_arsize;                                   // VexRiscv_0:iBusAxi_ar_payload_size -> mm_interconnect_0:VexRiscv_0_iBusaxi_arsize
+	wire         vexriscv_0_ibusaxi_rlast;                                    // mm_interconnect_0:VexRiscv_0_iBusaxi_rlast -> VexRiscv_0:iBusAxi_r_payload_last
+	wire         vexriscv_0_ibusaxi_bready;                                   // VexRiscv_0:iBusaxi_bready -> mm_interconnect_0:VexRiscv_0_iBusaxi_bready
+	wire         vexriscv_0_ibusaxi_wlast;                                    // VexRiscv_0:iBusaxi_wlast -> mm_interconnect_0:VexRiscv_0_iBusaxi_wlast
+	wire   [1:0] vexriscv_0_ibusaxi_rresp;                                    // mm_interconnect_0:VexRiscv_0_iBusaxi_rresp -> VexRiscv_0:iBusAxi_r_payload_resp
+	wire         vexriscv_0_ibusaxi_bid;                                      // mm_interconnect_0:VexRiscv_0_iBusaxi_bid -> VexRiscv_0:iBusaxi_bid
+	wire         vexriscv_0_ibusaxi_awid;                                     // VexRiscv_0:iBusaxi_awid -> mm_interconnect_0:VexRiscv_0_iBusaxi_awid
+	wire         vexriscv_0_ibusaxi_bvalid;                                   // mm_interconnect_0:VexRiscv_0_iBusaxi_bvalid -> VexRiscv_0:iBusaxi_bvalid
+	wire         vexriscv_0_ibusaxi_rvalid;                                   // mm_interconnect_0:VexRiscv_0_iBusaxi_rvalid -> VexRiscv_0:iBusAxi_r_valid
+	wire         vexriscv_0_ibusaxi_awvalid;                                  // VexRiscv_0:iBusaxi_awvalid -> mm_interconnect_0:VexRiscv_0_iBusaxi_awvalid
 	wire  [31:0] nios2_gen2_0_instruction_master_readdata;                    // mm_interconnect_0:nios2_gen2_0_instruction_master_readdata -> nios2_gen2_0:i_readdata
 	wire         nios2_gen2_0_instruction_master_waitrequest;                 // mm_interconnect_0:nios2_gen2_0_instruction_master_waitrequest -> nios2_gen2_0:i_waitrequest
 	wire  [16:0] nios2_gen2_0_instruction_master_address;                     // nios2_gen2_0:i_address -> mm_interconnect_0:nios2_gen2_0_instruction_master_address
@@ -118,13 +118,15 @@ module soc_system (
 	wire   [3:0] mm_interconnect_0_nios2_gen2_0_debug_mem_slave_byteenable;   // mm_interconnect_0:nios2_gen2_0_debug_mem_slave_byteenable -> nios2_gen2_0:debug_mem_slave_byteenable
 	wire         mm_interconnect_0_nios2_gen2_0_debug_mem_slave_write;        // mm_interconnect_0:nios2_gen2_0_debug_mem_slave_write -> nios2_gen2_0:debug_mem_slave_write
 	wire  [31:0] mm_interconnect_0_nios2_gen2_0_debug_mem_slave_writedata;    // mm_interconnect_0:nios2_gen2_0_debug_mem_slave_writedata -> nios2_gen2_0:debug_mem_slave_writedata
-	wire         mm_interconnect_0_ocram_64k_s1_chipselect;                   // mm_interconnect_0:ocram_64K_s1_chipselect -> ocram_64K:chipselect
-	wire  [31:0] mm_interconnect_0_ocram_64k_s1_readdata;                     // ocram_64K:readdata -> mm_interconnect_0:ocram_64K_s1_readdata
-	wire  [13:0] mm_interconnect_0_ocram_64k_s1_address;                      // mm_interconnect_0:ocram_64K_s1_address -> ocram_64K:address
-	wire   [3:0] mm_interconnect_0_ocram_64k_s1_byteenable;                   // mm_interconnect_0:ocram_64K_s1_byteenable -> ocram_64K:byteenable
-	wire         mm_interconnect_0_ocram_64k_s1_write;                        // mm_interconnect_0:ocram_64K_s1_write -> ocram_64K:write
-	wire  [31:0] mm_interconnect_0_ocram_64k_s1_writedata;                    // mm_interconnect_0:ocram_64K_s1_writedata -> ocram_64K:writedata
-	wire         mm_interconnect_0_ocram_64k_s1_clken;                        // mm_interconnect_0:ocram_64K_s1_clken -> ocram_64K:clken
+	wire  [31:0] mm_interconnect_0_switch_pio_s1_readdata;                    // switch_pio:readdata -> mm_interconnect_0:switch_pio_s1_readdata
+	wire   [1:0] mm_interconnect_0_switch_pio_s1_address;                     // mm_interconnect_0:switch_pio_s1_address -> switch_pio:address
+	wire  [31:0] mm_interconnect_0_button_pio_s1_readdata;                    // button_pio:readdata -> mm_interconnect_0:button_pio_s1_readdata
+	wire   [1:0] mm_interconnect_0_button_pio_s1_address;                     // mm_interconnect_0:button_pio_s1_address -> button_pio:address
+	wire         mm_interconnect_0_led_pio_s1_chipselect;                     // mm_interconnect_0:led_pio_s1_chipselect -> led_pio:chipselect
+	wire  [31:0] mm_interconnect_0_led_pio_s1_readdata;                       // led_pio:readdata -> mm_interconnect_0:led_pio_s1_readdata
+	wire   [1:0] mm_interconnect_0_led_pio_s1_address;                        // mm_interconnect_0:led_pio_s1_address -> led_pio:address
+	wire         mm_interconnect_0_led_pio_s1_write;                          // mm_interconnect_0:led_pio_s1_write -> led_pio:write_n
+	wire  [31:0] mm_interconnect_0_led_pio_s1_writedata;                      // mm_interconnect_0:led_pio_s1_writedata -> led_pio:writedata
 	wire         mm_interconnect_0_ocram_16b_s1_chipselect;                   // mm_interconnect_0:ocram_16b_s1_chipselect -> ocram_16b:chipselect
 	wire  [31:0] mm_interconnect_0_ocram_16b_s1_readdata;                     // ocram_16b:readdata -> mm_interconnect_0:ocram_16b_s1_readdata
 	wire  [11:0] mm_interconnect_0_ocram_16b_s1_address;                      // mm_interconnect_0:ocram_16b_s1_address -> ocram_16b:address
@@ -132,101 +134,102 @@ module soc_system (
 	wire         mm_interconnect_0_ocram_16b_s1_write;                        // mm_interconnect_0:ocram_16b_s1_write -> ocram_16b:write
 	wire  [31:0] mm_interconnect_0_ocram_16b_s1_writedata;                    // mm_interconnect_0:ocram_16b_s1_writedata -> ocram_16b:writedata
 	wire         mm_interconnect_0_ocram_16b_s1_clken;                        // mm_interconnect_0:ocram_16b_s1_clken -> ocram_16b:clken
-	wire         mm_interconnect_0_led_pio_s1_chipselect;                     // mm_interconnect_0:led_pio_s1_chipselect -> led_pio:chipselect
-	wire  [31:0] mm_interconnect_0_led_pio_s1_readdata;                       // led_pio:readdata -> mm_interconnect_0:led_pio_s1_readdata
-	wire   [1:0] mm_interconnect_0_led_pio_s1_address;                        // mm_interconnect_0:led_pio_s1_address -> led_pio:address
-	wire         mm_interconnect_0_led_pio_s1_write;                          // mm_interconnect_0:led_pio_s1_write -> led_pio:write_n
-	wire  [31:0] mm_interconnect_0_led_pio_s1_writedata;                      // mm_interconnect_0:led_pio_s1_writedata -> led_pio:writedata
-	wire  [31:0] mm_interconnect_0_button_pio_s1_readdata;                    // button_pio:readdata -> mm_interconnect_0:button_pio_s1_readdata
-	wire   [1:0] mm_interconnect_0_button_pio_s1_address;                     // mm_interconnect_0:button_pio_s1_address -> button_pio:address
-	wire  [31:0] mm_interconnect_0_switch_pio_s1_readdata;                    // switch_pio:readdata -> mm_interconnect_0:switch_pio_s1_readdata
-	wire   [1:0] mm_interconnect_0_switch_pio_s1_address;                     // mm_interconnect_0:switch_pio_s1_address -> switch_pio:address
-	wire         vexriscvaxi4_0_externalinterrupt_irq;                        // irq_mapper:sender_irq -> VexRiscvAxi4_0:externalInterrupt
-	wire         vexriscvaxi4_0_debug_resetout_reset;                         // VexRiscvAxi4_0:debug_resetOut -> [irq_mapper:reset, irq_mapper_001:reset, rst_controller:reset_in1, rst_controller_001:reset_in1, rst_controller_002:reset_in1]
-	wire         vexriscvaxi4_0_timerinterrupt_irq;                           // irq_mapper_001:sender_irq -> VexRiscvAxi4_0:timerInterrupt
-	wire         irq_mapper_002_receiver0_irq;                                // jtag_uart_0:av_irq -> irq_mapper_002:receiver0_irq
-	wire  [31:0] nios2_gen2_0_irq_irq;                                        // irq_mapper_002:sender_irq -> nios2_gen2_0:irq
-	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [VexRiscvAxi4_0:reset, mm_interconnect_0:VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset]
-	wire         rst_controller_001_reset_out_reset;                          // rst_controller_001:reset_out -> [VexRiscvAxi4_0:debugReset, button_pio:reset_n, irq_mapper_002:reset, jtag_uart_0:rst_n, led_pio:reset_n, mm_interconnect_0:master_0_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, ocram_16b:reset, ocram_64K:reset, rst_translator:in_reset, switch_pio:reset_n, sysid_qsys_0:reset_n]
-	wire         rst_controller_001_reset_out_reset_req;                      // rst_controller_001:reset_req -> [nios2_gen2_0:reset_req, ocram_16b:reset_req, ocram_64K:reset_req, rst_translator:reset_req_in]
-	wire         nios2_gen2_0_debug_reset_request_reset;                      // nios2_gen2_0:debug_reset_request -> [rst_controller_001:reset_in2, rst_controller_002:reset_in2]
-	wire         master_0_master_reset_reset;                                 // master_0:master_reset_reset -> [rst_controller_001:reset_in3, rst_controller_002:reset_in3]
-	wire         rst_controller_002_reset_out_reset;                          // rst_controller_002:reset_out -> master_0:clk_reset_reset
+	wire         mm_interconnect_0_ocram_64k_s1_chipselect;                   // mm_interconnect_0:ocram_64K_s1_chipselect -> ocram_64K:chipselect
+	wire  [31:0] mm_interconnect_0_ocram_64k_s1_readdata;                     // ocram_64K:readdata -> mm_interconnect_0:ocram_64K_s1_readdata
+	wire  [13:0] mm_interconnect_0_ocram_64k_s1_address;                      // mm_interconnect_0:ocram_64K_s1_address -> ocram_64K:address
+	wire   [3:0] mm_interconnect_0_ocram_64k_s1_byteenable;                   // mm_interconnect_0:ocram_64K_s1_byteenable -> ocram_64K:byteenable
+	wire         mm_interconnect_0_ocram_64k_s1_write;                        // mm_interconnect_0:ocram_64K_s1_write -> ocram_64K:write
+	wire  [31:0] mm_interconnect_0_ocram_64k_s1_writedata;                    // mm_interconnect_0:ocram_64K_s1_writedata -> ocram_64K:writedata
+	wire         mm_interconnect_0_ocram_64k_s1_clken;                        // mm_interconnect_0:ocram_64K_s1_clken -> ocram_64K:clken
+	wire  [31:0] vexriscv_0_externalinterruptarray_irq;                       // irq_mapper:sender_irq -> VexRiscv_0:externalInterruptArray
+	wire         vexriscv_0_debug_resetout_reset;                             // VexRiscv_0:debug_resetOut -> [irq_mapper:reset, irq_mapper_001:reset, irq_mapper_002:reset, rst_controller_001:reset_in1]
+	wire  [31:0] vexriscv_0_externalresetvector_irq;                          // irq_mapper_001:sender_irq -> VexRiscv_0:externalResetVector
+	wire         vexriscv_0_timerinterrupt_irq;                               // irq_mapper_002:sender_irq -> VexRiscv_0:timerInterrupt
+	wire  [31:0] nios2_gen2_0_irq_irq;                                        // irq_mapper_003:sender_irq -> nios2_gen2_0:irq
+	wire         irq_mapper_receiver0_irq;                                    // jtag_uart_0:av_irq -> [irq_mapper:receiver0_irq, irq_mapper_001:receiver0_irq, irq_mapper_002:receiver0_irq, irq_mapper_003:receiver0_irq]
+	wire         rst_controller_reset_out_reset;                              // rst_controller:reset_out -> [VexRiscv_0:reset, mm_interconnect_0:VexRiscv_0_reset_reset_bridge_in_reset_reset]
+	wire         rst_controller_001_reset_out_reset;                          // rst_controller_001:reset_out -> VexRiscv_0:debugReset
+	wire         nios2_gen2_0_debug_reset_request_reset;                      // nios2_gen2_0:debug_reset_request -> [rst_controller_001:reset_in2, rst_controller_002:reset_in1, rst_controller_003:reset_in1]
+	wire         master_0_master_reset_reset;                                 // master_0:master_reset_reset -> [rst_controller_001:reset_in3, rst_controller_002:reset_in2, rst_controller_003:reset_in2]
+	wire         rst_controller_002_reset_out_reset;                          // rst_controller_002:reset_out -> [button_pio:reset_n, irq_mapper_003:reset, jtag_uart_0:rst_n, led_pio:reset_n, mm_interconnect_0:master_0_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, ocram_16b:reset, ocram_64K:reset, rst_translator:in_reset, switch_pio:reset_n, sysid_qsys_0:reset_n]
+	wire         rst_controller_002_reset_out_reset_req;                      // rst_controller_002:reset_req -> [nios2_gen2_0:reset_req, ocram_16b:reset_req, ocram_64K:reset_req, rst_translator:reset_req_in]
+	wire         rst_controller_003_reset_out_reset;                          // rst_controller_003:reset_out -> master_0:clk_reset_reset
 
-	VexRiscvAxi4 vexriscvaxi4_0 (
-		.clk                       (clk_clk),                              //             clock.clk
-		.reset                     (rst_controller_reset_out_reset),       //             reset.reset
-		.dBusAxi_aw_valid          (vexriscvaxi4_0_dbusaxi_awvalid),       //           dBusaxi.awvalid
-		.dBusAxi_aw_ready          (vexriscvaxi4_0_dbusaxi_awready),       //                  .awready
-		.dBusAxi_aw_payload_addr   (vexriscvaxi4_0_dbusaxi_awaddr),        //                  .awaddr
-		.dBusAxi_aw_payload_id     (vexriscvaxi4_0_dbusaxi_awid),          //                  .awid
-		.dBusAxi_aw_payload_region (vexriscvaxi4_0_dbusaxi_awregion),      //                  .awregion
-		.dBusAxi_aw_payload_len    (vexriscvaxi4_0_dbusaxi_awlen),         //                  .awlen
-		.dBusAxi_aw_payload_size   (vexriscvaxi4_0_dbusaxi_awsize),        //                  .awsize
-		.dBusAxi_aw_payload_burst  (vexriscvaxi4_0_dbusaxi_awburst),       //                  .awburst
-		.dBusAxi_aw_payload_lock   (vexriscvaxi4_0_dbusaxi_awlock),        //                  .awlock
-		.dBusAxi_aw_payload_cache  (vexriscvaxi4_0_dbusaxi_awcache),       //                  .awcache
-		.dBusAxi_aw_payload_qos    (vexriscvaxi4_0_dbusaxi_awqos),         //                  .awqos
-		.dBusAxi_aw_payload_prot   (vexriscvaxi4_0_dbusaxi_awprot),        //                  .awprot
-		.dBusAxi_w_valid           (vexriscvaxi4_0_dbusaxi_wvalid),        //                  .wvalid
-		.dBusAxi_w_ready           (vexriscvaxi4_0_dbusaxi_wready),        //                  .wready
-		.dBusAxi_w_payload_data    (vexriscvaxi4_0_dbusaxi_wdata),         //                  .wdata
-		.dBusAxi_w_payload_strb    (vexriscvaxi4_0_dbusaxi_wstrb),         //                  .wstrb
-		.dBusAxi_w_payload_last    (vexriscvaxi4_0_dbusaxi_wlast),         //                  .wlast
-		.dBusAxi_b_valid           (vexriscvaxi4_0_dbusaxi_bvalid),        //                  .bvalid
-		.dBusAxi_b_ready           (vexriscvaxi4_0_dbusaxi_bready),        //                  .bready
-		.dBusAxi_b_payload_id      (vexriscvaxi4_0_dbusaxi_bid),           //                  .bid
-		.dBusAxi_b_payload_resp    (vexriscvaxi4_0_dbusaxi_bresp),         //                  .bresp
-		.dBusAxi_ar_valid          (vexriscvaxi4_0_dbusaxi_arvalid),       //                  .arvalid
-		.dBusAxi_ar_ready          (vexriscvaxi4_0_dbusaxi_arready),       //                  .arready
-		.dBusAxi_ar_payload_addr   (vexriscvaxi4_0_dbusaxi_araddr),        //                  .araddr
-		.dBusAxi_ar_payload_id     (vexriscvaxi4_0_dbusaxi_arid),          //                  .arid
-		.dBusAxi_ar_payload_region (vexriscvaxi4_0_dbusaxi_arregion),      //                  .arregion
-		.dBusAxi_ar_payload_len    (vexriscvaxi4_0_dbusaxi_arlen),         //                  .arlen
-		.dBusAxi_ar_payload_size   (vexriscvaxi4_0_dbusaxi_arsize),        //                  .arsize
-		.dBusAxi_ar_payload_burst  (vexriscvaxi4_0_dbusaxi_arburst),       //                  .arburst
-		.dBusAxi_ar_payload_lock   (vexriscvaxi4_0_dbusaxi_arlock),        //                  .arlock
-		.dBusAxi_ar_payload_cache  (vexriscvaxi4_0_dbusaxi_arcache),       //                  .arcache
-		.dBusAxi_ar_payload_qos    (vexriscvaxi4_0_dbusaxi_arqos),         //                  .arqos
-		.dBusAxi_ar_payload_prot   (vexriscvaxi4_0_dbusaxi_arprot),        //                  .arprot
-		.dBusAxi_r_valid           (vexriscvaxi4_0_dbusaxi_rvalid),        //                  .rvalid
-		.dBusAxi_r_ready           (vexriscvaxi4_0_dbusaxi_rready),        //                  .rready
-		.dBusAxi_r_payload_data    (vexriscvaxi4_0_dbusaxi_rdata),         //                  .rdata
-		.dBusAxi_r_payload_id      (vexriscvaxi4_0_dbusaxi_rid),           //                  .rid
-		.dBusAxi_r_payload_resp    (vexriscvaxi4_0_dbusaxi_rresp),         //                  .rresp
-		.dBusAxi_r_payload_last    (vexriscvaxi4_0_dbusaxi_rlast),         //                  .rlast
-		.iBusAxi_ar_valid          (vexriscvaxi4_0_ibusaxi_arvalid),       //           iBusaxi.arvalid
-		.iBusAxi_ar_ready          (vexriscvaxi4_0_ibusaxi_arready),       //                  .arready
-		.iBusAxi_ar_payload_addr   (vexriscvaxi4_0_ibusaxi_araddr),        //                  .araddr
-		.iBusAxi_ar_payload_id     (vexriscvaxi4_0_ibusaxi_arid),          //                  .arid
-		.iBusAxi_ar_payload_region (vexriscvaxi4_0_ibusaxi_arregion),      //                  .arregion
-		.iBusAxi_ar_payload_len    (vexriscvaxi4_0_ibusaxi_arlen),         //                  .arlen
-		.iBusAxi_ar_payload_size   (vexriscvaxi4_0_ibusaxi_arsize),        //                  .arsize
-		.iBusAxi_ar_payload_burst  (vexriscvaxi4_0_ibusaxi_arburst),       //                  .arburst
-		.iBusAxi_ar_payload_lock   (vexriscvaxi4_0_ibusaxi_arlock),        //                  .arlock
-		.iBusAxi_ar_payload_cache  (vexriscvaxi4_0_ibusaxi_arcache),       //                  .arcache
-		.iBusAxi_ar_payload_qos    (vexriscvaxi4_0_ibusaxi_arqos),         //                  .arqos
-		.iBusAxi_ar_payload_prot   (vexriscvaxi4_0_ibusaxi_arprot),        //                  .arprot
-		.iBusAxi_r_valid           (vexriscvaxi4_0_ibusaxi_rvalid),        //                  .rvalid
-		.iBusAxi_r_ready           (vexriscvaxi4_0_ibusaxi_rready),        //                  .rready
-		.iBusAxi_r_payload_data    (vexriscvaxi4_0_ibusaxi_rdata),         //                  .rdata
-		.iBusAxi_r_payload_id      (vexriscvaxi4_0_ibusaxi_rid),           //                  .rid
-		.iBusAxi_r_payload_resp    (vexriscvaxi4_0_ibusaxi_rresp),         //                  .rresp
-		.iBusAxi_r_payload_last    (vexriscvaxi4_0_ibusaxi_rlast),         //                  .rlast/home/khyam/Downloads/qsys/jtag_master
-		.debugReset                (rst_controller_001_reset_out_reset),   //        debugReset.reset
-		.debug_resetOut            (vexriscvaxi4_0_debug_resetout_reset),  //    debug_resetOut.reset
-		.externalInterrupt         (vexriscvaxi4_0_externalinterrupt_irq), // externalInterrupt.irq
-		.timerInterrupt            (vexriscvaxi4_0_timerinterrupt_irq),    //    timerInterrupt.irq
-		.softwareInterrupt         (),                                     // softwareInterrupt.export
-		.jtag_tms                  (),                                     //              jtag.export
-		.jtag_tdi                  (),                                     //                  .export1
-		.jtag_tdo                  (),                                     //                  .export2
-		.jtag_tck                  ()                                      //                  .export3
+	VexRiscv vexriscv_0 (
+		.clk                       (clk_clk),                               //                    clk.clk
+		.reset                     (rst_controller_reset_out_reset),        //                  reset.reset
+		.debugReset                (rst_controller_001_reset_out_reset),    //             debugReset.reset
+		.debug_resetOut            (vexriscv_0_debug_resetout_reset),       //         debug_resetOut.reset
+		.dBusAxi_aw_valid          (vexriscv_0_dbusaxi_awvalid),            //                dBusaxi.awvalid
+		.dBusAxi_aw_ready          (vexriscv_0_dbusaxi_awready),            //                       .awready
+		.dBusAxi_aw_payload_addr   (vexriscv_0_dbusaxi_awaddr),             //                       .awaddr
+		.dBusAxi_aw_payload_id     (vexriscv_0_dbusaxi_awid),               //                       .awid
+		.dBusAxi_aw_payload_region (vexriscv_0_dbusaxi_awregion),           //                       .awregion
+		.dBusAxi_aw_payload_len    (vexriscv_0_dbusaxi_awlen),              //                       .awlen
+		.dBusAxi_aw_payload_size   (vexriscv_0_dbusaxi_awsize),             //                       .awsize
+		.dBusAxi_aw_payload_burst  (vexriscv_0_dbusaxi_awburst),            //                       .awburst
+		.dBusAxi_aw_payload_lock   (vexriscv_0_dbusaxi_awlock),             //                       .awlock
+		.dBusAxi_aw_payload_cache  (vexriscv_0_dbusaxi_awcache),            //                       .awcache
+		.dBusAxi_aw_payload_qos    (vexriscv_0_dbusaxi_awqos),              //                       .awqos
+		.dBusAxi_aw_payload_prot   (vexriscv_0_dbusaxi_awprot),             //                       .awprot
+		.dBusAxi_w_valid           (vexriscv_0_dbusaxi_wvalid),             //                       .wvalid
+		.dBusAxi_w_ready           (vexriscv_0_dbusaxi_wready),             //                       .wready
+		.dBusAxi_w_payload_data    (vexriscv_0_dbusaxi_wdata),              //                       .wdata
+		.dBusAxi_w_payload_strb    (vexriscv_0_dbusaxi_wstrb),              //                       .wstrb
+		.dBusAxi_w_payload_last    (vexriscv_0_dbusaxi_wlast),              //                       .wlast
+		.dBusAxi_b_valid           (vexriscv_0_dbusaxi_bvalid),             //                       .bvalid
+		.dBusAxi_b_ready           (vexriscv_0_dbusaxi_bready),             //                       .bready
+		.dBusAxi_b_payload_id      (vexriscv_0_dbusaxi_bid),                //                       .bid
+		.dBusAxi_b_payload_resp    (vexriscv_0_dbusaxi_bresp),              //                       .bresp
+		.dBusAxi_ar_valid          (vexriscv_0_dbusaxi_arvalid),            //                       .arvalid
+		.dBusAxi_ar_ready          (vexriscv_0_dbusaxi_arready),            //                       .arready
+		.dBusAxi_ar_payload_addr   (vexriscv_0_dbusaxi_araddr),             //                       .araddr
+		.dBusAxi_ar_payload_id     (vexriscv_0_dbusaxi_arid),               //                       .arid
+		.dBusAxi_ar_payload_region (vexriscv_0_dbusaxi_arregion),           //                       .arregion
+		.dBusAxi_ar_payload_len    (vexriscv_0_dbusaxi_arlen),              //                       .arlen
+		.dBusAxi_ar_payload_size   (vexriscv_0_dbusaxi_arsize),             //                       .arsize
+		.dBusAxi_ar_payload_burst  (vexriscv_0_dbusaxi_arburst),            //                       .arburst
+		.dBusAxi_ar_payload_lock   (vexriscv_0_dbusaxi_arlock),             //                       .arlock
+		.dBusAxi_ar_payload_cache  (vexriscv_0_dbusaxi_arcache),            //                       .arcache
+		.dBusAxi_ar_payload_qos    (vexriscv_0_dbusaxi_arqos),              //                       .arqos
+		.dBusAxi_ar_payload_prot   (vexriscv_0_dbusaxi_arprot),             //                       .arprot
+		.dBusAxi_r_valid           (vexriscv_0_dbusaxi_rvalid),             //                       .rvalid
+		.dBusAxi_r_ready           (vexriscv_0_dbusaxi_rready),             //                       .rready
+		.dBusAxi_r_payload_data    (vexriscv_0_dbusaxi_rdata),              //                       .rdata
+		.dBusAxi_r_payload_id      (vexriscv_0_dbusaxi_rid),                //                       .rid
+		.dBusAxi_r_payload_resp    (vexriscv_0_dbusaxi_rresp),              //                       .rresp
+		.dBusAxi_r_payload_last    (vexriscv_0_dbusaxi_rlast),              //                       .rlast
+		.iBusAxi_ar_valid          (vexriscv_0_ibusaxi_arvalid),            //                iBusaxi.arvalid
+		.iBusAxi_ar_ready          (vexriscv_0_ibusaxi_arready),            //                       .arready
+		.iBusAxi_ar_payload_addr   (vexriscv_0_ibusaxi_araddr),             //                       .araddr
+		.iBusAxi_ar_payload_id     (vexriscv_0_ibusaxi_arid),               //                       .arid
+		.iBusAxi_ar_payload_region (vexriscv_0_ibusaxi_arregion),           //                       .arregion
+		.iBusAxi_ar_payload_len    (vexriscv_0_ibusaxi_arlen),              //                       .arlen
+		.iBusAxi_ar_payload_size   (vexriscv_0_ibusaxi_arsize),             //                       .arsize
+		.iBusAxi_ar_payload_burst  (vexriscv_0_ibusaxi_arburst),            //                       .arburst
+		.iBusAxi_ar_payload_lock   (vexriscv_0_ibusaxi_arlock),             //                       .arlock
+		.iBusAxi_ar_payload_cache  (vexriscv_0_ibusaxi_arcache),            //                       .arcache
+		.iBusAxi_ar_payload_qos    (vexriscv_0_ibusaxi_arqos),              //                       .arqos
+		.iBusAxi_ar_payload_prot   (vexriscv_0_ibusaxi_arprot),             //                       .arprot
+		.iBusAxi_r_valid           (vexriscv_0_ibusaxi_rvalid),             //                       .rvalid
+		.iBusAxi_r_ready           (vexriscv_0_ibusaxi_rready),             //                       .rready
+		.iBusAxi_r_payload_data    (vexriscv_0_ibusaxi_rdata),              //                       .rdata
+		.iBusAxi_r_payload_id      (vexriscv_0_ibusaxi_rid),                //                       .rid
+		.iBusAxi_r_payload_resp    (vexriscv_0_ibusaxi_rresp),              //                       .rresp
+		.iBusAxi_r_payload_last    (vexriscv_0_ibusaxi_rlast),              //                       .rlast
+		.externalInterruptArray    (vexriscv_0_externalinterruptarray_irq), // externalInterruptArray.irq
+		.externalResetVector       (vexriscv_0_externalresetvector_irq),    //    externalResetVector.irq
+		.timerInterrupt            (vexriscv_0_timerinterrupt_irq),         //         timerInterrupt.irq
+		.softwareInterrupt         (),                                      //      softwareInterrupt.export
+		.jtag_tms                  (),                                      //                   jtag.export
+		.jtag_tdi                  (),                                      //                       .export1
+		.jtag_tdo                  (),                                      //                       .export2
+		.jtag_tck                  ()                                       //                       .export3
 	);
 
 	soc_system_button_pio button_pio (
 		.clk      (clk_clk),                                  //                 clk.clk
-		.reset_n  (~rst_controller_001_reset_out_reset),      //               reset.reset_n
+		.reset_n  (~rst_controller_002_reset_out_reset),      //               reset.reset_n
 		.address  (mm_interconnect_0_button_pio_s1_address),  //                  s1.address
 		.readdata (mm_interconnect_0_button_pio_s1_readdata), //                    .readdata
 		.in_port  (button_pio_export)                         // external_connection.export
@@ -234,7 +237,7 @@ module soc_system (
 
 	soc_system_jtag_uart_0 jtag_uart_0 (
 		.clk            (clk_clk),                                                     //               clk.clk
-		.rst_n          (~rst_controller_001_reset_out_reset),                         //             reset.reset_n
+		.rst_n          (~rst_controller_002_reset_out_reset),                         //             reset.reset_n
 		.av_chipselect  (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_chipselect),  // avalon_jtag_slave.chipselect
 		.av_address     (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_address),     //                  .address
 		.av_read_n      (~mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read),       //                  .read_n
@@ -242,12 +245,12 @@ module soc_system (
 		.av_write_n     (~mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write),      //                  .write_n
 		.av_writedata   (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_writedata),   //                  .writedata
 		.av_waitrequest (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_waitrequest), //                  .waitrequest
-		.av_irq         (irq_mapper_002_receiver0_irq)                                 //               irq.irq
+		.av_irq         (irq_mapper_receiver0_irq)                                     //               irq.irq
 	);
 
 	soc_system_led_pio led_pio (
 		.clk        (clk_clk),                                 //                 clk.clk
-		.reset_n    (~rst_controller_001_reset_out_reset),     //               reset.reset_n
+		.reset_n    (~rst_controller_002_reset_out_reset),     //               reset.reset_n
 		.address    (mm_interconnect_0_led_pio_s1_address),    //                  s1.address
 		.write_n    (~mm_interconnect_0_led_pio_s1_write),     //                    .write_n
 		.writedata  (mm_interconnect_0_led_pio_s1_writedata),  //                    .writedata
@@ -262,7 +265,7 @@ module soc_system (
 		.FIFO_DEPTHS (2)
 	) master_0 (
 		.clk_clk              (clk_clk),                            //          clk.clk
-		.clk_reset_reset      (rst_controller_002_reset_out_reset), //    clk_reset.reset
+		.clk_reset_reset      (rst_controller_003_reset_out_reset), //    clk_reset.reset
 		.master_address       (master_0_master_address),            //       master.address
 		.master_readdata      (master_0_master_readdata),           //             .readdata
 		.master_read          (master_0_master_read),               //             .read
@@ -276,8 +279,8 @@ module soc_system (
 
 	soc_system_nios2_gen2_0 nios2_gen2_0 (
 		.clk                                 (clk_clk),                                                    //                       clk.clk
-		.reset_n                             (~rst_controller_001_reset_out_reset),                        //                     reset.reset_n
-		.reset_req                           (rst_controller_001_reset_out_reset_req),                     //                          .reset_req
+		.reset_n                             (~rst_controller_002_reset_out_reset),                        //                     reset.reset_n
+		.reset_req                           (rst_controller_002_reset_out_reset_req),                     //                          .reset_req
 		.d_address                           (nios2_gen2_0_data_master_address),                           //               data_master.address
 		.d_byteenable                        (nios2_gen2_0_data_master_byteenable),                        //                          .byteenable
 		.d_read                              (nios2_gen2_0_data_master_read),                              //                          .read
@@ -312,8 +315,8 @@ module soc_system (
 		.readdata   (mm_interconnect_0_ocram_16b_s1_readdata),   //       .readdata
 		.writedata  (mm_interconnect_0_ocram_16b_s1_writedata),  //       .writedata
 		.byteenable (mm_interconnect_0_ocram_16b_s1_byteenable), //       .byteenable
-		.reset      (rst_controller_001_reset_out_reset),        // reset1.reset
-		.reset_req  (rst_controller_001_reset_out_reset_req),    //       .reset_req
+		.reset      (rst_controller_002_reset_out_reset),        // reset1.reset
+		.reset_req  (rst_controller_002_reset_out_reset_req),    //       .reset_req
 		.freeze     (1'b0)                                       // (terminated)
 	);
 
@@ -326,14 +329,14 @@ module soc_system (
 		.readdata   (mm_interconnect_0_ocram_64k_s1_readdata),   //       .readdata
 		.writedata  (mm_interconnect_0_ocram_64k_s1_writedata),  //       .writedata
 		.byteenable (mm_interconnect_0_ocram_64k_s1_byteenable), //       .byteenable
-		.reset      (rst_controller_001_reset_out_reset),        // reset1.reset
-		.reset_req  (rst_controller_001_reset_out_reset_req),    //       .reset_req
+		.reset      (rst_controller_002_reset_out_reset),        // reset1.reset
+		.reset_req  (rst_controller_002_reset_out_reset_req),    //       .reset_req
 		.freeze     (1'b0)                                       // (terminated)
 	);
 
 	soc_system_switch_pio switch_pio (
 		.clk      (clk_clk),                                  //                 clk.clk
-		.reset_n  (~rst_controller_001_reset_out_reset),      //               reset.reset_n
+		.reset_n  (~rst_controller_002_reset_out_reset),      //               reset.reset_n
 		.address  (mm_interconnect_0_switch_pio_s1_address),  //                  s1.address
 		.readdata (mm_interconnect_0_switch_pio_s1_readdata), //                    .readdata
 		.in_port  (switch_pio_export)                         // external_connection.export
@@ -341,169 +344,178 @@ module soc_system (
 
 	soc_system_sysid_qsys_0 sysid_qsys_0 (
 		.clock    (clk_clk),                                               //           clk.clk
-		.reset_n  (~rst_controller_001_reset_out_reset),                   //         reset.reset_n
+		.reset_n  (~rst_controller_002_reset_out_reset),                   //         reset.reset_n
 		.readdata (mm_interconnect_0_sysid_qsys_0_control_slave_readdata), // control_slave.readdata
 		.address  (mm_interconnect_0_sysid_qsys_0_control_slave_address)   //              .address
 	);
 
 	soc_system_mm_interconnect_0 mm_interconnect_0 (
-		.VexRiscvAxi4_0_dBusaxi_awid                      (vexriscvaxi4_0_dbusaxi_awid),                                 //                     VexRiscvAxi4_0_dBusaxi.awid
-		.VexRiscvAxi4_0_dBusaxi_awaddr                    (vexriscvaxi4_0_dbusaxi_awaddr),                               //                                           .awaddr
-		.VexRiscvAxi4_0_dBusaxi_awlen                     (vexriscvaxi4_0_dbusaxi_awlen),                                //                                           .awlen
-		.VexRiscvAxi4_0_dBusaxi_awsize                    (vexriscvaxi4_0_dbusaxi_awsize),                               //                                           .awsize
-		.VexRiscvAxi4_0_dBusaxi_awburst                   (vexriscvaxi4_0_dbusaxi_awburst),                              //                                           .awburst
-		.VexRiscvAxi4_0_dBusaxi_awlock                    (vexriscvaxi4_0_dbusaxi_awlock),                               //                                           .awlock
-		.VexRiscvAxi4_0_dBusaxi_awcache                   (vexriscvaxi4_0_dbusaxi_awcache),                              //                                           .awcache
-		.VexRiscvAxi4_0_dBusaxi_awprot                    (vexriscvaxi4_0_dbusaxi_awprot),                               //                                           .awprot
-		.VexRiscvAxi4_0_dBusaxi_awqos                     (vexriscvaxi4_0_dbusaxi_awqos),                                //                                           .awqos
-		.VexRiscvAxi4_0_dBusaxi_awregion                  (vexriscvaxi4_0_dbusaxi_awregion),                             //                                           .awregion
-		.VexRiscvAxi4_0_dBusaxi_awvalid                   (vexriscvaxi4_0_dbusaxi_awvalid),                              //                                           .awvalid
-		.VexRiscvAxi4_0_dBusaxi_awready                   (vexriscvaxi4_0_dbusaxi_awready),                              //                                           .awready
-		.VexRiscvAxi4_0_dBusaxi_wdata                     (vexriscvaxi4_0_dbusaxi_wdata),                                //                                           .wdata
-		.VexRiscvAxi4_0_dBusaxi_wstrb                     (vexriscvaxi4_0_dbusaxi_wstrb),                                //                                           .wstrb
-		.VexRiscvAxi4_0_dBusaxi_wlast                     (vexriscvaxi4_0_dbusaxi_wlast),                                //                                           .wlast
-		.VexRiscvAxi4_0_dBusaxi_wvalid                    (vexriscvaxi4_0_dbusaxi_wvalid),                               //                                           .wvalid
-		.VexRiscvAxi4_0_dBusaxi_wready                    (vexriscvaxi4_0_dbusaxi_wready),                               //                                           .wready
-		.VexRiscvAxi4_0_dBusaxi_bid                       (vexriscvaxi4_0_dbusaxi_bid),                                  //                                           .bid
-		.VexRiscvAxi4_0_dBusaxi_bresp                     (vexriscvaxi4_0_dbusaxi_bresp),                                //                                           .bresp
-		.VexRiscvAxi4_0_dBusaxi_bvalid                    (vexriscvaxi4_0_dbusaxi_bvalid),                               //                                           .bvalid
-		.VexRiscvAxi4_0_dBusaxi_bready                    (vexriscvaxi4_0_dbusaxi_bready),                               //                                           .bready
-		.VexRiscvAxi4_0_dBusaxi_arid                      (vexriscvaxi4_0_dbusaxi_arid),                                 //                                           .arid
-		.VexRiscvAxi4_0_dBusaxi_araddr                    (vexriscvaxi4_0_dbusaxi_araddr),                               //                                           .araddr
-		.VexRiscvAxi4_0_dBusaxi_arlen                     (vexriscvaxi4_0_dbusaxi_arlen),                                //                                           .arlen
-		.VexRiscvAxi4_0_dBusaxi_arsize                    (vexriscvaxi4_0_dbusaxi_arsize),                               //                                           .arsize
-		.VexRiscvAxi4_0_dBusaxi_arburst                   (vexriscvaxi4_0_dbusaxi_arburst),                              //                                           .arburst
-		.VexRiscvAxi4_0_dBusaxi_arlock                    (vexriscvaxi4_0_dbusaxi_arlock),                               //                                           .arlock
-		.VexRiscvAxi4_0_dBusaxi_arcache                   (vexriscvaxi4_0_dbusaxi_arcache),                              //                                           .arcache
-		.VexRiscvAxi4_0_dBusaxi_arprot                    (vexriscvaxi4_0_dbusaxi_arprot),                               //                                           .arprot
-		.VexRiscvAxi4_0_dBusaxi_arqos                     (vexriscvaxi4_0_dbusaxi_arqos),                                //                                           .arqos
-		.VexRiscvAxi4_0_dBusaxi_arregion                  (vexriscvaxi4_0_dbusaxi_arregion),                             //                                           .arregion
-		.VexRiscvAxi4_0_dBusaxi_arvalid                   (vexriscvaxi4_0_dbusaxi_arvalid),                              //                                           .arvalid
-		.VexRiscvAxi4_0_dBusaxi_arready                   (vexriscvaxi4_0_dbusaxi_arready),                              //                                           .arready
-		.VexRiscvAxi4_0_dBusaxi_rid                       (vexriscvaxi4_0_dbusaxi_rid),                                  //                                           .rid
-		.VexRiscvAxi4_0_dBusaxi_rdata                     (vexriscvaxi4_0_dbusaxi_rdata),                                //                                           .rdata
-		.VexRiscvAxi4_0_dBusaxi_rresp                     (vexriscvaxi4_0_dbusaxi_rresp),                                //                                           .rresp
-		.VexRiscvAxi4_0_dBusaxi_rlast                     (vexriscvaxi4_0_dbusaxi_rlast),                                //                                           .rlast
-		.VexRiscvAxi4_0_dBusaxi_rvalid                    (vexriscvaxi4_0_dbusaxi_rvalid),                               //                                           .rvalid
-		.VexRiscvAxi4_0_dBusaxi_rready                    (vexriscvaxi4_0_dbusaxi_rready),                               //                                           .rready
-		.VexRiscvAxi4_0_iBusaxi_awid                      (vexriscvaxi4_0_ibusaxi_awid),                                 //                     VexRiscvAxi4_0_iBusaxi.awid
-		.VexRiscvAxi4_0_iBusaxi_awaddr                    (vexriscvaxi4_0_ibusaxi_awaddr),                               //                                           .awaddr
-		.VexRiscvAxi4_0_iBusaxi_awlock                    (vexriscvaxi4_0_ibusaxi_awlock),                               //                                           .awlock
-		.VexRiscvAxi4_0_iBusaxi_awprot                    (vexriscvaxi4_0_ibusaxi_awprot),                               //                                           .awprot
-		.VexRiscvAxi4_0_iBusaxi_awvalid                   (vexriscvaxi4_0_ibusaxi_awvalid),                              //                                           .awvalid
-		.VexRiscvAxi4_0_iBusaxi_awready                   (vexriscvaxi4_0_ibusaxi_awready),                              //                                           .awready
-		.VexRiscvAxi4_0_iBusaxi_wdata                     (vexriscvaxi4_0_ibusaxi_wdata),                                //                                           .wdata
-		.VexRiscvAxi4_0_iBusaxi_wlast                     (vexriscvaxi4_0_ibusaxi_wlast),                                //                                           .wlast
-		.VexRiscvAxi4_0_iBusaxi_wvalid                    (vexriscvaxi4_0_ibusaxi_wvalid),                               //                                           .wvalid
-		.VexRiscvAxi4_0_iBusaxi_wready                    (vexriscvaxi4_0_ibusaxi_wready),                               //                                           .wready
-		.VexRiscvAxi4_0_iBusaxi_bid                       (vexriscvaxi4_0_ibusaxi_bid),                                  //                                           .bid
-		.VexRiscvAxi4_0_iBusaxi_bvalid                    (vexriscvaxi4_0_ibusaxi_bvalid),                               //                                           .bvalid
-		.VexRiscvAxi4_0_iBusaxi_bready                    (vexriscvaxi4_0_ibusaxi_bready),                               //                                           .bready
-		.VexRiscvAxi4_0_iBusaxi_arid                      (vexriscvaxi4_0_ibusaxi_arid),                                 //                                           .arid
-		.VexRiscvAxi4_0_iBusaxi_araddr                    (vexriscvaxi4_0_ibusaxi_araddr),                               //                                           .araddr
-		.VexRiscvAxi4_0_iBusaxi_arlen                     (vexriscvaxi4_0_ibusaxi_arlen),                                //                                           .arlen
-		.VexRiscvAxi4_0_iBusaxi_arsize                    (vexriscvaxi4_0_ibusaxi_arsize),                               //                                           .arsize
-		.VexRiscvAxi4_0_iBusaxi_arburst                   (vexriscvaxi4_0_ibusaxi_arburst),                              //                                           .arburst
-		.VexRiscvAxi4_0_iBusaxi_arlock                    (vexriscvaxi4_0_ibusaxi_arlock),                               //                                           .arlock
-		.VexRiscvAxi4_0_iBusaxi_arcache                   (vexriscvaxi4_0_ibusaxi_arcache),                              //                                           .arcache
-		.VexRiscvAxi4_0_iBusaxi_arprot                    (vexriscvaxi4_0_ibusaxi_arprot),                               //                                           .arprot
-		.VexRiscvAxi4_0_iBusaxi_arqos                     (vexriscvaxi4_0_ibusaxi_arqos),                                //                                           .arqos
-		.VexRiscvAxi4_0_iBusaxi_arregion                  (vexriscvaxi4_0_ibusaxi_arregion),                             //                                           .arregion
-		.VexRiscvAxi4_0_iBusaxi_arvalid                   (vexriscvaxi4_0_ibusaxi_arvalid),                              //                                           .arvalid
-		.VexRiscvAxi4_0_iBusaxi_arready                   (vexriscvaxi4_0_ibusaxi_arready),                              //                                           .arready
-		.VexRiscvAxi4_0_iBusaxi_rid                       (vexriscvaxi4_0_ibusaxi_rid),                                  //                                           .rid
-		.VexRiscvAxi4_0_iBusaxi_rdata                     (vexriscvaxi4_0_ibusaxi_rdata),                                //                                           .rdata
-		.VexRiscvAxi4_0_iBusaxi_rresp                     (vexriscvaxi4_0_ibusaxi_rresp),                                //                                           .rresp
-		.VexRiscvAxi4_0_iBusaxi_rlast                     (vexriscvaxi4_0_ibusaxi_rlast),                                //                                           .rlast
-		.VexRiscvAxi4_0_iBusaxi_rvalid                    (vexriscvaxi4_0_ibusaxi_rvalid),                               //                                           .rvalid
-		.VexRiscvAxi4_0_iBusaxi_rready                    (vexriscvaxi4_0_ibusaxi_rready),                               //                                           .rready
-		.clk_0_clk_clk                                    (clk_clk),                                                     //                                  clk_0_clk.clk
-		.master_0_clk_reset_reset_bridge_in_reset_reset   (rst_controller_001_reset_out_reset),                          //   master_0_clk_reset_reset_bridge_in_reset.reset
-		.nios2_gen2_0_reset_reset_bridge_in_reset_reset   (rst_controller_001_reset_out_reset),                          //   nios2_gen2_0_reset_reset_bridge_in_reset.reset
-		.VexRiscvAxi4_0_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                              // VexRiscvAxi4_0_reset_reset_bridge_in_reset.reset
-		.master_0_master_address                          (master_0_master_address),                                     //                            master_0_master.address
-		.master_0_master_waitrequest                      (master_0_master_waitrequest),                                 //                                           .waitrequest
-		.master_0_master_byteenable                       (master_0_master_byteenable),                                  //                                           .byteenable
-		.master_0_master_read                             (master_0_master_read),                                        //                                           .read
-		.master_0_master_readdata                         (master_0_master_readdata),                                    //                                           .readdata
-		.master_0_master_readdatavalid                    (master_0_master_readdatavalid),                               //                                           .readdatavalid
-		.master_0_master_write                            (master_0_master_write),                                       //                                           .write
-		.master_0_master_writedata                        (master_0_master_writedata),                                   //                                           .writedata
-		.nios2_gen2_0_data_master_address                 (nios2_gen2_0_data_master_address),                            //                   nios2_gen2_0_data_master.address
-		.nios2_gen2_0_data_master_waitrequest             (nios2_gen2_0_data_master_waitrequest),                        //                                           .waitrequest
-		.nios2_gen2_0_data_master_byteenable              (nios2_gen2_0_data_master_byteenable),                         //                                           .byteenable
-		.nios2_gen2_0_data_master_read                    (nios2_gen2_0_data_master_read),                               //                                           .read
-		.nios2_gen2_0_data_master_readdata                (nios2_gen2_0_data_master_readdata),                           //                                           .readdata
-		.nios2_gen2_0_data_master_write                   (nios2_gen2_0_data_master_write),                              //                                           .write
-		.nios2_gen2_0_data_master_writedata               (nios2_gen2_0_data_master_writedata),                          //                                           .writedata
-		.nios2_gen2_0_data_master_debugaccess             (nios2_gen2_0_data_master_debugaccess),                        //                                           .debugaccess
-		.nios2_gen2_0_instruction_master_address          (nios2_gen2_0_instruction_master_address),                     //            nios2_gen2_0_instruction_master.address
-		.nios2_gen2_0_instruction_master_waitrequest      (nios2_gen2_0_instruction_master_waitrequest),                 //                                           .waitrequest
-		.nios2_gen2_0_instruction_master_read             (nios2_gen2_0_instruction_master_read),                        //                                           .read
-		.nios2_gen2_0_instruction_master_readdata         (nios2_gen2_0_instruction_master_readdata),                    //                                           .readdata
-		.button_pio_s1_address                            (mm_interconnect_0_button_pio_s1_address),                     //                              button_pio_s1.address
-		.button_pio_s1_readdata                           (mm_interconnect_0_button_pio_s1_readdata),                    //                                           .readdata
-		.jtag_uart_0_avalon_jtag_slave_address            (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_address),     //              jtag_uart_0_avalon_jtag_slave.address
-		.jtag_uart_0_avalon_jtag_slave_write              (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write),       //                                           .write
-		.jtag_uart_0_avalon_jtag_slave_read               (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read),        //                                           .read
-		.jtag_uart_0_avalon_jtag_slave_readdata           (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_readdata),    //                                           .readdata
-		.jtag_uart_0_avalon_jtag_slave_writedata          (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_writedata),   //                                           .writedata
-		.jtag_uart_0_avalon_jtag_slave_waitrequest        (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_waitrequest), //                                           .waitrequest
-		.jtag_uart_0_avalon_jtag_slave_chipselect         (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_chipselect),  //                                           .chipselect
-		.led_pio_s1_address                               (mm_interconnect_0_led_pio_s1_address),                        //                                 led_pio_s1.address
-		.led_pio_s1_write                                 (mm_interconnect_0_led_pio_s1_write),                          //                                           .write
-		.led_pio_s1_readdata                              (mm_interconnect_0_led_pio_s1_readdata),                       //                                           .readdata
-		.led_pio_s1_writedata                             (mm_interconnect_0_led_pio_s1_writedata),                      //                                           .writedata
-		.led_pio_s1_chipselect                            (mm_interconnect_0_led_pio_s1_chipselect),                     //                                           .chipselect
-		.nios2_gen2_0_debug_mem_slave_address             (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_address),      //               nios2_gen2_0_debug_mem_slave.address
-		.nios2_gen2_0_debug_mem_slave_write               (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_write),        //                                           .write
-		.nios2_gen2_0_debug_mem_slave_read                (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_read),         //                                           .read
-		.nios2_gen2_0_debug_mem_slave_readdata            (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_readdata),     //                                           .readdata
-		.nios2_gen2_0_debug_mem_slave_writedata           (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_writedata),    //                                           .writedata
-		.nios2_gen2_0_debug_mem_slave_byteenable          (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_byteenable),   //                                           .byteenable
-		.nios2_gen2_0_debug_mem_slave_waitrequest         (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_waitrequest),  //                                           .waitrequest
-		.nios2_gen2_0_debug_mem_slave_debugaccess         (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_debugaccess),  //                                           .debugaccess
-		.ocram_16b_s1_address                             (mm_interconnect_0_ocram_16b_s1_address),                      //                               ocram_16b_s1.address
-		.ocram_16b_s1_write                               (mm_interconnect_0_ocram_16b_s1_write),                        //                                           .write
-		.ocram_16b_s1_readdata                            (mm_interconnect_0_ocram_16b_s1_readdata),                     //                                           .readdata
-		.ocram_16b_s1_writedata                           (mm_interconnect_0_ocram_16b_s1_writedata),                    //                                           .writedata
-		.ocram_16b_s1_byteenable                          (mm_interconnect_0_ocram_16b_s1_byteenable),                   //                                           .byteenable
-		.ocram_16b_s1_chipselect                          (mm_interconnect_0_ocram_16b_s1_chipselect),                   //                                           .chipselect
-		.ocram_16b_s1_clken                               (mm_interconnect_0_ocram_16b_s1_clken),                        //                                           .clken
-		.ocram_64K_s1_address                             (mm_interconnect_0_ocram_64k_s1_address),                      //                               ocram_64K_s1.address
-		.ocram_64K_s1_write                               (mm_interconnect_0_ocram_64k_s1_write),                        //                                           .write
-		.ocram_64K_s1_readdata                            (mm_interconnect_0_ocram_64k_s1_readdata),                     //                                           .readdata
-		.ocram_64K_s1_writedata                           (mm_interconnect_0_ocram_64k_s1_writedata),                    //                                           .writedata
-		.ocram_64K_s1_byteenable                          (mm_interconnect_0_ocram_64k_s1_byteenable),                   //                                           .byteenable
-		.ocram_64K_s1_chipselect                          (mm_interconnect_0_ocram_64k_s1_chipselect),                   //                                           .chipselect
-		.ocram_64K_s1_clken                               (mm_interconnect_0_ocram_64k_s1_clken),                        //                                           .clken
-		.switch_pio_s1_address                            (mm_interconnect_0_switch_pio_s1_address),                     //                              switch_pio_s1.address
-		.switch_pio_s1_readdata                           (mm_interconnect_0_switch_pio_s1_readdata),                    //                                           .readdata
-		.sysid_qsys_0_control_slave_address               (mm_interconnect_0_sysid_qsys_0_control_slave_address),        //                 sysid_qsys_0_control_slave.address
-		.sysid_qsys_0_control_slave_readdata              (mm_interconnect_0_sysid_qsys_0_control_slave_readdata)        //                                           .readdata
+		.VexRiscv_0_dBusaxi_awid                        (vexriscv_0_dbusaxi_awid),                                     //                       VexRiscv_0_dBusaxi.awid
+		.VexRiscv_0_dBusaxi_awaddr                      (vexriscv_0_dbusaxi_awaddr),                                   //                                         .awaddr
+		.VexRiscv_0_dBusaxi_awlen                       (vexriscv_0_dbusaxi_awlen),                                    //                                         .awlen
+		.VexRiscv_0_dBusaxi_awsize                      (vexriscv_0_dbusaxi_awsize),                                   //                                         .awsize
+		.VexRiscv_0_dBusaxi_awburst                     (vexriscv_0_dbusaxi_awburst),                                  //                                         .awburst
+		.VexRiscv_0_dBusaxi_awlock                      (vexriscv_0_dbusaxi_awlock),                                   //                                         .awlock
+		.VexRiscv_0_dBusaxi_awcache                     (vexriscv_0_dbusaxi_awcache),                                  //                                         .awcache
+		.VexRiscv_0_dBusaxi_awprot                      (vexriscv_0_dbusaxi_awprot),                                   //                                         .awprot
+		.VexRiscv_0_dBusaxi_awqos                       (vexriscv_0_dbusaxi_awqos),                                    //                                         .awqos
+		.VexRiscv_0_dBusaxi_awregion                    (vexriscv_0_dbusaxi_awregion),                                 //                                         .awregion
+		.VexRiscv_0_dBusaxi_awvalid                     (vexriscv_0_dbusaxi_awvalid),                                  //                                         .awvalid
+		.VexRiscv_0_dBusaxi_awready                     (vexriscv_0_dbusaxi_awready),                                  //                                         .awready
+		.VexRiscv_0_dBusaxi_wdata                       (vexriscv_0_dbusaxi_wdata),                                    //                                         .wdata
+		.VexRiscv_0_dBusaxi_wstrb                       (vexriscv_0_dbusaxi_wstrb),                                    //                                         .wstrb
+		.VexRiscv_0_dBusaxi_wlast                       (vexriscv_0_dbusaxi_wlast),                                    //                                         .wlast
+		.VexRiscv_0_dBusaxi_wvalid                      (vexriscv_0_dbusaxi_wvalid),                                   //                                         .wvalid
+		.VexRiscv_0_dBusaxi_wready                      (vexriscv_0_dbusaxi_wready),                                   //                                         .wready
+		.VexRiscv_0_dBusaxi_bid                         (vexriscv_0_dbusaxi_bid),                                      //                                         .bid
+		.VexRiscv_0_dBusaxi_bresp                       (vexriscv_0_dbusaxi_bresp),                                    //                                         .bresp
+		.VexRiscv_0_dBusaxi_bvalid                      (vexriscv_0_dbusaxi_bvalid),                                   //                                         .bvalid
+		.VexRiscv_0_dBusaxi_bready                      (vexriscv_0_dbusaxi_bready),                                   //                                         .bready
+		.VexRiscv_0_dBusaxi_arid                        (vexriscv_0_dbusaxi_arid),                                     //                                         .arid
+		.VexRiscv_0_dBusaxi_araddr                      (vexriscv_0_dbusaxi_araddr),                                   //                                         .araddr
+		.VexRiscv_0_dBusaxi_arlen                       (vexriscv_0_dbusaxi_arlen),                                    //                                         .arlen
+		.VexRiscv_0_dBusaxi_arsize                      (vexriscv_0_dbusaxi_arsize),                                   //                                         .arsize
+		.VexRiscv_0_dBusaxi_arburst                     (vexriscv_0_dbusaxi_arburst),                                  //                                         .arburst
+		.VexRiscv_0_dBusaxi_arlock                      (vexriscv_0_dbusaxi_arlock),                                   //                                         .arlock
+		.VexRiscv_0_dBusaxi_arcache                     (vexriscv_0_dbusaxi_arcache),                                  //                                         .arcache
+		.VexRiscv_0_dBusaxi_arprot                      (vexriscv_0_dbusaxi_arprot),                                   //                                         .arprot
+		.VexRiscv_0_dBusaxi_arqos                       (vexriscv_0_dbusaxi_arqos),                                    //                                         .arqos
+		.VexRiscv_0_dBusaxi_arregion                    (vexriscv_0_dbusaxi_arregion),                                 //                                         .arregion
+		.VexRiscv_0_dBusaxi_arvalid                     (vexriscv_0_dbusaxi_arvalid),                                  //                                         .arvalid
+		.VexRiscv_0_dBusaxi_arready                     (vexriscv_0_dbusaxi_arready),                                  //                                         .arready
+		.VexRiscv_0_dBusaxi_rid                         (vexriscv_0_dbusaxi_rid),                                      //                                         .rid
+		.VexRiscv_0_dBusaxi_rdata                       (vexriscv_0_dbusaxi_rdata),                                    //                                         .rdata
+		.VexRiscv_0_dBusaxi_rresp                       (vexriscv_0_dbusaxi_rresp),                                    //                                         .rresp
+		.VexRiscv_0_dBusaxi_rlast                       (vexriscv_0_dbusaxi_rlast),                                    //                                         .rlast
+		.VexRiscv_0_dBusaxi_rvalid                      (vexriscv_0_dbusaxi_rvalid),                                   //                                         .rvalid
+		.VexRiscv_0_dBusaxi_rready                      (vexriscv_0_dbusaxi_rready),                                   //                                         .rready
+		.VexRiscv_0_iBusaxi_awid                        (vexriscv_0_ibusaxi_awid),                                     //                       VexRiscv_0_iBusaxi.awid
+		.VexRiscv_0_iBusaxi_awaddr                      (vexriscv_0_ibusaxi_awaddr),                                   //                                         .awaddr
+		.VexRiscv_0_iBusaxi_awlock                      (vexriscv_0_ibusaxi_awlock),                                   //                                         .awlock
+		.VexRiscv_0_iBusaxi_awprot                      (vexriscv_0_ibusaxi_awprot),                                   //                                         .awprot
+		.VexRiscv_0_iBusaxi_awvalid                     (vexriscv_0_ibusaxi_awvalid),                                  //                                         .awvalid
+		.VexRiscv_0_iBusaxi_awready                     (vexriscv_0_ibusaxi_awready),                                  //                                         .awready
+		.VexRiscv_0_iBusaxi_wdata                       (vexriscv_0_ibusaxi_wdata),                                    //                                         .wdata
+		.VexRiscv_0_iBusaxi_wlast                       (vexriscv_0_ibusaxi_wlast),                                    //                                         .wlast
+		.VexRiscv_0_iBusaxi_wvalid                      (vexriscv_0_ibusaxi_wvalid),                                   //                                         .wvalid
+		.VexRiscv_0_iBusaxi_wready                      (vexriscv_0_ibusaxi_wready),                                   //                                         .wready
+		.VexRiscv_0_iBusaxi_bid                         (vexriscv_0_ibusaxi_bid),                                      //                                         .bid
+		.VexRiscv_0_iBusaxi_bvalid                      (vexriscv_0_ibusaxi_bvalid),                                   //                                         .bvalid
+		.VexRiscv_0_iBusaxi_bready                      (vexriscv_0_ibusaxi_bready),                                   //                                         .bready
+		.VexRiscv_0_iBusaxi_arid                        (vexriscv_0_ibusaxi_arid),                                     //                                         .arid
+		.VexRiscv_0_iBusaxi_araddr                      (vexriscv_0_ibusaxi_araddr),                                   //                                         .araddr
+		.VexRiscv_0_iBusaxi_arlen                       (vexriscv_0_ibusaxi_arlen),                                    //                                         .arlen
+		.VexRiscv_0_iBusaxi_arsize                      (vexriscv_0_ibusaxi_arsize),                                   //                                         .arsize
+		.VexRiscv_0_iBusaxi_arburst                     (vexriscv_0_ibusaxi_arburst),                                  //                                         .arburst
+		.VexRiscv_0_iBusaxi_arlock                      (vexriscv_0_ibusaxi_arlock),                                   //                                         .arlock
+		.VexRiscv_0_iBusaxi_arcache                     (vexriscv_0_ibusaxi_arcache),                                  //                                         .arcache
+		.VexRiscv_0_iBusaxi_arprot                      (vexriscv_0_ibusaxi_arprot),                                   //                                         .arprot
+		.VexRiscv_0_iBusaxi_arqos                       (vexriscv_0_ibusaxi_arqos),                                    //                                         .arqos
+		.VexRiscv_0_iBusaxi_arregion                    (vexriscv_0_ibusaxi_arregion),                                 //                                         .arregion
+		.VexRiscv_0_iBusaxi_arvalid                     (vexriscv_0_ibusaxi_arvalid),                                  //                                         .arvalid
+		.VexRiscv_0_iBusaxi_arready                     (vexriscv_0_ibusaxi_arready),                                  //                                         .arready
+		.VexRiscv_0_iBusaxi_rid                         (vexriscv_0_ibusaxi_rid),                                      //                                         .rid
+		.VexRiscv_0_iBusaxi_rdata                       (vexriscv_0_ibusaxi_rdata),                                    //                                         .rdata
+		.VexRiscv_0_iBusaxi_rresp                       (vexriscv_0_ibusaxi_rresp),                                    //                                         .rresp
+		.VexRiscv_0_iBusaxi_rlast                       (vexriscv_0_ibusaxi_rlast),                                    //                                         .rlast
+		.VexRiscv_0_iBusaxi_rvalid                      (vexriscv_0_ibusaxi_rvalid),                                   //                                         .rvalid
+		.VexRiscv_0_iBusaxi_rready                      (vexriscv_0_ibusaxi_rready),                                   //                                         .rready
+		.clk_0_clk_clk                                  (clk_clk),                                                     //                                clk_0_clk.clk
+		.master_0_clk_reset_reset_bridge_in_reset_reset (rst_controller_002_reset_out_reset),                          // master_0_clk_reset_reset_bridge_in_reset.reset
+		.nios2_gen2_0_reset_reset_bridge_in_reset_reset (rst_controller_002_reset_out_reset),                          // nios2_gen2_0_reset_reset_bridge_in_reset.reset
+		.VexRiscv_0_reset_reset_bridge_in_reset_reset   (rst_controller_reset_out_reset),                              //   VexRiscv_0_reset_reset_bridge_in_reset.reset
+		.master_0_master_address                        (master_0_master_address),                                     //                          master_0_master.address
+		.master_0_master_waitrequest                    (master_0_master_waitrequest),                                 //                                         .waitrequest
+		.master_0_master_byteenable                     (master_0_master_byteenable),                                  //                                         .byteenable
+		.master_0_master_read                           (master_0_master_read),                                        //                                         .read
+		.master_0_master_readdata                       (master_0_master_readdata),                                    //                                         .readdata
+		.master_0_master_readdatavalid                  (master_0_master_readdatavalid),                               //                                         .readdatavalid
+		.master_0_master_write                          (master_0_master_write),                                       //                                         .write
+		.master_0_master_writedata                      (master_0_master_writedata),                                   //                                         .writedata
+		.nios2_gen2_0_data_master_address               (nios2_gen2_0_data_master_address),                            //                 nios2_gen2_0_data_master.address
+		.nios2_gen2_0_data_master_waitrequest           (nios2_gen2_0_data_master_waitrequest),                        //                                         .waitrequest
+		.nios2_gen2_0_data_master_byteenable            (nios2_gen2_0_data_master_byteenable),                         //                                         .byteenable
+		.nios2_gen2_0_data_master_read                  (nios2_gen2_0_data_master_read),                               //                                         .read
+		.nios2_gen2_0_data_master_readdata              (nios2_gen2_0_data_master_readdata),                           //                                         .readdata
+		.nios2_gen2_0_data_master_write                 (nios2_gen2_0_data_master_write),                              //                                         .write
+		.nios2_gen2_0_data_master_writedata             (nios2_gen2_0_data_master_writedata),                          //                                         .writedata
+		.nios2_gen2_0_data_master_debugaccess           (nios2_gen2_0_data_master_debugaccess),                        //                                         .debugaccess
+		.nios2_gen2_0_instruction_master_address        (nios2_gen2_0_instruction_master_address),                     //          nios2_gen2_0_instruction_master.address
+		.nios2_gen2_0_instruction_master_waitrequest    (nios2_gen2_0_instruction_master_waitrequest),                 //                                         .waitrequest
+		.nios2_gen2_0_instruction_master_read           (nios2_gen2_0_instruction_master_read),                        //                                         .read
+		.nios2_gen2_0_instruction_master_readdata       (nios2_gen2_0_instruction_master_readdata),                    //                                         .readdata
+		.button_pio_s1_address                          (mm_interconnect_0_button_pio_s1_address),                     //                            button_pio_s1.address
+		.button_pio_s1_readdata                         (mm_interconnect_0_button_pio_s1_readdata),                    //                                         .readdata
+		.jtag_uart_0_avalon_jtag_slave_address          (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_address),     //            jtag_uart_0_avalon_jtag_slave.address
+		.jtag_uart_0_avalon_jtag_slave_write            (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write),       //                                         .write
+		.jtag_uart_0_avalon_jtag_slave_read             (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read),        //                                         .read
+		.jtag_uart_0_avalon_jtag_slave_readdata         (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_readdata),    //                                         .readdata
+		.jtag_uart_0_avalon_jtag_slave_writedata        (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_writedata),   //                                         .writedata
+		.jtag_uart_0_avalon_jtag_slave_waitrequest      (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_waitrequest), //                                         .waitrequest
+		.jtag_uart_0_avalon_jtag_slave_chipselect       (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_chipselect),  //                                         .chipselect
+		.led_pio_s1_address                             (mm_interconnect_0_led_pio_s1_address),                        //                               led_pio_s1.address
+		.led_pio_s1_write                               (mm_interconnect_0_led_pio_s1_write),                          //                                         .write
+		.led_pio_s1_readdata                            (mm_interconnect_0_led_pio_s1_readdata),                       //                                         .readdata
+		.led_pio_s1_writedata                           (mm_interconnect_0_led_pio_s1_writedata),                      //                                         .writedata
+		.led_pio_s1_chipselect                          (mm_interconnect_0_led_pio_s1_chipselect),                     //                                         .chipselect
+		.nios2_gen2_0_debug_mem_slave_address           (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_address),      //             nios2_gen2_0_debug_mem_slave.address
+		.nios2_gen2_0_debug_mem_slave_write             (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_write),        //                                         .write
+		.nios2_gen2_0_debug_mem_slave_read              (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_read),         //                                         .read
+		.nios2_gen2_0_debug_mem_slave_readdata          (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_readdata),     //                                         .readdata
+		.nios2_gen2_0_debug_mem_slave_writedata         (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_writedata),    //                                         .writedata
+		.nios2_gen2_0_debug_mem_slave_byteenable        (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_byteenable),   //                                         .byteenable
+		.nios2_gen2_0_debug_mem_slave_waitrequest       (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_waitrequest),  //                                         .waitrequest
+		.nios2_gen2_0_debug_mem_slave_debugaccess       (mm_interconnect_0_nios2_gen2_0_debug_mem_slave_debugaccess),  //                                         .debugaccess
+		.ocram_16b_s1_address                           (mm_interconnect_0_ocram_16b_s1_address),                      //                             ocram_16b_s1.address
+		.ocram_16b_s1_write                             (mm_interconnect_0_ocram_16b_s1_write),                        //                                         .write
+		.ocram_16b_s1_readdata                          (mm_interconnect_0_ocram_16b_s1_readdata),                     //                                         .readdata
+		.ocram_16b_s1_writedata                         (mm_interconnect_0_ocram_16b_s1_writedata),                    //                                         .writedata
+		.ocram_16b_s1_byteenable                        (mm_interconnect_0_ocram_16b_s1_byteenable),                   //                                         .byteenable
+		.ocram_16b_s1_chipselect                        (mm_interconnect_0_ocram_16b_s1_chipselect),                   //                                         .chipselect
+		.ocram_16b_s1_clken                             (mm_interconnect_0_ocram_16b_s1_clken),                        //                                         .clken
+		.ocram_64K_s1_address                           (mm_interconnect_0_ocram_64k_s1_address),                      //                             ocram_64K_s1.address
+		.ocram_64K_s1_write                             (mm_interconnect_0_ocram_64k_s1_write),                        //                                         .write
+		.ocram_64K_s1_readdata                          (mm_interconnect_0_ocram_64k_s1_readdata),                     //                                         .readdata
+		.ocram_64K_s1_writedata                         (mm_interconnect_0_ocram_64k_s1_writedata),                    //                                         .writedata
+		.ocram_64K_s1_byteenable                        (mm_interconnect_0_ocram_64k_s1_byteenable),                   //                                         .byteenable
+		.ocram_64K_s1_chipselect                        (mm_interconnect_0_ocram_64k_s1_chipselect),                   //                                         .chipselect
+		.ocram_64K_s1_clken                             (mm_interconnect_0_ocram_64k_s1_clken),                        //                                         .clken
+		.switch_pio_s1_address                          (mm_interconnect_0_switch_pio_s1_address),                     //                            switch_pio_s1.address
+		.switch_pio_s1_readdata                         (mm_interconnect_0_switch_pio_s1_readdata),                    //                                         .readdata
+		.sysid_qsys_0_control_slave_address             (mm_interconnect_0_sysid_qsys_0_control_slave_address),        //               sysid_qsys_0_control_slave.address
+		.sysid_qsys_0_control_slave_readdata            (mm_interconnect_0_sysid_qsys_0_control_slave_readdata)        //                                         .readdata
 	);
 
 	soc_system_irq_mapper irq_mapper (
-		.clk        (clk_clk),                              //       clk.clk
-		.reset      (vexriscvaxi4_0_debug_resetout_reset),  // clk_reset.reset
-		.sender_irq (vexriscvaxi4_0_externalinterrupt_irq)  //    sender.irq
+		.clk           (clk_clk),                               //       clk.clk
+		.reset         (vexriscv_0_debug_resetout_reset),       // clk_reset.reset
+		.receiver0_irq (irq_mapper_receiver0_irq),              // receiver0.irq
+		.sender_irq    (vexriscv_0_externalinterruptarray_irq)  //    sender.irq
 	);
 
 	soc_system_irq_mapper irq_mapper_001 (
-		.clk        (clk_clk),                             //       clk.clk
-		.reset      (vexriscvaxi4_0_debug_resetout_reset), // clk_reset.reset
-		.sender_irq (vexriscvaxi4_0_timerinterrupt_irq)    //    sender.irq
+		.clk           (clk_clk),                            //       clk.clk
+		.reset         (vexriscv_0_debug_resetout_reset),    // clk_reset.reset
+		.receiver0_irq (irq_mapper_receiver0_irq),           // receiver0.irq
+		.sender_irq    (vexriscv_0_externalresetvector_irq)  //    sender.irq
 	);
 
 	soc_system_irq_mapper_002 irq_mapper_002 (
+		.clk           (clk_clk),                         //       clk.clk
+		.reset         (vexriscv_0_debug_resetout_reset), // clk_reset.reset
+		.receiver0_irq (irq_mapper_receiver0_irq),        // receiver0.irq
+		.sender_irq    (vexriscv_0_timerinterrupt_irq)    //    sender.irq
+	);
+
+	soc_system_irq_mapper irq_mapper_003 (
 		.clk           (clk_clk),                            //       clk.clk
-		.reset         (rst_controller_001_reset_out_reset), // clk_reset.reset
-		.receiver0_irq (irq_mapper_002_receiver0_irq),       // receiver0.irq
+		.reset         (rst_controller_002_reset_out_reset), // clk_reset.reset
+		.receiver0_irq (irq_mapper_receiver0_irq),           // receiver0.irq
 		.sender_irq    (nios2_gen2_0_irq_irq)                //    sender.irq
 	);
 
 	altera_reset_controller #(
-		.NUM_RESET_INPUTS          (2),
+		.NUM_RESET_INPUTS          (1),
 		.OUTPUT_RESET_SYNC_EDGES   ("deassert"),
 		.SYNC_DEPTH                (2),
 		.RESET_REQUEST_PRESENT     (0),
@@ -528,48 +540,48 @@ module soc_system (
 		.USE_RESET_REQUEST_IN15    (0),
 		.ADAPT_RESET_REQUEST       (0)
 	) rst_controller (
-		.reset_in0      (~reset_reset_n),                      // reset_in0.reset
-		.reset_in1      (vexriscvaxi4_0_debug_resetout_reset), // reset_in1.reset
-		.clk            (clk_clk),                             //       clk.clk
-		.reset_out      (rst_controller_reset_out_reset),      // reset_out.reset
-		.reset_req      (),                                    // (terminated)
-		.reset_req_in0  (1'b0),                                // (terminated)
-		.reset_req_in1  (1'b0),                                // (terminated)
-		.reset_in2      (1'b0),                                // (terminated)
-		.reset_req_in2  (1'b0),                                // (terminated)
-		.reset_in3      (1'b0),                                // (terminated)
-		.reset_req_in3  (1'b0),                                // (terminated)
-		.reset_in4      (1'b0),                                // (terminated)
-		.reset_req_in4  (1'b0),                                // (terminated)
-		.reset_in5      (1'b0),                                // (terminated)
-		.reset_req_in5  (1'b0),                                // (terminated)
-		.reset_in6      (1'b0),                                // (terminated)
-		.reset_req_in6  (1'b0),                                // (terminated)
-		.reset_in7      (1'b0),                                // (terminated)
-		.reset_req_in7  (1'b0),                                // (terminated)
-		.reset_in8      (1'b0),                                // (terminated)
-		.reset_req_in8  (1'b0),                                // (terminated)
-		.reset_in9      (1'b0),                                // (terminated)
-		.reset_req_in9  (1'b0),                                // (terminated)
-		.reset_in10     (1'b0),                                // (terminated)
-		.reset_req_in10 (1'b0),                                // (terminated)
-		.reset_in11     (1'b0),                                // (terminated)
-		.reset_req_in11 (1'b0),                                // (terminated)
-		.reset_in12     (1'b0),                                // (terminated)
-		.reset_req_in12 (1'b0),                                // (terminated)
-		.reset_in13     (1'b0),                                // (terminated)
-		.reset_req_in13 (1'b0),                                // (terminated)
-		.reset_in14     (1'b0),                                // (terminated)
-		.reset_req_in14 (1'b0),                                // (terminated)
-		.reset_in15     (1'b0),                                // (terminated)
-		.reset_req_in15 (1'b0)                                 // (terminated)
+		.reset_in0      (~reset_reset_n),                 // reset_in0.reset
+		.clk            (clk_clk),                        //       clk.clk
+		.reset_out      (rst_controller_reset_out_reset), // reset_out.reset
+		.reset_req      (),                               // (terminated)
+		.reset_req_in0  (1'b0),                           // (terminated)
+		.reset_in1      (1'b0),                           // (terminated)
+		.reset_req_in1  (1'b0),                           // (terminated)
+		.reset_in2      (1'b0),                           // (terminated)
+		.reset_req_in2  (1'b0),                           // (terminated)
+		.reset_in3      (1'b0),                           // (terminated)
+		.reset_req_in3  (1'b0),                           // (terminated)
+		.reset_in4      (1'b0),                           // (terminated)
+		.reset_req_in4  (1'b0),                           // (terminated)
+		.reset_in5      (1'b0),                           // (terminated)
+		.reset_req_in5  (1'b0),                           // (terminated)
+		.reset_in6      (1'b0),                           // (terminated)
+		.reset_req_in6  (1'b0),                           // (terminated)
+		.reset_in7      (1'b0),                           // (terminated)
+		.reset_req_in7  (1'b0),                           // (terminated)
+		.reset_in8      (1'b0),                           // (terminated)
+		.reset_req_in8  (1'b0),                           // (terminated)
+		.reset_in9      (1'b0),                           // (terminated)
+		.reset_req_in9  (1'b0),                           // (terminated)
+		.reset_in10     (1'b0),                           // (terminated)
+		.reset_req_in10 (1'b0),                           // (terminated)
+		.reset_in11     (1'b0),                           // (terminated)
+		.reset_req_in11 (1'b0),                           // (terminated)
+		.reset_in12     (1'b0),                           // (terminated)
+		.reset_req_in12 (1'b0),                           // (terminated)
+		.reset_in13     (1'b0),                           // (terminated)
+		.reset_req_in13 (1'b0),                           // (terminated)
+		.reset_in14     (1'b0),                           // (terminated)
+		.reset_req_in14 (1'b0),                           // (terminated)
+		.reset_in15     (1'b0),                           // (terminated)
+		.reset_req_in15 (1'b0)                            // (terminated)
 	);
 
 	altera_reset_controller #(
 		.NUM_RESET_INPUTS          (4),
 		.OUTPUT_RESET_SYNC_EDGES   ("deassert"),
 		.SYNC_DEPTH                (2),
-		.RESET_REQUEST_PRESENT     (1),
+		.RESET_REQUEST_PRESENT     (0),
 		.RESET_REQ_WAIT_TIME       (1),
 		.MIN_RST_ASSERTION_TIME    (3),
 		.RESET_REQ_EARLY_DSRT_TIME (1),
@@ -592,12 +604,12 @@ module soc_system (
 		.ADAPT_RESET_REQUEST       (0)
 	) rst_controller_001 (
 		.reset_in0      (~reset_reset_n),                         // reset_in0.reset
-		.reset_in1      (vexriscvaxi4_0_debug_resetout_reset),    // reset_in1.reset
+		.reset_in1      (vexriscv_0_debug_resetout_reset),        // reset_in1.reset
 		.reset_in2      (nios2_gen2_0_debug_reset_request_reset), // reset_in2.reset
 		.reset_in3      (master_0_master_reset_reset),            // reset_in3.reset
 		.clk            (clk_clk),                                //       clk.clk
 		.reset_out      (rst_controller_001_reset_out_reset),     // reset_out.reset
-		.reset_req      (rst_controller_001_reset_out_reset_req), //          .reset_req
+		.reset_req      (),                                       // (terminated)
 		.reset_req_in0  (1'b0),                                   // (terminated)
 		.reset_req_in1  (1'b0),                                   // (terminated)
 		.reset_req_in2  (1'b0),                                   // (terminated)
@@ -629,7 +641,70 @@ module soc_system (
 	);
 
 	altera_reset_controller #(
-		.NUM_RESET_INPUTS          (4),
+		.NUM_RESET_INPUTS          (3),
+		.OUTPUT_RESET_SYNC_EDGES   ("deassert"),
+		.SYNC_DEPTH                (2),
+		.RESET_REQUEST_PRESENT     (1),
+		.RESET_REQ_WAIT_TIME       (1),
+		.MIN_RST_ASSERTION_TIME    (3),
+		.RESET_REQ_EARLY_DSRT_TIME (1),
+		.USE_RESET_REQUEST_IN0     (0),
+		.USE_RESET_REQUEST_IN1     (0),
+		.USE_RESET_REQUEST_IN2     (0),
+		.USE_RESET_REQUEST_IN3     (0),
+		.USE_RESET_REQUEST_IN4     (0),
+		.USE_RESET_REQUEST_IN5     (0),
+		.USE_RESET_REQUEST_IN6     (0),
+		.USE_RESET_REQUEST_IN7     (0),
+		.USE_RESET_REQUEST_IN8     (0),
+		.USE_RESET_REQUEST_IN9     (0),
+		.USE_RESET_REQUEST_IN10    (0),
+		.USE_RESET_REQUEST_IN11    (0),
+		.USE_RESET_REQUEST_IN12    (0),
+		.USE_RESET_REQUEST_IN13    (0),
+		.USE_RESET_REQUEST_IN14    (0),
+		.USE_RESET_REQUEST_IN15    (0),
+		.ADAPT_RESET_REQUEST       (0)
+	) rst_controller_002 (
+		.reset_in0      (~reset_reset_n),                         // reset_in0.reset
+		.reset_in1      (nios2_gen2_0_debug_reset_request_reset), // reset_in1.reset
+		.reset_in2      (master_0_master_reset_reset),            // reset_in2.reset
+		.clk            (clk_clk),                                //       clk.clk
+		.reset_out      (rst_controller_002_reset_out_reset),     // reset_out.reset
+		.reset_req      (rst_controller_002_reset_out_reset_req), //          .reset_req
+		.reset_req_in0  (1'b0),                                   // (terminated)
+		.reset_req_in1  (1'b0),                                   // (terminated)
+		.reset_req_in2  (1'b0),                                   // (terminated)
+		.reset_in3      (1'b0),                                   // (terminated)
+		.reset_req_in3  (1'b0),                                   // (terminated)
+		.reset_in4      (1'b0),                                   // (terminated)
+		.reset_req_in4  (1'b0),                                   // (terminated)
+		.reset_in5      (1'b0),                                   // (terminated)
+		.reset_req_in5  (1'b0),                                   // (terminated)
+		.reset_in6      (1'b0),                                   // (terminated)
+		.reset_req_in6  (1'b0),                                   // (terminated)
+		.reset_in7      (1'b0),                                   // (terminated)
+		.reset_req_in7  (1'b0),                                   // (terminated)
+		.reset_in8      (1'b0),                                   // (terminated)
+		.reset_req_in8  (1'b0),                                   // (terminated)
+		.reset_in9      (1'b0),                                   // (terminated)
+		.reset_req_in9  (1'b0),                                   // (terminated)
+		.reset_in10     (1'b0),                                   // (terminated)
+		.reset_req_in10 (1'b0),                                   // (terminated)
+		.reset_in11     (1'b0),                                   // (terminated)
+		.reset_req_in11 (1'b0),                                   // (terminated)
+		.reset_in12     (1'b0),                                   // (terminated)
+		.reset_req_in12 (1'b0),                                   // (terminated)
+		.reset_in13     (1'b0),                                   // (terminated)
+		.reset_req_in13 (1'b0),                                   // (terminated)
+		.reset_in14     (1'b0),                                   // (terminated)
+		.reset_req_in14 (1'b0),                                   // (terminated)
+		.reset_in15     (1'b0),                                   // (terminated)
+		.reset_req_in15 (1'b0)                                    // (terminated)
+	);
+
+	altera_reset_controller #(
+		.NUM_RESET_INPUTS          (3),
 		.OUTPUT_RESET_SYNC_EDGES   ("none"),
 		.SYNC_DEPTH                (2),
 		.RESET_REQUEST_PRESENT     (0),
@@ -653,17 +728,17 @@ module soc_system (
 		.USE_RESET_REQUEST_IN14    (0),
 		.USE_RESET_REQUEST_IN15    (0),
 		.ADAPT_RESET_REQUEST       (0)
-	) rst_controller_002 (
+	) rst_controller_003 (
 		.reset_in0      (~reset_reset_n),                         // reset_in0.reset
-		.reset_in1      (vexriscvaxi4_0_debug_resetout_reset),    // reset_in1.reset
-		.reset_in2      (nios2_gen2_0_debug_reset_request_reset), // reset_in2.reset
-		.reset_in3      (master_0_master_reset_reset),            // reset_in3.reset
+		.reset_in1      (nios2_gen2_0_debug_reset_request_reset), // reset_in1.reset
+		.reset_in2      (master_0_master_reset_reset),            // reset_in2.reset
 		.clk            (),                                       //       clk.clk
-		.reset_out      (rst_controller_002_reset_out_reset),     // reset_out.reset
+		.reset_out      (rst_controller_003_reset_out_reset),     // reset_out.reset
 		.reset_req      (),                                       // (terminated)
 		.reset_req_in0  (1'b0),                                   // (terminated)
 		.reset_req_in1  (1'b0),                                   // (terminated)
 		.reset_req_in2  (1'b0),                                   // (terminated)
+		.reset_in3      (1'b0),                                   // (terminated)
 		.reset_req_in3  (1'b0),                                   // (terminated)
 		.reset_in4      (1'b0),                                   // (terminated)
 		.reset_req_in4  (1'b0),                                   // (terminated)

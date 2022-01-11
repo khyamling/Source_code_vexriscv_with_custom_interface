@@ -17,6 +17,14 @@
          type = "int";
       }
    }
+   element VexRiscv_0
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
    element button_pio
    {
       datum _sortIndex
@@ -231,9 +239,14 @@
    internal="switch_pio.external_connection"
    type="conduit"
    dir="end" />
- <module name="VexRiscvAxi4_0" kind="VexRiscvAxi4" version="1.0" enabled="1">
+ <module name="VexRiscvAxi4_0" kind="VexRiscvAxi4" version="1.0" enabled="0">
   <parameter name="AUTO_EXTERNALINTERRUPT_INTERRUPTS_USED" value="0" />
   <parameter name="AUTO_TIMERINTERRUPT_INTERRUPTS_USED" value="0" />
+ </module>
+ <module name="VexRiscv_0" kind="VexRiscv" version="1.0" enabled="1">
+  <parameter name="AUTO_EXTERNALINTERRUPTARRAY_INTERRUPTS_USED" value="1" />
+  <parameter name="AUTO_EXTERNALRESETVECTOR_INTERRUPTS_USED" value="1" />
+  <parameter name="AUTO_TIMERINTERRUPT_INTERRUPTS_USED" value="1" />
  </module>
  <module name="button_pio" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
@@ -581,6 +594,15 @@
  <connection
    kind="avalon"
    version="18.1"
+   start="VexRiscv_0.dBusaxi"
+   end="jtag_uart_0.avalon_jtag_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010838" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
    start="VexRiscvAxi4_0.dBusaxi"
    end="sysid_qsys_0.control_slave">
   <parameter name="arbitrationPriority" value="1" />
@@ -590,7 +612,25 @@
  <connection
    kind="avalon"
    version="18.1"
+   start="VexRiscv_0.dBusaxi"
+   end="sysid_qsys_0.control_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010830" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
    start="VexRiscvAxi4_0.dBusaxi"
+   end="nios2_gen2_0.debug_mem_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="VexRiscv_0.dBusaxi"
    end="nios2_gen2_0.debug_mem_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00010000" />
@@ -630,6 +670,51 @@
    end="button_pio.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00010810" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="VexRiscv_0.dBusaxi"
+   end="switch_pio.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010800" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="VexRiscv_0.dBusaxi"
+   end="button_pio.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010810" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="VexRiscv_0.dBusaxi"
+   end="led_pio.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010820" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="VexRiscv_0.dBusaxi"
+   end="ocram_16b.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010000" />
+  <parameter name="defaultConnection" value="true" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="VexRiscv_0.dBusaxi"
+   end="ocram_64K.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -717,6 +802,24 @@
    kind="avalon"
    version="18.1"
    start="VexRiscvAxi4_0.iBusaxi"
+   end="ocram_16b.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010000" />
+  <parameter name="defaultConnection" value="true" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="VexRiscv_0.iBusaxi"
+   end="ocram_64K.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="VexRiscv_0.iBusaxi"
    end="ocram_16b.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00010000" />
@@ -824,6 +927,7 @@
  <connection kind="clock" version="18.1" start="clk_0.clk" end="master_0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="nios2_gen2_0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="jtag_uart_0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="VexRiscv_0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ocram_64K.clk1" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="ocram_16b.clk1" />
  <connection
@@ -834,7 +938,28 @@
  <connection
    kind="interrupt"
    version="18.1"
+   start="VexRiscv_0.externalInterruptArray"
+   end="jtag_uart_0.irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="18.1"
+   start="VexRiscv_0.externalResetVector"
+   end="jtag_uart_0.irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="18.1"
    start="nios2_gen2_0.irq"
+   end="jtag_uart_0.irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="18.1"
+   start="VexRiscv_0.timerInterrupt"
    end="jtag_uart_0.irq">
   <parameter name="irqNumber" value="0" />
  </connection>
@@ -852,6 +977,11 @@
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
+   end="VexRiscv_0.debugReset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
    end="led_pio.reset" />
  <connection
    kind="reset"
@@ -887,6 +1017,11 @@
    kind="reset"
    version="18.1"
    start="clk_0.clk_reset"
+   end="VexRiscv_0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
    end="ocram_64K.reset1" />
  <connection
    kind="reset"
@@ -903,6 +1038,16 @@
    version="18.1"
    start="VexRiscvAxi4_0.debug_resetOut"
    end="VexRiscvAxi4_0.debugReset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="VexRiscvAxi4_0.debug_resetOut"
+   end="VexRiscv_0.debugReset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="VexRiscv_0.debug_resetOut"
+   end="VexRiscv_0.debugReset" />
  <connection
    kind="reset"
    version="18.1"
@@ -942,6 +1087,11 @@
    kind="reset"
    version="18.1"
    start="VexRiscvAxi4_0.debug_resetOut"
+   end="VexRiscv_0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="VexRiscvAxi4_0.debug_resetOut"
    end="ocram_16b.reset1" />
  <connection
    kind="reset"
@@ -958,6 +1108,11 @@
    version="18.1"
    start="nios2_gen2_0.debug_reset_request"
    end="VexRiscvAxi4_0.debugReset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_gen2_0.debug_reset_request"
+   end="VexRiscv_0.debugReset" />
  <connection
    kind="reset"
    version="18.1"
@@ -1008,6 +1163,11 @@
    version="18.1"
    start="master_0.master_reset"
    end="VexRiscvAxi4_0.debugReset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="master_0.master_reset"
+   end="VexRiscv_0.debugReset" />
  <connection
    kind="reset"
    version="18.1"
